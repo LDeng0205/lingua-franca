@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="lf___p_o_s_i_x__threads__support_8c" kind="file" language="C++">
+    <compoundname>lf_POSIX_threads_support.c</compoundname>
+    <includes refid="lf___p_o_s_i_x__threads__support_8h" local="yes">lf_POSIX_threads_support.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>pthread.h</label>
+      </node>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c</label>
+        <link refid="lf___p_o_s_i_x__threads__support_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lf_POSIX_threads_support.h</label>
+        <link refid="lf___p_o_s_i_x__threads__support_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="lf___p_o_s_i_x__threads__support_8c_1ab8be4b8137e1f0d949ba2eccf4e1def1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lf_thread_create</definition>
+        <argsstring>(_lf_thread_t *thread, void *(*lf_thread)(void *), void *arguments)</argsstring>
+        <name>lf_thread_create</name>
+        <param>
+          <type>_lf_thread_t *</type>
+          <declname>thread</declname>
+        </param>
+        <param>
+          <type>void *(*)(void *)</type>
+          <declname>lf_thread</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arguments</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>POSIX API support for the C target of Lingua Franca.</para>
+<para><simplesect kind="author"><para>{Soroush Bateni <ulink url="mailto:soroush@utdallas.edu">soroush@utdallas.edu</ulink>}</para>
+</simplesect>
+All functions return 0 on success. Create a new thread, starting with execution of lf_thread getting passed arguments. The new handle is stored in thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" line="40" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="lf___p_o_s_i_x__threads__support_8c_1a7307363a56eba75ff4a4c0cd213d3b8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lf_thread_join</definition>
+        <argsstring>(_lf_thread_t thread, void **thread_return)</argsstring>
+        <name>lf_thread_join</name>
+        <param>
+          <type>_lf_thread_t</type>
+          <declname>thread</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>thread_return</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Make calling thread wait for termination of the thread. The exit status of the thread is stored in thread_return, if thread_return is not NULL. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" line="49" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="lf___p_o_s_i_x__threads__support_8c_1a6f92f2dbfa7f242e61802f7c7e0d92d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lf_mutex_init</definition>
+        <argsstring>(_lf_mutex_t *mutex)</argsstring>
+        <name>lf_mutex_init</name>
+        <param>
+          <type>_lf_mutex_t *</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize a mutex. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" line="56" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" bodystart="56" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="lf___p_o_s_i_x__threads__support_8c_1a5b4bfce1aea7b1fe41a0dd43ca508579" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lf_mutex_lock</definition>
+        <argsstring>(_lf_mutex_t *mutex)</argsstring>
+        <name>lf_mutex_lock</name>
+        <param>
+          <type>_lf_mutex_t *</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lock a mutex. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" line="67" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="lf___p_o_s_i_x__threads__support_8c_1ab4ab44390a03ab9cfe030e840175cbf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lf_mutex_unlock</definition>
+        <argsstring>(_lf_mutex_t *mutex)</argsstring>
+        <name>lf_mutex_unlock</name>
+        <param>
+          <type>_lf_mutex_t *</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unlock a mutex. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" line="74" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" bodystart="74" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="lf___p_o_s_i_x__threads__support_8c_1af945deaf6d9ca0ffeef1415e0be7dc52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lf_cond_init</definition>
+        <argsstring>(_lf_cond_t *cond)</argsstring>
+        <name>lf_cond_init</name>
+        <param>
+          <type>_lf_cond_t *</type>
+          <declname>cond</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize a conditional variable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" line="81" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" bodystart="81" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="lf___p_o_s_i_x__threads__support_8c_1abe3e9be9ae9a8e977a6f8b925e921505" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lf_cond_broadcast</definition>
+        <argsstring>(_lf_cond_t *cond)</argsstring>
+        <name>lf_cond_broadcast</name>
+        <param>
+          <type>_lf_cond_t *</type>
+          <declname>cond</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wake up all threads waiting for condition variable cond. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" line="92" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" bodystart="92" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="lf___p_o_s_i_x__threads__support_8c_1a7466e689556b0b100f2b622b3d166342" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lf_cond_signal</definition>
+        <argsstring>(_lf_cond_t *cond)</argsstring>
+        <name>lf_cond_signal</name>
+        <param>
+          <type>_lf_cond_t *</type>
+          <declname>cond</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wake up one thread waiting for condition variable cond. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" line="99" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" bodystart="99" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="lf___p_o_s_i_x__threads__support_8c_1a505558d6760c34d10be2ca352bad8d4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lf_cond_wait</definition>
+        <argsstring>(_lf_cond_t *cond, _lf_mutex_t *mutex)</argsstring>
+        <name>lf_cond_wait</name>
+        <param>
+          <type>_lf_cond_t *</type>
+          <declname>cond</declname>
+        </param>
+        <param>
+          <type>_lf_mutex_t *</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wait for condition variable &quot;cond&quot; to be signaled or broadcast. &quot;mutex&quot; is assumed to be locked before. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" line="107" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" bodystart="107" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="lf___p_o_s_i_x__threads__support_8c_1a30b1186dc25375d2edea323aa4c059bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lf_cond_timedwait</definition>
+        <argsstring>(_lf_cond_t *cond, _lf_mutex_t *mutex, long long absolute_time_ns)</argsstring>
+        <name>lf_cond_timedwait</name>
+        <param>
+          <type>_lf_cond_t *</type>
+          <declname>cond</declname>
+        </param>
+        <param>
+          <type>_lf_mutex_t *</type>
+          <declname>mutex</declname>
+        </param>
+        <param>
+          <type>long long</type>
+          <declname>absolute_time_ns</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Block current thread on the condition variable until condition variable pointed by &quot;cond&quot; is signaled or time pointed by &quot;absolute_time_ns&quot; in nanoseconds is reached.</para>
+<para><simplesect kind="return"><para>0 on success and LF_TIMEOUT on timeout. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" line="118" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c" bodystart="118" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>POSIX<sp/>API<sp/>support<sp/>for<sp/>the<sp/>C<sp/>target<sp/>of<sp/>Lingua<sp/>Franca.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/*************</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">Copyright<sp/>(c)<sp/>2021,<sp/>The<sp/>University<sp/>of<sp/>California<sp/>at<sp/>Berkeley.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/>modification,</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright<sp/>notice,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright<sp/>notice,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the<sp/>documentation</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment">THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">THE<sp/>COPYRIGHT<sp/>HOLDER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">***************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor">#include<sp/>&quot;lf_POSIX_threads_support.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lf_thread_create(_lf_thread_t*<sp/>thread,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*(*lf_thread)<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*),<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>arguments)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pthread_create((pthread_t*)thread,<sp/>NULL,<sp/>lf_thread,<sp/>arguments);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lf_thread_join(_lf_thread_t<sp/>thread,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/>thread_return)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pthread_join((pthread_t)thread,<sp/>thread_return);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lf_mutex_init(_lf_mutex_t*<sp/>mutex)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>up<sp/>a<sp/>recursive<sp/>mutex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_mutexattr_t<sp/>attr;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_mutexattr_init(&amp;attr);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_mutexattr_settype(&amp;attr,<sp/>PTHREAD_MUTEX_RECURSIVE);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pthread_mutex_init((pthread_mutex_t*)mutex,<sp/>&amp;attr);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lf_mutex_lock(_lf_mutex_t*<sp/>mutex)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pthread_mutex_lock((pthread_mutex_t*)mutex);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lf_mutex_unlock(_lf_mutex_t*<sp/>mutex)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pthread_mutex_unlock((pthread_mutex_t*)mutex);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lf_cond_init(_lf_cond_t*<sp/>cond)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_condattr_t<sp/>cond_attr;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_condattr_init(&amp;cond_attr);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Limit<sp/>the<sp/>scope<sp/>of<sp/>the<sp/>condition<sp/>variable<sp/>to<sp/>this<sp/>process<sp/>(default)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_condattr_setpshared(&amp;cond_attr,<sp/>PTHREAD_PROCESS_PRIVATE);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pthread_cond_init(cond,<sp/>&amp;cond_attr);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lf_cond_broadcast(_lf_cond_t*<sp/>cond)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pthread_cond_broadcast((pthread_cond_t*)cond);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lf_cond_signal(_lf_cond_t*<sp/>cond)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pthread_cond_signal((pthread_cond_t*)cond);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lf_cond_wait(_lf_cond_t*<sp/>cond,<sp/>_lf_mutex_t*<sp/>mutex)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pthread_cond_wait((pthread_cond_t*)cond,<sp/>(pthread_mutex_t*)mutex);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lf_cond_timedwait(_lf_cond_t*<sp/>cond,<sp/>_lf_mutex_t*<sp/>mutex,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>absolute_time_ns)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Convert<sp/>the<sp/>absolute<sp/>time<sp/>to<sp/>a<sp/>timespec.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>timespec<sp/>is<sp/>seconds<sp/>and<sp/>nanoseconds.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/>timespec_absolute_time</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>{(time_t)absolute_time_ns<sp/>/<sp/>1000000000LL,<sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)absolute_time_ns<sp/>%<sp/>1000000000LL};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pthread_cond_timedwait(</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(pthread_cond_t*)cond,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(pthread_mutex_t*)mutex,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;timespec_absolute_time);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/lf_POSIX_threads_support.c"/>
+  </compounddef>
+</doxygen>

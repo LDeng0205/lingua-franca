@@ -1,0 +1,126 @@
+\hypertarget{sensor__simulator_8h}{}\doxysection{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/\+C/util/sensor\+\_\+simulator.h File Reference}
+\label{sensor__simulator_8h}\index{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/C/util/sensor\_simulator.h@{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/C/util/sensor\_simulator.h}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{sensor__simulator_8h_adfb8c4dc96d976367deb805452b8a3b2}{start\+\_\+sensor\+\_\+simulator}} (char $\ast$message\+\_\+lines\mbox{[}$\,$\mbox{]}, int number\+\_\+of\+\_\+lines, int \mbox{\hyperlink{sensor__simulator_8c_a89502730b2655e279c83afb299e8ded5}{tick\+\_\+window\+\_\+width}}, char $\ast$\mbox{\hyperlink{sensor__simulator_8c_ab936051f5aaca44c6c3c41dee0d19c36}{log\+\_\+file}}, int log\+\_\+level)
+\item 
+void \mbox{\hyperlink{sensor__simulator_8h_ad9a70cc616c82bab0563369a662e5cc0}{show\+\_\+tick}} (char $\ast$character)
+\item 
+int \mbox{\hyperlink{sensor__simulator_8h_a196614841046dea5b94b2a60108fff40}{register\+\_\+sensor\+\_\+key}} (char key, void $\ast$action)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Edward A. Lee (\href{mailto:eal@berkeley.edu}{\texttt{ eal@berkeley.\+edu}})
+\end{DoxyAuthor}
+\hypertarget{util_8h_LICENSE}{}\doxysubsection{L\+I\+C\+E\+N\+SE}\label{util_8h_LICENSE}
+Copyright (c) 2020, The University of California at Berkeley.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.\hypertarget{util_8h_DESCRIPTION}{}\doxysubsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}\label{util_8h_DESCRIPTION}
+When prototyping Lingua Franca programs on a laptop, it is convenient to use the laptop keyboard to simulate asynchronous sensor input. This small library provides a convenient way to do that.
+
+To use this, include the following flags in your target properties\+: 
+\begin{DoxyPre}
+target C \{
+    flags: "-\/lncurses",
+    files: ["/lib/C/util/sensor\_simulator.c", "/lib/C/util/sensor\_simulator.h"]
+\};
+\end{DoxyPre}
+ This requires {\ttfamily ncurses}, a library providing somewhat portable keyboard access.
+
+In addition, you need this in your Lingua Franca file\+: 
+\begin{DoxyPre}
+preamble \{=
+    \#include "sensor\_simulator.c"
+=\}
+\end{DoxyPre}
+ To start the sensor simulator, call {\ttfamily start\+\_\+sensor\+\_\+simulator} passing it an array of strings to print and the width of the window to use to display characters using the {\ttfamily show\+\_\+tick} function.
+
+To print messages to the screen, rather than using printf(), you should use the messaging functions in \mbox{\hyperlink{util_8h}{util.\+h}}, such as \mbox{\hyperlink{util_8c_ab831b6ca5cfb47d7d4b3f15ef8e0f053}{info\+\_\+print()}}. Otherwise, your messages will be printed over other information. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sensor__simulator_8h_a196614841046dea5b94b2a60108fff40}\label{sensor__simulator_8h_a196614841046dea5b94b2a60108fff40}} 
+\index{sensor\_simulator.h@{sensor\_simulator.h}!register\_sensor\_key@{register\_sensor\_key}}
+\index{register\_sensor\_key@{register\_sensor\_key}!sensor\_simulator.h@{sensor\_simulator.h}}
+\doxysubsubsection{\texorpdfstring{register\_sensor\_key()}{register\_sensor\_key()}}
+{\footnotesize\ttfamily int register\+\_\+sensor\+\_\+key (\begin{DoxyParamCaption}\item[{char}]{key,  }\item[{void $\ast$}]{action }\end{DoxyParamCaption})}
+
+Register a keyboard key to trigger the specified action. Printable A\+S\+C\+II characters (codes 32 to 127) are supported plus \textquotesingle{}~\newline
+\textquotesingle{} and \textquotesingle{}\textbackslash{}0\textquotesingle{}, where the latter registers a trigger to invoked when any key is pressed. If a specific key is registered and any key (\textquotesingle{}\textbackslash{}0\textquotesingle{}) is also registered, the any key trigger will be scheduled after the specific key is scheduled. If these triggers belong to different reactors, they could be invoked in parallel. This will fail if the specified key has already been registered (error code 1), or the key is not a supported key or a newline ‘~\newline
+’ or any key \textquotesingle{}\textbackslash{}0\textquotesingle{} (error code 2) or if the trigger is N\+U\+LL (error code 3). 
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to register. \\
+\hline
+{\em action} & The action to trigger when the key is pressed (a pointer to a \mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}} struct). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, error code for failure.
+\end{DoxyReturn}
+Register a keyboard key to trigger the specified action. Printable A\+S\+C\+II characters (codes 32 to 127) are supported plus \textquotesingle{}~\newline
+\textquotesingle{} and \textquotesingle{}\textbackslash{}0\textquotesingle{}, where the latter registers a trigger to invoked when any key is pressed. If a specific key is registered and any key (\textquotesingle{}\textbackslash{}0\textquotesingle{}) is also registered, the any key trigger will be scheduled after the specific key is scheduled. If these triggers belong to different reactors, they could be invoked in parallel. This will fail if the specified key has already been registered (error code 1), or the key is not a supported key (error code 2) or if the trigger is N\+U\+LL (error code 3). 
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to register. \\
+\hline
+{\em action} & The action to trigger when the key is pressed (a pointer to a \mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}} struct). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, error code for failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sensor__simulator_8h_ad9a70cc616c82bab0563369a662e5cc0}\label{sensor__simulator_8h_ad9a70cc616c82bab0563369a662e5cc0}} 
+\index{sensor\_simulator.h@{sensor\_simulator.h}!show\_tick@{show\_tick}}
+\index{show\_tick@{show\_tick}!sensor\_simulator.h@{sensor\_simulator.h}}
+\doxysubsubsection{\texorpdfstring{show\_tick()}{show\_tick()}}
+{\footnotesize\ttfamily void show\+\_\+tick (\begin{DoxyParamCaption}\item[{char $\ast$}]{character }\end{DoxyParamCaption})}
+
+Place a tick (usually a single character) in the tick window. 
+\begin{DoxyParams}{Parameters}
+{\em character} & The tick character. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sensor__simulator_8h_adfb8c4dc96d976367deb805452b8a3b2}\label{sensor__simulator_8h_adfb8c4dc96d976367deb805452b8a3b2}} 
+\index{sensor\_simulator.h@{sensor\_simulator.h}!start\_sensor\_simulator@{start\_sensor\_simulator}}
+\index{start\_sensor\_simulator@{start\_sensor\_simulator}!sensor\_simulator.h@{sensor\_simulator.h}}
+\doxysubsubsection{\texorpdfstring{start\_sensor\_simulator()}{start\_sensor\_simulator()}}
+{\footnotesize\ttfamily int start\+\_\+sensor\+\_\+simulator (\begin{DoxyParamCaption}\item[{char $\ast$}]{message\+\_\+lines\mbox{[}$\,$\mbox{]},  }\item[{int}]{number\+\_\+of\+\_\+lines,  }\item[{int}]{tick\+\_\+window\+\_\+width,  }\item[{char $\ast$}]{log\+\_\+file,  }\item[{int}]{log\+\_\+level }\end{DoxyParamCaption})}
+
+Start the sensor simulator if it has not been already started. This must be called at least once before any call to register\+\_\+sensor\+\_\+key. If given, this will put a message in the center of the terminal window. The message will be left justified, with each string in the specified array on a new line. If a tick\+\_\+window\+\_\+width is given, then a second window will be created that is intended to show activity, typically using a single character per event. 
+\begin{DoxyParams}{Parameters}
+{\em message\+\_\+lines} & The message lines or N\+U\+LL for none. \\
+\hline
+{\em number\+\_\+of\+\_\+lines} & The number of message lines or 0 for none. \\
+\hline
+{\em tick\+\_\+window\+\_\+width} & The width of the tick window or 0 for none. \\
+\hline
+{\em log\+\_\+file} & If non-\/\+N\+U\+LL, the name of a file to which to write logging messages. \\
+\hline
+{\em log\+\_\+level} & The level of log messages to redirect to the file. The level should be one of L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+E\+R\+R\+OR, L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+W\+A\+R\+N\+I\+NG, L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+I\+N\+FO, L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+L\+OG, or L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+D\+E\+B\+UG.\\
+\hline
+\end{DoxyParams}
+Start the sensor simulator if it has not been already started. This must be called at least once before any call to register\+\_\+sensor\+\_\+key. The specified message is an initial message to display at the upper left, typically a set of instructions, that remains displayed throughout the lifetime of the window. 
+\begin{DoxyParams}{Parameters}
+{\em message\+\_\+lines} & The message lines. \\
+\hline
+{\em number\+\_\+of\+\_\+lines} & The number of lines. \\
+\hline
+{\em tick\+\_\+window\+\_\+width} & The width of the tick window or 0 for none. \\
+\hline
+{\em log\+\_\+file} & If non-\/\+N\+U\+LL, the name of a file to which to write logging messages. \\
+\hline
+{\em log\+\_\+level} & The level of log messages to redirect to the file. The level should be one of L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+E\+R\+R\+OR, L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+W\+A\+R\+N\+I\+NG, L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+I\+N\+FO, L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+L\+OG, L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+D\+E\+B\+UG, or L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+A\+LL. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, error code for failure. 
+\end{DoxyReturn}

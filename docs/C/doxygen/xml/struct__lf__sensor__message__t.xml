@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="struct__lf__sensor__message__t" kind="struct" language="C++" prot="public">
+    <compoundname>_lf_sensor_message_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__lf__sensor__message__t_1a985768458c6b00559db82b549f2870a4" prot="public" static="no" mutable="no">
+        <type>enum _lf_sensor_message_type</type>
+        <definition>enum _lf_sensor_message_type _lf_sensor_message_t::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/sensor_simulator.c" line="478" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/sensor_simulator.c" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__lf__sensor__message__t_1a3a9fd3aca3ae40d8a10665c4cc89cd68" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _lf_sensor_message_t::message</definition>
+        <argsstring></argsstring>
+        <name>message</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/sensor_simulator.c" line="64" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/sensor_simulator.c" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__lf__sensor__message__t_1a96731ca0567d1b00ef6f677a35a95228" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct__lf__sensor__message__t" kindref="compound">_lf_sensor_message_t</ref> *</type>
+        <definition>struct _lf_sensor_message_t* _lf_sensor_message_t::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/sensor_simulator.c" line="65" column="28" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/sensor_simulator.c" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>_lf_sensor_message_t</label>
+        <link refid="struct__lf__sensor__message__t"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/sensor_simulator.c" line="62" column="35" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/sensor_simulator.c" bodystart="62" bodyend="66"/>
+    <listofallmembers>
+      <member refid="struct__lf__sensor__message__t_1a3a9fd3aca3ae40d8a10665c4cc89cd68" prot="public" virt="non-virtual"><scope>_lf_sensor_message_t</scope><name>message</name></member>
+      <member refid="struct__lf__sensor__message__t_1a96731ca0567d1b00ef6f677a35a95228" prot="public" virt="non-virtual"><scope>_lf_sensor_message_t</scope><name>next</name></member>
+      <member refid="struct__lf__sensor__message__t_1a985768458c6b00559db82b549f2870a4" prot="public" virt="non-virtual"><scope>_lf_sensor_message_t</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

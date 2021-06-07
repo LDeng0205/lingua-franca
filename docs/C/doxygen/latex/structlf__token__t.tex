@@ -1,0 +1,72 @@
+\hypertarget{structlf__token__t}{}\doxysection{lf\+\_\+token\+\_\+t Struct Reference}
+\label{structlf__token__t}\index{lf\_token\_t@{lf\_token\_t}}
+
+
+{\ttfamily \#include $<$reactor.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{structlf__token__t_a96f790f8f8dcc01474dbc255e05ceaa8}{value}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structlf__token__t_af2b9d91b8dcfbc640f0cf52d4fac6035}{element\+\_\+size}}
+\item 
+int \mbox{\hyperlink{structlf__token__t_aa907a3d0901bd1ae3ab88fecb8dc11e5}{length}}
+\item 
+int \mbox{\hyperlink{structlf__token__t_ab1043c1cbbd70a0cb0d10058b3d5290b}{ref\+\_\+count}}
+\item 
+ok\+\_\+to\+\_\+free\+\_\+t \mbox{\hyperlink{structlf__token__t_aa002374ec3b3165193393952dd216a90}{ok\+\_\+to\+\_\+free}}
+\item 
+struct \mbox{\hyperlink{structlf__token__t}{lf\+\_\+token\+\_\+t}} $\ast$ \mbox{\hyperlink{structlf__token__t_a3b993d54120f7b0137785c99f7ddc118}{next\+\_\+free}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Token type for dynamically allocated arrays and structs sent as messages.
+
+In the C LF target, a type for an output that ends in \textquotesingle{}$\ast$\textquotesingle{} is treated specially. The value carried by the output is assumed to be in dynamically allocated memory, and, using reference counting, after the last downstream reader of the value has finished, the memory will be freed. To prevent this freeing from occurring, the output type can be specified using the syntax \{= type$\ast$ =\}; this will not be treated as dynamically allocated memory. Alternatively, the programmer can give a typedef in the preamble that masks the trailing $\ast$.
+
+This struct is the wrapper around the dynamically allocated memory that carries the message. The message can be an array of values, where the size of each value is element\+\_\+size (in bytes). If it is not an array, the length == 1. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structlf__token__t_af2b9d91b8dcfbc640f0cf52d4fac6035}\label{structlf__token__t_af2b9d91b8dcfbc640f0cf52d4fac6035}} 
+\index{lf\_token\_t@{lf\_token\_t}!element\_size@{element\_size}}
+\index{element\_size@{element\_size}!lf\_token\_t@{lf\_token\_t}}
+\doxysubsubsection{\texorpdfstring{element\_size}{element\_size}}
+{\footnotesize\ttfamily size\+\_\+t lf\+\_\+token\+\_\+t\+::element\+\_\+size}
+
+Size of the struct or array element. \mbox{\Hypertarget{structlf__token__t_aa907a3d0901bd1ae3ab88fecb8dc11e5}\label{structlf__token__t_aa907a3d0901bd1ae3ab88fecb8dc11e5}} 
+\index{lf\_token\_t@{lf\_token\_t}!length@{length}}
+\index{length@{length}!lf\_token\_t@{lf\_token\_t}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily int lf\+\_\+token\+\_\+t\+::length}
+
+Length of the array or 1 for a struct. \mbox{\Hypertarget{structlf__token__t_a3b993d54120f7b0137785c99f7ddc118}\label{structlf__token__t_a3b993d54120f7b0137785c99f7ddc118}} 
+\index{lf\_token\_t@{lf\_token\_t}!next\_free@{next\_free}}
+\index{next\_free@{next\_free}!lf\_token\_t@{lf\_token\_t}}
+\doxysubsubsection{\texorpdfstring{next\_free}{next\_free}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structlf__token__t}{lf\+\_\+token\+\_\+t}}$\ast$ lf\+\_\+token\+\_\+t\+::next\+\_\+free}
+
+For recycling, a pointer to the next token in the recycling bin. \mbox{\Hypertarget{structlf__token__t_aa002374ec3b3165193393952dd216a90}\label{structlf__token__t_aa002374ec3b3165193393952dd216a90}} 
+\index{lf\_token\_t@{lf\_token\_t}!ok\_to\_free@{ok\_to\_free}}
+\index{ok\_to\_free@{ok\_to\_free}!lf\_token\_t@{lf\_token\_t}}
+\doxysubsubsection{\texorpdfstring{ok\_to\_free}{ok\_to\_free}}
+{\footnotesize\ttfamily ok\+\_\+to\+\_\+free\+\_\+t lf\+\_\+token\+\_\+t\+::ok\+\_\+to\+\_\+free}
+
+Indicator of whether this token is expected to be freed. Tokens that are created at the start of execution and associated with output ports or actions are not expected to be freed. They can be reused instead. \mbox{\Hypertarget{structlf__token__t_ab1043c1cbbd70a0cb0d10058b3d5290b}\label{structlf__token__t_ab1043c1cbbd70a0cb0d10058b3d5290b}} 
+\index{lf\_token\_t@{lf\_token\_t}!ref\_count@{ref\_count}}
+\index{ref\_count@{ref\_count}!lf\_token\_t@{lf\_token\_t}}
+\doxysubsubsection{\texorpdfstring{ref\_count}{ref\_count}}
+{\footnotesize\ttfamily int lf\+\_\+token\+\_\+t\+::ref\+\_\+count}
+
+The number of input ports that have not already reacted to the message. \mbox{\Hypertarget{structlf__token__t_a96f790f8f8dcc01474dbc255e05ceaa8}\label{structlf__token__t_a96f790f8f8dcc01474dbc255e05ceaa8}} 
+\index{lf\_token\_t@{lf\_token\_t}!value@{value}}
+\index{value@{value}!lf\_token\_t@{lf\_token\_t}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily void$\ast$ lf\+\_\+token\+\_\+t\+::value}
+
+Pointer to dynamically allocated memory containing a message. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.\+lflang/src/lib/core/\mbox{\hyperlink{reactor_8h}{reactor.\+h}}\end{DoxyCompactItemize}

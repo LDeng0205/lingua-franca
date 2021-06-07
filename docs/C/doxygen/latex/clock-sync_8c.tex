@@ -1,0 +1,178 @@
+\hypertarget{clock-sync_8c}{}\doxysection{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/clock-\/sync.c File Reference}
+\label{clock-sync_8c}\index{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/clock-\/sync.c@{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/clock-\/sync.c}}
+{\ttfamily \#include \char`\"{}clock-\/sync.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rti.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{clock-sync_8c_ae267d03a5f2263604459ca4c1aef2c2c}{reset\+\_\+socket\+\_\+stat}} (struct \mbox{\hyperlink{structsocket__stat__t}{socket\+\_\+stat\+\_\+t}} $\ast$socket\+\_\+stat)
+\item 
+\mbox{\hyperlink{reactor_8h_a3fa7784c89589b49764048e9909d0e07}{ushort}} \mbox{\hyperlink{clock-sync_8c_aefb38f85188382621177f531f5134a89}{setup\+\_\+clock\+\_\+synchronization\+\_\+with\+\_\+rti}} ()
+\item 
+void \mbox{\hyperlink{clock-sync_8c_a8a95b04db741b4fd04fb2ee4941fc8c6}{synchronize\+\_\+initial\+\_\+physical\+\_\+clock\+\_\+with\+\_\+rti}} (int rti\+\_\+socket\+\_\+\+T\+CP)
+\item 
+int \mbox{\hyperlink{clock-sync_8c_ace14df89540b56b069c6c619e8f37493}{handle\+\_\+\+T1\+\_\+clock\+\_\+sync\+\_\+message}} (unsigned char $\ast$buffer, int socket, \mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} t2)
+\item 
+void \mbox{\hyperlink{clock-sync_8c_a1b35d21eda090ea4bf8a79f401dbdad0}{handle\+\_\+\+T4\+\_\+clock\+\_\+sync\+\_\+message}} (unsigned char $\ast$buffer, int socket, \mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} r4)
+\item 
+void $\ast$ \mbox{\hyperlink{clock-sync_8c_ae471d3256d0e072e5ee6bb83b0d0e99b}{listen\+\_\+to\+\_\+rti\+\_\+\+U\+D\+P\+\_\+thread}} (void $\ast$args)
+\item 
+int \mbox{\hyperlink{clock-sync_8c_ac094b53ced87d3cbd617a66591f4282a}{create\+\_\+clock\+\_\+sync\+\_\+thread}} (lf\+\_\+thread\+\_\+t $\ast$thread\+\_\+id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsocket__stat__t}{socket\+\_\+stat\+\_\+t}} \mbox{\hyperlink{clock-sync_8c_aca692f1141783acf8a992f9d4713ebf0}{\+\_\+lf\+\_\+rti\+\_\+socket\+\_\+stat}}
+\item 
+\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} \mbox{\hyperlink{clock-sync_8c_aa7b61bf176d2a9ed52aa9c4f14d61577}{\+\_\+lf\+\_\+last\+\_\+clock\+\_\+sync\+\_\+instant}} = 0\+LL
+\item 
+int \mbox{\hyperlink{clock-sync_8c_aae34b5d2d5b70ef1783aef6292810208}{\+\_\+lf\+\_\+rti\+\_\+socket\+\_\+\+U\+DP}} = -\/1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Edward A. Lee (\href{mailto:eal@berkeley.edu}{\texttt{ eal@berkeley.\+edu}}) 
+
+Soroush Bateni (\href{mailto:soroush@utdallas.edu}{\texttt{ soroush@utdallas.\+edu}})
+\end{DoxyAuthor}
+\hypertarget{util_8h_LICENSE}{}\doxysubsection{L\+I\+C\+E\+N\+SE}\label{util_8h_LICENSE}
+Copyright (c) 2020-\/21, The University of California at Berkeley.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.\hypertarget{util_8h_DESCRIPTION}{}\doxysubsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}\label{util_8h_DESCRIPTION}
+Utility functions for clock synchronization. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{clock-sync_8c_ac094b53ced87d3cbd617a66591f4282a}\label{clock-sync_8c_ac094b53ced87d3cbd617a66591f4282a}} 
+\index{clock-\/sync.c@{clock-\/sync.c}!create\_clock\_sync\_thread@{create\_clock\_sync\_thread}}
+\index{create\_clock\_sync\_thread@{create\_clock\_sync\_thread}!clock-\/sync.c@{clock-\/sync.c}}
+\doxysubsubsection{\texorpdfstring{create\_clock\_sync\_thread()}{create\_clock\_sync\_thread()}}
+{\footnotesize\ttfamily int create\+\_\+clock\+\_\+sync\+\_\+thread (\begin{DoxyParamCaption}\item[{lf\+\_\+thread\+\_\+t $\ast$}]{thread\+\_\+id }\end{DoxyParamCaption})}
+
+Create the thread responsible for handling clock synchronization with the R\+TI if (runtime) clock synchronization is on. Otherwise, do nothing an return 0.
+
+\begin{DoxyReturn}{Returns}
+On success, returns 0; On error, it returns an error number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{clock-sync_8c_ace14df89540b56b069c6c619e8f37493}\label{clock-sync_8c_ace14df89540b56b069c6c619e8f37493}} 
+\index{clock-\/sync.c@{clock-\/sync.c}!handle\_T1\_clock\_sync\_message@{handle\_T1\_clock\_sync\_message}}
+\index{handle\_T1\_clock\_sync\_message@{handle\_T1\_clock\_sync\_message}!clock-\/sync.c@{clock-\/sync.c}}
+\doxysubsubsection{\texorpdfstring{handle\_T1\_clock\_sync\_message()}{handle\_T1\_clock\_sync\_message()}}
+{\footnotesize\ttfamily int handle\+\_\+\+T1\+\_\+clock\+\_\+sync\+\_\+message (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{socket,  }\item[{\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}}}]{t2 }\end{DoxyParamCaption})}
+
+Handle a clock synchroninzation message T1 coming from the R\+TI. T1 is the first message in a P\+TP exchange. This replies to the R\+TI with a T3 message. It also measures the time it takes between when the method is called and the reply has been sent. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer containing the message, including the message type. \\
+\hline
+{\em socket} & The socket (either \+\_\+lf\+\_\+rti\+\_\+socket\+\_\+\+T\+CP or \+\_\+lf\+\_\+rti\+\_\+socket\+\_\+\+U\+DP). \\
+\hline
+{\em t2} & The physical time at which the T1 message was received. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if T3 reply is successfully sent, -\/1 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{clock-sync_8c_a1b35d21eda090ea4bf8a79f401dbdad0}\label{clock-sync_8c_a1b35d21eda090ea4bf8a79f401dbdad0}} 
+\index{clock-\/sync.c@{clock-\/sync.c}!handle\_T4\_clock\_sync\_message@{handle\_T4\_clock\_sync\_message}}
+\index{handle\_T4\_clock\_sync\_message@{handle\_T4\_clock\_sync\_message}!clock-\/sync.c@{clock-\/sync.c}}
+\doxysubsubsection{\texorpdfstring{handle\_T4\_clock\_sync\_message()}{handle\_T4\_clock\_sync\_message()}}
+{\footnotesize\ttfamily void handle\+\_\+\+T4\+\_\+clock\+\_\+sync\+\_\+message (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{socket,  }\item[{\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}}}]{r4 }\end{DoxyParamCaption})}
+
+Handle a clock synchronization message T4 coming from the R\+TI. If the socket is \+\_\+lf\+\_\+rti\+\_\+socket\+\_\+\+T\+CP, then assume we are in the initial clock synchronization phase and set the clock offset based on the estimated clock synchronization error. Otherwise, if the socket is \+\_\+lf\+\_\+rti\+\_\+socket\+\_\+\+U\+DP, then this looks also for a subsequent \char`\"{}coded probe\char`\"{} message on the socket. If the delay between the T4 and the coded probe message is not as expected, then reject this clock synchronization round. If it is not rejected, then make an adjustment to the clock offset based on the estimated error. This function does not acquire the socket\+\_\+mutex lock. The caller should acquire it unless it is sure there is only one thread running. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer containing the message, including the message type. \\
+\hline
+{\em socket} & The socket (either \+\_\+lf\+\_\+rti\+\_\+socket\+\_\+\+T\+CP or \+\_\+lf\+\_\+rti\+\_\+socket\+\_\+\+U\+DP). \\
+\hline
+{\em r4} & The physical time at which this T4 message was received. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{clock-sync_8c_ae471d3256d0e072e5ee6bb83b0d0e99b}\label{clock-sync_8c_ae471d3256d0e072e5ee6bb83b0d0e99b}} 
+\index{clock-\/sync.c@{clock-\/sync.c}!listen\_to\_rti\_UDP\_thread@{listen\_to\_rti\_UDP\_thread}}
+\index{listen\_to\_rti\_UDP\_thread@{listen\_to\_rti\_UDP\_thread}!clock-\/sync.c@{clock-\/sync.c}}
+\doxysubsubsection{\texorpdfstring{listen\_to\_rti\_UDP\_thread()}{listen\_to\_rti\_UDP\_thread()}}
+{\footnotesize\ttfamily void$\ast$ listen\+\_\+to\+\_\+rti\+\_\+\+U\+D\+P\+\_\+thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{args }\end{DoxyParamCaption})}
+
+Thread that listens for U\+DP inputs from the R\+TI. \mbox{\Hypertarget{clock-sync_8c_ae267d03a5f2263604459ca4c1aef2c2c}\label{clock-sync_8c_ae267d03a5f2263604459ca4c1aef2c2c}} 
+\index{clock-\/sync.c@{clock-\/sync.c}!reset\_socket\_stat@{reset\_socket\_stat}}
+\index{reset\_socket\_stat@{reset\_socket\_stat}!clock-\/sync.c@{clock-\/sync.c}}
+\doxysubsubsection{\texorpdfstring{reset\_socket\_stat()}{reset\_socket\_stat()}}
+{\footnotesize\ttfamily void reset\+\_\+socket\+\_\+stat (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsocket__stat__t}{socket\+\_\+stat\+\_\+t}} $\ast$}]{socket\+\_\+stat }\end{DoxyParamCaption})}
+
+Reset statistics on the socket.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket\+\_\+stat} & The \mbox{\hyperlink{structsocket__stat__t}{socket\+\_\+stat\+\_\+t}} struct that keeps track of stats for a given connection \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{clock-sync_8c_aefb38f85188382621177f531f5134a89}\label{clock-sync_8c_aefb38f85188382621177f531f5134a89}} 
+\index{clock-\/sync.c@{clock-\/sync.c}!setup\_clock\_synchronization\_with\_rti@{setup\_clock\_synchronization\_with\_rti}}
+\index{setup\_clock\_synchronization\_with\_rti@{setup\_clock\_synchronization\_with\_rti}!clock-\/sync.c@{clock-\/sync.c}}
+\doxysubsubsection{\texorpdfstring{setup\_clock\_synchronization\_with\_rti()}{setup\_clock\_synchronization\_with\_rti()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reactor_8h_a3fa7784c89589b49764048e9909d0e07}{ushort}} setup\+\_\+clock\+\_\+synchronization\+\_\+with\+\_\+rti (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Setup necessary functionalities to synchronize clock with the R\+TI.
+
+\begin{DoxyReturn}{Returns}
+port number to be sent to the R\+TI If clock synchronization is off compeltely, U\+S\+H\+R\+T\+\_\+\+M\+AX is returned. If clock synchronization is set to initial, 0 is sent. If clock synchronization is set to on, a reserved U\+DP port number will be sent. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{clock-sync_8c_a8a95b04db741b4fd04fb2ee4941fc8c6}\label{clock-sync_8c_a8a95b04db741b4fd04fb2ee4941fc8c6}} 
+\index{clock-\/sync.c@{clock-\/sync.c}!synchronize\_initial\_physical\_clock\_with\_rti@{synchronize\_initial\_physical\_clock\_with\_rti}}
+\index{synchronize\_initial\_physical\_clock\_with\_rti@{synchronize\_initial\_physical\_clock\_with\_rti}!clock-\/sync.c@{clock-\/sync.c}}
+\doxysubsubsection{\texorpdfstring{synchronize\_initial\_physical\_clock\_with\_rti()}{synchronize\_initial\_physical\_clock\_with\_rti()}}
+{\footnotesize\ttfamily void synchronize\+\_\+initial\+\_\+physical\+\_\+clock\+\_\+with\+\_\+rti (\begin{DoxyParamCaption}\item[{int}]{rti\+\_\+socket\+\_\+\+T\+CP }\end{DoxyParamCaption})}
+
+Synchronize the initial physical clock with the R\+TI. A call to this function is inserted into the startup sequence by the code generator if initial clock synchronization is required.
+
+This is a blocking function that expects to read a P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T1 from the R\+TI T\+CP socket. It will then follow the P\+TP protocol to synchronize the local physical clock with the R\+TI. Failing to complete this protocol is treated as a catastrophic error that causes the federate to exit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rti\+\_\+socket\+\_\+\+T\+CP} & The rti\textquotesingle{}s socket \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{clock-sync_8c_aa7b61bf176d2a9ed52aa9c4f14d61577}\label{clock-sync_8c_aa7b61bf176d2a9ed52aa9c4f14d61577}} 
+\index{clock-\/sync.c@{clock-\/sync.c}!\_lf\_last\_clock\_sync\_instant@{\_lf\_last\_clock\_sync\_instant}}
+\index{\_lf\_last\_clock\_sync\_instant@{\_lf\_last\_clock\_sync\_instant}!clock-\/sync.c@{clock-\/sync.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_last\_clock\_sync\_instant}{\_lf\_last\_clock\_sync\_instant}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} \+\_\+lf\+\_\+last\+\_\+clock\+\_\+sync\+\_\+instant = 0\+LL}
+
+Records the physical time at which the clock of this federate was synchronized with the R\+TI. Used to calculate the drift. \mbox{\Hypertarget{clock-sync_8c_aca692f1141783acf8a992f9d4713ebf0}\label{clock-sync_8c_aca692f1141783acf8a992f9d4713ebf0}} 
+\index{clock-\/sync.c@{clock-\/sync.c}!\_lf\_rti\_socket\_stat@{\_lf\_rti\_socket\_stat}}
+\index{\_lf\_rti\_socket\_stat@{\_lf\_rti\_socket\_stat}!clock-\/sync.c@{clock-\/sync.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_rti\_socket\_stat}{\_lf\_rti\_socket\_stat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsocket__stat__t}{socket\+\_\+stat\+\_\+t}} \+\_\+lf\+\_\+rti\+\_\+socket\+\_\+stat}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    .remote\_physical\_clock\_snapshot\_T1 = NEVER,}
+\DoxyCodeLine{    .local\_physical\_clock\_snapshot\_T2 = NEVER,}
+\DoxyCodeLine{    .local\_delay = 0LL,}
+\DoxyCodeLine{    .received\_T4\_messages\_in\_current\_sync\_window = 0,}
+\DoxyCodeLine{    .history = 0LL,}
+\DoxyCodeLine{    .network\_stat\_round\_trip\_delay\_max = 0LL,}
+\DoxyCodeLine{    .network\_stat\_sample\_index = 0,}
+\DoxyCodeLine{    .clock\_synchronization\_error\_bound = 0LL}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Keep a record of connection statistics and the remote physical clock of the R\+TI. \mbox{\Hypertarget{clock-sync_8c_aae34b5d2d5b70ef1783aef6292810208}\label{clock-sync_8c_aae34b5d2d5b70ef1783aef6292810208}} 
+\index{clock-\/sync.c@{clock-\/sync.c}!\_lf\_rti\_socket\_UDP@{\_lf\_rti\_socket\_UDP}}
+\index{\_lf\_rti\_socket\_UDP@{\_lf\_rti\_socket\_UDP}!clock-\/sync.c@{clock-\/sync.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_rti\_socket\_UDP}{\_lf\_rti\_socket\_UDP}}
+{\footnotesize\ttfamily int \+\_\+lf\+\_\+rti\+\_\+socket\+\_\+\+U\+DP = -\/1}
+
+The U\+DP socket descriptor for this federate to communicate with the R\+TI. This is set by \mbox{\hyperlink{clock-sync_8c_aefb38f85188382621177f531f5134a89}{setup\+\_\+clock\+\_\+synchronization\+\_\+with\+\_\+rti()}} in \mbox{\hyperlink{federate_8c_ac4fb5cd6e02f70979dd3e30310d4b2bb}{connect\+\_\+to\+\_\+rti()}} in \mbox{\hyperlink{federate_8c}{federate.\+c}}, which must be called before other functions that communicate with the rti are called. 

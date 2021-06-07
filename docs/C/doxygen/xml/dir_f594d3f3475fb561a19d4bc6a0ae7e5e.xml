@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_f594d3f3475fb561a19d4bc6a0ae7e5e" kind="dir">
+    <compoundname>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core</compoundname>
+    <innerdir refid="dir_2b11225271d0af639f26eae1524b0006">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform</innerdir>
+    <innerfile refid="clock-sync_8c">clock-sync.c</innerfile>
+    <innerfile refid="clock-sync_8h">clock-sync.h</innerfile>
+    <innerfile refid="federate_8c">federate.c</innerfile>
+    <innerfile refid="federate_8h">federate.h</innerfile>
+    <innerfile refid="net__util_8c">net_util.c</innerfile>
+    <innerfile refid="net__util_8h">net_util.h</innerfile>
+    <innerfile refid="platform_8h">platform.h</innerfile>
+    <innerfile refid="pqueue_8c">pqueue.c</innerfile>
+    <innerfile refid="pqueue_8h">pqueue.h</innerfile>
+    <innerfile refid="reactor_8c">reactor.c</innerfile>
+    <innerfile refid="reactor_8h">reactor.h</innerfile>
+    <innerfile refid="reactor__common_8c">reactor_common.c</innerfile>
+    <innerfile refid="reactor__threaded_8c">reactor_threaded.c</innerfile>
+    <innerfile refid="rti_8c">rti.c</innerfile>
+    <innerfile refid="rti_8h">rti.h</innerfile>
+    <innerfile refid="tag_8c">tag.c</innerfile>
+    <innerfile refid="tag_8h">tag.h</innerfile>
+    <innerfile refid="trace_8c">trace.c</innerfile>
+    <innerfile refid="trace_8h">trace.h</innerfile>
+    <innerfile refid="util_8c">util.c</innerfile>
+    <innerfile refid="util_8h">util.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/"/>
+  </compounddef>
+</doxygen>

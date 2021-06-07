@@ -1,0 +1,1275 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="trace_8c" kind="file" language="C++">
+    <compoundname>trace.c</compoundname>
+    <includes refid="util_8h" local="yes">util.h</includes>
+    <includes refid="platform_8h" local="yes">platform.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>util.h</label>
+        <link refid="util_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdarg.h</label>
+      </node>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c</label>
+        <link refid="trace_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>platform.h</label>
+        <link refid="platform_8h_source"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="trace_8c_1a7e540fdcdbf452d4198f88859699ce18" prot="public" static="no">
+        <name>_LF_TRACE_FAILURE</name>
+        <param><defname>trace_file</defname></param>
+        <initializer>    do { \
+        fprintf(stderr, &quot;WARNING: Access to trace file failed.\n&quot;); \
+        fclose(trace_file); \
+        trace_file = NULL; \
+        lf_mutex_unlock(&amp;_lf_trace_mutex); \
+        return -1; \
+    } while(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to use when access to trace file fails. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="37" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="trace_8c_1a60cdf206e0f44081034f532b41f568ef" prot="public" static="no" mutable="no">
+        <type>lf_mutex_t</type>
+        <definition>lf_mutex_t _lf_trace_mutex</definition>
+        <argsstring></argsstring>
+        <name>_lf_trace_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="47" column="12" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="trace_8c_1a27420e40a24ad2b61b84d7e30f4bf2b7" prot="public" static="no" mutable="no">
+        <type>lf_cond_t</type>
+        <definition>lf_cond_t _lf_flush_finished</definition>
+        <argsstring></argsstring>
+        <name>_lf_flush_finished</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="49" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="trace_8c_1acaf876be8e2e7c8cb57236eeaaa666b5" prot="public" static="no" mutable="no">
+        <type>lf_cond_t</type>
+        <definition>lf_cond_t _lf_flush_needed</definition>
+        <argsstring></argsstring>
+        <name>_lf_flush_needed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="51" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="trace_8c_1aad0cffd2c8d44038c96c9436d9a3d9ac" prot="public" static="no" mutable="no">
+        <type>lf_thread_t</type>
+        <definition>lf_thread_t _lf_flush_trace_thread</definition>
+        <argsstring></argsstring>
+        <name>_lf_flush_trace_thread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="53" column="13" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="trace_8c_1a35622f0680c4d66b6ac2d14ead593cbc" prot="public" static="no" mutable="no">
+        <type>trace_record_t **</type>
+        <definition>trace_record_t** _lf_trace_buffer</definition>
+        <argsstring></argsstring>
+        <name>_lf_trace_buffer</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Array of buffers into which traces are written. When each buffer gets full, the trace is flushed to the trace file. We use a double buffering strategy. When a buffer becomes full, tracing continues in a new buffer while a separate thread writes the old buffer to the file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="62" column="16" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="trace_8c_1a020646a917bd0ef27bafe281fe412e5f" prot="public" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* _lf_trace_buffer_size</definition>
+        <argsstring></argsstring>
+        <name>_lf_trace_buffer_size</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="63" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="trace_8c_1a0b114d024d2d303913ce7c1249b876e0" prot="public" static="no" mutable="no">
+        <type>trace_record_t **</type>
+        <definition>trace_record_t** _lf_trace_buffer_to_flush</definition>
+        <argsstring></argsstring>
+        <name>_lf_trace_buffer_to_flush</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="64" column="16" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="trace_8c_1a40588e022e69b560f3c9a2d9082b07af" prot="public" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* _lf_trace_buffer_size_to_flush</definition>
+        <argsstring></argsstring>
+        <name>_lf_trace_buffer_size_to_flush</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="65" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="trace_8c_1a143958fccee03b6d931bdb53ac00dff1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _lf_number_of_trace_buffers</definition>
+        <argsstring></argsstring>
+        <name>_lf_number_of_trace_buffers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of trace buffers allocated when tracing starts. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="68" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="trace_8c_1a5a3bbaf504f73248cf2dd343c19a64f0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _lf_trace_stop</definition>
+        <argsstring></argsstring>
+        <name>_lf_trace_stop</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Marker that tracing is stopping or has stopped. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="71" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" prot="public" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* _lf_trace_file</definition>
+        <argsstring></argsstring>
+        <name>_lf_trace_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The file into which traces are written. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="74" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="trace_8c_1a8fdb97e55822d6ae545d5248d5a3df89" prot="public" static="no" mutable="no">
+        <type>object_description_t</type>
+        <definition>object_description_t _lf_trace_object_descriptions[TRACE_OBJECT_TABLE_SIZE]</definition>
+        <argsstring>[TRACE_OBJECT_TABLE_SIZE]</argsstring>
+        <name>_lf_trace_object_descriptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Table of pointers to a description of the object. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="79" column="22" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="trace_8c_1a4f857eb84a862d13b0a568bd2aa407a1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _lf_trace_object_descriptions_size</definition>
+        <argsstring></argsstring>
+        <name>_lf_trace_object_descriptions_size</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="80" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="trace_8c_1acb7c96e202d992a664c7a7e8d4713a79" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool _lf_trace_header_written</definition>
+        <argsstring></argsstring>
+        <name>_lf_trace_header_written</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicator that the trace header information has been written to the file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="116" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="trace_8c_1a292c73e4f09daa50330b53079df620a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _lf_register_trace_event</definition>
+        <argsstring>(void *pointer1, void *pointer2, _lf_trace_object_t type, char *description)</argsstring>
+        <name>_lf_register_trace_event</name>
+        <param>
+          <type>void *</type>
+          <declname>pointer1</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pointer2</declname>
+        </param>
+        <param>
+          <type>_lf_trace_object_t</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Register a trace event. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pointer1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer that identifies the object, typically to a reactor self struct. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pointer2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Further identifying pointer, typically to a trigger (action or timer) or NULL if irrelevant. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of trace object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The human-readable description of the object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if successful, 0 if the trace object table is full. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="90" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="90" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="trace_8c_1a9f1d309784e7483c7e3570349d8ca2c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int register_user_trace_event</definition>
+        <argsstring>(char *description)</argsstring>
+        <name>register_user_trace_event</name>
+        <param>
+          <type>char *</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Register a user trace event. This should be called once, providing a pointer to a string that describes a phenomenon being traced. Use the same pointer as the first argument to <ref refid="trace_8c_1a68f463b93ec266e65bf6b72ee32a540a" kindref="member">tracepoint_user_event()</ref> and <ref refid="trace_8c_1a964a1b9e5b2e7941d4c37609aecc7b1b" kindref="member">tracepoint_user_value()</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a human-readable description of the event. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if successful, 0 if the trace object table is full. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="111" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="111" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="trace_8c_1ae4b7f1b628d3202a369e4bab1220abcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int write_trace_header</definition>
+        <argsstring>()</argsstring>
+        <name>write_trace_header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the trace header information. See <ref refid="trace_8h" kindref="compound">trace.h</ref>. <simplesect kind="return"><para>The number of items written to the object table or -1 for failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="123" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="123" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="trace_8c_1a59ccb06dfedbfda7abb65737018b80e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* flush_trace</definition>
+        <argsstring>(void *args)</argsstring>
+        <name>flush_trace</name>
+        <param>
+          <type>void *</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Thread that actually flushes the buffers to a file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="198" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="198" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="trace_8c_1a86c0cbfa4153faa765c9f3d7f3e15ce8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void flush_trace_to_file_locked</definition>
+        <argsstring>(int worker)</argsstring>
+        <name>flush_trace_to_file_locked</name>
+        <param>
+          <type>int</type>
+          <declname>worker</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flush trace so far to the trace file. This version assumes the mutex is already held. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>worker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The worker thread or 0 for the main (or only) thread. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="273" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="273" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="trace_8c_1abedd63424159bb6a418b8c989ce9d520" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void flush_trace_to_file</definition>
+        <argsstring>(int worker)</argsstring>
+        <name>flush_trace_to_file</name>
+        <param>
+          <type>int</type>
+          <declname>worker</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flush trace so far to the trace file. We use double buffering, so unless the flush thread is busy flushing the previous buffer for this worker, this returns immediately. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>worker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The worker thread or 0 for the main (or only) thread. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="299" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="299" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="trace_8c_1a7db60d81b5b339239544a09f07c2d4b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void start_trace</definition>
+        <argsstring>(char *filename)</argsstring>
+        <name>start_trace</name>
+        <param>
+          <type>char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Open a trace file and start tracing. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename for the trace file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="312" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="312" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="trace_8c_1aff3f7c314f0f0849b57f51477201763d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tracepoint</definition>
+        <argsstring>(trace_event_t event_type, void *pointer, int reaction_number, int worker, instant_t *physical_time, trigger_t *trigger, interval_t extra_delay)</argsstring>
+        <name>tracepoint</name>
+        <param>
+          <type><ref refid="trace_8h_1ab02e9e69539d60297cedb38c2193a453" kindref="member">trace_event_t</ref></type>
+          <declname>event_type</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pointer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>reaction_number</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>worker</declname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref> *</type>
+          <declname>physical_time</declname>
+        </param>
+        <param>
+          <type><ref refid="structtrigger__t" kindref="compound">trigger_t</ref> *</type>
+          <declname>trigger</declname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+          <declname>extra_delay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Trace an event identified by a type and an identifying pointer. The pointer can be, for example, to the self struct of the reactor instance. This is a generic tracepoint function. It is better to use one of the specific functions. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of event (see trace_event_t in <ref refid="trace_8h" kindref="compound">trace.h</ref>) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pointer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifying pointer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reaction_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of the reaction or -1 if the trace is not of a reaction or the reaction number if not known. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>worker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The thread number of the worker thread or 0 for unthreaded execution or -1 for an unknown thread. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>physical_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the caller has already accessed physical time, provide it here. Otherwise, provide NULL. This argument avoids a second call to get_physical_time and ensures that the physical time in the trace is the same as that used by the caller. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trigger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="structtrigger__t" kindref="compound">trigger_t</ref> struct for calls to schedule or NULL otherwise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>extra_delay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The extra delay passed to <ref refid="ctarget_8h_1a961a0ed618d8dbb43f9f3b2bf3541af4" kindref="member">schedule()</ref>. If not relevant for this event type, pass 0. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="374" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="374" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="function" id="trace_8c_1ade61b59eed2f970f376f319ffaf2541d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tracepoint_reaction_starts</definition>
+        <argsstring>(reaction_t *reaction, int worker)</argsstring>
+        <name>tracepoint_reaction_starts</name>
+        <param>
+          <type><ref refid="structreaction__t" kindref="compound">reaction_t</ref> *</type>
+          <declname>reaction</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>worker</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Trace the start of a reaction execution. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reaction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="structreaction__t" kindref="compound">reaction_t</ref> struct for the reaction. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>worker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The thread number of the worker thread or 0 for unthreaded execution. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="414" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="414" bodyend="416"/>
+      </memberdef>
+      <memberdef kind="function" id="trace_8c_1ad9628a6d76f5bad7a0c093f00731364b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tracepoint_reaction_ends</definition>
+        <argsstring>(reaction_t *reaction, int worker)</argsstring>
+        <name>tracepoint_reaction_ends</name>
+        <param>
+          <type><ref refid="structreaction__t" kindref="compound">reaction_t</ref> *</type>
+          <declname>reaction</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>worker</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Trace the end of a reaction execution. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reaction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="structreaction__t" kindref="compound">reaction_t</ref> struct for the reaction. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>worker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The thread number of the worker thread or 0 for unthreaded execution. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="423" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="423" bodyend="425"/>
+      </memberdef>
+      <memberdef kind="function" id="trace_8c_1a896a14a2ac7b800e93d4d2210321448e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tracepoint_schedule</definition>
+        <argsstring>(trigger_t *trigger, interval_t extra_delay)</argsstring>
+        <name>tracepoint_schedule</name>
+        <param>
+          <type><ref refid="structtrigger__t" kindref="compound">trigger_t</ref> *</type>
+          <declname>trigger</declname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+          <declname>extra_delay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Trace a call to schedule. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trigger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="structtrigger__t" kindref="compound">trigger_t</ref> struct for the trigger. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>extra_delay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The extra delay passed to <ref refid="ctarget_8h_1a961a0ed618d8dbb43f9f3b2bf3541af4" kindref="member">schedule()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="432" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="432" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="trace_8c_1a68f463b93ec266e65bf6b72ee32a540a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tracepoint_user_event</definition>
+        <argsstring>(char *description)</argsstring>
+        <name>tracepoint_user_event</name>
+        <param>
+          <type>char *</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Trace a user-defined event. Before calling this, you must call <ref refid="trace_8c_1a9f1d309784e7483c7e3570349d8ca2c6" kindref="member">register_user_trace_event()</ref> with a pointer to the same string or else the event will not be recognized. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the description string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="451" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="451" bodyend="454"/>
+      </memberdef>
+      <memberdef kind="function" id="trace_8c_1a964a1b9e5b2e7941d4c37609aecc7b1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tracepoint_user_value</definition>
+        <argsstring>(char *description, long long value)</argsstring>
+        <name>tracepoint_user_value</name>
+        <param>
+          <type>char *</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type>long long</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Trace a user-defined event with a value. Before calling this, you must call <ref refid="trace_8c_1a9f1d309784e7483c7e3570349d8ca2c6" kindref="member">register_user_trace_event()</ref> with a pointer to the same string or else the event will not be recognized. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the description string. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the event. This is a long long for convenience so that time values can be passed unchanged. But int values work as well. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="466" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="466" bodyend="469"/>
+      </memberdef>
+      <memberdef kind="function" id="trace_8c_1aa6b088266f62c6f156ae241d52cdf415" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tracepoint_worker_wait_starts</definition>
+        <argsstring>(int worker)</argsstring>
+        <name>tracepoint_worker_wait_starts</name>
+        <param>
+          <type>int</type>
+          <declname>worker</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Trace the start of a worker waiting for something to change on the event or reaction queue. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>worker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The thread number of the worker thread or 0 for unthreaded execution. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="475" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="475" bodyend="477"/>
+      </memberdef>
+      <memberdef kind="function" id="trace_8c_1a04892321c2313cbd11dd85bee1a9d251" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tracepoint_worker_wait_ends</definition>
+        <argsstring>(int worker)</argsstring>
+        <name>tracepoint_worker_wait_ends</name>
+        <param>
+          <type>int</type>
+          <declname>worker</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Trace the end of a worker waiting for something to change on the event or reaction queue. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>worker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The thread number of the worker thread or 0 for unthreaded execution. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="483" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="483" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="function" id="trace_8c_1acaec136e0b3327ef233f13e89666b87c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tracepoint_worker_advancing_time_starts</definition>
+        <argsstring>(int worker)</argsstring>
+        <name>tracepoint_worker_advancing_time_starts</name>
+        <param>
+          <type>int</type>
+          <declname>worker</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Trace the start of a worker waiting for logical time to advance or an event to appear on the event queue. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>worker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The thread number of the worker thread or 0 for unthreaded execution. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="492" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="492" bodyend="494"/>
+      </memberdef>
+      <memberdef kind="function" id="trace_8c_1aad8dcf334448b94525bb7fa4d57c64a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tracepoint_worker_advancing_time_ends</definition>
+        <argsstring>(int worker)</argsstring>
+        <name>tracepoint_worker_advancing_time_ends</name>
+        <param>
+          <type>int</type>
+          <declname>worker</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Trace the end of a worker waiting for logical time to advance or an event to appear on the event queue. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>worker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The thread number of the worker thread or 0 for unthreaded execution. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="501" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="501" bodyend="503"/>
+      </memberdef>
+      <memberdef kind="function" id="trace_8c_1a6dabaa8855fdeb4b896d459fa3196256" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stop_trace</definition>
+        <argsstring>()</argsstring>
+        <name>stop_trace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flush any buffered trace records to the trace file and close the file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" line="509" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c" bodystart="509" bodyend="540"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Edward A. Lee</para>
+</simplesect>
+</para>
+<sect1 id="util_8h_1LICENSE">
+<title>LICENSE</title>
+<para>Copyright (c) 2020, The University of California at Berkeley and TU Dresden</para>
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</para>
+<para><orderedlist>
+<listitem><para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem><para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem></orderedlist>
+</para>
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+</sect1>
+<sect1 id="util_8h_1DESCRIPTION">
+<title>DESCRIPTION</title>
+<para>Include this file instead of <ref refid="trace_8h" kindref="compound">trace.h</ref> to get tracing. See <ref refid="trace_8h" kindref="compound">trace.h</ref> file for instructions. </para>
+</sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="33"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="util_8h" kindref="compound">util.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;platform.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor">#define<sp/>_LF_TRACE_FAILURE(trace_file)<sp/>\</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/>&quot;WARNING:<sp/>Access<sp/>to<sp/>trace<sp/>file<sp/>failed.\n&quot;);<sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fclose(trace_file);<sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trace_file<sp/>=<sp/>NULL;<sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lf_mutex_unlock(&amp;_lf_trace_mutex);<sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>-1;<sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Mutex<sp/>used<sp/>to<sp/>provent<sp/>collisions<sp/>between<sp/>threads<sp/>writing<sp/>to<sp/>the<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">lf_mutex_t<sp/>_lf_trace_mutex;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Condition<sp/>variable<sp/>used<sp/>to<sp/>indicate<sp/>when<sp/>flushing<sp/>a<sp/>buffer<sp/>is<sp/>finished.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">lf_cond_t<sp/>_lf_flush_finished;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Condition<sp/>variable<sp/>used<sp/>to<sp/>indicate<sp/>when<sp/>a<sp/>new<sp/>trace<sp/>needs<sp/>to<sp/>be<sp/>flushed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">lf_cond_t<sp/>_lf_flush_needed;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>thread<sp/>that<sp/>flushes<sp/>to<sp/>a<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">lf_thread_t<sp/>_lf_flush_trace_thread;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">trace_record_t**<sp/><ref refid="trace_8c_1a35622f0680c4d66b6ac2d14ead593cbc" kindref="member">_lf_trace_buffer</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>_lf_trace_buffer_size<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">trace_record_t**<sp/>_lf_trace_buffer_to_flush<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>_lf_trace_buffer_size_to_flush<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a143958fccee03b6d931bdb53ac00dff1" kindref="member">_lf_number_of_trace_buffers</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a5a3bbaf504f73248cf2dd343c19a64f0" kindref="member">_lf_trace_stop</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">FILE*<sp/><ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">object_description_t<sp/><ref refid="trace_8c_1a8fdb97e55822d6ae545d5248d5a3df89" kindref="member">_lf_trace_object_descriptions</ref>[TRACE_OBJECT_TABLE_SIZE];</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_lf_trace_object_descriptions_size<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a292c73e4f09daa50330b53079df620a9" kindref="member">_lf_register_trace_event</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pointer1,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pointer2,<sp/>_lf_trace_object_t<sp/>type,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>description)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>lf_mutex_lock(&amp;_lf_trace_mutex);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_lf_trace_object_descriptions_size<sp/>&gt;=<sp/>TRACE_OBJECT_TABLE_SIZE)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a8fdb97e55822d6ae545d5248d5a3df89" kindref="member">_lf_trace_object_descriptions</ref>[_lf_trace_object_descriptions_size].pointer<sp/>=<sp/>pointer1;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a8fdb97e55822d6ae545d5248d5a3df89" kindref="member">_lf_trace_object_descriptions</ref>[_lf_trace_object_descriptions_size].trigger<sp/>=<sp/>pointer2;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a8fdb97e55822d6ae545d5248d5a3df89" kindref="member">_lf_trace_object_descriptions</ref>[_lf_trace_object_descriptions_size].type<sp/>=<sp/>type;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a8fdb97e55822d6ae545d5248d5a3df89" kindref="member">_lf_trace_object_descriptions</ref>[_lf_trace_object_descriptions_size].description<sp/>=<sp/>description;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>_lf_trace_object_descriptions_size++;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>lf_mutex_unlock(&amp;_lf_trace_mutex);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a9f1d309784e7483c7e3570349d8ca2c6" kindref="member">register_user_trace_event</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>description)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a292c73e4f09daa50330b53079df620a9" kindref="member">_lf_register_trace_event</ref>(description,<sp/>NULL,<sp/>trace_user,<sp/>description);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1acb7c96e202d992a664c7a7e8d4713a79" kindref="member">_lf_trace_header_written</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1ae4b7f1b628d3202a369e4bab1220abcc" kindref="member">write_trace_header</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref><sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lf_mutex_lock(&amp;_lf_trace_mutex);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>first<sp/>item<sp/>in<sp/>the<sp/>header<sp/>is<sp/>the<sp/>start<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>both<sp/>the<sp/>starting<sp/>physical<sp/>time<sp/>and<sp/>the<sp/>starting<sp/>logical<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/><ref refid="tag_8c_1a20b56e8fb05c017508f1c4fa2e311a87" kindref="member">start_time</ref><sp/>=<sp/><ref refid="reactor_8h_1a8b4f2e4e87e43670217c0c53099ae2f5" kindref="member">get_start_time</ref>();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(&quot;DEBUG:<sp/>Start<sp/>time<sp/>written<sp/>to<sp/>trace<sp/>file<sp/>is<sp/>%lld.\n&quot;,<sp/>start_time);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>items_written<sp/>=<sp/>fwrite(</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="tag_8c_1a20b56e8fb05c017508f1c4fa2e311a87" kindref="member">start_time</ref>,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref>),</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(items_written<sp/>!=<sp/>1)<sp/><ref refid="trace_8c_1a7e540fdcdbf452d4198f88859699ce18" kindref="member">_LF_TRACE_FAILURE</ref>(<ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref>);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>next<sp/>item<sp/>in<sp/>the<sp/>header<sp/>is<sp/>the<sp/>size<sp/>of<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>_lf_trace_object_descriptions<sp/>table.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(&quot;DEBUG:<sp/>Table<sp/>size<sp/>written<sp/>to<sp/>trace<sp/>file<sp/>is<sp/>%d.\n&quot;,<sp/>_lf_trace_object_descriptions_size);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>items_written<sp/>=<sp/>fwrite(</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;_lf_trace_object_descriptions_size,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(items_written<sp/>!=<sp/>1)<sp/><ref refid="trace_8c_1a7e540fdcdbf452d4198f88859699ce18" kindref="member">_LF_TRACE_FAILURE</ref>(<ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref>);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Next<sp/>we<sp/>write<sp/>the<sp/>table.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>_lf_trace_object_descriptions_size;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(&quot;DEBUG:<sp/>Object<sp/>pointer:<sp/>%p.\n&quot;,<sp/>_lf_trace_object_descriptions[i].pointer);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>the<sp/>pointer<sp/>to<sp/>the<sp/>self<sp/>struct.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>items_written<sp/>=<sp/>fwrite(</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="trace_8c_1a8fdb97e55822d6ae545d5248d5a3df89" kindref="member">_lf_trace_object_descriptions</ref>[i].pointer,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*),</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(items_written<sp/>!=<sp/>1)<sp/><ref refid="trace_8c_1a7e540fdcdbf452d4198f88859699ce18" kindref="member">_LF_TRACE_FAILURE</ref>(<ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref>);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>the<sp/>pointer<sp/>to<sp/>the<sp/>trigger_t<sp/>struct.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>items_written<sp/>=<sp/>fwrite(</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="trace_8c_1a8fdb97e55822d6ae545d5248d5a3df89" kindref="member">_lf_trace_object_descriptions</ref>[i].trigger,</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structtrigger__t" kindref="compound">trigger_t</ref>*),</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(items_written<sp/>!=<sp/>1)<sp/><ref refid="trace_8c_1a7e540fdcdbf452d4198f88859699ce18" kindref="member">_LF_TRACE_FAILURE</ref>(<ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref>);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>the<sp/>object<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>items_written<sp/>=<sp/>fwrite(</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="trace_8c_1a8fdb97e55822d6ae545d5248d5a3df89" kindref="member">_lf_trace_object_descriptions</ref>[i].type,<sp/></highlight><highlight class="comment">//<sp/>Write<sp/>the<sp/>pointer<sp/>value.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(_lf_trace_object_t),</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(items_written<sp/>!=<sp/>1)<sp/><ref refid="trace_8c_1a7e540fdcdbf452d4198f88859699ce18" kindref="member">_LF_TRACE_FAILURE</ref>(<ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref>);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>the<sp/>description.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>description_size<sp/>=<sp/>strlen(<ref refid="trace_8c_1a8fdb97e55822d6ae545d5248d5a3df89" kindref="member">_lf_trace_object_descriptions</ref>[i].description);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(&quot;DEBUG:<sp/>Object<sp/>description:<sp/>%s.\n&quot;,<sp/>_lf_trace_object_descriptions[i].description);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>items_written<sp/>=<sp/>fwrite(</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a8fdb97e55822d6ae545d5248d5a3df89" kindref="member">_lf_trace_object_descriptions</ref>[i].description,</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>description_size<sp/>+<sp/>1,<sp/></highlight><highlight class="comment">//<sp/>Include<sp/>null<sp/>terminator.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(items_written<sp/>!=<sp/>description_size<sp/>+<sp/>1)<sp/><ref refid="trace_8c_1a7e540fdcdbf452d4198f88859699ce18" kindref="member">_LF_TRACE_FAILURE</ref>(<ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref>);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lf_mutex_unlock(&amp;_lf_trace_mutex);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_lf_trace_object_descriptions_size;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="trace_8c_1a59ccb06dfedbfda7abb65737018b80e3" kindref="member">flush_trace</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>lf_mutex_lock(&amp;_lf_trace_mutex);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref><sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Look<sp/>for<sp/>a<sp/>buffer<sp/>to<sp/>flush.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>worker<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="trace_8c_1a143958fccee03b6d931bdb53ac00dff1" kindref="member">_lf_number_of_trace_buffers</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_lf_trace_buffer_size_to_flush<sp/>&amp;&amp;<sp/>_lf_trace_buffer_size_to_flush[i]<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Found<sp/>one.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>worker<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(worker<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>There<sp/>is<sp/>no<sp/>trace<sp/>ready<sp/>to<sp/>flush.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="trace_8c_1a5a3bbaf504f73248cf2dd343c19a64f0" kindref="member">_lf_trace_stop</ref><sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Tracing<sp/>has<sp/>stopped.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lf_mutex_unlock(&amp;_lf_trace_mutex);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Wait<sp/>for<sp/>notification<sp/>that<sp/>there<sp/>is<sp/>a<sp/>buffer<sp/>ready<sp/>to<sp/>flush</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(or<sp/>that<sp/>tracing<sp/>is<sp/>being<sp/>stopped).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lf_cond_wait(&amp;_lf_flush_needed,<sp/>&amp;_lf_trace_mutex);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Unlock<sp/>the<sp/>mutex<sp/>to<sp/>write<sp/>to<sp/>the<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lf_mutex_unlock(&amp;_lf_trace_mutex);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>trace<sp/>header<sp/>has<sp/>not<sp/>been<sp/>written,<sp/>write<sp/>it<sp/>now.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>deferred<sp/>to<sp/>here<sp/>so<sp/>that<sp/>user<sp/>trace<sp/>objects<sp/>can<sp/>be</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>registered<sp/>in<sp/>startup<sp/>reactions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="trace_8c_1acb7c96e202d992a664c7a7e8d4713a79" kindref="member">_lf_trace_header_written</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1ae4b7f1b628d3202a369e4bab1220abcc" kindref="member">write_trace_header</ref>();</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1acb7c96e202d992a664c7a7e8d4713a79" kindref="member">_lf_trace_header_written</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>first<sp/>the<sp/>length<sp/>of<sp/>the<sp/>array.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>items_written<sp/>=<sp/>fwrite(</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;_lf_trace_buffer_size_to_flush[worker],</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(items_written<sp/>!=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;WARNING:<sp/>Access<sp/>to<sp/>trace<sp/>file<sp/>failed.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fclose(<ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref>);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>the<sp/>contents.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>items_written<sp/>=<sp/>fwrite(</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_lf_trace_buffer_to_flush[worker],</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(trace_record_t),</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_lf_trace_buffer_size_to_flush[worker],</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(items_written<sp/>!=<sp/>_lf_trace_buffer_size_to_flush[worker])<sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;WARNING:<sp/>Access<sp/>to<sp/>trace<sp/>file<sp/>failed.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fclose(<ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref>);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Acquire<sp/>the<sp/>mutex<sp/>to<sp/>update<sp/>the<sp/>size.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lf_mutex_lock(&amp;_lf_trace_mutex);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_lf_trace_buffer_size_to_flush[worker]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>There<sp/>may<sp/>be<sp/>more<sp/>than<sp/>one<sp/>worker<sp/>thread<sp/>blocked<sp/>waiting<sp/>for<sp/>a<sp/>flush,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>so<sp/>broadcast<sp/>rather<sp/>than<sp/>just<sp/>signal.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lf_cond_broadcast(&amp;_lf_flush_finished);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a86c0cbfa4153faa765c9f3d7f3e15ce8" kindref="member">flush_trace_to_file_locked</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>worker)<sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref><sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(&quot;DEBUG:<sp/>Writing<sp/>%d<sp/>trace<sp/>records.\n&quot;,<sp/>_lf_trace_buffer_size[worker]);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>previous<sp/>flush<sp/>for<sp/>this<sp/>worker<sp/>is<sp/>not<sp/>finished,<sp/>wait<sp/>for<sp/>it<sp/>to<sp/>finish.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(_lf_trace_buffer_size_to_flush[worker]<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lf_cond_wait(&amp;_lf_flush_finished,<sp/>&amp;_lf_trace_mutex);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_lf_trace_buffer_size_to_flush[worker]<sp/>=<sp/>_lf_trace_buffer_size[worker];</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Swap<sp/>the<sp/>double<sp/>buffer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trace_record_t*<sp/>tmp<sp/>=<sp/><ref refid="trace_8c_1a35622f0680c4d66b6ac2d14ead593cbc" kindref="member">_lf_trace_buffer</ref>[worker];</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a35622f0680c4d66b6ac2d14ead593cbc" kindref="member">_lf_trace_buffer</ref>[worker]<sp/>=<sp/>_lf_trace_buffer_to_flush[worker];</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_lf_trace_buffer_to_flush[worker]<sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_lf_trace_buffer_size[worker]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lf_cond_signal(&amp;_lf_flush_needed);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1abedd63424159bb6a418b8c989ce9d520" kindref="member">flush_trace_to_file</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>worker)<sp/>{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref><sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(&quot;DEBUG:<sp/>Writing<sp/>%d<sp/>trace<sp/>records.\n&quot;,<sp/>_lf_trace_buffer_size[worker]);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lf_mutex_lock(&amp;_lf_trace_mutex);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a86c0cbfa4153faa765c9f3d7f3e15ce8" kindref="member">flush_trace_to_file_locked</ref>(worker);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lf_mutex_unlock(&amp;_lf_trace_mutex);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a7db60d81b5b339239544a09f07c2d4b5" kindref="member">start_trace</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename)<sp/>{</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>lf_mutex_init(&amp;_lf_trace_mutex);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>lf_cond_init(&amp;_lf_flush_finished);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>lf_cond_init(&amp;_lf_flush_needed);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FIXME:<sp/>location<sp/>of<sp/>trace<sp/>file<sp/>should<sp/>be<sp/>customizable.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref><sp/>=<sp/>fopen(filename,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;WARNING:<sp/>Failed<sp/>to<sp/>open<sp/>log<sp/>file<sp/>with<sp/>error<sp/>code<sp/>%d.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;No<sp/>log<sp/>will<sp/>be<sp/>written.\n&quot;</highlight><highlight class="normal">,<sp/>errno);</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>not<sp/>write<sp/>the<sp/>trace<sp/>header<sp/>information<sp/>to<sp/>the<sp/>file<sp/>yet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>so<sp/>that<sp/>startup<sp/>reactions<sp/>can<sp/>register<sp/>user-defined<sp/>trace<sp/>objects.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>write_trace_header();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1acb7c96e202d992a664c7a7e8d4713a79" kindref="member">_lf_trace_header_written</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Allocate<sp/>an<sp/>array<sp/>of<sp/>arrays<sp/>of<sp/>trace<sp/>records,<sp/>one<sp/>per<sp/>worker<sp/>thread<sp/>plus<sp/>one</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>the<sp/>0<sp/>thread<sp/>(the<sp/>main<sp/>thread,<sp/>or<sp/>in<sp/>an<sp/>unthreaded<sp/>program,<sp/>the<sp/>only<sp/>thread).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a143958fccee03b6d931bdb53ac00dff1" kindref="member">_lf_number_of_trace_buffers</ref><sp/>=<sp/><ref refid="reactor_8h_1af74a2782bda0d66298d22d637ad964b5" kindref="member">_lf_number_of_threads</ref><sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a35622f0680c4d66b6ac2d14ead593cbc" kindref="member">_lf_trace_buffer</ref><sp/>=<sp/>(trace_record_t**)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(trace_record_t*)<sp/>*<sp/><ref refid="trace_8c_1a143958fccee03b6d931bdb53ac00dff1" kindref="member">_lf_number_of_trace_buffers</ref>);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="trace_8c_1a143958fccee03b6d931bdb53ac00dff1" kindref="member">_lf_number_of_trace_buffers</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a35622f0680c4d66b6ac2d14ead593cbc" kindref="member">_lf_trace_buffer</ref>[i]<sp/>=<sp/>(trace_record_t*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(trace_record_t)<sp/>*<sp/>TRACE_BUFFER_CAPACITY);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Array<sp/>of<sp/>counters<sp/>that<sp/>track<sp/>the<sp/>size<sp/>of<sp/>each<sp/>trace<sp/>record<sp/>(per<sp/>thread).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/>_lf_trace_buffer_size<sp/>=<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*)calloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">),<sp/><ref refid="trace_8c_1a143958fccee03b6d931bdb53ac00dff1" kindref="member">_lf_number_of_trace_buffers</ref>);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Allocate<sp/>memory<sp/>for<sp/>double<sp/>buffering.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/>_lf_trace_buffer_to_flush<sp/>=<sp/>(trace_record_t**)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(trace_record_t*)<sp/>*<sp/><ref refid="trace_8c_1a143958fccee03b6d931bdb53ac00dff1" kindref="member">_lf_number_of_trace_buffers</ref>);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="trace_8c_1a143958fccee03b6d931bdb53ac00dff1" kindref="member">_lf_number_of_trace_buffers</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_lf_trace_buffer_to_flush[i]<sp/>=<sp/>(trace_record_t*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(trace_record_t)<sp/>*<sp/>TRACE_BUFFER_CAPACITY);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Array<sp/>of<sp/>counters<sp/>that<sp/>track<sp/>the<sp/>size<sp/>of<sp/>each<sp/>trace<sp/>record<sp/>(per<sp/>thread).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>_lf_trace_buffer_size_to_flush<sp/>=<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*)calloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">),<sp/><ref refid="trace_8c_1a143958fccee03b6d931bdb53ac00dff1" kindref="member">_lf_number_of_trace_buffers</ref>);</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a5a3bbaf504f73248cf2dd343c19a64f0" kindref="member">_lf_trace_stop</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>In<sp/>case<sp/>the<sp/>user<sp/>forgets<sp/>to<sp/>stop<sp/>to<sp/>the<sp/>trace<sp/>in<sp/>wrapup.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(atexit(<ref refid="trace_8c_1a6dabaa8855fdeb4b896d459fa3196256" kindref="member">stop_trace</ref>)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a31c6c0670e0e0d97586def29f10bf7d4" kindref="member">warning_print</ref>(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>register<sp/>stop_trace<sp/>function<sp/>for<sp/>execution<sp/>upon<sp/>termination.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/>lf_thread_create(&amp;_lf_flush_trace_thread,<sp/><ref refid="trace_8c_1a59ccb06dfedbfda7abb65737018b80e3" kindref="member">flush_trace</ref>,<sp/>NULL);</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="util_8h_1a0a27a0fa2f8d9461204242121941696c" kindref="member">DEBUG_PRINT</ref>(</highlight><highlight class="stringliteral">&quot;Started<sp/>tracing.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="355"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1aff3f7c314f0f0849b57f51477201763d" kindref="member">tracepoint</ref>(</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8h_1ab02e9e69539d60297cedb38c2193a453" kindref="member">trace_event_t</ref><sp/>event_type,</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pointer,</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>reaction_number,</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>worker,</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref>*<sp/>physical_time,</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtrigger__t" kindref="compound">trigger_t</ref>*<sp/>trigger,</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>extra_delay</highlight></codeline>
+<codeline lineno="382"><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(&quot;DEBUG:<sp/>Creating<sp/>trace<sp/>record.\n&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Flush<sp/>the<sp/>buffer<sp/>if<sp/>it<sp/>is<sp/>full.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>(worker<sp/>&gt;=<sp/>0)<sp/>?<sp/>worker<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_lf_trace_buffer_size[index]<sp/>&gt;=<sp/>TRACE_BUFFER_CAPACITY)<sp/>{</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>No<sp/>more<sp/>room<sp/>in<sp/>the<sp/>buffer.<sp/>Write<sp/>the<sp/>buffer<sp/>to<sp/>the<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1abedd63424159bb6a418b8c989ce9d520" kindref="member">flush_trace_to_file</ref>(index);</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>above<sp/>flush_trace_to_file<sp/>resets<sp/>the<sp/>write<sp/>pointer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>_lf_trace_buffer_size[index];</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>to<sp/>memory<sp/>buffer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a35622f0680c4d66b6ac2d14ead593cbc" kindref="member">_lf_trace_buffer</ref>[index][i].event_type<sp/>=<sp/>event_type;</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a35622f0680c4d66b6ac2d14ead593cbc" kindref="member">_lf_trace_buffer</ref>[index][i].pointer<sp/>=<sp/>pointer;</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a35622f0680c4d66b6ac2d14ead593cbc" kindref="member">_lf_trace_buffer</ref>[index][i].reaction_number<sp/>=<sp/>reaction_number;</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a35622f0680c4d66b6ac2d14ead593cbc" kindref="member">_lf_trace_buffer</ref>[index][i].worker<sp/>=<sp/>worker;</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a35622f0680c4d66b6ac2d14ead593cbc" kindref="member">_lf_trace_buffer</ref>[index][i].logical_time<sp/>=<sp/><ref refid="tag_8c_1a9da5960071964c9c2bdb602526da0565" kindref="member">get_logical_time</ref>();</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a35622f0680c4d66b6ac2d14ead593cbc" kindref="member">_lf_trace_buffer</ref>[index][i].microstep<sp/>=<sp/><ref refid="tag_8c_1af413f18a3d52672f4ba984cc92e4efe5" kindref="member">get_microstep</ref>();</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(physical_time<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a35622f0680c4d66b6ac2d14ead593cbc" kindref="member">_lf_trace_buffer</ref>[index][i].physical_time<sp/>=<sp/>*physical_time;</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a35622f0680c4d66b6ac2d14ead593cbc" kindref="member">_lf_trace_buffer</ref>[index][i].physical_time<sp/>=<sp/><ref refid="tag_8c_1a84d52b3843db3b4fcb932326d6b288c4" kindref="member">get_physical_time</ref>();</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/>_lf_trace_buffer_size[index]++;</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a35622f0680c4d66b6ac2d14ead593cbc" kindref="member">_lf_trace_buffer</ref>[index][i].trigger<sp/>=<sp/>trigger;</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a35622f0680c4d66b6ac2d14ead593cbc" kindref="member">_lf_trace_buffer</ref>[index][i].extra_delay<sp/>=<sp/>extra_delay;</highlight></codeline>
+<codeline lineno="407"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight></codeline>
+<codeline lineno="414"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1ade61b59eed2f970f376f319ffaf2541d" kindref="member">tracepoint_reaction_starts</ref>(<ref refid="structreaction__t" kindref="compound">reaction_t</ref>*<sp/>reaction,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>worker)<sp/>{</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1aff3f7c314f0f0849b57f51477201763d" kindref="member">tracepoint</ref>(reaction_starts,<sp/>reaction-&gt;self,<sp/>reaction-&gt;number,<sp/>worker,<sp/>NULL,<sp/>NULL,<sp/>0);</highlight></codeline>
+<codeline lineno="416"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"></highlight></codeline>
+<codeline lineno="423"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1ad9628a6d76f5bad7a0c093f00731364b" kindref="member">tracepoint_reaction_ends</ref>(<ref refid="structreaction__t" kindref="compound">reaction_t</ref>*<sp/>reaction,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>worker)<sp/>{</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1aff3f7c314f0f0849b57f51477201763d" kindref="member">tracepoint</ref>(reaction_ends,<sp/>reaction-&gt;self,<sp/>reaction-&gt;number,<sp/>worker,<sp/>NULL,<sp/>NULL,<sp/>0);</highlight></codeline>
+<codeline lineno="425"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight></codeline>
+<codeline lineno="432"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a896a14a2ac7b800e93d4d2210321448e" kindref="member">tracepoint_schedule</ref>(<ref refid="structtrigger__t" kindref="compound">trigger_t</ref>*<sp/>trigger,<sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>extra_delay)<sp/>{</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>schedule()<sp/>can<sp/>only<sp/>trigger<sp/>reactions<sp/>within<sp/>the<sp/>same<sp/>reactor<sp/>as<sp/>the<sp/>action</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>or<sp/>timer.<sp/>If<sp/>there<sp/>is<sp/>such<sp/>a<sp/>reaction,<sp/>find<sp/>its<sp/>reactor&apos;s<sp/>self<sp/>struct<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>put<sp/>that<sp/>into<sp/>the<sp/>tracepoint.<sp/>We<sp/>only<sp/>have<sp/>to<sp/>look<sp/>at<sp/>the<sp/>first<sp/>reaction.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>there<sp/>is<sp/>no<sp/>reaction,<sp/>insert<sp/>NULL<sp/>for<sp/>the<sp/>reactor.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>reactor<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(trigger-&gt;number_of_reactions<sp/>&gt;<sp/>0</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>trigger-&gt;reactions[0]<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reactor<sp/>=<sp/>trigger-&gt;reactions[0]-&gt;self;</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1aff3f7c314f0f0849b57f51477201763d" kindref="member">tracepoint</ref>(schedule_called,<sp/>reactor,<sp/>0,<sp/>0,<sp/>NULL,<sp/>trigger,<sp/>extra_delay);</highlight></codeline>
+<codeline lineno="443"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"></highlight></codeline>
+<codeline lineno="451"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a68f463b93ec266e65bf6b72ee32a540a" kindref="member">tracepoint_user_event</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>description)<sp/>{</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-1s<sp/>indicate<sp/>unknown<sp/>reaction<sp/>number<sp/>and<sp/>worker<sp/>thread.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1aff3f7c314f0f0849b57f51477201763d" kindref="member">tracepoint</ref>(user_event,<sp/>description,<sp/><sp/>-1,<sp/>-1,<sp/>NULL,<sp/>NULL,<sp/>0);</highlight></codeline>
+<codeline lineno="454"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"></highlight></codeline>
+<codeline lineno="466"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a964a1b9e5b2e7941d4c37609aecc7b1b" kindref="member">tracepoint_user_value</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>description,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-1s<sp/>indicate<sp/>unknown<sp/>reaction<sp/>number<sp/>and<sp/>worker<sp/>thread.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1aff3f7c314f0f0849b57f51477201763d" kindref="member">tracepoint</ref>(user_value,<sp/>description,<sp/><sp/>-1,<sp/>-1,<sp/>NULL,<sp/>NULL,<sp/>value);</highlight></codeline>
+<codeline lineno="469"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"></highlight></codeline>
+<codeline lineno="475"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1aa6b088266f62c6f156ae241d52cdf415" kindref="member">tracepoint_worker_wait_starts</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>worker)<sp/>{</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1aff3f7c314f0f0849b57f51477201763d" kindref="member">tracepoint</ref>(worker_wait_starts,<sp/>NULL,<sp/>-1,<sp/>worker,<sp/>NULL,<sp/>NULL,<sp/>0);</highlight></codeline>
+<codeline lineno="477"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"></highlight></codeline>
+<codeline lineno="483"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a04892321c2313cbd11dd85bee1a9d251" kindref="member">tracepoint_worker_wait_ends</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>worker)<sp/>{</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1aff3f7c314f0f0849b57f51477201763d" kindref="member">tracepoint</ref>(worker_wait_ends,<sp/>NULL,<sp/>-1,<sp/>worker,<sp/>NULL,<sp/>NULL,<sp/>0);</highlight></codeline>
+<codeline lineno="485"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"></highlight></codeline>
+<codeline lineno="492"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1acaec136e0b3327ef233f13e89666b87c" kindref="member">tracepoint_worker_advancing_time_starts</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>worker)<sp/>{</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1aff3f7c314f0f0849b57f51477201763d" kindref="member">tracepoint</ref>(worker_advancing_time_starts,<sp/>NULL,<sp/>-1,<sp/>worker,<sp/>NULL,<sp/>NULL,<sp/>0);</highlight></codeline>
+<codeline lineno="494"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"></highlight></codeline>
+<codeline lineno="501"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1aad8dcf334448b94525bb7fa4d57c64a2" kindref="member">tracepoint_worker_advancing_time_ends</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>worker)<sp/>{</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1aff3f7c314f0f0849b57f51477201763d" kindref="member">tracepoint</ref>(worker_advancing_time_ends,<sp/>NULL,<sp/>-1,<sp/>worker,<sp/>NULL,<sp/>NULL,<sp/>0);</highlight></codeline>
+<codeline lineno="503"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"></highlight></codeline>
+<codeline lineno="509"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a6dabaa8855fdeb4b896d459fa3196256" kindref="member">stop_trace</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="trace_8c_1a5a3bbaf504f73248cf2dd343c19a64f0" kindref="member">_lf_trace_stop</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Trace<sp/>was<sp/>already<sp/>stopped.<sp/>Nothing<sp/>to<sp/>do.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/>lf_mutex_lock(&amp;_lf_trace_mutex);</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>In<sp/>multithreaded<sp/>execution,<sp/>thread<sp/>0<sp/>invokes<sp/>wrapup<sp/>reactions,<sp/>so<sp/>we</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>put<sp/>that<sp/>trace<sp/>last.<sp/>However,<sp/>it<sp/>could<sp/>also<sp/>include<sp/>some<sp/>startup<sp/>events.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>In<sp/>any<sp/>case,<sp/>the<sp/>trace<sp/>file<sp/>does<sp/>not<sp/>guarantee<sp/>any<sp/>ordering.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/><ref refid="trace_8c_1a143958fccee03b6d931bdb53ac00dff1" kindref="member">_lf_number_of_trace_buffers</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Flush<sp/>the<sp/>buffer<sp/>if<sp/>it<sp/>has<sp/>data.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(&quot;DEBUG:<sp/>Trace<sp/>buffer<sp/>%d<sp/>has<sp/>%d<sp/>records.\n&quot;,<sp/>i,<sp/>_lf_trace_buffer_size[i]);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_lf_trace_buffer_size<sp/>&amp;&amp;<sp/>_lf_trace_buffer_size[i]<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a86c0cbfa4153faa765c9f3d7f3e15ce8" kindref="member">flush_trace_to_file_locked</ref>(i);</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_lf_trace_buffer_size<sp/>&amp;&amp;<sp/>_lf_trace_buffer_size[0]<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a86c0cbfa4153faa765c9f3d7f3e15ce8" kindref="member">flush_trace_to_file_locked</ref>(0);</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="528"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a5a3bbaf504f73248cf2dd343c19a64f0" kindref="member">_lf_trace_stop</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="529"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Wake<sp/>up<sp/>the<sp/>trace_flush<sp/>thread.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="530"><highlight class="normal"><sp/><sp/><sp/><sp/>lf_cond_signal(&amp;_lf_flush_needed);</highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><sp/>lf_mutex_unlock(&amp;_lf_trace_mutex);</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"></highlight></codeline>
+<codeline lineno="533"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Join<sp/>trace_flush<sp/>thread.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>flush_trace_thread_exit_status;</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/><sp/><sp/>lf_thread_join(_lf_flush_trace_thread,<sp/>&amp;flush_trace_thread_exit_status);</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"></highlight></codeline>
+<codeline lineno="537"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(<ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref>);</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8c_1a9373e5b6f9a93fae3bbac278df36e0bb" kindref="member">_lf_trace_file</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="util_8h_1a0a27a0fa2f8d9461204242121941696c" kindref="member">DEBUG_PRINT</ref>(</highlight><highlight class="stringliteral">&quot;Stopped<sp/>tracing.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="540"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c"/>
+  </compounddef>
+</doxygen>

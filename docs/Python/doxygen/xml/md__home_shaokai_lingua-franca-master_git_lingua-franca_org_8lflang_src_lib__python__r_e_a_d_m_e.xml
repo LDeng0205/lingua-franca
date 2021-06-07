@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="md__home_shaokai_lingua-franca-master_git_lingua-franca_org_8lflang_src_lib__python__r_e_a_d_m_e" kind="page">
+    <compoundname>md__home_shaokai_lingua-franca-master_git_lingua-franca_org.lflang_src_lib_Python_README</compoundname>
+    <title>Lingua Franca Base</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This package contains the following two modules:</para>
+<para>functions.py which contains some useful functions used in Lingua Franca programs constants.py which contains handy shortcuts for some concepts such as &apos;interval_t&apos;</para>
+<para>This package is required for Python generated code to function properly. To build and install, run: <verbatim>python3 setup.py build
+sudo python3 setup.py install
+</verbatim> </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

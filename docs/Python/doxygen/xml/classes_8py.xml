@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classes_8py" kind="file" language="Python">
+    <compoundname>classes.py</compoundname>
+    <innerclass refid="class_lingua_franca_base_1_1classes_1_1_make" prot="public">LinguaFrancaBase::classes::Make</innerclass>
+    <innernamespace refid="namespace_lingua_franca_base_1_1classes">LinguaFrancaBase::classes</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">#<sp/>A<sp/>class<sp/>used<sp/>to<sp/>generate<sp/>variables<sp/>with<sp/>dots<sp/>in<sp/>their<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Taken<sp/>from<sp/>tinyurl.com/y4chuth3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_lingua_franca_base_1_1classes_1_1_make" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_lingua_franca_base_1_1classes_1_1_make" kindref="compound">Make</ref>:</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__getattr__(self,<sp/>name):</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.__dict__[name]<sp/>=<sp/><ref refid="class_lingua_franca_base_1_1classes_1_1_make" kindref="compound">Make</ref>()</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>self.__dict__[name]</highlight></codeline>
+    </programlisting>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/classes.py"/>
+  </compounddef>
+</doxygen>

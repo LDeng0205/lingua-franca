@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespace_lingua_franca_base_1_1constants" kind="namespace" language="Python">
+    <compoundname>LinguaFrancaBase::constants</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="constants_8py_1a332bef3c2c29cff218b5400951d50101" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LinguaFrancaBase::constants.NEVER</definition>
+        <argsstring></argsstring>
+        <name>NEVER</name>
+        <initializer>=  -0xFFFFFFFFFFFFFFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/constants.py" line="3" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/constants.py" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="constants_8py_1a9e7ce8202b2eea15824f11ea764355ac" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LinguaFrancaBase::constants.FOREVER</definition>
+        <argsstring></argsstring>
+        <name>FOREVER</name>
+        <initializer>=   0x7FFFFFFFFFFFFFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/constants.py" line="4" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/constants.py" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="constants_8py_1a154407a12cc9f003ece09e1ab63bd7b3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LinguaFrancaBase::constants.BILLION</definition>
+        <argsstring></argsstring>
+        <name>BILLION</name>
+        <initializer>=   1000000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/constants.py" line="5" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/constants.py" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="constants_8py_1a1cf75809418cfa9cbc52ab90f69f24cd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>LinguaFrancaBase::constants.instant_t</definition>
+        <argsstring></argsstring>
+        <name>instant_t</name>
+        <initializer>=  int</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/constants.py" line="9" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/constants.py" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/constants.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

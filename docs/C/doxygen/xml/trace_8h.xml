@@ -1,0 +1,438 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="trace_8h" kind="file" language="C++">
+    <compoundname>trace.h</compoundname>
+    <includedby refid="reactor_8h" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h</label>
+        <link refid="trace_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h</label>
+        <link refid="ctarget_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.c</label>
+        <link refid="federate_8c"/>
+      </node>
+      <node id="8">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.c</label>
+        <link refid="rti_8c"/>
+      </node>
+      <node id="5">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h</label>
+        <link refid="rti_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c</label>
+        <link refid="clock-sync_8c"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/sensor_simulator.c</label>
+        <link refid="sensor__simulator_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h</label>
+        <link refid="reactor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="trace_8h_1a93b33b5ac0d1091ac118ab464bf3a7d0" prot="public" static="no">
+        <name>register_user_trace_event</name>
+        <param><defname>...</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" line="246" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="trace_8h_1aeae0efb071b08e657d36788eee20c1a7" prot="public" static="no">
+        <name>tracepoint</name>
+        <param><defname>...</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" line="247" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="trace_8h_1a618fd3947984f4585e5071ec945f4908" prot="public" static="no">
+        <name>tracepoint_reaction_starts</name>
+        <param><defname>...</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" line="248" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="trace_8h_1a6886c0b07fa8962e9e251bc5442fbae3" prot="public" static="no">
+        <name>tracepoint_reaction_ends</name>
+        <param><defname>...</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" line="249" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="trace_8h_1afce5f2514b7b2001611c45b2f0122cee" prot="public" static="no">
+        <name>tracepoint_schedule</name>
+        <param><defname>...</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" line="250" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="trace_8h_1a4eaa42638286bf2cfdfed4b45d4a1036" prot="public" static="no">
+        <name>tracepoint_user_event</name>
+        <param><defname>...</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" line="251" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="trace_8h_1adc24126d062442704b43b2ea2f95042c" prot="public" static="no">
+        <name>tracepoint_user_value</name>
+        <param><defname>...</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" line="252" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="trace_8h_1a00635edd06259391fe45fa81f2dd9cab" prot="public" static="no">
+        <name>tracepoint_worker_wait_starts</name>
+        <param><defname>...</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" line="253" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="trace_8h_1a9dc20d411fb600c803f04572bde501ff" prot="public" static="no">
+        <name>tracepoint_worker_wait_ends</name>
+        <param><defname>...</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" line="254" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="trace_8h_1aa22497584488a2a7e993a79aaf722b3f" prot="public" static="no">
+        <name>tracepoint_worker_advancing_time_starts</name>
+        <param><defname>...</defname></param>
+        <initializer>;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" line="255" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="trace_8h_1a24b9a43858a553b3dcdd6adfaa3b0ace" prot="public" static="no">
+        <name>tracepoint_worker_advancing_time_ends</name>
+        <param><defname>...</defname></param>
+        <initializer>;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" line="256" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="trace_8h_1a27e365336dc38cd3fec8741832c0e195" prot="public" static="no">
+        <name>start_trace</name>
+        <param><defname>...</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" line="258" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="trace_8h_1a9c54cf0034978f2dd5b3521fc522d237" prot="public" static="no">
+        <name>stop_trace</name>
+        <param><defname>...</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" line="259" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="trace_8h_1ab02e9e69539d60297cedb38c2193a453" prot="public" static="no" strong="no">
+        <type></type>
+        <name>trace_event_t</name>
+        <enumvalue id="trace_8h_1ab02e9e69539d60297cedb38c2193a453a7ca2fc1a301d8e66944fab471646728a" prot="public">
+          <name>reaction_starts</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="trace_8h_1ab02e9e69539d60297cedb38c2193a453a79889b5c51ccdf63962a8ec230ff3f6b" prot="public">
+          <name>reaction_ends</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="trace_8h_1ab02e9e69539d60297cedb38c2193a453a666fca0e7c44992277a6f47331b6ff49" prot="public">
+          <name>schedule_called</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="trace_8h_1ab02e9e69539d60297cedb38c2193a453aeba45bd40c043d7a65ac7c5d31b9e187" prot="public">
+          <name>user_event</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="trace_8h_1ab02e9e69539d60297cedb38c2193a453a1d509d2fbc0fe97dcc61aea8ba7b68c1" prot="public">
+          <name>user_value</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="trace_8h_1ab02e9e69539d60297cedb38c2193a453a9c6849445ded286ba9f914d3b1decd2a" prot="public">
+          <name>worker_wait_starts</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="trace_8h_1ab02e9e69539d60297cedb38c2193a453afa179671ba1508f1c16b10ffef3a17c6" prot="public">
+          <name>worker_wait_ends</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="trace_8h_1ab02e9e69539d60297cedb38c2193a453ace85af852e92328c55f2fd15c01f9fb8" prot="public">
+          <name>worker_advancing_time_starts</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="trace_8h_1ab02e9e69539d60297cedb38c2193a453ab91c6be611bdcd2dffb716884a485c5e" prot="public">
+          <name>worker_advancing_time_ends</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Trace event types. If you update this, be sure to update the string representation below. Also, create a tracepoint function for each event type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" line="55" column="14" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h" bodystart="55" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Edward A. Lee</para>
+</simplesect>
+</para>
+<sect1 id="util_8h_1LICENSE">
+<title>LICENSE</title>
+<para>Copyright (c) 2020, The University of California at Berkeley and TU Dresden</para>
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</para>
+<para><orderedlist>
+<listitem><para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem><para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem></orderedlist>
+</para>
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+</sect1>
+<sect1 id="util_8h_1DESCRIPTION">
+<title>DESCRIPTION</title>
+<para>Definitions of tracepoint events for use with the C code generator and any other code generator that uses the C infrastructure (such as the Python code generator).</para>
+<para>See: <ulink url="https://github.com/icyphy/lingua-franca/wiki/Tracing#TracingInC">https://github.com/icyphy/lingua-franca/wiki/Tracing#TracingInC</ulink></para>
+<para>The trace file is named trace.lft and is a binary file with the following format:</para>
+<para>Header:<itemizedlist>
+<listitem><para>instant_t: The start time. This is both the starting physical time and the starting logical time.</para>
+</listitem><listitem><para>int: Size N of the table mapping pointers to descriptions. This is followed by N records each of which has:</para>
+</listitem><listitem><para>A pointer value (the key).</para>
+</listitem><listitem><para>A null-terminated string (the description).</para>
+</listitem></itemizedlist>
+</para>
+<para>Traces: A sequence of traces, each of which begins with an int giving the length of the trace followed by binary representations of the trace_record struct written using fwrite(). </para>
+</sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="47"><highlight class="preprocessor">#ifndef<sp/>TRACE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRACE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="trace_8h_1ab02e9e69539d60297cedb38c2193a453" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>reaction_starts,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>reaction_ends,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>schedule_called,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>user_event,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>user_value,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>worker_wait_starts,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>worker_wait_ends,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>worker_advancing_time_starts,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>worker_advancing_time_ends</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}<sp/><ref refid="trace_8h_1ab02e9e69539d60297cedb38c2193a453" kindref="member">trace_event_t</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>LINGUA_FRANCA_TRACE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>trace_event_names[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Reaction<sp/>starts&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Reaction<sp/>ends&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Schedule<sp/>called&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;User-defined<sp/>event&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;User-defined<sp/>valued<sp/>event&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Worker<sp/>wait<sp/>starts&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Worker<sp/>wait<sp/>ends&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Worker<sp/>advancing<sp/>time<sp/>starts&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Worker<sp/>advancing<sp/>time<sp/>ends&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//<sp/>FIXME:<sp/>Target<sp/>property<sp/>should<sp/>specify<sp/>the<sp/>capacity<sp/>of<sp/>the<sp/>trace<sp/>buffer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRACE_BUFFER_CAPACITY<sp/>2048</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor">#define<sp/>TRACE_OBJECT_TABLE_SIZE<sp/>1024</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">trace_record_t<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="trace_8h_1ab02e9e69539d60297cedb38c2193a453" kindref="member">trace_event_t</ref><sp/>event_type;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pointer;<sp/><sp/></highlight><highlight class="comment">//<sp/>pointer<sp/>identifying<sp/>the<sp/>record,<sp/>e.g.<sp/>to<sp/>self<sp/>struct<sp/>for<sp/>a<sp/>reactor.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>reaction_number;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>worker;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/>logical_time;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tag_8h_1a818d416d39f7c82f1fbeb5c5d3149f0d" kindref="member">microstep_t</ref><sp/>microstep;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/>physical_time;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtrigger__t" kindref="compound">trigger_t</ref>*<sp/>trigger;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>extra_delay;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}<sp/>trace_record_t;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>trace_reactor,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Self<sp/>struct.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>trace_trigger,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Timer<sp/>or<sp/>action<sp/>(argument<sp/>to<sp/>schedule()).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>trace_user<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>User-defined<sp/>trace<sp/>object.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}<sp/>_lf_trace_object_t;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">object_description_t<sp/>object_description_t;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">object_description_t<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pointer;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>reactor<sp/>self<sp/>struct<sp/>or<sp/>other<sp/>identifying<sp/>pointer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>trigger;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>trigger<sp/>(action<sp/>or<sp/>timer)<sp/>or<sp/>other<sp/>secondary<sp/>ID,<sp/>if<sp/>any.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>_lf_trace_object_t<sp/>type;<sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>type<sp/>of<sp/>trace<sp/>object.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>description;<sp/></highlight><highlight class="comment">//<sp/>A<sp/>NULL<sp/>terminated<sp/>string.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>object_description_t<sp/><ref refid="trace_8c_1a8fdb97e55822d6ae545d5248d5a3df89" kindref="member">_lf_trace_object_descriptions</ref>[];</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_lf_trace_object_descriptions_size;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a292c73e4f09daa50330b53079df620a9" kindref="member">_lf_register_trace_event</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pointer1,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pointer2,<sp/>_lf_trace_object_t<sp/>type,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>description);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a9f1d309784e7483c7e3570349d8ca2c6" kindref="member">register_user_trace_event</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>description);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a7db60d81b5b339239544a09f07c2d4b5" kindref="member">start_trace</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1aff3f7c314f0f0849b57f51477201763d" kindref="member">tracepoint</ref>(</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="trace_8h_1ab02e9e69539d60297cedb38c2193a453" kindref="member">trace_event_t</ref><sp/>event_type,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>reactor,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>reaction_number,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>worker,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref>*<sp/>physical_time,</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtrigger__t" kindref="compound">trigger_t</ref>*<sp/>trigger,</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>extra_delay</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1ade61b59eed2f970f376f319ffaf2541d" kindref="member">tracepoint_reaction_starts</ref>(<ref refid="structreaction__t" kindref="compound">reaction_t</ref>*<sp/>reaction,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>worker);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1ad9628a6d76f5bad7a0c093f00731364b" kindref="member">tracepoint_reaction_ends</ref>(<ref refid="structreaction__t" kindref="compound">reaction_t</ref>*<sp/>reaction,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>worker);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a896a14a2ac7b800e93d4d2210321448e" kindref="member">tracepoint_schedule</ref>(<ref refid="structtrigger__t" kindref="compound">trigger_t</ref>*<sp/>trigger,<sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>extra_delay);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a68f463b93ec266e65bf6b72ee32a540a" kindref="member">tracepoint_user_event</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>description);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a964a1b9e5b2e7941d4c37609aecc7b1b" kindref="member">tracepoint_user_value</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>description,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1aa6b088266f62c6f156ae241d52cdf415" kindref="member">tracepoint_worker_wait_starts</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>worker);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a04892321c2313cbd11dd85bee1a9d251" kindref="member">tracepoint_worker_wait_ends</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>worker);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1acaec136e0b3327ef233f13e89666b87c" kindref="member">tracepoint_worker_advancing_time_starts</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>worker);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1aad8dcf334448b94525bb7fa4d57c64a2" kindref="member">tracepoint_worker_advancing_time_ends</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>worker);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="trace_8c_1a6dabaa8855fdeb4b896d459fa3196256" kindref="member">stop_trace</ref>();</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight><highlight class="comment">//<sp/>empty<sp/>definition<sp/>in<sp/>case<sp/>we<sp/>compile<sp/>without<sp/>tracing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>register_user_trace_event(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>tracepoint(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>tracepoint_reaction_starts(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>tracepoint_reaction_ends(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>tracepoint_schedule(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>tracepoint_user_event(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>tracepoint_user_value(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>tracepoint_worker_wait_starts(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>tracepoint_worker_wait_ends(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>tracepoint_worker_advancing_time_starts(...);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>tracepoint_worker_advancing_time_ends(...);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>start_trace(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>stop_trace(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>LINGUA_FRANCA_TRACE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>TRACE_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.h"/>
+  </compounddef>
+</doxygen>

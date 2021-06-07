@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structlf__wav__t" kind="struct" language="C++" prot="public">
+    <compoundname>lf_wav_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlf__wav__t_1a4dfe6fe77717d001176da92f396b85d9" prot="public" static="no" mutable="no">
+        <type><ref refid="structlf__wav__riff__t" kindref="compound">lf_wav_riff_t</ref></type>
+        <definition>lf_wav_riff_t lf_wav_t::riff</definition>
+        <argsstring></argsstring>
+        <name>riff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" line="89" column="18" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlf__wav__t_1ade6c01f216604eef5d88c937972ab052" prot="public" static="no" mutable="no">
+        <type><ref refid="structlf__wav__format__t" kindref="compound">lf_wav_format_t</ref></type>
+        <definition>lf_wav_format_t lf_wav_t::fmt</definition>
+        <argsstring></argsstring>
+        <name>fmt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" line="90" column="20" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlf__wav__t_1a5bb20beaea682b4cacf483ae929c220c" prot="public" static="no" mutable="no">
+        <type><ref refid="structlf__wav__data__t" kindref="compound">lf_wav_data_t</ref></type>
+        <definition>lf_wav_data_t lf_wav_t::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" line="91" column="18" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Overall wave data. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>lf_wav_format_t</label>
+        <link refid="structlf__wav__format__t"/>
+      </node>
+      <node id="4">
+        <label>lf_wav_data_t</label>
+        <link refid="structlf__wav__data__t"/>
+      </node>
+      <node id="1">
+        <label>lf_wav_t</label>
+        <link refid="structlf__wav__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>riff</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>fmt</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lf_wav_riff_t</label>
+        <link refid="structlf__wav__riff__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" line="88" column="15" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" bodystart="88" bodyend="92"/>
+    <listofallmembers>
+      <member refid="structlf__wav__t_1a5bb20beaea682b4cacf483ae929c220c" prot="public" virt="non-virtual"><scope>lf_wav_t</scope><name>data</name></member>
+      <member refid="structlf__wav__t_1ade6c01f216604eef5d88c937972ab052" prot="public" virt="non-virtual"><scope>lf_wav_t</scope><name>fmt</name></member>
+      <member refid="structlf__wav__t_1a4dfe6fe77717d001176da92f396b85d9" prot="public" virt="non-virtual"><scope>lf_wav_t</scope><name>riff</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

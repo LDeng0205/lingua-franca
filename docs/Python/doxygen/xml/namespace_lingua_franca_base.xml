@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespace_lingua_franca_base" kind="namespace" language="Python">
+    <compoundname>LinguaFrancaBase</compoundname>
+    <innernamespace refid="namespace_lingua_franca_base_1_1classes">LinguaFrancaBase::classes</innernamespace>
+    <innernamespace refid="namespace_lingua_franca_base_1_1constants">LinguaFrancaBase::constants</innernamespace>
+    <innernamespace refid="namespace_lingua_franca_base_1_1functions">LinguaFrancaBase::functions</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/__init__.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

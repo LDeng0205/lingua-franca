@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structsocket__stat__t" kind="struct" language="C++" prot="public">
+    <compoundname>socket_stat_t</compoundname>
+    <includes refid="clock-sync_8h" local="no">clock-sync.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsocket__stat__t_1a337626dbaef95e87f6e611219cc445ef" prot="public" static="no" mutable="no">
+        <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+        <definition>instant_t socket_stat_t::remote_physical_clock_snapshot_T1</definition>
+        <argsstring></argsstring>
+        <name>remote_physical_clock_snapshot_T1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" line="68" column="15" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsocket__stat__t_1af084180438ba84b4ec8e8fd873222605" prot="public" static="no" mutable="no">
+        <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+        <definition>instant_t socket_stat_t::local_physical_clock_snapshot_T2</definition>
+        <argsstring></argsstring>
+        <name>local_physical_clock_snapshot_T2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" line="70" column="15" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsocket__stat__t_1a645afb48648fcee15ce3625456eb5c21" prot="public" static="no" mutable="no">
+        <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+        <definition>interval_t socket_stat_t::local_delay</definition>
+        <argsstring></argsstring>
+        <name>local_delay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" line="72" column="16" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsocket__stat__t_1ac7e50f6cbdc0f9709868bca0ec83b177" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int socket_stat_t::received_T4_messages_in_current_sync_window</definition>
+        <argsstring></argsstring>
+        <name>received_T4_messages_in_current_sync_window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" line="74" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsocket__stat__t_1ab34f093b789df801fe4717cca5a3e745" prot="public" static="no" mutable="no">
+        <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+        <definition>interval_t socket_stat_t::history</definition>
+        <argsstring></argsstring>
+        <name>history</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" line="76" column="16" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsocket__stat__t_1a2d53d66644d18d6e948aafd2913b638d" prot="public" static="no" mutable="no">
+        <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+        <definition>interval_t socket_stat_t::network_stat_round_trip_delay_max</definition>
+        <argsstring></argsstring>
+        <name>network_stat_round_trip_delay_max</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FIXME: TODO: A federate should create a <ref refid="structsocket__stat__t" kindref="compound">socket_stat_t</ref> for every federate it is connected to and keep record of the following stats </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" line="83" column="16" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsocket__stat__t_1a5782a45124508e912999a1e5a723e07d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int socket_stat_t::network_stat_sample_index</definition>
+        <argsstring></argsstring>
+        <name>network_stat_sample_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" line="85" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsocket__stat__t_1aa86b4d56287ba851680428e98fd6cdf2" prot="public" static="no" mutable="no">
+        <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+        <definition>interval_t socket_stat_t::clock_synchronization_error_bound</definition>
+        <argsstring></argsstring>
+        <name>clock_synchronization_error_bound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" line="87" column="16" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsocket__stat__t_1a334228438ef47a0f2befc117ee0d9d47" prot="public" static="no" mutable="no">
+        <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+        <definition>interval_t socket_stat_t::network_stat_samples[_LF_CLOCK_SYNC_EXCHANGES_PER_INTERVAL]</definition>
+        <argsstring>[_LF_CLOCK_SYNC_EXCHANGES_PER_INTERVAL]</argsstring>
+        <name>network_stat_samples</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" line="92" column="16" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Statistics for a given socket. The RTI initiates a clock synchronization action by sending its current physical time T1 to a federate. The federate records the local time T2 that it receives T1. It sends a reply at local time T3, which the RTI receives at its time T4. The RTI sends back T4. The round trip delay on the socket is therefore estimated as: (T4 - T1) - (T3 - T2). </para>
+    </detaileddescription>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" line="67" column="28" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.h" bodystart="67" bodyend="94"/>
+    <listofallmembers>
+      <member refid="structsocket__stat__t_1aa86b4d56287ba851680428e98fd6cdf2" prot="public" virt="non-virtual"><scope>socket_stat_t</scope><name>clock_synchronization_error_bound</name></member>
+      <member refid="structsocket__stat__t_1ab34f093b789df801fe4717cca5a3e745" prot="public" virt="non-virtual"><scope>socket_stat_t</scope><name>history</name></member>
+      <member refid="structsocket__stat__t_1a645afb48648fcee15ce3625456eb5c21" prot="public" virt="non-virtual"><scope>socket_stat_t</scope><name>local_delay</name></member>
+      <member refid="structsocket__stat__t_1af084180438ba84b4ec8e8fd873222605" prot="public" virt="non-virtual"><scope>socket_stat_t</scope><name>local_physical_clock_snapshot_T2</name></member>
+      <member refid="structsocket__stat__t_1a2d53d66644d18d6e948aafd2913b638d" prot="public" virt="non-virtual"><scope>socket_stat_t</scope><name>network_stat_round_trip_delay_max</name></member>
+      <member refid="structsocket__stat__t_1a5782a45124508e912999a1e5a723e07d" prot="public" virt="non-virtual"><scope>socket_stat_t</scope><name>network_stat_sample_index</name></member>
+      <member refid="structsocket__stat__t_1a334228438ef47a0f2befc117ee0d9d47" prot="public" virt="non-virtual"><scope>socket_stat_t</scope><name>network_stat_samples</name></member>
+      <member refid="structsocket__stat__t_1ac7e50f6cbdc0f9709868bca0ec83b177" prot="public" virt="non-virtual"><scope>socket_stat_t</scope><name>received_T4_messages_in_current_sync_window</name></member>
+      <member refid="structsocket__stat__t_1a337626dbaef95e87f6e611219cc445ef" prot="public" virt="non-virtual"><scope>socket_stat_t</scope><name>remote_physical_clock_snapshot_T1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

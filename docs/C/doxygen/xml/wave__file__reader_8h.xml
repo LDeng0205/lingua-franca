@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="wave__file__reader_8h" kind="file" language="C++">
+    <compoundname>wave_file_reader.h</compoundname>
+    <includedby refid="audio__loop_8h" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h</includedby>
+    <includedby refid="wave__file__reader_8c" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c</includedby>
+    <invincdepgraph>
+      <node id="4">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c</label>
+        <link refid="audio__loop__mac_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h</label>
+        <link refid="audio__loop_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c</label>
+        <link refid="wave__file__reader_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.h</label>
+        <link refid="wave__file__reader_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_linux.c</label>
+        <link refid="audio__loop__linux_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlf__waveform__t" prot="public">lf_waveform_t</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="wave__file__reader_8h_1a464bd5c31a1a562536e2a54213135604" prot="public" static="no">
+        <type>struct <ref refid="structlf__waveform__t" kindref="compound">lf_waveform_t</ref></type>
+        <definition>typedef struct lf_waveform_t lf_waveform_t</definition>
+        <argsstring></argsstring>
+        <name>lf_waveform_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Waveform in 16-bit linear-PCM format. The waveform element is an array containing audio samples. If there are two channels, then they are interleaved left and right channel. The length is the total number of samples, a multiple of the number of channels. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.h" line="68" column="15"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="wave__file__reader_8h_1a428c2db9a5e86cf61e6cf3f9d2ea51ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlf__waveform__t" kindref="compound">lf_waveform_t</ref> *</type>
+        <definition>lf_waveform_t* read_wave_file</definition>
+        <argsstring>(const char *path)</argsstring>
+        <name>read_wave_file</name>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Open a wave file, check that the format is supported, allocate memory for the sample data, and fill the memory with the sample data. It is up to the caller to free the memory when done with it. That code should first free the waveform element of the returned struct, then the struct itself. This implementation supports only 16-bit linear PCM files. On a Mac, you can convert audio files into this format using the afconvert utility.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array of sample data or NULL if the file can&apos;t be opened or has an usupported format. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.h" line="84" column="15" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" bodystart="108" bodyend="200" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.h" declline="84" declcolumn="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Edward A. Lee</para>
+</simplesect>
+</para>
+<sect1 id="util_8h_1LICENSE">
+<title>LICENSE</title>
+<para>Copyright (c) 2020, The University of California at Berkeley and TU Dresden</para>
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</para>
+<para><orderedlist>
+<listitem><para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem><para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem></orderedlist>
+</para>
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+</sect1>
+<sect1 id="util_8h_1DESCRIPTION">
+<title>DESCRIPTION</title>
+<para>Utility functions and data types for importing audio files with the wave audio format. The main function is <ref refid="wave__file__reader_8h_1a428c2db9a5e86cf61e6cf3f9d2ea51ad" kindref="member">read_wave_file()</ref>, which, given a path to a .wav file, reads the file and, if the format of the file is supported, returns an <ref refid="structlf__waveform__t" kindref="compound">lf_waveform_t</ref> struct, which contains the raw audio data in 16-bit linear PCM form.</para>
+<para>This code has few dependencies, so it should run on just about any platform.</para>
+<para>To use this, include the following flags in your target properties: <preformatted>
+   target C {
+       files: [&quot;/lib/C/util/wave_file_reader.c&quot;, &quot;/lib/C/util/wave_file_reader.h&quot;]
+   };
+   </preformatted></para>
+<para>In addition, you need this in your Lingua Franca file: <preformatted>
+   preamble {=
+       #include &quot;wave_file_reader.c&quot;
+   =}
+   </preformatted> </para>
+</sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="54"><highlight class="preprocessor">#ifndef<sp/>WAVE_FILE_READER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WAVE_FILE_READER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="structlf__waveform__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlf__waveform__t" kindref="compound">lf_waveform_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>length;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>num_channels;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t*<sp/>waveform;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}<sp/><ref refid="wave__file__reader_8h_1a464bd5c31a1a562536e2a54213135604" kindref="member">lf_waveform_t</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><ref refid="structlf__waveform__t" kindref="compound">lf_waveform_t</ref>*<sp/><ref refid="wave__file__reader_8h_1a428c2db9a5e86cf61e6cf3f9d2ea51ad" kindref="member">read_wave_file</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>WAVE_FILE_READER_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.h"/>
+  </compounddef>
+</doxygen>

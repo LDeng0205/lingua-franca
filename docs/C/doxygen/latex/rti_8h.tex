@@ -1,0 +1,547 @@
+\hypertarget{rti_8h}{}\doxysection{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/rti.h File Reference}
+\label{rti_8h}\index{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/rti.h@{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/rti.h}}
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}reactor.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structfederate__t}{federate\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{rti_8h_ab1edbb864391382835b9ad71408c5c53}{T\+C\+P\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+T\+I\+ME}}~S\+EC(10)
+\item 
+\#define \mbox{\hyperlink{rti_8h_aac9f4a449d302b4f39e69a14b3a4c8d5}{U\+D\+P\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+T\+I\+ME}}~S\+EC(1)
+\item 
+\#define \mbox{\hyperlink{rti_8h_acc95612e1d2dbbdf34afe76d50e75223}{F\+E\+D\+\_\+\+C\+O\+M\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}}~256
+\item 
+\#define \mbox{\hyperlink{rti_8h_ab2106828de539188aed925f592751c12}{C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+T\+R\+Y\+\_\+\+I\+N\+T\+E\+R\+V\+AL}}~2
+\item 
+\#define \mbox{\hyperlink{rti_8h_a0ea56eac4d92cb13df332bd6765c3601}{C\+O\+N\+N\+E\+C\+T\+\_\+\+N\+U\+M\+\_\+\+R\+E\+T\+R\+I\+ES}}~500
+\item 
+\#define \mbox{\hyperlink{rti_8h_a8ce563da4edbe9c4f7c1ccf35ad8694f}{A\+D\+D\+R\+E\+S\+S\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+R\+E\+T\+R\+Y\+\_\+\+I\+N\+T\+E\+R\+V\+AL}}~100000000\+LL
+\item 
+\#define \mbox{\hyperlink{rti_8h_a98427377c5c05d575a91f0b144bf7c74}{P\+O\+R\+T\+\_\+\+K\+N\+O\+C\+K\+I\+N\+G\+\_\+\+R\+E\+T\+R\+Y\+\_\+\+I\+N\+T\+E\+R\+V\+AL}}~10000\+LL
+\item 
+\#define \mbox{\hyperlink{rti_8h_a3935567021a890f8b97f3d733ca5cfa1}{S\+T\+A\+R\+T\+I\+N\+G\+\_\+\+P\+O\+RT}}~15045
+\item 
+\#define \mbox{\hyperlink{rti_8h_aff81692fc67e6f7838d9d1cff402d7f6}{P\+O\+R\+T\+\_\+\+R\+A\+N\+G\+E\+\_\+\+L\+I\+M\+IT}}~1024
+\item 
+\#define \mbox{\hyperlink{rti_8h_a4b8c713b515dba0c86d9205dc0caf4ed}{D\+E\+L\+A\+Y\+\_\+\+S\+T\+A\+RT}}~S\+EC(1)
+\item 
+\#define \mbox{\hyperlink{rti_8h_a835f10dd1ab4bf9a80c4cd80ee6e3058}{R\+E\+J\+E\+CT}}~0
+\item 
+\#define \mbox{\hyperlink{rti_8h_a6f6489887e08bff4887d0bc5dcf214d8}{A\+CK}}~255
+\item 
+\#define \mbox{\hyperlink{rti_8h_a7342deb9bd9ebf195e550e2d8e7c38b4}{U\+D\+P\+\_\+\+P\+O\+RT}}~254
+\item 
+\#define \mbox{\hyperlink{rti_8h_af7370318c7e1ddead64c1a262b632c20}{F\+E\+D\+\_\+\+ID}}~1
+\item 
+\#define \mbox{\hyperlink{rti_8h_ac59bf49f337079e65fe54acbfa21977e}{T\+I\+M\+E\+S\+T\+A\+MP}}~2
+\item 
+\#define \mbox{\hyperlink{rti_8h_af8a3e30cb4858ca8a098acae107286c0}{M\+E\+S\+S\+A\+GE}}~3
+\item 
+\#define \mbox{\hyperlink{rti_8h_abed4d766c1f54069227b5cb054b8c198}{R\+E\+S\+I\+GN}}~4
+\item 
+\#define \mbox{\hyperlink{rti_8h_a0283943cd958ee91edaffe4dd45782f1}{T\+I\+M\+E\+D\+\_\+\+M\+E\+S\+S\+A\+GE}}~5
+\item 
+\#define \mbox{\hyperlink{rti_8h_a40f3720fa53cce015534fb7246006645}{N\+E\+X\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+AG}}~6
+\item 
+\#define \mbox{\hyperlink{rti_8h_a01049d88b81bb8b6e6b3e8242e435c50}{T\+I\+M\+E\+\_\+\+A\+D\+V\+A\+N\+C\+E\+\_\+\+N\+O\+T\+I\+CE}}~253
+\item 
+\#define \mbox{\hyperlink{rti_8h_a6e44583f2f5668165e01b0d15a3a780f}{T\+I\+M\+E\+\_\+\+A\+D\+V\+A\+N\+C\+E\+\_\+\+G\+R\+A\+NT}}~7
+\item 
+\#define \mbox{\hyperlink{rti_8h_a8ec00307b6556a571f6420bbcb0a5d66}{P\+R\+O\+V\+I\+S\+I\+O\+N\+A\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+D\+V\+A\+N\+C\+E\+\_\+\+G\+R\+A\+NT}}~8
+\item 
+\#define \mbox{\hyperlink{rti_8h_a5c99fcbbcca0bf2d2ca961d769f2fbb1}{L\+O\+G\+I\+C\+A\+L\+\_\+\+T\+A\+G\+\_\+\+C\+O\+M\+P\+L\+E\+TE}}~9
+\item 
+\#define \mbox{\hyperlink{rti_8h_af423f7742f891187e4dcafce5c41844a}{S\+T\+O\+P\+\_\+\+R\+E\+Q\+U\+E\+ST}}~10
+\item 
+\mbox{\Hypertarget{rti_8h_ab08233d5a97ca00ebba53122acfde965}\label{rti_8h_ab08233d5a97ca00ebba53122acfde965}} 
+\#define {\bfseries S\+T\+O\+P\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH}~(1 + sizeof(\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}}) + sizeof(\mbox{\hyperlink{tag_8h_a818d416d39f7c82f1fbeb5c5d3149f0d}{microstep\+\_\+t}}))
+\item 
+\#define {\bfseries E\+N\+C\+O\+D\+E\+\_\+\+S\+T\+O\+P\+\_\+\+R\+E\+Q\+U\+E\+ST}(buffer,  time,  microstep)
+\item 
+\#define \mbox{\hyperlink{rti_8h_a8fd3e44be8050c9f7d97252fe00cbddf}{S\+T\+O\+P\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+R\+E\+P\+LY}}~11
+\item 
+\mbox{\Hypertarget{rti_8h_a2b46e5fe6fcf338a02a31a6372b0eaad}\label{rti_8h_a2b46e5fe6fcf338a02a31a6372b0eaad}} 
+\#define {\bfseries S\+T\+O\+P\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+R\+E\+P\+L\+Y\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH}~(1 + sizeof(\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}}) + sizeof(\mbox{\hyperlink{tag_8h_a818d416d39f7c82f1fbeb5c5d3149f0d}{microstep\+\_\+t}}))
+\item 
+\#define {\bfseries E\+N\+C\+O\+D\+E\+\_\+\+S\+T\+O\+P\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+R\+E\+P\+LY}(buffer,  time,  microstep)
+\item 
+\#define \mbox{\hyperlink{rti_8h_acd984d88f77b2961da3e431d851ebf5e}{S\+T\+O\+P\+\_\+\+G\+R\+A\+N\+T\+ED}}~12
+\item 
+\mbox{\Hypertarget{rti_8h_aec4b9f61451c53ed87a8e605b7bc5f13}\label{rti_8h_aec4b9f61451c53ed87a8e605b7bc5f13}} 
+\#define {\bfseries S\+T\+O\+P\+\_\+\+G\+R\+A\+N\+T\+E\+D\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH}~(1 + sizeof(\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}}) + sizeof(\mbox{\hyperlink{tag_8h_a818d416d39f7c82f1fbeb5c5d3149f0d}{microstep\+\_\+t}}))
+\item 
+\#define {\bfseries E\+N\+C\+O\+D\+E\+\_\+\+S\+T\+O\+P\+\_\+\+G\+R\+A\+N\+T\+ED}(buffer,  time,  microstep)
+\item 
+\#define \mbox{\hyperlink{rti_8h_a78332727fe2ecd72cb7e47881a87d494}{A\+D\+D\+R\+E\+S\+S\+\_\+\+Q\+U\+E\+RY}}~13
+\item 
+\#define \mbox{\hyperlink{rti_8h_a4f0f800c091729c481a6ce0f3bac4ca4}{A\+D\+D\+R\+E\+S\+S\+\_\+\+AD}}~14
+\item 
+\#define \mbox{\hyperlink{rti_8h_a91cf0e11a78e0b94952a2151993fc9c2}{P2\+P\+\_\+\+S\+E\+N\+D\+I\+N\+G\+\_\+\+F\+E\+D\+\_\+\+ID}}~15
+\item 
+\#define \mbox{\hyperlink{rti_8h_a5ce0ffa3d59395228539825e73ee490a}{P2\+P\+\_\+\+M\+E\+S\+S\+A\+GE}}~16
+\item 
+\#define \mbox{\hyperlink{rti_8h_a6ef14664d9d9d95f792d7f847bc5b119}{P2\+P\+\_\+\+T\+I\+M\+E\+D\+\_\+\+M\+E\+S\+S\+A\+GE}}~17
+\item 
+\#define \mbox{\hyperlink{rti_8h_a4bb77849ca928a2744185ed37697bfd9}{C\+L\+O\+S\+E\+\_\+\+R\+E\+Q\+U\+E\+ST}}~18
+\item 
+\#define \mbox{\hyperlink{rti_8h_a31f24c0e324077c60e4ded8a30b15978}{P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T1}}~19
+\item 
+\mbox{\Hypertarget{rti_8h_a6b462fb16e166bee1bb818f1e5ae14f4}\label{rti_8h_a6b462fb16e166bee1bb818f1e5ae14f4}} 
+\#define {\bfseries P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T3}~20
+\item 
+\mbox{\Hypertarget{rti_8h_af38d2ca60339849913065187fe3cc18b}\label{rti_8h_af38d2ca60339849913065187fe3cc18b}} 
+\#define {\bfseries P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T4}~21
+\item 
+\#define \mbox{\hyperlink{rti_8h_a20be238dc0a124a1bab9b7f5bf449fc7}{P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T4\+\_\+\+C\+O\+D\+E\+D\+\_\+\+P\+R\+O\+BE}}~22
+\item 
+\#define \mbox{\hyperlink{rti_8h_a82ec41cec8ce47732562301bd2155e54}{P\+O\+R\+T\+\_\+\+A\+B\+S\+E\+NT}}~23
+\item 
+\#define \mbox{\hyperlink{rti_8h_a653676d1f302fe08249af3dee78fa294}{F\+E\+D\+E\+R\+A\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+D\+O\+E\+S\+\_\+\+N\+O\+T\+\_\+\+M\+A\+T\+CH}}~1
+\item 
+\#define \mbox{\hyperlink{rti_8h_ae3bd830cd17cf0914b61d0516360abc1}{F\+E\+D\+E\+R\+A\+T\+E\+\_\+\+I\+D\+\_\+\+I\+N\+\_\+\+U\+SE}}~2
+\item 
+\#define \mbox{\hyperlink{rti_8h_a5846fdcf4c92041f543b73e29e78aa21}{F\+E\+D\+E\+R\+A\+T\+E\+\_\+\+I\+D\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE}}~3
+\item 
+\#define \mbox{\hyperlink{rti_8h_ae2e1a44a10d4219f4645a4e99fee009c}{U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+M\+E\+S\+S\+A\+GE}}~4
+\item 
+\#define \mbox{\hyperlink{rti_8h_a5a6c87886a0136b58ae5bb1d627c7ae3}{W\+R\+O\+N\+G\+\_\+\+S\+E\+R\+V\+ER}}~5
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{rti_8h_a45bb50f52b617bc6a30719cbaafd075d}\label{rti_8h_a45bb50f52b617bc6a30719cbaafd075d}} 
+typedef enum socket\+\_\+type\+\_\+t {\bfseries socket\+\_\+type\+\_\+t}
+\item 
+typedef enum \mbox{\hyperlink{rti_8h_a83ca4d4187a661b1395c9f860d61c97e}{execution\+\_\+mode\+\_\+t}} \mbox{\hyperlink{rti_8h_a50856f252373f4c456a34c6f26d385ce}{execution\+\_\+mode\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{rti_8h_a7a2e496e8d9be587cc662640a4251b23}{fed\+\_\+state\+\_\+t}} \mbox{\hyperlink{rti_8h_ae0ca2ecc00a6486432e5965cb81c3044}{fed\+\_\+state\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structfederate__t}{federate\+\_\+t}} \mbox{\hyperlink{rti_8h_afa071c0f847bd1cc2a736ab3cd20ee72}{federate\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{rti_8h_a54c375e3893ff5969d20df65b90c8335}\label{rti_8h_a54c375e3893ff5969d20df65b90c8335}} 
+enum {\bfseries socket\+\_\+type\+\_\+t} \{ {\bfseries T\+CP}, 
+{\bfseries U\+DP}
+ \}
+\item 
+enum \mbox{\hyperlink{rti_8h_a83ca4d4187a661b1395c9f860d61c97e}{execution\+\_\+mode\+\_\+t}} \{ {\bfseries F\+A\+ST}, 
+{\bfseries R\+E\+A\+L\+T\+I\+ME}
+ \}
+\item 
+enum \mbox{\hyperlink{rti_8h_a7a2e496e8d9be587cc662640a4251b23}{fed\+\_\+state\+\_\+t}} \{ {\bfseries N\+O\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+ED}, 
+{\bfseries G\+R\+A\+N\+T\+ED}, 
+{\bfseries P\+E\+N\+D\+I\+NG}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Edward A. Lee (\href{mailto:eal@berkeley.edu}{\texttt{ eal@berkeley.\+edu}})
+\end{DoxyAuthor}
+\hypertarget{util_8h_LICENSE}{}\doxysubsection{L\+I\+C\+E\+N\+SE}\label{util_8h_LICENSE}
+Copyright (c) 2020, The University of California at Berkeley.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.\hypertarget{util_8h_DESCRIPTION}{}\doxysubsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}\label{util_8h_DESCRIPTION}
+Header file for the runtime infrastructure for distributed Lingua Franca programs.
+
+This file defines the message types for the federate to communicate with the R\+TI. Each message type has a unique one-\/byte ID.
+
+The startup sequence is as follows\+:
+
+Each federate attempts to connect with an R\+TI at the IP address put into its code by the code generator (i.\+e., it attempts to open a T\+CP connection). It starts by trying the port number given by S\+T\+A\+R\+T\+I\+N\+G\+\_\+\+P\+O\+RT and increments the port number from there until it successfully connects. The maximum port number it will try before giving up is S\+T\+A\+R\+T\+I\+N\+G\+\_\+\+P\+O\+RT + P\+O\+R\+T\+\_\+\+R\+A\+N\+G\+E\+\_\+\+L\+I\+M\+IT.
+
+F\+I\+X\+ME\+: What if a port is specified in the \char`\"{}at\char`\"{} of the federated statement?
+
+When it has successfully opened a T\+CP connection, the first message it sends to the R\+TI is a F\+E\+D\+\_\+\+ID message, which contains the ID of this federate within the federation, contained in the global variable \+\_\+lf\+\_\+my\+\_\+fed\+\_\+id in the federate code (which is initialized by the code generator) and the unique ID of the federation, a G\+U\+ID that is created at run time by the generated script that launches the federation. If you launch the federates and the R\+TI manually, rather than using the script, then the federation ID is a string that is optionally given to the federate on the command line when it is launched. The federate will connect successfully only to an R\+TI that is given the same federation ID on its command line. If no ID is given on the command line, then the default ID \char`\"{}\+Unidentified Federation\char`\"{} will be used.
+
+The R\+TI will respond with a R\+E\+J\+E\+CT message if the federation I\+Ds do not match and close the connection. At this point the federate will increment the port number and try again to find an R\+TI that matches.
+
+When the federation I\+Ds match, the R\+TI will respond with an A\+CK.
+
+The next message to the R\+TI will a U\+D\+P\+\_\+\+P\+O\+RT message, which has payload U\+S\+H\+R\+T\+\_\+\+M\+AX if clock synchronization is disabled altogether, 0 if only initial clock synchronization is enabled, and a port number for U\+DP communication if runtime clock synchronization is enabled. By default, if the federate host is identical to that of the R\+TI (either no \char`\"{}at\char`\"{} clause is given for either or they both have exactly the same string), then clock synchronization is disabled. Otherwise, the default is that initial clock synchronization is enabled. To turn turn off clock synchronization altogether, set the clock-\/sync property of the target to off. To turn on runtime clock synchronization, set it to on. The default value is initial.
+
+If initial clock sync is enabled, the next step is to perform the initial clock synchronization (using the T\+CP connection), which attempts to find an initial offset to the physical clock of the federate to make it better match the physical clock at the R\+TI.
+
+Clock synchronization is initiated by the R\+TI by sending a message of type P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T1, the payload of which is the current physical clock reading at the R\+TI. The federate records the physical time when it receives this message (T2) and sends a reply message of type P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T3 to the R\+TI. It records the time (T3) at which this message has gone out. The payload of the P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T3 message is the federate ID. The R\+TI responds to the T3 message with a message of type P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T4, which has as a payload the physical time at which that response was sent. This cycle will happen \+\_\+\+L\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+E\+X\+C\+H\+A\+N\+G\+E\+S\+\_\+\+P\+E\+R\+\_\+\+I\+N\+T\+E\+R\+V\+AL times at startup to account for network delay variations (see below).
+
+The times T1 and T4 are taken from the physical clock at the R\+TI, whereas the times T2 and T3 are taken from the physical clock at the federate. The round trip latency on the connection to the R\+TI is therefore measured as (T4 -\/ T1) -\/ (T3 -\/ T2). Half this quantity is an estimate L of the one-\/way latency. The estimated clock error E is therefore L -\/ (T2 -\/ T1). Over several cycles, the average value of E becomes the initial offset for the clock at the federate. Henceforth, when \mbox{\hyperlink{tag_8c_a84d52b3843db3b4fcb932326d6b288c4}{get\+\_\+physical\+\_\+time()}} is called, the offset will be added to whatever the physical clock says.
+
+If clock synchronization is enabled, then the federate will also start a thread to listen for incoming U\+DP messages from the R\+TI. With period given by \+\_\+\+L\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+NS, the R\+TI will initiate a clock synchronization round by sending to the federate a P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T1 message. A similar protocol to that above is followed to estimate the average clock synchronization error E, with two exceptions. First, a fraction of E (given by \+\_\+\+L\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+A\+T\+T\+E\+N\+U\+A\+T\+I\+ON) is used to adjust the offset up or down rather than just setting the offset equal to E. Second, after P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T4, the R\+TI immediately sends a following message of type P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T4\+\_\+\+C\+O\+D\+E\+D\+\_\+\+P\+R\+O\+BE. The federate measures the time difference between its receipt of T4 and this code probe and compares that time difference against the time difference at the R\+TI (the difference between the two payloads). If that difference is larger than C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+G\+U\+A\+R\+D\+\_\+\+B\+A\+ND in magnitude, then the clock synchronization round is skipped and no adjustment is made. The round will also be skipped if any of the expected U\+DP messages fails to arrive.
+
+F\+I\+X\+ME\+: Citation needed here.
+
+The next step depends on the coordination mode. If the coordination parameter of the target is \char`\"{}decentralized\char`\"{} and the federate has inbound connections from other federates, then it starts a socket server to listen for incoming connections from those federates. It attempts to create the server at the port given by S\+T\+A\+R\+T\+I\+N\+G\+\_\+\+P\+O\+RT, and if this fails, increments the port number from there until a port is available. It then sends to the R\+TI an A\+D\+D\+R\+E\+S\+S\+\_\+\+AD message with the port number as a payload. The federate then creates a thread to listen for incoming socket connections and messages.
+
+If the federate has outbound connections to other federates, then it establishes a socket connection to those federates. It does this by first sending to the R\+TI an A\+D\+D\+R\+E\+S\+S\+\_\+\+Q\+U\+E\+RY message with the payload being the ID of the federate it wishes to connect to. If the R\+TI responds with a -\/1, then the R\+TI does not (yet) know the remote federate\textquotesingle{}s port number and IP address, so the local federate will try again after waiting A\+D\+D\+R\+E\+S\+S\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+R\+E\+T\+R\+Y\+\_\+\+I\+N\+T\+E\+R\+V\+AL. When it gets a valid port number and IP address in reply, it will establish a socket connection to that remote federate.
+
+Physical connections also use the above P2P sockets between federates even if the coordination is centralized.
+
+Peer-\/to-\/peer sockets can be closed by the downstream federate. For example, when a downstream federate reaches its stop time, then it will stop accepting physical messages. To achieve an orderly shutdown, the downstream federate sends a C\+L\+O\+S\+E\+\_\+\+R\+E\+Q\+U\+E\+ST message to the upstream one and the upstream federate handles closing the socket. This way, any messages that are in the middle of being sent while the downstream federate shuts down will successfully traverse the socket, even if only to be ignored by the downstream federate. It is valid to ignore such messages if the connection is physical or if the coordination is decentralized and the messages arrive after the S\+TP offset of the downstream federate (i.\+e., they are \char`\"{}tardy\char`\"{}).
+
+F\+I\+X\+ME\+: What happens after this? 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{rti_8h_a6f6489887e08bff4887d0bc5dcf214d8}\label{rti_8h_a6f6489887e08bff4887d0bc5dcf214d8}} 
+\index{rti.h@{rti.h}!ACK@{ACK}}
+\index{ACK@{ACK}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{ACK}{ACK}}
+{\footnotesize\ttfamily \#define A\+CK~255}
+
+Byte identifying an acknowledgment of the previously received message. This message carries no payload. \mbox{\Hypertarget{rti_8h_a4f0f800c091729c481a6ce0f3bac4ca4}\label{rti_8h_a4f0f800c091729c481a6ce0f3bac4ca4}} 
+\index{rti.h@{rti.h}!ADDRESS\_AD@{ADDRESS\_AD}}
+\index{ADDRESS\_AD@{ADDRESS\_AD}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{ADDRESS\_AD}{ADDRESS\_AD}}
+{\footnotesize\ttfamily \#define A\+D\+D\+R\+E\+S\+S\+\_\+\+AD~14}
+
+Byte identifying a message advertising the port for the physical connection server of a federate. The next four bytes (or sizeof(int)) will be the port number. The sending federate will not wait for a response from the R\+TI and assumes its request will be processed eventually by the R\+TI. \mbox{\Hypertarget{rti_8h_a78332727fe2ecd72cb7e47881a87d494}\label{rti_8h_a78332727fe2ecd72cb7e47881a87d494}} 
+\index{rti.h@{rti.h}!ADDRESS\_QUERY@{ADDRESS\_QUERY}}
+\index{ADDRESS\_QUERY@{ADDRESS\_QUERY}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{ADDRESS\_QUERY}{ADDRESS\_QUERY}}
+{\footnotesize\ttfamily \#define A\+D\+D\+R\+E\+S\+S\+\_\+\+Q\+U\+E\+RY~13}
+
+Byte identifying a address query message, sent by a federate to R\+TI to ask for another federate\textquotesingle{}s address and port number. The next two bytes are the other federate\textquotesingle{}s ID. The reply from the R\+TI will a port number (an int), which is -\/1 if the R\+TI does not know yet (it has not received A\+D\+D\+R\+E\+S\+S\+\_\+\+AD from the other federate), followed by the IP address of the other federate (an I\+P\+V4 address, which has length I\+N\+E\+T\+\_\+\+A\+D\+D\+R\+S\+T\+R\+L\+EN). \mbox{\Hypertarget{rti_8h_a8ce563da4edbe9c4f7c1ccf35ad8694f}\label{rti_8h_a8ce563da4edbe9c4f7c1ccf35ad8694f}} 
+\index{rti.h@{rti.h}!ADDRESS\_QUERY\_RETRY\_INTERVAL@{ADDRESS\_QUERY\_RETRY\_INTERVAL}}
+\index{ADDRESS\_QUERY\_RETRY\_INTERVAL@{ADDRESS\_QUERY\_RETRY\_INTERVAL}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{ADDRESS\_QUERY\_RETRY\_INTERVAL}{ADDRESS\_QUERY\_RETRY\_INTERVAL}}
+{\footnotesize\ttfamily \#define A\+D\+D\+R\+E\+S\+S\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+R\+E\+T\+R\+Y\+\_\+\+I\+N\+T\+E\+R\+V\+AL~100000000\+LL}
+
+Number of nanoseconds that a federate waits before asking the R\+TI again for the port and IP address of a federate (an A\+D\+D\+R\+E\+S\+S\+\_\+\+Q\+U\+E\+RY message) after the R\+TI responds that it does not know. \mbox{\Hypertarget{rti_8h_a4bb77849ca928a2744185ed37697bfd9}\label{rti_8h_a4bb77849ca928a2744185ed37697bfd9}} 
+\index{rti.h@{rti.h}!CLOSE\_REQUEST@{CLOSE\_REQUEST}}
+\index{CLOSE\_REQUEST@{CLOSE\_REQUEST}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{CLOSE\_REQUEST}{CLOSE\_REQUEST}}
+{\footnotesize\ttfamily \#define C\+L\+O\+S\+E\+\_\+\+R\+E\+Q\+U\+E\+ST~18}
+
+Byte identifying a message that a downstream federate sends to its upstream counterpart to request that the socket connection be closed. This is the only message that should flow upstream on such socket connections. \mbox{\Hypertarget{rti_8h_a0ea56eac4d92cb13df332bd6765c3601}\label{rti_8h_a0ea56eac4d92cb13df332bd6765c3601}} 
+\index{rti.h@{rti.h}!CONNECT\_NUM\_RETRIES@{CONNECT\_NUM\_RETRIES}}
+\index{CONNECT\_NUM\_RETRIES@{CONNECT\_NUM\_RETRIES}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{CONNECT\_NUM\_RETRIES}{CONNECT\_NUM\_RETRIES}}
+{\footnotesize\ttfamily \#define C\+O\+N\+N\+E\+C\+T\+\_\+\+N\+U\+M\+\_\+\+R\+E\+T\+R\+I\+ES~500}
+
+Bound on the number of retries to connect to the R\+TI. A federate will retry every C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+T\+R\+Y\+\_\+\+I\+N\+T\+E\+R\+V\+AL seconds this many times before giving up. E.\+g., 500 retries every 2 seconds results in retrying for about 16 minutes. \mbox{\Hypertarget{rti_8h_ab2106828de539188aed925f592751c12}\label{rti_8h_ab2106828de539188aed925f592751c12}} 
+\index{rti.h@{rti.h}!CONNECT\_RETRY\_INTERVAL@{CONNECT\_RETRY\_INTERVAL}}
+\index{CONNECT\_RETRY\_INTERVAL@{CONNECT\_RETRY\_INTERVAL}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{CONNECT\_RETRY\_INTERVAL}{CONNECT\_RETRY\_INTERVAL}}
+{\footnotesize\ttfamily \#define C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+T\+R\+Y\+\_\+\+I\+N\+T\+E\+R\+V\+AL~2}
+
+Number of seconds that elapse between a federate\textquotesingle{}s attempts to connect to the R\+TI. \mbox{\Hypertarget{rti_8h_a4b8c713b515dba0c86d9205dc0caf4ed}\label{rti_8h_a4b8c713b515dba0c86d9205dc0caf4ed}} 
+\index{rti.h@{rti.h}!DELAY\_START@{DELAY\_START}}
+\index{DELAY\_START@{DELAY\_START}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{DELAY\_START}{DELAY\_START}}
+{\footnotesize\ttfamily \#define D\+E\+L\+A\+Y\+\_\+\+S\+T\+A\+RT~S\+EC(1)}
+
+Delay the start of all federates by this amount. F\+I\+X\+ME\+: More. F\+I\+X\+ME\+: Should use the latency estimates that were acquired during initial clock synchronization. \mbox{\Hypertarget{rti_8h_a8086398bfefdc0104767df037e59daa5}\label{rti_8h_a8086398bfefdc0104767df037e59daa5}} 
+\index{rti.h@{rti.h}!ENCODE\_STOP\_GRANTED@{ENCODE\_STOP\_GRANTED}}
+\index{ENCODE\_STOP\_GRANTED@{ENCODE\_STOP\_GRANTED}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{ENCODE\_STOP\_GRANTED}{ENCODE\_STOP\_GRANTED}}
+{\footnotesize\ttfamily \#define E\+N\+C\+O\+D\+E\+\_\+\+S\+T\+O\+P\+\_\+\+G\+R\+A\+N\+T\+ED(\begin{DoxyParamCaption}\item[{}]{buffer,  }\item[{}]{time,  }\item[{}]{microstep }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{    buffer[0] = \mbox{\hyperlink{rti_8h_acd984d88f77b2961da3e431d851ebf5e}{STOP\_GRANTED}}; \(\backslash\)}
+\DoxyCodeLine{    encode\_ll(time, \&(buffer[1])); \(\backslash\)}
+\DoxyCodeLine{    encode\_int(microstep, \&(buffer[1 + \textcolor{keyword}{sizeof}(\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\_t}})])); \(\backslash\)}
+\DoxyCodeLine{\} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{rti_8h_a3268a658c2cb5126be5284a86ad9bd62}\label{rti_8h_a3268a658c2cb5126be5284a86ad9bd62}} 
+\index{rti.h@{rti.h}!ENCODE\_STOP\_REQUEST@{ENCODE\_STOP\_REQUEST}}
+\index{ENCODE\_STOP\_REQUEST@{ENCODE\_STOP\_REQUEST}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{ENCODE\_STOP\_REQUEST}{ENCODE\_STOP\_REQUEST}}
+{\footnotesize\ttfamily \#define E\+N\+C\+O\+D\+E\+\_\+\+S\+T\+O\+P\+\_\+\+R\+E\+Q\+U\+E\+ST(\begin{DoxyParamCaption}\item[{}]{buffer,  }\item[{}]{time,  }\item[{}]{microstep }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{    buffer[0] = \mbox{\hyperlink{rti_8h_af423f7742f891187e4dcafce5c41844a}{STOP\_REQUEST}}; \(\backslash\)}
+\DoxyCodeLine{    encode\_ll(time, \&(buffer[1])); \(\backslash\)}
+\DoxyCodeLine{    encode\_int(microstep, \&(buffer[1 + \textcolor{keyword}{sizeof}(\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\_t}})])); \(\backslash\)}
+\DoxyCodeLine{\} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{rti_8h_ae06b33f7fcdc71f52eb0fcf81e07e4d6}\label{rti_8h_ae06b33f7fcdc71f52eb0fcf81e07e4d6}} 
+\index{rti.h@{rti.h}!ENCODE\_STOP\_REQUEST\_REPLY@{ENCODE\_STOP\_REQUEST\_REPLY}}
+\index{ENCODE\_STOP\_REQUEST\_REPLY@{ENCODE\_STOP\_REQUEST\_REPLY}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{ENCODE\_STOP\_REQUEST\_REPLY}{ENCODE\_STOP\_REQUEST\_REPLY}}
+{\footnotesize\ttfamily \#define E\+N\+C\+O\+D\+E\+\_\+\+S\+T\+O\+P\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+R\+E\+P\+LY(\begin{DoxyParamCaption}\item[{}]{buffer,  }\item[{}]{time,  }\item[{}]{microstep }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{    buffer[0] = \mbox{\hyperlink{rti_8h_a8fd3e44be8050c9f7d97252fe00cbddf}{STOP\_REQUEST\_REPLY}}; \(\backslash\)}
+\DoxyCodeLine{    encode\_ll(time, \&(buffer[1])); \(\backslash\)}
+\DoxyCodeLine{    encode\_int(microstep, \&(buffer[1 + \textcolor{keyword}{sizeof}(\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\_t}})])); \(\backslash\)}
+\DoxyCodeLine{\} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{rti_8h_acc95612e1d2dbbdf34afe76d50e75223}\label{rti_8h_acc95612e1d2dbbdf34afe76d50e75223}} 
+\index{rti.h@{rti.h}!FED\_COM\_BUFFER\_SIZE@{FED\_COM\_BUFFER\_SIZE}}
+\index{FED\_COM\_BUFFER\_SIZE@{FED\_COM\_BUFFER\_SIZE}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{FED\_COM\_BUFFER\_SIZE}{FED\_COM\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily \#define F\+E\+D\+\_\+\+C\+O\+M\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE~256}
+
+Size of the buffer used for messages sent between federates. This is used by both the federates and the rti, so message lengths should generally match. \mbox{\Hypertarget{rti_8h_af7370318c7e1ddead64c1a262b632c20}\label{rti_8h_af7370318c7e1ddead64c1a262b632c20}} 
+\index{rti.h@{rti.h}!FED\_ID@{FED\_ID}}
+\index{FED\_ID@{FED\_ID}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{FED\_ID}{FED\_ID}}
+{\footnotesize\ttfamily \#define F\+E\+D\+\_\+\+ID~1}
+
+Byte identifying a message from a federate to an R\+TI containing the federation ID and the federate ID. The message contains, in this order\+:
+\begin{DoxyItemize}
+\item One byte equal to F\+E\+D\+\_\+\+ID.
+\item Two bytes (ushort) giving the federate ID.
+\item One byte (uchar) giving the length N of the federation ID.
+\item N bytes containing the federation ID. Each federate needs to have a unique ID between 0 and N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+F\+E\+D\+E\+R\+A\+T\+E\+S-\/1. Each federate, when starting up, should send this message to the R\+TI. This is its first message to the R\+TI. The R\+TI will respond with either R\+E\+J\+E\+CT, A\+CK, or U\+D\+P\+\_\+\+P\+O\+RT. If the federate is a C target LF program, the generated federate code does this by calling \mbox{\hyperlink{federate_8c_ad83fe9661682934029a42954b8fe6e2f}{synchronize\+\_\+with\+\_\+other\+\_\+federates()}}, passing to it its federate ID. 
+\end{DoxyItemize}\mbox{\Hypertarget{rti_8h_ae3bd830cd17cf0914b61d0516360abc1}\label{rti_8h_ae3bd830cd17cf0914b61d0516360abc1}} 
+\index{rti.h@{rti.h}!FEDERATE\_ID\_IN\_USE@{FEDERATE\_ID\_IN\_USE}}
+\index{FEDERATE\_ID\_IN\_USE@{FEDERATE\_ID\_IN\_USE}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{FEDERATE\_ID\_IN\_USE}{FEDERATE\_ID\_IN\_USE}}
+{\footnotesize\ttfamily \#define F\+E\+D\+E\+R\+A\+T\+E\+\_\+\+I\+D\+\_\+\+I\+N\+\_\+\+U\+SE~2}
+
+Federate with the specified ID has already joined. \mbox{\Hypertarget{rti_8h_a5846fdcf4c92041f543b73e29e78aa21}\label{rti_8h_a5846fdcf4c92041f543b73e29e78aa21}} 
+\index{rti.h@{rti.h}!FEDERATE\_ID\_OUT\_OF\_RANGE@{FEDERATE\_ID\_OUT\_OF\_RANGE}}
+\index{FEDERATE\_ID\_OUT\_OF\_RANGE@{FEDERATE\_ID\_OUT\_OF\_RANGE}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{FEDERATE\_ID\_OUT\_OF\_RANGE}{FEDERATE\_ID\_OUT\_OF\_RANGE}}
+{\footnotesize\ttfamily \#define F\+E\+D\+E\+R\+A\+T\+E\+\_\+\+I\+D\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE~3}
+
+Federate ID out of range. \mbox{\Hypertarget{rti_8h_a653676d1f302fe08249af3dee78fa294}\label{rti_8h_a653676d1f302fe08249af3dee78fa294}} 
+\index{rti.h@{rti.h}!FEDERATION\_ID\_DOES\_NOT\_MATCH@{FEDERATION\_ID\_DOES\_NOT\_MATCH}}
+\index{FEDERATION\_ID\_DOES\_NOT\_MATCH@{FEDERATION\_ID\_DOES\_NOT\_MATCH}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{FEDERATION\_ID\_DOES\_NOT\_MATCH}{FEDERATION\_ID\_DOES\_NOT\_MATCH}}
+{\footnotesize\ttfamily \#define F\+E\+D\+E\+R\+A\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+D\+O\+E\+S\+\_\+\+N\+O\+T\+\_\+\+M\+A\+T\+CH~1}
+
+These codes are sent in a R\+E\+J\+E\+CT message. They are limited to one byte (uchar). Federation ID does not match. \mbox{\Hypertarget{rti_8h_a5c99fcbbcca0bf2d2ca961d769f2fbb1}\label{rti_8h_a5c99fcbbcca0bf2d2ca961d769f2fbb1}} 
+\index{rti.h@{rti.h}!LOGICAL\_TAG\_COMPLETE@{LOGICAL\_TAG\_COMPLETE}}
+\index{LOGICAL\_TAG\_COMPLETE@{LOGICAL\_TAG\_COMPLETE}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{LOGICAL\_TAG\_COMPLETE}{LOGICAL\_TAG\_COMPLETE}}
+{\footnotesize\ttfamily \#define L\+O\+G\+I\+C\+A\+L\+\_\+\+T\+A\+G\+\_\+\+C\+O\+M\+P\+L\+E\+TE~9}
+
+Byte identifying a logical tag complete (L\+TC) message sent by a federate to the R\+TI. The next eight bytes will be the timestep of the completed tag. The next four bytes will be the microsteps of the completed tag. \mbox{\Hypertarget{rti_8h_af8a3e30cb4858ca8a098acae107286c0}\label{rti_8h_af8a3e30cb4858ca8a098acae107286c0}} 
+\index{rti.h@{rti.h}!MESSAGE@{MESSAGE}}
+\index{MESSAGE@{MESSAGE}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{MESSAGE}{MESSAGE}}
+{\footnotesize\ttfamily \#define M\+E\+S\+S\+A\+GE~3}
+
+Byte identifying a message to forward to another federate. The next two bytes will be the ID of the destination port. The next two bytes are the destination federate ID. The four bytes after that will be the length of the message. The remaining bytes are the message. N\+O\+TE\+: This is currently not used. All messages are timed, even on physical connections, because if \char`\"{}after\char`\"{} is used, the message may preserve the logical timestamp rather than using the physical time. \mbox{\Hypertarget{rti_8h_a40f3720fa53cce015534fb7246006645}\label{rti_8h_a40f3720fa53cce015534fb7246006645}} 
+\index{rti.h@{rti.h}!NEXT\_EVENT\_TAG@{NEXT\_EVENT\_TAG}}
+\index{NEXT\_EVENT\_TAG@{NEXT\_EVENT\_TAG}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{NEXT\_EVENT\_TAG}{NEXT\_EVENT\_TAG}}
+{\footnotesize\ttfamily \#define N\+E\+X\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+AG~6}
+
+Byte identifying a next event tag (N\+ET) message sent from a federate in centralized coordination. The next eight bytes will be the timestamp. The next four bytes will be the microstep. This message from a federate tells the R\+TI the tag of the earliest event on that federate\textquotesingle{}s event queue. In other words, absent any further inputs from other federates, this will be the least tag of the next set of reactions on that federate. If the event queue is empty and a timeout time has been specified, then the timeout time will be sent. If there is no timeout time, then F\+O\+R\+E\+V\+ER will be sent. Note that this message should not be sent if there are physical actions and the earliest event on the event queue has a tag that is ahead of physical time (or the queue is empty). In that case, send T\+AN instead. \mbox{\Hypertarget{rti_8h_a5ce0ffa3d59395228539825e73ee490a}\label{rti_8h_a5ce0ffa3d59395228539825e73ee490a}} 
+\index{rti.h@{rti.h}!P2P\_MESSAGE@{P2P\_MESSAGE}}
+\index{P2P\_MESSAGE@{P2P\_MESSAGE}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{P2P\_MESSAGE}{P2P\_MESSAGE}}
+{\footnotesize\ttfamily \#define P2\+P\+\_\+\+M\+E\+S\+S\+A\+GE~16}
+
+Byte identifying a message to send directly to another federate.
+
+The next two bytes will be the ID of the destination port. The next two bytes are the destination federate ID. This is checked against the \+\_\+lf\+\_\+my\+\_\+fed\+\_\+id of the receiving federate to ensure the message was intended for The four bytes after will be the length of the message. The ramaining bytes are the message. \mbox{\Hypertarget{rti_8h_a91cf0e11a78e0b94952a2151993fc9c2}\label{rti_8h_a91cf0e11a78e0b94952a2151993fc9c2}} 
+\index{rti.h@{rti.h}!P2P\_SENDING\_FED\_ID@{P2P\_SENDING\_FED\_ID}}
+\index{P2P\_SENDING\_FED\_ID@{P2P\_SENDING\_FED\_ID}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{P2P\_SENDING\_FED\_ID}{P2P\_SENDING\_FED\_ID}}
+{\footnotesize\ttfamily \#define P2\+P\+\_\+\+S\+E\+N\+D\+I\+N\+G\+\_\+\+F\+E\+D\+\_\+\+ID~15}
+
+Byte identifying a first message that is sent by a federate directly to another federate after establishing a socket connection to send messages directly to the federate. This first message contains two bytes identifying the sending federate (its ID), a byte giving the length of the federation ID, followed by the federation ID (a string). The response from the remote federate is expected to be A\+CK, but if the remote federate does not expect this federate or federation to connect, it will respond instead with R\+E\+J\+E\+CT. \mbox{\Hypertarget{rti_8h_a6ef14664d9d9d95f792d7f847bc5b119}\label{rti_8h_a6ef14664d9d9d95f792d7f847bc5b119}} 
+\index{rti.h@{rti.h}!P2P\_TIMED\_MESSAGE@{P2P\_TIMED\_MESSAGE}}
+\index{P2P\_TIMED\_MESSAGE@{P2P\_TIMED\_MESSAGE}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{P2P\_TIMED\_MESSAGE}{P2P\_TIMED\_MESSAGE}}
+{\footnotesize\ttfamily \#define P2\+P\+\_\+\+T\+I\+M\+E\+D\+\_\+\+M\+E\+S\+S\+A\+GE~17}
+
+Byte identifying a timestamped message to send directly to another federate. This is a variant of \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{rti_8h_a0283943cd958ee91edaffe4dd45782f1}{T\+I\+M\+E\+D\+\_\+\+M\+E\+S\+S\+A\+GE}} that is used in P2P connections between federates. Having a separate message type for P2P connections between federates will be useful in preventing crosstalk.
+\end{DoxySeeAlso}
+The next two bytes will be the ID of the destination port. The next two bytes are the destination federate ID. This is checked against the \+\_\+lf\+\_\+my\+\_\+fed\+\_\+id of the receiving federate to ensure the message was intended for the correct federate. The four bytes after will be the length of the message. The next eight bytes will be the timestamp. The next four bytes will be the microstep of the sender. The ramaining bytes are the message. \mbox{\Hypertarget{rti_8h_a31f24c0e324077c60e4ded8a30b15978}\label{rti_8h_a31f24c0e324077c60e4ded8a30b15978}} 
+\index{rti.h@{rti.h}!PHYSICAL\_CLOCK\_SYNC\_MESSAGE\_T1@{PHYSICAL\_CLOCK\_SYNC\_MESSAGE\_T1}}
+\index{PHYSICAL\_CLOCK\_SYNC\_MESSAGE\_T1@{PHYSICAL\_CLOCK\_SYNC\_MESSAGE\_T1}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{PHYSICAL\_CLOCK\_SYNC\_MESSAGE\_T1}{PHYSICAL\_CLOCK\_SYNC\_MESSAGE\_T1}}
+{\footnotesize\ttfamily \#define P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T1~19}
+
+Physical clock synchronization messages according to P\+TP. \mbox{\Hypertarget{rti_8h_a20be238dc0a124a1bab9b7f5bf449fc7}\label{rti_8h_a20be238dc0a124a1bab9b7f5bf449fc7}} 
+\index{rti.h@{rti.h}!PHYSICAL\_CLOCK\_SYNC\_MESSAGE\_T4\_CODED\_PROBE@{PHYSICAL\_CLOCK\_SYNC\_MESSAGE\_T4\_CODED\_PROBE}}
+\index{PHYSICAL\_CLOCK\_SYNC\_MESSAGE\_T4\_CODED\_PROBE@{PHYSICAL\_CLOCK\_SYNC\_MESSAGE\_T4\_CODED\_PROBE}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{PHYSICAL\_CLOCK\_SYNC\_MESSAGE\_T4\_CODED\_PROBE}{PHYSICAL\_CLOCK\_SYNC\_MESSAGE\_T4\_CODED\_PROBE}}
+{\footnotesize\ttfamily \#define P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T4\+\_\+\+C\+O\+D\+E\+D\+\_\+\+P\+R\+O\+BE~22}
+
+Coded probe message. This messages is sent by the server (master) right after P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T4(t1) with a new physical clock snapshot t2. At the receiver, the previous P\+H\+Y\+S\+I\+C\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T4 message and this message are assigned a receive timestamp r1 and r2. If $\vert$(r2 -\/ r1) -\/ (t2 -\/ t1)$\vert$ $<$ G\+U\+A\+R\+D\+\_\+\+B\+A\+ND, then the current clock sync cycle is considered pure and can be processed. \begin{DoxySeeAlso}{See also}
+Geng, Yilong, et al. \char`\"{}\+Exploiting a natural network effect for scalable, fine-\/grained clock synchronization.\char`\"{} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{rti_8h_a82ec41cec8ce47732562301bd2155e54}\label{rti_8h_a82ec41cec8ce47732562301bd2155e54}} 
+\index{rti.h@{rti.h}!PORT\_ABSENT@{PORT\_ABSENT}}
+\index{PORT\_ABSENT@{PORT\_ABSENT}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_ABSENT}{PORT\_ABSENT}}
+{\footnotesize\ttfamily \#define P\+O\+R\+T\+\_\+\+A\+B\+S\+E\+NT~23}
+
+A port absent message, informing the receiver that a given port will not have event for the current logical time.
+
+The next 2 bytes is the port id. The next 2 bytes will be the federate id of the destination federate. This is needed for the centralized coordination so that the R\+TI knows where to forward the message. The next 8 bytes are the intended time of the absent message The next 4 bytes are the intended microstep of the absent message \mbox{\Hypertarget{rti_8h_a98427377c5c05d575a91f0b144bf7c74}\label{rti_8h_a98427377c5c05d575a91f0b144bf7c74}} 
+\index{rti.h@{rti.h}!PORT\_KNOCKING\_RETRY\_INTERVAL@{PORT\_KNOCKING\_RETRY\_INTERVAL}}
+\index{PORT\_KNOCKING\_RETRY\_INTERVAL@{PORT\_KNOCKING\_RETRY\_INTERVAL}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_KNOCKING\_RETRY\_INTERVAL}{PORT\_KNOCKING\_RETRY\_INTERVAL}}
+{\footnotesize\ttfamily \#define P\+O\+R\+T\+\_\+\+K\+N\+O\+C\+K\+I\+N\+G\+\_\+\+R\+E\+T\+R\+Y\+\_\+\+I\+N\+T\+E\+R\+V\+AL~10000\+LL}
+
+Number of nanoseconds that a federate waits before trying another port for the R\+TI. This is to avoid overwhelming the OS and the socket with too many calls. F\+I\+X\+ME\+: Is this too small? \mbox{\Hypertarget{rti_8h_aff81692fc67e6f7838d9d1cff402d7f6}\label{rti_8h_aff81692fc67e6f7838d9d1cff402d7f6}} 
+\index{rti.h@{rti.h}!PORT\_RANGE\_LIMIT@{PORT\_RANGE\_LIMIT}}
+\index{PORT\_RANGE\_LIMIT@{PORT\_RANGE\_LIMIT}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_RANGE\_LIMIT}{PORT\_RANGE\_LIMIT}}
+{\footnotesize\ttfamily \#define P\+O\+R\+T\+\_\+\+R\+A\+N\+G\+E\+\_\+\+L\+I\+M\+IT~1024}
+
+Number of ports to try to connect to. Unless the LF program specifies a specific port number to use, the R\+TI or federates will attempt to start a socket server on port S\+T\+A\+R\+T\+I\+N\+G\+\_\+\+P\+O\+RT. If that port is not available (e.\+g., another R\+TI is running or has recently exited), then it will try the next port, S\+T\+A\+R\+T\+I\+N\+G\+\_\+\+P\+O\+R\+T+1, and keep incrementing the port number up to this limit. If no port between S\+T\+A\+R\+T\+I\+N\+G\+\_\+\+P\+O\+RT and S\+T\+A\+R\+T\+I\+N\+G\+\_\+\+P\+O\+RT + P\+O\+R\+T\+\_\+\+R\+A\+N\+G\+E\+\_\+\+L\+I\+M\+IT is available, then the R\+TI or the federate will fail to start. This number, therefore, limits the number of R\+T\+Is and federates that can be simultaneously running on any given machine without assigning specific port numbers. \mbox{\Hypertarget{rti_8h_a8ec00307b6556a571f6420bbcb0a5d66}\label{rti_8h_a8ec00307b6556a571f6420bbcb0a5d66}} 
+\index{rti.h@{rti.h}!PROVISIONAL\_TIME\_ADVANCE\_GRANT@{PROVISIONAL\_TIME\_ADVANCE\_GRANT}}
+\index{PROVISIONAL\_TIME\_ADVANCE\_GRANT@{PROVISIONAL\_TIME\_ADVANCE\_GRANT}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{PROVISIONAL\_TIME\_ADVANCE\_GRANT}{PROVISIONAL\_TIME\_ADVANCE\_GRANT}}
+{\footnotesize\ttfamily \#define P\+R\+O\+V\+I\+S\+I\+O\+N\+A\+L\+\_\+\+T\+I\+M\+E\+\_\+\+A\+D\+V\+A\+N\+C\+E\+\_\+\+G\+R\+A\+NT~8}
+
+Byte identifying a provisional time advance grant (P\+T\+AG) sent by the R\+TI to a federate in centralized coordination. This message is a promise by the R\+TI to the federate that no later message sent to the federate will have a tag earlier than the tag carried by this P\+T\+AG message. The next eight bytes will be the timestamp. The next four bytes will be the microstep. \mbox{\Hypertarget{rti_8h_a835f10dd1ab4bf9a80c4cd80ee6e3058}\label{rti_8h_a835f10dd1ab4bf9a80c4cd80ee6e3058}} 
+\index{rti.h@{rti.h}!REJECT@{REJECT}}
+\index{REJECT@{REJECT}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{REJECT}{REJECT}}
+{\footnotesize\ttfamily \#define R\+E\+J\+E\+CT~0}
+
+Byte identifying a rejection of the previously received message. The reason for the rejection is included as an additional byte (uchar) (see below for encodings of rejection reasons). \mbox{\Hypertarget{rti_8h_abed4d766c1f54069227b5cb054b8c198}\label{rti_8h_abed4d766c1f54069227b5cb054b8c198}} 
+\index{rti.h@{rti.h}!RESIGN@{RESIGN}}
+\index{RESIGN@{RESIGN}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{RESIGN}{RESIGN}}
+{\footnotesize\ttfamily \#define R\+E\+S\+I\+GN~4}
+
+Byte identifying that the federate is ending its execution. \mbox{\Hypertarget{rti_8h_a3935567021a890f8b97f3d733ca5cfa1}\label{rti_8h_a3935567021a890f8b97f3d733ca5cfa1}} 
+\index{rti.h@{rti.h}!STARTING\_PORT@{STARTING\_PORT}}
+\index{STARTING\_PORT@{STARTING\_PORT}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{STARTING\_PORT}{STARTING\_PORT}}
+{\footnotesize\ttfamily \#define S\+T\+A\+R\+T\+I\+N\+G\+\_\+\+P\+O\+RT~15045}
+
+Default starting port number for the R\+TI and federates\textquotesingle{} socket server. Unless a specific port has been specified by the LF program in the \char`\"{}at\char`\"{} for the R\+TI, when the federates start up, they will attempt to open a socket server on this port, and, if this fails, increment the port number and try again. The number of increments is limited by P\+O\+R\+T\+\_\+\+R\+A\+N\+G\+E\+\_\+\+L\+I\+M\+IT. F\+I\+X\+ME\+: Clarify what happens if a specific port has been given in \char`\"{}at\char`\"{}. \mbox{\Hypertarget{rti_8h_acd984d88f77b2961da3e431d851ebf5e}\label{rti_8h_acd984d88f77b2961da3e431d851ebf5e}} 
+\index{rti.h@{rti.h}!STOP\_GRANTED@{STOP\_GRANTED}}
+\index{STOP\_GRANTED@{STOP\_GRANTED}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{STOP\_GRANTED}{STOP\_GRANTED}}
+{\footnotesize\ttfamily \#define S\+T\+O\+P\+\_\+\+G\+R\+A\+N\+T\+ED~12}
+
+Byte sent by the R\+TI indicating that the stop request from some federate has been granted. The payload is the tag at which all federates have agreed that they can stop. The next 8 bytes will be the time at which the federates will stop. $\ast$ The next 4 bytes will be the microstep at which the federates will stop.. \mbox{\Hypertarget{rti_8h_af423f7742f891187e4dcafce5c41844a}\label{rti_8h_af423f7742f891187e4dcafce5c41844a}} 
+\index{rti.h@{rti.h}!STOP\_REQUEST@{STOP\_REQUEST}}
+\index{STOP\_REQUEST@{STOP\_REQUEST}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{STOP\_REQUEST}{STOP\_REQUEST}}
+{\footnotesize\ttfamily \#define S\+T\+O\+P\+\_\+\+R\+E\+Q\+U\+E\+ST~10}
+
+Byte identifying a stop request. This message is first sent to the R\+TI by a federate that would like to stop execution at the specified tag. The R\+TI will forward the S\+T\+O\+P\+\_\+\+R\+E\+Q\+U\+E\+ST to all other federates. Those federates will either agree to the requested tag or propose a larger tag. The R\+TI will collect all proposed tags and broadcast the largest of those to all federates. All federates will then be expected to stop at the granted tag.
+
+The next 8 bytes will be the timestamp. The next 4 bytes will be the microstep.
+
+N\+O\+TE\+: The R\+TI may reply with a larger tag than the one specified in this message. It has to be that way because if any federate can send a S\+T\+O\+P\+\_\+\+R\+E\+Q\+U\+E\+ST message that specifies the stop time on all other federates, then every federate depends on every other federate and time cannot be advanced. Hence, the actual stop time may be nondeterministic.
+
+If, on the other hand, the federate requesting the stop is upstream of every other federate, then it should be possible to respect its requested stop tag. \mbox{\Hypertarget{rti_8h_a8fd3e44be8050c9f7d97252fe00cbddf}\label{rti_8h_a8fd3e44be8050c9f7d97252fe00cbddf}} 
+\index{rti.h@{rti.h}!STOP\_REQUEST\_REPLY@{STOP\_REQUEST\_REPLY}}
+\index{STOP\_REQUEST\_REPLY@{STOP\_REQUEST\_REPLY}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{STOP\_REQUEST\_REPLY}{STOP\_REQUEST\_REPLY}}
+{\footnotesize\ttfamily \#define S\+T\+O\+P\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+R\+E\+P\+LY~11}
+
+Byte indicating a federate\textquotesingle{}s reply to a S\+T\+O\+P\+\_\+\+R\+E\+Q\+U\+E\+ST that was sent by the R\+TI. The payload is a proposed stop tag that is at least as large as the one sent to the federate in a S\+T\+O\+P\+\_\+\+R\+E\+Q\+U\+E\+ST message.
+
+The next 8 bytes will be the timestamp. The next 4 bytes will be the microstep. \mbox{\Hypertarget{rti_8h_ab1edbb864391382835b9ad71408c5c53}\label{rti_8h_ab1edbb864391382835b9ad71408c5c53}} 
+\index{rti.h@{rti.h}!TCP\_TIMEOUT\_TIME@{TCP\_TIMEOUT\_TIME}}
+\index{TCP\_TIMEOUT\_TIME@{TCP\_TIMEOUT\_TIME}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{TCP\_TIMEOUT\_TIME}{TCP\_TIMEOUT\_TIME}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+T\+I\+ME~S\+EC(10)}
+
+The timeout time in ns for T\+CP operations. Default value is 10 secs. \mbox{\Hypertarget{rti_8h_a6e44583f2f5668165e01b0d15a3a780f}\label{rti_8h_a6e44583f2f5668165e01b0d15a3a780f}} 
+\index{rti.h@{rti.h}!TIME\_ADVANCE\_GRANT@{TIME\_ADVANCE\_GRANT}}
+\index{TIME\_ADVANCE\_GRANT@{TIME\_ADVANCE\_GRANT}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{TIME\_ADVANCE\_GRANT}{TIME\_ADVANCE\_GRANT}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+\_\+\+A\+D\+V\+A\+N\+C\+E\+\_\+\+G\+R\+A\+NT~7}
+
+Byte identifying a time advance grant (T\+AG) sent by the R\+TI to a federate in centralized coordination. This message is a promise by the R\+TI to the federate that no later message sent to the federate will have a tag earlier than or equal to the tag carried by this T\+AG message. The next eight bytes will be the timestamp. The next four bytes will be the microstep. \mbox{\Hypertarget{rti_8h_a01049d88b81bb8b6e6b3e8242e435c50}\label{rti_8h_a01049d88b81bb8b6e6b3e8242e435c50}} 
+\index{rti.h@{rti.h}!TIME\_ADVANCE\_NOTICE@{TIME\_ADVANCE\_NOTICE}}
+\index{TIME\_ADVANCE\_NOTICE@{TIME\_ADVANCE\_NOTICE}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{TIME\_ADVANCE\_NOTICE}{TIME\_ADVANCE\_NOTICE}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+\_\+\+A\+D\+V\+A\+N\+C\+E\+\_\+\+N\+O\+T\+I\+CE~253}
+
+Byte identifying a time advance notice (T\+AN) message sent from a federate in centralized coordination. This message is used by a federate that has outputs that are directly or indirectly triggered by a physical action to notify the R\+TI that its physical time has advanced and that it will produce no outputs with timestamps less than the specified timestamp. The next eight bytes will be the timestamp. \mbox{\Hypertarget{rti_8h_a0283943cd958ee91edaffe4dd45782f1}\label{rti_8h_a0283943cd958ee91edaffe4dd45782f1}} 
+\index{rti.h@{rti.h}!TIMED\_MESSAGE@{TIMED\_MESSAGE}}
+\index{TIMED\_MESSAGE@{TIMED\_MESSAGE}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{TIMED\_MESSAGE}{TIMED\_MESSAGE}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+D\+\_\+\+M\+E\+S\+S\+A\+GE~5}
+
+Byte identifying a timestamped message to forward to another federate. The next two bytes will be the ID of the destination port. The next two bytes are the destination federate ID. The four bytes after that will be the length of the message. The next eight bytes will be the timestamp. The next four bytes will be the microstep of the sender. The remaining bytes are the message.
+
+F\+I\+X\+ME\+: Clarify centralized or decentralized. F\+I\+X\+ME\+: Rename T\+A\+G\+G\+E\+D\+\_\+\+M\+E\+S\+S\+A\+GE \mbox{\Hypertarget{rti_8h_ac59bf49f337079e65fe54acbfa21977e}\label{rti_8h_ac59bf49f337079e65fe54acbfa21977e}} 
+\index{rti.h@{rti.h}!TIMESTAMP@{TIMESTAMP}}
+\index{TIMESTAMP@{TIMESTAMP}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{TIMESTAMP}{TIMESTAMP}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+S\+T\+A\+MP~2}
+
+Byte identifying a timestamp message, which is 64 bits long. F\+I\+X\+ME\+: When is this used? s \mbox{\Hypertarget{rti_8h_a7342deb9bd9ebf195e550e2d8e7c38b4}\label{rti_8h_a7342deb9bd9ebf195e550e2d8e7c38b4}} 
+\index{rti.h@{rti.h}!UDP\_PORT@{UDP\_PORT}}
+\index{UDP\_PORT@{UDP\_PORT}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{UDP\_PORT}{UDP\_PORT}}
+{\footnotesize\ttfamily \#define U\+D\+P\+\_\+\+P\+O\+RT~254}
+
+Byte identifying an acknowledgment of the previously received F\+E\+D\+\_\+\+ID message sent by the R\+TI to the federate with a payload indicating the U\+DP port to use for clock synchronization. The next four bytes will be the port number for the U\+DP server, or 0 or U\+S\+H\+R\+T\+\_\+\+M\+AX if there is no U\+DP server. 0 means that initial clock synchronization is enabled, whereas U\+S\+H\+R\+T\+\_\+\+M\+AX mean that no synchronization should be performed at all. \mbox{\Hypertarget{rti_8h_aac9f4a449d302b4f39e69a14b3a4c8d5}\label{rti_8h_aac9f4a449d302b4f39e69a14b3a4c8d5}} 
+\index{rti.h@{rti.h}!UDP\_TIMEOUT\_TIME@{UDP\_TIMEOUT\_TIME}}
+\index{UDP\_TIMEOUT\_TIME@{UDP\_TIMEOUT\_TIME}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{UDP\_TIMEOUT\_TIME}{UDP\_TIMEOUT\_TIME}}
+{\footnotesize\ttfamily \#define U\+D\+P\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+T\+I\+ME~S\+EC(1)}
+
+The timeout time in ns for U\+DP operations. Default value is 1 sec. \mbox{\Hypertarget{rti_8h_ae2e1a44a10d4219f4645a4e99fee009c}\label{rti_8h_ae2e1a44a10d4219f4645a4e99fee009c}} 
+\index{rti.h@{rti.h}!UNEXPECTED\_MESSAGE@{UNEXPECTED\_MESSAGE}}
+\index{UNEXPECTED\_MESSAGE@{UNEXPECTED\_MESSAGE}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{UNEXPECTED\_MESSAGE}{UNEXPECTED\_MESSAGE}}
+{\footnotesize\ttfamily \#define U\+N\+E\+X\+P\+E\+C\+T\+E\+D\+\_\+\+M\+E\+S\+S\+A\+GE~4}
+
+Incoming message is not expected. \mbox{\Hypertarget{rti_8h_a5a6c87886a0136b58ae5bb1d627c7ae3}\label{rti_8h_a5a6c87886a0136b58ae5bb1d627c7ae3}} 
+\index{rti.h@{rti.h}!WRONG\_SERVER@{WRONG\_SERVER}}
+\index{WRONG\_SERVER@{WRONG\_SERVER}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{WRONG\_SERVER}{WRONG\_SERVER}}
+{\footnotesize\ttfamily \#define W\+R\+O\+N\+G\+\_\+\+S\+E\+R\+V\+ER~5}
+
+Connected to the wrong server. 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{rti_8h_a50856f252373f4c456a34c6f26d385ce}\label{rti_8h_a50856f252373f4c456a34c6f26d385ce}} 
+\index{rti.h@{rti.h}!execution\_mode\_t@{execution\_mode\_t}}
+\index{execution\_mode\_t@{execution\_mode\_t}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{execution\_mode\_t}{execution\_mode\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{rti_8h_a83ca4d4187a661b1395c9f860d61c97e}{execution\+\_\+mode\+\_\+t}} \mbox{\hyperlink{rti_8h_a83ca4d4187a661b1395c9f860d61c97e}{execution\+\_\+mode\+\_\+t}}}
+
+Mode of execution of a federate. \mbox{\Hypertarget{rti_8h_ae0ca2ecc00a6486432e5965cb81c3044}\label{rti_8h_ae0ca2ecc00a6486432e5965cb81c3044}} 
+\index{rti.h@{rti.h}!fed\_state\_t@{fed\_state\_t}}
+\index{fed\_state\_t@{fed\_state\_t}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{fed\_state\_t}{fed\_state\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{rti_8h_a7a2e496e8d9be587cc662640a4251b23}{fed\+\_\+state\+\_\+t}} \mbox{\hyperlink{rti_8h_a7a2e496e8d9be587cc662640a4251b23}{fed\+\_\+state\+\_\+t}}}
+
+State of a federate during execution. \mbox{\Hypertarget{rti_8h_afa071c0f847bd1cc2a736ab3cd20ee72}\label{rti_8h_afa071c0f847bd1cc2a736ab3cd20ee72}} 
+\index{rti.h@{rti.h}!federate\_t@{federate\_t}}
+\index{federate\_t@{federate\_t}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{federate\_t}{federate\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structfederate__t}{federate\+\_\+t}} \mbox{\hyperlink{structfederate__t}{federate\+\_\+t}}}
+
+Information about a federate known to the R\+TI, including its runtime state, mode of execution, and connectivity with other federates. The list of upstream and downstream federates does not include those that are connected via a \char`\"{}physical\char`\"{} connection (one denoted with $\sim$$>$) because those connections do not impose any scheduling constraints. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{rti_8h_a83ca4d4187a661b1395c9f860d61c97e}\label{rti_8h_a83ca4d4187a661b1395c9f860d61c97e}} 
+\index{rti.h@{rti.h}!execution\_mode\_t@{execution\_mode\_t}}
+\index{execution\_mode\_t@{execution\_mode\_t}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{execution\_mode\_t}{execution\_mode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{rti_8h_a83ca4d4187a661b1395c9f860d61c97e}{execution\+\_\+mode\+\_\+t}}}
+
+Mode of execution of a federate. \mbox{\Hypertarget{rti_8h_a7a2e496e8d9be587cc662640a4251b23}\label{rti_8h_a7a2e496e8d9be587cc662640a4251b23}} 
+\index{rti.h@{rti.h}!fed\_state\_t@{fed\_state\_t}}
+\index{fed\_state\_t@{fed\_state\_t}!rti.h@{rti.h}}
+\doxysubsubsection{\texorpdfstring{fed\_state\_t}{fed\_state\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{rti_8h_a7a2e496e8d9be587cc662640a4251b23}{fed\+\_\+state\+\_\+t}}}
+
+State of a federate during execution. 

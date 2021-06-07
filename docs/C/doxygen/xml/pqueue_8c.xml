@@ -1,0 +1,1028 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="pqueue_8c" kind="file" language="C++">
+    <compoundname>pqueue.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">string.h</includes>
+    <includes refid="pqueue_8h" local="yes">pqueue.h</includes>
+    <includes refid="util_8h" local="yes">util.h</includes>
+    <includedby refid="reactor__common_8c" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor_common.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c</label>
+        <link refid="pqueue_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>util.h</label>
+        <link refid="util_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>pqueue.h</label>
+        <link refid="pqueue_8h"/>
+      </node>
+      <node id="7">
+        <label>stdarg.h</label>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="pqueue_8c_1a8d1b3e7289cde75b3042e855207bbd6e" prot="public" static="no">
+        <name>LF_LEFT</name>
+        <param><defname>i</defname></param>
+        <initializer>((i) &lt;&lt; 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="41" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pqueue_8c_1ae14316df2cad4b399158d355b917bbd3" prot="public" static="no">
+        <name>LF_RIGHT</name>
+        <param><defname>i</defname></param>
+        <initializer>(((i) &lt;&lt; 1) + 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="42" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pqueue_8c_1a673aa06f4a4edddbf8cf5020c50552b8" prot="public" static="no">
+        <name>LF_PARENT</name>
+        <param><defname>i</defname></param>
+        <initializer>((i) &gt;&gt; 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="43" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pqueue_8c_1a502ade1771a31d362fc849661c07f98c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* find_equal</definition>
+        <argsstring>(pqueue_t *q, void *e, int pos, pqueue_pri_t max)</argsstring>
+        <name>find_equal</name>
+        <param>
+          <type><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="pqueue_8h_1ad8239ddc32134716f57e54bb972f6bf0" kindref="member">pqueue_pri_t</ref></type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Find an element in the queue that matches the given element up to and including the given maximum priority. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="49" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="49" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="pqueue_8c_1a8c2bf643ee21d3f6a08c42555b43f086" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* find_equal_same_priority</definition>
+        <argsstring>(pqueue_t *q, void *e, int pos)</argsstring>
+        <name>find_equal_same_priority</name>
+        <param>
+          <type><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Find an element in the queue that matches the given element up to but not including the given maximum priority. The matching element has to <emphasis>also</emphasis> have the same priority. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="86" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="86" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="pqueue_8c_1a09b96709c25615c2232596ba6c959c26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref> *</type>
+        <definition>pqueue_t* pqueue_init</definition>
+        <argsstring>(size_t n, pqueue_cmp_pri_f cmppri, pqueue_get_pri_f getpri, pqueue_get_pos_f getpos, pqueue_set_pos_f setpos, pqueue_eq_elem_f eqelem, pqueue_print_entry_f prt)</argsstring>
+        <name>pqueue_init</name>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>pqueue_cmp_pri_f</type>
+          <declname>cmppri</declname>
+        </param>
+        <param>
+          <type><ref refid="pqueue_8h_1aa84f0100faf971295df5aed226c390a6" kindref="member">pqueue_get_pri_f</ref></type>
+          <declname>getpri</declname>
+        </param>
+        <param>
+          <type><ref refid="pqueue_8h_1a31ca7927983005bd7866021819ad7037" kindref="member">pqueue_get_pos_f</ref></type>
+          <declname>getpos</declname>
+        </param>
+        <param>
+          <type>pqueue_set_pos_f</type>
+          <declname>setpos</declname>
+        </param>
+        <param>
+          <type>pqueue_eq_elem_f</type>
+          <declname>eqelem</declname>
+        </param>
+        <param>
+          <type><ref refid="pqueue_8h_1a884902da135214a6167f1536ad4ed4bc" kindref="member">pqueue_print_entry_f</ref></type>
+          <declname>prt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>initialize the queue</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the initial estimate of the number of queue items for which memory should be preallocated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cmppri</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function to run to compare two elements This callback should return 0 for &apos;lower&apos; and non-zero for &apos;higher&apos;, or vice versa if reverse priority is desired </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>getpri</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the callback function to run to set a score to an element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>getpos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the callback function to get the current element&apos;s position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>setpos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the callback function to set the current element&apos;s position</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the handle or NULL for insufficent memory </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="125" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="125" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="pqueue_8c_1acceacc4429dd9cd31d5af09f3f473cb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pqueue_free</definition>
+        <argsstring>(pqueue_t *q)</argsstring>
+        <name>pqueue_free</name>
+        <param>
+          <type><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>free all memory used by the queue <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="154" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="154" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="pqueue_8c_1ae0cf88c8360a5f08ada81feaaeb40505" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t pqueue_size</definition>
+        <argsstring>(pqueue_t *q)</argsstring>
+        <name>pqueue_size</name>
+        <param>
+          <type><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>return the size of the queue. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="159" column="8" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="159" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="pqueue_8c_1a3e99f0cb15bfac6eeee46df9c875073a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>static size_t maxchild</definition>
+        <argsstring>(pqueue_t *q, size_t i)</argsstring>
+        <name>maxchild</name>
+        <param>
+          <type><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="164" column="15" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="164" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="pqueue_8c_1a2794910fab93f7194bd77ccb903f36a1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>static size_t bubble_up</definition>
+        <argsstring>(pqueue_t *q, size_t i)</argsstring>
+        <name>bubble_up</name>
+        <param>
+          <type><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="177" column="15" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="177" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="pqueue_8c_1a69ad19c161ae75369d1a444c83f4600c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void percolate_down</definition>
+        <argsstring>(pqueue_t *q, size_t i)</argsstring>
+        <name>percolate_down</name>
+        <param>
+          <type><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="195" column="13" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="195" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="pqueue_8c_1a1107ed07c3b78c119042d0c478d57551" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* pqueue_find_equal_same_priority</definition>
+        <argsstring>(pqueue_t *q, void *e)</argsstring>
+        <name>pqueue_find_equal_same_priority</name>
+        <param>
+          <type><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Find the highest-ranking item with the same priority that matches the supplied entry. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the entry to compare against </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>NULL if no matching event has been found, otherwise the entry </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="212" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="212" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="pqueue_8c_1afa263e9f9ca6446e307c2422ae5cee06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* pqueue_find_equal</definition>
+        <argsstring>(pqueue_t *q, void *e, pqueue_pri_t max)</argsstring>
+        <name>pqueue_find_equal</name>
+        <param>
+          <type><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="pqueue_8h_1ad8239ddc32134716f57e54bb972f6bf0" kindref="member">pqueue_pri_t</ref></type>
+          <declname>max_priority</declname>
+          <defname>max</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Find the highest-ranking item with priority up to and including the given maximum priority that matches the supplied entry. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the entry to compare against </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the maximum priority to consider </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>NULL if no matching event has been found, otherwise the entry </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="216" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="216" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="pqueue_8c_1addd8cdfbc8c47b8cdd7eb4c4560de7aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int pqueue_insert</definition>
+        <argsstring>(pqueue_t *q, void *d)</argsstring>
+        <name>pqueue_insert</name>
+        <param>
+          <type><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Insert an element into the queue. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the element </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="220" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="220" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="pqueue_8c_1a9a509654dacb6be3d34ff7a4958ab4dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int pqueue_remove</definition>
+        <argsstring>(pqueue_t *q, void *d)</argsstring>
+        <name>pqueue_remove</name>
+        <param>
+          <type><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>e</declname>
+          <defname>d</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove an item from the queue. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the entry </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="263" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="263" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="pqueue_8c_1abec9363c7a9cc89190bf0925a4a1652c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* pqueue_pop</definition>
+        <argsstring>(pqueue_t *q)</argsstring>
+        <name>pqueue_pop</name>
+        <param>
+          <type><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pop the highest-ranking item from the queue. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>NULL on error, otherwise the entry </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="274" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="274" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="pqueue_8c_1a2919d3e817688b81da746d4123f51ba3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* pqueue_peek</definition>
+        <argsstring>(pqueue_t *q)</argsstring>
+        <name>pqueue_peek</name>
+        <param>
+          <type><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access highest-ranking item without removing it. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the queue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>NULL on error, otherwise the entry </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="287" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="287" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="pqueue_8c_1add0fae8523cca210f1574586e82cf7dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pqueue_dump</definition>
+        <argsstring>(pqueue_t *q, pqueue_print_entry_f print)</argsstring>
+        <name>pqueue_dump</name>
+        <param>
+          <type><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type><ref refid="pqueue_8h_1a884902da135214a6167f1536ad4ed4bc" kindref="member">pqueue_print_entry_f</ref></type>
+          <declname>print</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dump the queue and it&apos;s internal structure. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="295" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="295" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="pqueue_8c_1a1bc71ac57e101d48d91c75ecbf8fc278" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pqueue_print</definition>
+        <argsstring>(pqueue_t *q, pqueue_print_entry_f print)</argsstring>
+        <name>pqueue_print</name>
+        <param>
+          <type><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type><ref refid="pqueue_8h_1a884902da135214a6167f1536ad4ed4bc" kindref="member">pqueue_print_entry_f</ref></type>
+          <declname>print</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Print the queue. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="308" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="308" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="pqueue_8c_1aaa65a8fd39dc6a0a5bae297f37b7046c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int subtree_is_valid</definition>
+        <argsstring>(pqueue_t *q, int pos)</argsstring>
+        <name>subtree_is_valid</name>
+        <param>
+          <type><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="328" column="12" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="328" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="pqueue_8c_1aecb92aa04f03ad7866508bc27778d7e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int pqueue_is_valid</definition>
+        <argsstring>(pqueue_t *q)</argsstring>
+        <name>pqueue_is_valid</name>
+        <param>
+          <type><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check that the all entries are in the right order, etc. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" line="360" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c" bodystart="360" bodyend="362"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2014,<sp/>Volkan<sp/>Yazıcı<sp/>&lt;volkan.yazici@gmail.com&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright<sp/>notice,<sp/>this</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright<sp/>notice,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the<sp/>documentation</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/>&quot;AS<sp/>IS&quot;<sp/>AND</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED<sp/>AND</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>Modified<sp/>by<sp/>Marten<sp/>Lohstroh<sp/>(May,<sp/>2019).</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>Changes:<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>-<sp/>Require<sp/>implementation<sp/>of<sp/>a<sp/>pqueue_eq_elem_f<sp/>function<sp/>to<sp/>determine</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/><sp/>whether<sp/>two<sp/>elements<sp/>are<sp/>equal<sp/>or<sp/>not;<sp/>and</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>-<sp/>The<sp/>provided<sp/>pqueue_eq_elem_f<sp/>implementation<sp/>is<sp/>used<sp/>to<sp/>test<sp/>and<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/><sp/>search<sp/>for<sp/>equal<sp/>elements<sp/>present<sp/>in<sp/>the<sp/>queue;<sp/>and</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>-<sp/>Removed<sp/>capability<sp/>to<sp/>reassign<sp/>priorities.</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pqueue_8h" kindref="compound">pqueue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="util_8h" kindref="compound">util.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LF_LEFT(i)<sp/><sp/><sp/>((i)<sp/>&lt;&lt;<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LF_RIGHT(i)<sp/><sp/>(((i)<sp/>&lt;&lt;<sp/>1)<sp/>+<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LF_PARENT(i)<sp/>((i)<sp/>&gt;&gt;<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>find_equal(<ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*q,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*e,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos,<sp/><ref refid="pqueue_8h_1ad8239ddc32134716f57e54bb972f6bf0" kindref="member">pqueue_pri_t</ref><sp/>max)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pos<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a7389ef15e70a377a52086e6d6b956d70" kindref="member">error_print_and_exit</ref>(</highlight><highlight class="stringliteral">&quot;find_equal()<sp/>called<sp/>with<sp/>a<sp/>negative<sp/>pos<sp/>index.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stop<sp/>the<sp/>recursion<sp/>when<sp/>we&apos;ve<sp/>reached<sp/>the<sp/>end<sp/>of<sp/>the<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>queue.<sp/>This<sp/>has<sp/>to<sp/>be<sp/>done<sp/>before<sp/>accessing<sp/>the<sp/>queue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>avoid<sp/>segmentation<sp/>fault.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!q<sp/>||<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)pos<sp/>&gt;=<sp/>q-&gt;<ref refid="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" kindref="member">size</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>rval;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>curr<sp/>=<sp/>q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[pos];</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stop<sp/>the<sp/>recursion<sp/>when<sp/>we&apos;ve<sp/>surpassed<sp/>the<sp/>maximum<sp/>priority.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!curr<sp/>||<sp/>q-&gt;<ref refid="structpqueue__t_1af44c1953e47510529147cfbea33489ef" kindref="member">cmppri</ref>(q-&gt;<ref refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" kindref="member">getpri</ref>(curr),<sp/>max))<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(q-&gt;<ref refid="structpqueue__t_1a27ad9197156c9be3cbc2845478223f32" kindref="member">eqelem</ref>(curr,<sp/>e))<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>curr;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rval<sp/>=<sp/>find_equal(q,<sp/>e,<sp/>LF_LEFT(pos),<sp/>max);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rval)<sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rval;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>find_equal(q,<sp/>e,<sp/>LF_RIGHT(pos),<sp/>max);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>find_equal_same_priority(<ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*q,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*e,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pos<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a7389ef15e70a377a52086e6d6b956d70" kindref="member">error_print_and_exit</ref>(</highlight><highlight class="stringliteral">&quot;find_equal_same_priority()<sp/>called<sp/>with<sp/>a<sp/>negative<sp/>pos<sp/>index.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stop<sp/>the<sp/>recursion<sp/>when<sp/>we&apos;ve<sp/>reached<sp/>the<sp/>end<sp/>of<sp/>the<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>queue.<sp/>This<sp/>has<sp/>to<sp/>be<sp/>done<sp/>before<sp/>accessing<sp/>the<sp/>queue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>avoid<sp/>segmentation<sp/>fault.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!q<sp/>||<sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)pos<sp/>&gt;=<sp/>q-&gt;<ref refid="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" kindref="member">size</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>rval;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>curr<sp/>=<sp/>q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[pos];</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stop<sp/>the<sp/>recursion<sp/>once<sp/>we&apos;ve<sp/>surpassed<sp/>the<sp/>priority<sp/>of<sp/>the<sp/>element</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we&apos;re<sp/>looking<sp/>for.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!curr<sp/>||<sp/>q-&gt;<ref refid="structpqueue__t_1af44c1953e47510529147cfbea33489ef" kindref="member">cmppri</ref>(q-&gt;<ref refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" kindref="member">getpri</ref>(curr),<sp/>q-&gt;<ref refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" kindref="member">getpri</ref>(e)))<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(q-&gt;<ref refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" kindref="member">getpri</ref>(curr)<sp/>==<sp/>q-&gt;<ref refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" kindref="member">getpri</ref>(e)<sp/>&amp;&amp;<sp/>q-&gt;<ref refid="structpqueue__t_1a27ad9197156c9be3cbc2845478223f32" kindref="member">eqelem</ref>(curr,<sp/>e))<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>curr;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rval<sp/>=<sp/>find_equal_same_priority(q,<sp/>e,<sp/>LF_LEFT(pos));</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rval)<sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rval;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>find_equal_same_priority(q,<sp/>e,<sp/>LF_RIGHT(pos));<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>(int<sp/>i=1;<sp/>i<sp/>&lt;<sp/>q-&gt;size;<sp/>i++)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>if<sp/>(q-&gt;d[i]<sp/>==<sp/>e)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>q-&gt;d[i];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*<sp/><ref refid="pqueue_8h_1a09b96709c25615c2232596ba6c959c26" kindref="member">pqueue_init</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pqueue_cmp_pri_f<sp/>cmppri,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pqueue_8h_1aa84f0100faf971295df5aed226c390a6" kindref="member">pqueue_get_pri_f</ref><sp/>getpri,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pqueue_8h_1a31ca7927983005bd7866021819ad7037" kindref="member">pqueue_get_pos_f</ref><sp/>getpos,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pqueue_set_pos_f<sp/>setpos,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pqueue_eq_elem_f<sp/>eqelem,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pqueue_8h_1a884902da135214a6167f1536ad4ed4bc" kindref="member">pqueue_print_entry_f</ref><sp/>prt)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*q;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(q<sp/>=<sp/>(<ref refid="structpqueue__t" kindref="compound">pqueue_t</ref>*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structpqueue__t" kindref="compound">pqueue_t</ref>))))</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Need<sp/>to<sp/>allocate<sp/>n+1<sp/>elements<sp/>since<sp/>element<sp/>0<sp/>isn&apos;t<sp/>used.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref><sp/>=<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**)malloc((n<sp/>+<sp/>1)<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*))))<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(q);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" kindref="member">size</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1a2edc2359d1420efc7031677ecd19c1ec" kindref="member">avail</ref><sp/>=<sp/>q-&gt;<ref refid="structpqueue__t_1ab405fbb415065192ce9a1a39b5f45978" kindref="member">step</ref><sp/>=<sp/>(n+1);<sp/><sp/></highlight><highlight class="comment">/*<sp/>see<sp/>comment<sp/>above<sp/>about<sp/>n+1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1af44c1953e47510529147cfbea33489ef" kindref="member">cmppri</ref><sp/>=<sp/>cmppri;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" kindref="member">getpri</ref><sp/>=<sp/>getpri;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1a20a38eccf17fb90e2c483503326c3fba" kindref="member">getpos</ref><sp/>=<sp/>getpos;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1a0960bed72e0c851bccf1591c39360c73" kindref="member">setpos</ref><sp/>=<sp/>setpos;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1a27ad9197156c9be3cbc2845478223f32" kindref="member">eqelem</ref><sp/>=<sp/>eqelem;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1aeb48e61916a065bb67c7dc3cc963ffeb" kindref="member">prt</ref><sp/>=<sp/>prt;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>q;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="pqueue_8h_1acceacc4429dd9cd31d5af09f3f473cb0" kindref="member">pqueue_free</ref>(<ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*q)<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>free(q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>free(q);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="pqueue_8h_1ae0cf88c8360a5f08ada81feaaeb40505" kindref="member">pqueue_size</ref>(<ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*q)<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Queue<sp/>element<sp/>0<sp/>exists<sp/>but<sp/>doesn&apos;t<sp/>count<sp/>since<sp/>it<sp/>isn&apos;t<sp/>used.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(q-&gt;<ref refid="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" kindref="member">size</ref><sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>maxchild(<ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*q,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>child_node<sp/>=<sp/>LF_LEFT(i);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(child_node<sp/>&gt;=<sp/>q-&gt;<ref refid="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" kindref="member">size</ref>)</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((child_node+1)<sp/>&lt;<sp/>q-&gt;<ref refid="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" kindref="member">size</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(q-&gt;<ref refid="structpqueue__t_1af44c1953e47510529147cfbea33489ef" kindref="member">cmppri</ref>(q-&gt;<ref refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" kindref="member">getpri</ref>(q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[child_node]),<sp/>q-&gt;<ref refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" kindref="member">getpri</ref>(q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[child_node+1]))))<sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>child_node++;<sp/></highlight><highlight class="comment">/*<sp/>use<sp/>right<sp/>child<sp/>instead<sp/>of<sp/>left<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>child_node;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bubble_up(<ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*q,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>parent_node;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*moving_node<sp/>=<sp/>q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[i];</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pqueue_8h_1ad8239ddc32134716f57e54bb972f6bf0" kindref="member">pqueue_pri_t</ref><sp/>moving_pri<sp/>=<sp/>q-&gt;<ref refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" kindref="member">getpri</ref>(moving_node);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(parent_node<sp/>=<sp/>LF_PARENT(i);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i<sp/>&gt;<sp/>1)<sp/>&amp;&amp;<sp/>q-&gt;<ref refid="structpqueue__t_1af44c1953e47510529147cfbea33489ef" kindref="member">cmppri</ref>(q-&gt;<ref refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" kindref="member">getpri</ref>(q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[parent_node]),<sp/>moving_pri));</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>=<sp/>parent_node,<sp/>parent_node<sp/>=<sp/>LF_PARENT(i))</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[i]<sp/>=<sp/>q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[parent_node];</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1a0960bed72e0c851bccf1591c39360c73" kindref="member">setpos</ref>(q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[i],<sp/>i);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[i]<sp/>=<sp/>moving_node;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1a0960bed72e0c851bccf1591c39360c73" kindref="member">setpos</ref>(moving_node,<sp/>i);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>percolate_down(<ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*q,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i)<sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>child_node;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*moving_node<sp/>=<sp/>q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[i];</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pqueue_8h_1ad8239ddc32134716f57e54bb972f6bf0" kindref="member">pqueue_pri_t</ref><sp/>moving_pri<sp/>=<sp/>q-&gt;<ref refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" kindref="member">getpri</ref>(moving_node);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((child_node<sp/>=<sp/>maxchild(q,<sp/>i))<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1af44c1953e47510529147cfbea33489ef" kindref="member">cmppri</ref>(moving_pri,<sp/>q-&gt;<ref refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" kindref="member">getpri</ref>(q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[child_node])))</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[i]<sp/>=<sp/>q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[child_node];</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1a0960bed72e0c851bccf1591c39360c73" kindref="member">setpos</ref>(q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[i],<sp/>i);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>=<sp/>child_node;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[i]<sp/>=<sp/>moving_node;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1a0960bed72e0c851bccf1591c39360c73" kindref="member">setpos</ref>(moving_node,<sp/>i);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="pqueue_8h_1a1107ed07c3b78c119042d0c478d57551" kindref="member">pqueue_find_equal_same_priority</ref>(<ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*q,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*e)<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>find_equal_same_priority(q,<sp/>e,<sp/>1);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="pqueue_8h_1a8e0ceba56c7d72d4fe5c7776063b5e0c" kindref="member">pqueue_find_equal</ref>(<ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*q,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*e,<sp/><ref refid="pqueue_8h_1ad8239ddc32134716f57e54bb972f6bf0" kindref="member">pqueue_pri_t</ref><sp/>max)<sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>find_equal(q,<sp/>e,<sp/>1,<sp/>max);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pqueue_8h_1addd8cdfbc8c47b8cdd7eb4c4560de7aa" kindref="member">pqueue_insert</ref>(<ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*q,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*d)<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**tmp;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>newsize;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!q)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(&quot;==Before<sp/>insert==\n&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pqueue_dump(q,<sp/>stdout,<sp/>q-&gt;prt);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for(int<sp/>i=1;<sp/>i<sp/>&lt;<sp/>q-&gt;size;<sp/>i++)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>if<sp/>(d<sp/>==<sp/>q-&gt;d[i])<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Duplicate<sp/>found!\n&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>allocate<sp/>more<sp/>memory<sp/>if<sp/>necessary<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(q-&gt;<ref refid="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" kindref="member">size</ref><sp/>&gt;=<sp/>q-&gt;<ref refid="structpqueue__t_1a2edc2359d1420efc7031677ecd19c1ec" kindref="member">avail</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newsize<sp/>=<sp/>q-&gt;<ref refid="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" kindref="member">size</ref><sp/>+<sp/>q-&gt;<ref refid="structpqueue__t_1ab405fbb415065192ce9a1a39b5f45978" kindref="member">step</ref>;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(tmp<sp/>=<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**)realloc(q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)<sp/>*<sp/>newsize)))</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref><sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1a2edc2359d1420efc7031677ecd19c1ec" kindref="member">avail</ref><sp/>=<sp/>newsize;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>insert<sp/>item<sp/>and<sp/>organize<sp/>the<sp/>tree<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>i<sp/>=<sp/>q-&gt;<ref refid="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" kindref="member">size</ref>++;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[i]<sp/>=<sp/>d;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>bubble_up(q,<sp/>i);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(&quot;==After<sp/>insert==\n&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pqueue_dump(q,<sp/>stdout,<sp/>q-&gt;prt);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOTE:<sp/>Only<sp/>use<sp/>this<sp/>for<sp/>debugging!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>(!pqueue_is_valid(q))<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>pqueue_dump(q,<sp/>stdout,<sp/>q-&gt;prt);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>exit(1);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pqueue_8h_1a921be3b49e4021888c595188438fdf7a" kindref="member">pqueue_remove</ref>(<ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*q,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*d)<sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>posn<sp/>=<sp/>q-&gt;<ref refid="structpqueue__t_1a20a38eccf17fb90e2c483503326c3fba" kindref="member">getpos</ref>(d);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[posn]<sp/>=<sp/>q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[--q-&gt;<ref refid="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" kindref="member">size</ref>];</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(q-&gt;<ref refid="structpqueue__t_1af44c1953e47510529147cfbea33489ef" kindref="member">cmppri</ref>(q-&gt;<ref refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" kindref="member">getpri</ref>(d),<sp/>q-&gt;<ref refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" kindref="member">getpri</ref>(q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[posn])))</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bubble_up(q,<sp/>posn);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>percolate_down(q,<sp/>posn);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="pqueue_8h_1abec9363c7a9cc89190bf0925a4a1652c" kindref="member">pqueue_pop</ref>(<ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*q)<sp/>{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>head;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!q<sp/>||<sp/>q-&gt;<ref refid="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" kindref="member">size</ref><sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>head<sp/>=<sp/>q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[1];</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[1]<sp/>=<sp/>q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[--q-&gt;<ref refid="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" kindref="member">size</ref>];</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>percolate_down(q,<sp/>1);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>head;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="pqueue_8h_1a2919d3e817688b81da746d4123f51ba3" kindref="member">pqueue_peek</ref>(<ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*q)<sp/>{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*d;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!q<sp/>||<sp/>q-&gt;<ref refid="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" kindref="member">size</ref><sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>d<sp/>=<sp/>q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[1];</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="pqueue_8h_1add0fae8523cca210f1574586e82cf7dd" kindref="member">pqueue_dump</ref>(<ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*q,<sp/><ref refid="pqueue_8h_1a884902da135214a6167f1536ad4ed4bc" kindref="member">pqueue_print_entry_f</ref><sp/>print)<sp/>{</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="util_8h_1a0a27a0fa2f8d9461204242121941696c" kindref="member">DEBUG_PRINT</ref>(</highlight><highlight class="stringliteral">&quot;posn\tleft\tright\tparent\tmaxchild\t...&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>q-&gt;<ref refid="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" kindref="member">size</ref><sp/>;i++)<sp/>{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8h_1a0a27a0fa2f8d9461204242121941696c" kindref="member">DEBUG_PRINT</ref>(</highlight><highlight class="stringliteral">&quot;%zu\t%zu\t%zu\t%zu\t%ul\t&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i,</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LF_LEFT(i),<sp/>LF_RIGHT(i),<sp/>LF_PARENT(i),</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)maxchild(q,<sp/>i));</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[i]);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="pqueue_8h_1a1bc71ac57e101d48d91c75ecbf8fc278" kindref="member">pqueue_print</ref>(<ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*q,<sp/><ref refid="pqueue_8h_1a884902da135214a6167f1536ad4ed4bc" kindref="member">pqueue_print_entry_f</ref><sp/>print)<sp/>{</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*dup;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*e;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>dup<sp/>=<sp/><ref refid="pqueue_8h_1a09b96709c25615c2232596ba6c959c26" kindref="member">pqueue_init</ref>(q-&gt;<ref refid="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" kindref="member">size</ref>,</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1af44c1953e47510529147cfbea33489ef" kindref="member">cmppri</ref>,<sp/>q-&gt;<ref refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" kindref="member">getpri</ref>,</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>q-&gt;<ref refid="structpqueue__t_1a20a38eccf17fb90e2c483503326c3fba" kindref="member">getpos</ref>,<sp/>q-&gt;<ref refid="structpqueue__t_1a0960bed72e0c851bccf1591c39360c73" kindref="member">setpos</ref>,<sp/>q-&gt;<ref refid="structpqueue__t_1a27ad9197156c9be3cbc2845478223f32" kindref="member">eqelem</ref>,<sp/>q-&gt;<ref refid="structpqueue__t_1aeb48e61916a065bb67c7dc3cc963ffeb" kindref="member">prt</ref>);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>dup-&gt;<ref refid="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" kindref="member">size</ref><sp/>=<sp/>q-&gt;<ref refid="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/>dup-&gt;<ref refid="structpqueue__t_1a2edc2359d1420efc7031677ecd19c1ec" kindref="member">avail</ref><sp/>=<sp/>q-&gt;<ref refid="structpqueue__t_1a2edc2359d1420efc7031677ecd19c1ec" kindref="member">avail</ref>;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>dup-&gt;<ref refid="structpqueue__t_1ab405fbb415065192ce9a1a39b5f45978" kindref="member">step</ref><sp/>=<sp/>q-&gt;<ref refid="structpqueue__t_1ab405fbb415065192ce9a1a39b5f45978" kindref="member">step</ref>;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(dup-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>,<sp/>q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>,<sp/>(q-&gt;<ref refid="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" kindref="member">size</ref><sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)));</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((e<sp/>=<sp/><ref refid="pqueue_8h_1abec9363c7a9cc89190bf0925a4a1652c" kindref="member">pqueue_pop</ref>(dup)))</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(e);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pqueue_8h_1acceacc4429dd9cd31d5af09f3f473cb0" kindref="member">pqueue_free</ref>(dup);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>subtree_is_valid(<ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*q,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos)<sp/>{</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pos<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a7389ef15e70a377a52086e6d6b956d70" kindref="member">error_print_and_exit</ref>(</highlight><highlight class="stringliteral">&quot;subtree_is_valid()<sp/>called<sp/>with<sp/>a<sp/>negative<sp/>pos<sp/>index.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>left_pos<sp/>=<sp/>LF_LEFT(pos);</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(left_pos<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a7389ef15e70a377a52086e6d6b956d70" kindref="member">error_print_and_exit</ref>(</highlight><highlight class="stringliteral">&quot;subtree_is_valid():<sp/>index<sp/>overflow<sp/>detected.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)left_pos<sp/>&lt;<sp/>q-&gt;size)<sp/>{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>has<sp/>a<sp/>left<sp/>child<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(q-&gt;<ref refid="structpqueue__t_1af44c1953e47510529147cfbea33489ef" kindref="member">cmppri</ref>(q-&gt;<ref refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" kindref="member">getpri</ref>(q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[pos]),<sp/>q-&gt;<ref refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" kindref="member">getpri</ref>(q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[LF_LEFT(pos)])))</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!subtree_is_valid(q,<sp/>LF_LEFT(pos)))</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>right_pos<sp/>=<sp/>LF_RIGHT(pos);</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(right_pos<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a7389ef15e70a377a52086e6d6b956d70" kindref="member">error_print_and_exit</ref>(</highlight><highlight class="stringliteral">&quot;subtree_is_valid():<sp/>index<sp/>overflow<sp/>detected.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)right_pos<sp/>&lt;<sp/>q-&gt;size)<sp/>{</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>has<sp/>a<sp/>right<sp/>child<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(q-&gt;<ref refid="structpqueue__t_1af44c1953e47510529147cfbea33489ef" kindref="member">cmppri</ref>(q-&gt;<ref refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" kindref="member">getpri</ref>(q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[pos]),<sp/>q-&gt;<ref refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" kindref="member">getpri</ref>(q-&gt;<ref refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" kindref="member">d</ref>[LF_RIGHT(pos)])))</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!subtree_is_valid(q,<sp/>LF_RIGHT(pos)))</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pqueue_8h_1aecb92aa04f03ad7866508bc27778d7e9" kindref="member">pqueue_is_valid</ref>(<ref refid="structpqueue__t" kindref="compound">pqueue_t</ref><sp/>*q)<sp/>{</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>subtree_is_valid(q,<sp/>1);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c"/>
+  </compounddef>
+</doxygen>

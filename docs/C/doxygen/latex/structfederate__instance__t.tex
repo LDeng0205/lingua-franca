@@ -1,0 +1,211 @@
+\hypertarget{structfederate__instance__t}{}\doxysection{federate\+\_\+instance\+\_\+t Struct Reference}
+\label{structfederate__instance__t}\index{federate\_instance\_t@{federate\_instance\_t}}
+
+
+{\ttfamily \#include $<$federate.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structfederate__instance__t_aacdc19a638ccdc9fae494ce641f4cb04}{socket\+\_\+\+T\+C\+P\+\_\+\+R\+TI}}
+\item 
+lf\+\_\+thread\+\_\+t \mbox{\hyperlink{structfederate__instance__t_a5b6b4b5912a7bb7df1c8987f38e12004}{R\+T\+I\+\_\+socket\+\_\+listener}}
+\item 
+int \mbox{\hyperlink{structfederate__instance__t_a189bc35e092cd0c6908267aa9ff663e5}{number\+\_\+of\+\_\+inbound\+\_\+p2p\+\_\+connections}}
+\item 
+lf\+\_\+thread\+\_\+t $\ast$ \mbox{\hyperlink{structfederate__instance__t_ac751250db764f954659deb15f1427044}{inbound\+\_\+socket\+\_\+listeners}}
+\item 
+int \mbox{\hyperlink{structfederate__instance__t_a26af9633fce5c849b670f9e4ebec020e}{number\+\_\+of\+\_\+outbound\+\_\+p2p\+\_\+connections}}
+\item 
+int \mbox{\hyperlink{structfederate__instance__t_a244a65a4b9ca9e27230c87ce9021b7e1}{sockets\+\_\+for\+\_\+inbound\+\_\+p2p\+\_\+connections}} \mbox{[}N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+F\+E\+D\+E\+R\+A\+T\+ES\mbox{]}
+\item 
+int \mbox{\hyperlink{structfederate__instance__t_a9e1cde7330bec95f787bb7a85d509c9a}{sockets\+\_\+for\+\_\+outbound\+\_\+p2p\+\_\+connections}} \mbox{[}N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+F\+E\+D\+E\+R\+A\+T\+ES\mbox{]}
+\item 
+lf\+\_\+thread\+\_\+t \mbox{\hyperlink{structfederate__instance__t_ab441abf042a2ff79099bdf2860aeb058}{inbound\+\_\+p2p\+\_\+handling\+\_\+thread\+\_\+id}}
+\item 
+int \mbox{\hyperlink{structfederate__instance__t_a20c5d19d5166ec82a09efe072c2f1b49}{server\+\_\+socket}}
+\item 
+int \mbox{\hyperlink{structfederate__instance__t_a309c9672d657f20cd1d3661edc7d5179}{server\+\_\+port}}
+\item 
+\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} \mbox{\hyperlink{structfederate__instance__t_aa66a2f08ea9173743106c7ff18f1846a}{last\+\_\+\+T\+AG}}
+\item 
+bool \mbox{\hyperlink{structfederate__instance__t_a05a9586ad89b82d0bf5f969a194ef69c}{is\+\_\+last\+\_\+\+T\+A\+G\+\_\+provisional}}
+\item 
+bool \mbox{\hyperlink{structfederate__instance__t_a9812f0499dda0efd9f2718981be2e905}{waiting\+\_\+for\+\_\+\+T\+AG}}
+\item 
+bool \mbox{\hyperlink{structfederate__instance__t_a603662cf0155920b8a76659e7dacb9ef}{has\+\_\+upstream}}
+\item 
+bool \mbox{\hyperlink{structfederate__instance__t_ac130c67ec68fe84d6753a54e6e73d59a}{has\+\_\+downstream}}
+\item 
+bool \mbox{\hyperlink{structfederate__instance__t_a5bed997749ef910209491c67e3ece6b4}{sent\+\_\+a\+\_\+stop\+\_\+request\+\_\+to\+\_\+rti}}
+\item 
+\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} \mbox{\hyperlink{structfederate__instance__t_ae95f54a01b0367048faa6460ff86e987}{last\+\_\+sent\+\_\+\+L\+TC}}
+\item 
+\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} \mbox{\hyperlink{structfederate__instance__t_a42618a45ae75b42e1caec4b373471d96}{last\+\_\+sent\+\_\+\+N\+ET}}
+\item 
+\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} \mbox{\hyperlink{structfederate__instance__t_a91a34b0d7f0f604c2f21cf062dbe0314}{min\+\_\+delay\+\_\+from\+\_\+physical\+\_\+action\+\_\+to\+\_\+federate\+\_\+output}}
+\item 
+\mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}} $\ast$$\ast$ \mbox{\hyperlink{structfederate__instance__t_a8385397cd2996dbf5f79828e077926f2}{triggers\+\_\+for\+\_\+network\+\_\+input\+\_\+control\+\_\+reactions}}
+\item 
+\mbox{\Hypertarget{structfederate__instance__t_a55752090527a6364765bf510c94b4837}\label{structfederate__instance__t_a55752090527a6364765bf510c94b4837}} 
+int {\bfseries triggers\+\_\+for\+\_\+network\+\_\+input\+\_\+control\+\_\+reactions\+\_\+size}
+\item 
+\mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}} $\ast$ \mbox{\hyperlink{structfederate__instance__t_a786701f771e06e14c369be4b0a6519b5}{trigger\+\_\+for\+\_\+network\+\_\+output\+\_\+control\+\_\+reactions}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure that a federate instance uses to keep track of its own state. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structfederate__instance__t_ac130c67ec68fe84d6753a54e6e73d59a}\label{structfederate__instance__t_ac130c67ec68fe84d6753a54e6e73d59a}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!has\_downstream@{has\_downstream}}
+\index{has\_downstream@{has\_downstream}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{has\_downstream}{has\_downstream}}
+{\footnotesize\ttfamily bool federate\+\_\+instance\+\_\+t\+::has\+\_\+downstream}
+
+Indicator of whether this federate has downstream federates. The default value of false may be overridden in \+\_\+\+\_\+initialize\+\_\+trigger\+\_\+objects. \mbox{\Hypertarget{structfederate__instance__t_a603662cf0155920b8a76659e7dacb9ef}\label{structfederate__instance__t_a603662cf0155920b8a76659e7dacb9ef}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!has\_upstream@{has\_upstream}}
+\index{has\_upstream@{has\_upstream}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{has\_upstream}{has\_upstream}}
+{\footnotesize\ttfamily bool federate\+\_\+instance\+\_\+t\+::has\+\_\+upstream}
+
+Indicator of whether this federate has upstream federates. The default value of false may be overridden in \+\_\+\+\_\+initialize\+\_\+trigger\+\_\+objects. \mbox{\Hypertarget{structfederate__instance__t_ab441abf042a2ff79099bdf2860aeb058}\label{structfederate__instance__t_ab441abf042a2ff79099bdf2860aeb058}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!inbound\_p2p\_handling\_thread\_id@{inbound\_p2p\_handling\_thread\_id}}
+\index{inbound\_p2p\_handling\_thread\_id@{inbound\_p2p\_handling\_thread\_id}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{inbound\_p2p\_handling\_thread\_id}{inbound\_p2p\_handling\_thread\_id}}
+{\footnotesize\ttfamily lf\+\_\+thread\+\_\+t federate\+\_\+instance\+\_\+t\+::inbound\+\_\+p2p\+\_\+handling\+\_\+thread\+\_\+id}
+
+Thread ID for a thread that accepts sockets and then supervises listening to those sockets for incoming P2P (physical) connections. \mbox{\Hypertarget{structfederate__instance__t_ac751250db764f954659deb15f1427044}\label{structfederate__instance__t_ac751250db764f954659deb15f1427044}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!inbound\_socket\_listeners@{inbound\_socket\_listeners}}
+\index{inbound\_socket\_listeners@{inbound\_socket\_listeners}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{inbound\_socket\_listeners}{inbound\_socket\_listeners}}
+{\footnotesize\ttfamily lf\+\_\+thread\+\_\+t$\ast$ federate\+\_\+instance\+\_\+t\+::inbound\+\_\+socket\+\_\+listeners}
+
+Array of thread I\+Ds for threads that listen for incoming messages. This is N\+U\+LL if there are none and otherwise has size given by number\+\_\+of\+\_\+inbound\+\_\+p2p\+\_\+connections. \mbox{\Hypertarget{structfederate__instance__t_a05a9586ad89b82d0bf5f969a194ef69c}\label{structfederate__instance__t_a05a9586ad89b82d0bf5f969a194ef69c}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!is\_last\_TAG\_provisional@{is\_last\_TAG\_provisional}}
+\index{is\_last\_TAG\_provisional@{is\_last\_TAG\_provisional}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{is\_last\_TAG\_provisional}{is\_last\_TAG\_provisional}}
+{\footnotesize\ttfamily bool federate\+\_\+instance\+\_\+t\+::is\+\_\+last\+\_\+\+T\+A\+G\+\_\+provisional}
+
+Indicates whether the last T\+AG received is provisional or an ordinary T\+AG. If the last T\+AG has been provisional, network control reactions must be inserted. This variable should only be accessed while holding the mutex lock. \mbox{\Hypertarget{structfederate__instance__t_ae95f54a01b0367048faa6460ff86e987}\label{structfederate__instance__t_ae95f54a01b0367048faa6460ff86e987}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!last\_sent\_LTC@{last\_sent\_LTC}}
+\index{last\_sent\_LTC@{last\_sent\_LTC}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{last\_sent\_LTC}{last\_sent\_LTC}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtag__t}{tag\+\_\+t}} federate\+\_\+instance\+\_\+t\+::last\+\_\+sent\+\_\+\+L\+TC}
+
+A record of the most recently sent L\+TC (logical tag complete) message. In some situations, federates can send logical\+\_\+tag\+\_\+complete for the same tag twice or more in-\/a-\/row to the R\+TI. For example, when \+\_\+\+\_\+next() returns without advancing tag. To prevent overwhelming the R\+TI with extra messages, record the last sent logical tag complete message and check against it in \mbox{\hyperlink{federate_8c_a77aa8325df62cb64364fb8af6b1c2334}{\+\_\+lf\+\_\+logical\+\_\+tag\+\_\+complete()}}.
+
+\begin{DoxyNote}{Note}
+Here, the underlying assumption is that the T\+CP stack will deliver the Logical T\+AG Complete message to the R\+TI eventually if it is deliverable 
+\end{DoxyNote}
+\mbox{\Hypertarget{structfederate__instance__t_a42618a45ae75b42e1caec4b373471d96}\label{structfederate__instance__t_a42618a45ae75b42e1caec4b373471d96}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!last\_sent\_NET@{last\_sent\_NET}}
+\index{last\_sent\_NET@{last\_sent\_NET}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{last\_sent\_NET}{last\_sent\_NET}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtag__t}{tag\+\_\+t}} federate\+\_\+instance\+\_\+t\+::last\+\_\+sent\+\_\+\+N\+ET}
+
+A record of the most recently sent N\+ET (next event tag) message. \mbox{\Hypertarget{structfederate__instance__t_aa66a2f08ea9173743106c7ff18f1846a}\label{structfederate__instance__t_aa66a2f08ea9173743106c7ff18f1846a}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!last\_TAG@{last\_TAG}}
+\index{last\_TAG@{last\_TAG}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{last\_TAG}{last\_TAG}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtag__t}{tag\+\_\+t}} federate\+\_\+instance\+\_\+t\+::last\+\_\+\+T\+AG}
+
+Most recent T\+I\+M\+E\+\_\+\+A\+D\+V\+A\+N\+C\+E\+\_\+\+G\+R\+A\+NT received from the R\+TI, or N\+E\+V\+ER if none has been received. This is used to communicate between the listen\+\_\+to\+\_\+rti\+\_\+\+T\+CP thread and the main federate thread. This variable should only be accessed while holding the mutex lock. \mbox{\Hypertarget{structfederate__instance__t_a91a34b0d7f0f604c2f21cf062dbe0314}\label{structfederate__instance__t_a91a34b0d7f0f604c2f21cf062dbe0314}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!min\_delay\_from\_physical\_action\_to\_federate\_output@{min\_delay\_from\_physical\_action\_to\_federate\_output}}
+\index{min\_delay\_from\_physical\_action\_to\_federate\_output@{min\_delay\_from\_physical\_action\_to\_federate\_output}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{min\_delay\_from\_physical\_action\_to\_federate\_output}{min\_delay\_from\_physical\_action\_to\_federate\_output}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} federate\+\_\+instance\+\_\+t\+::min\+\_\+delay\+\_\+from\+\_\+physical\+\_\+action\+\_\+to\+\_\+federate\+\_\+output}
+
+For use in federates with centralized coordination, the minimum time delay between a physical action within this federate and an output from this federate. This is N\+E\+V\+ER if there is causal path from a physical action to any output. \mbox{\Hypertarget{structfederate__instance__t_a189bc35e092cd0c6908267aa9ff663e5}\label{structfederate__instance__t_a189bc35e092cd0c6908267aa9ff663e5}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!number\_of\_inbound\_p2p\_connections@{number\_of\_inbound\_p2p\_connections}}
+\index{number\_of\_inbound\_p2p\_connections@{number\_of\_inbound\_p2p\_connections}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{number\_of\_inbound\_p2p\_connections}{number\_of\_inbound\_p2p\_connections}}
+{\footnotesize\ttfamily int federate\+\_\+instance\+\_\+t\+::number\+\_\+of\+\_\+inbound\+\_\+p2p\+\_\+connections}
+
+Number of inbound physical connections to the federate. This can be either physical connections, or logical connections in the decentralized coordination, or both. \mbox{\Hypertarget{structfederate__instance__t_a26af9633fce5c849b670f9e4ebec020e}\label{structfederate__instance__t_a26af9633fce5c849b670f9e4ebec020e}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!number\_of\_outbound\_p2p\_connections@{number\_of\_outbound\_p2p\_connections}}
+\index{number\_of\_outbound\_p2p\_connections@{number\_of\_outbound\_p2p\_connections}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{number\_of\_outbound\_p2p\_connections}{number\_of\_outbound\_p2p\_connections}}
+{\footnotesize\ttfamily int federate\+\_\+instance\+\_\+t\+::number\+\_\+of\+\_\+outbound\+\_\+p2p\+\_\+connections}
+
+Number of outbound peer-\/to-\/peer connections from the federate. This can be either physical connections, or logical connections in the decentralized coordination, or both. \mbox{\Hypertarget{structfederate__instance__t_a5b6b4b5912a7bb7df1c8987f38e12004}\label{structfederate__instance__t_a5b6b4b5912a7bb7df1c8987f38e12004}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!RTI\_socket\_listener@{RTI\_socket\_listener}}
+\index{RTI\_socket\_listener@{RTI\_socket\_listener}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{RTI\_socket\_listener}{RTI\_socket\_listener}}
+{\footnotesize\ttfamily lf\+\_\+thread\+\_\+t federate\+\_\+instance\+\_\+t\+::\+R\+T\+I\+\_\+socket\+\_\+listener}
+
+Thread listening for incoming T\+CP messages from the R\+TI. \mbox{\Hypertarget{structfederate__instance__t_a5bed997749ef910209491c67e3ece6b4}\label{structfederate__instance__t_a5bed997749ef910209491c67e3ece6b4}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!sent\_a\_stop\_request\_to\_rti@{sent\_a\_stop\_request\_to\_rti}}
+\index{sent\_a\_stop\_request\_to\_rti@{sent\_a\_stop\_request\_to\_rti}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{sent\_a\_stop\_request\_to\_rti}{sent\_a\_stop\_request\_to\_rti}}
+{\footnotesize\ttfamily bool federate\+\_\+instance\+\_\+t\+::sent\+\_\+a\+\_\+stop\+\_\+request\+\_\+to\+\_\+rti}
+
+Used to prevent the federate from sending a R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+T\+OP message multiple times to the R\+TI. This variable should only be accessed while holding the mutex lock. \mbox{\Hypertarget{structfederate__instance__t_a309c9672d657f20cd1d3661edc7d5179}\label{structfederate__instance__t_a309c9672d657f20cd1d3661edc7d5179}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!server\_port@{server\_port}}
+\index{server\_port@{server\_port}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{server\_port}{server\_port}}
+{\footnotesize\ttfamily int federate\+\_\+instance\+\_\+t\+::server\+\_\+port}
+
+The port used for the server socket to listen for messages from other federates. The federate informs the R\+TI of this port once it has created its socket server by sending an A\+D\+D\+R\+E\+S\+S\+\_\+\+AD message (\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{rti_8h}{rti.\+h}}). 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structfederate__instance__t_a20c5d19d5166ec82a09efe072c2f1b49}\label{structfederate__instance__t_a20c5d19d5166ec82a09efe072c2f1b49}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!server\_socket@{server\_socket}}
+\index{server\_socket@{server\_socket}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{server\_socket}{server\_socket}}
+{\footnotesize\ttfamily int federate\+\_\+instance\+\_\+t\+::server\+\_\+socket}
+
+A socket descriptor for the socket server of the federate. This is assigned in \mbox{\hyperlink{federate_8c_a0e2425b519aae66167fbf454f896df92}{create\+\_\+server()}}. This socket is used to listen to incoming physical connections from remote federates. Once an incoming connection is accepted, the opened socket will be stored in federate\+\_\+sockets\+\_\+for\+\_\+inbound\+\_\+p2p\+\_\+connections. \mbox{\Hypertarget{structfederate__instance__t_aacdc19a638ccdc9fae494ce641f4cb04}\label{structfederate__instance__t_aacdc19a638ccdc9fae494ce641f4cb04}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!socket\_TCP\_RTI@{socket\_TCP\_RTI}}
+\index{socket\_TCP\_RTI@{socket\_TCP\_RTI}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{socket\_TCP\_RTI}{socket\_TCP\_RTI}}
+{\footnotesize\ttfamily int federate\+\_\+instance\+\_\+t\+::socket\+\_\+\+T\+C\+P\+\_\+\+R\+TI}
+
+The T\+CP socket descriptor for this federate to communicate with the R\+TI. This is set by \mbox{\hyperlink{federate_8c_ac4fb5cd6e02f70979dd3e30310d4b2bb}{connect\+\_\+to\+\_\+rti()}}, which must be called before other functions that communicate with the rti are called. \mbox{\Hypertarget{structfederate__instance__t_a244a65a4b9ca9e27230c87ce9021b7e1}\label{structfederate__instance__t_a244a65a4b9ca9e27230c87ce9021b7e1}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!sockets\_for\_inbound\_p2p\_connections@{sockets\_for\_inbound\_p2p\_connections}}
+\index{sockets\_for\_inbound\_p2p\_connections@{sockets\_for\_inbound\_p2p\_connections}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{sockets\_for\_inbound\_p2p\_connections}{sockets\_for\_inbound\_p2p\_connections}}
+{\footnotesize\ttfamily int federate\+\_\+instance\+\_\+t\+::sockets\+\_\+for\+\_\+inbound\+\_\+p2p\+\_\+connections\mbox{[}N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+F\+E\+D\+E\+R\+A\+T\+ES\mbox{]}}
+
+An array that holds the socket descriptors for inbound connections from each federate. The index will be the federate ID of the remote sending federate. This is initialized at startup to -\/1 and is set to a socket ID by \mbox{\hyperlink{federate_8c_ade1ea1b03d383abebf7303b10a05f370}{handle\+\_\+p2p\+\_\+connections\+\_\+from\+\_\+federates()}} when the socket is opened.
+
+\begin{DoxyNote}{Note}
+There will not be an inbound socket unless a physical connection or a p2p logical connection (by setting the coordination target property to \char`\"{}distributed\char`\"{}) is specified in the Lingua Franca program where this federate is the destination. Multiple incoming p2p connections from the same remote federate will use the same socket. 
+\end{DoxyNote}
+\mbox{\Hypertarget{structfederate__instance__t_a9e1cde7330bec95f787bb7a85d509c9a}\label{structfederate__instance__t_a9e1cde7330bec95f787bb7a85d509c9a}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!sockets\_for\_outbound\_p2p\_connections@{sockets\_for\_outbound\_p2p\_connections}}
+\index{sockets\_for\_outbound\_p2p\_connections@{sockets\_for\_outbound\_p2p\_connections}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{sockets\_for\_outbound\_p2p\_connections}{sockets\_for\_outbound\_p2p\_connections}}
+{\footnotesize\ttfamily int federate\+\_\+instance\+\_\+t\+::sockets\+\_\+for\+\_\+outbound\+\_\+p2p\+\_\+connections\mbox{[}N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+F\+E\+D\+E\+R\+A\+T\+ES\mbox{]}}
+
+An array that holds the socket descriptors for outbound direct connections to each remote federate. The index will be the federate ID of the remote receiving federate. This is initialized at startup to -\/1 and is set to a socket ID by \mbox{\hyperlink{federate_8c_ae531b26446e581af75969ca6d9dc71f5}{connect\+\_\+to\+\_\+federate()}} when the socket is opened.
+
+\begin{DoxyNote}{Note}
+This federate will not open an outbound socket unless a physical connection or a p2p logical connection (by setting the coordination target property to \char`\"{}distributed\char`\"{}) is specified in the Lingua Franca program where this federate acts as the source. Multiple outgoing p2p connections to the same remote federate will use the same socket. 
+\end{DoxyNote}
+\mbox{\Hypertarget{structfederate__instance__t_a786701f771e06e14c369be4b0a6519b5}\label{structfederate__instance__t_a786701f771e06e14c369be4b0a6519b5}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!trigger\_for\_network\_output\_control\_reactions@{trigger\_for\_network\_output\_control\_reactions}}
+\index{trigger\_for\_network\_output\_control\_reactions@{trigger\_for\_network\_output\_control\_reactions}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{trigger\_for\_network\_output\_control\_reactions}{trigger\_for\_network\_output\_control\_reactions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}}$\ast$ federate\+\_\+instance\+\_\+t\+::trigger\+\_\+for\+\_\+network\+\_\+output\+\_\+control\+\_\+reactions}
+
+The triggers for all network output control reactions.
+
+This is used to trigger network output control reactions that will potentially send an A\+B\+S\+E\+NT message to any downstream federate that might be blocking on the network port. The A\+B\+S\+E\+NT message will only be sent if the output is not present. \mbox{\Hypertarget{structfederate__instance__t_a8385397cd2996dbf5f79828e077926f2}\label{structfederate__instance__t_a8385397cd2996dbf5f79828e077926f2}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!triggers\_for\_network\_input\_control\_reactions@{triggers\_for\_network\_input\_control\_reactions}}
+\index{triggers\_for\_network\_input\_control\_reactions@{triggers\_for\_network\_input\_control\_reactions}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{triggers\_for\_network\_input\_control\_reactions}{triggers\_for\_network\_input\_control\_reactions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}}$\ast$$\ast$ federate\+\_\+instance\+\_\+t\+::triggers\+\_\+for\+\_\+network\+\_\+input\+\_\+control\+\_\+reactions}
+
+This list is also used to determine the status of a given network input port at a given logical time. The status of the port (trigger-\/$>$status) can be\+: present, absent, or unknown. To determine the status of that port, for a given trigger \textquotesingle{}t\textquotesingle{} in this list, a (number of) network input control reactions are inserted into the reaction queue, which is are special kind of reaction that wait long enough until the status of the port becomes known. In the centralized coordination, this wait is until the R\+TI informs the reaction of the status of the port. In the decentralized coordination, this wait is until the S\+TP offset expires (or the status is somehow becomes known sooner). List of triggers for network input control reactions, used to trigger these reaction at the beginning of every tag. \mbox{\Hypertarget{structfederate__instance__t_a9812f0499dda0efd9f2718981be2e905}\label{structfederate__instance__t_a9812f0499dda0efd9f2718981be2e905}} 
+\index{federate\_instance\_t@{federate\_instance\_t}!waiting\_for\_TAG@{waiting\_for\_TAG}}
+\index{waiting\_for\_TAG@{waiting\_for\_TAG}!federate\_instance\_t@{federate\_instance\_t}}
+\doxysubsubsection{\texorpdfstring{waiting\_for\_TAG}{waiting\_for\_TAG}}
+{\footnotesize\ttfamily bool federate\+\_\+instance\+\_\+t\+::waiting\+\_\+for\+\_\+\+T\+AG}
+
+Indicator of whether a N\+ET has been sent to the R\+TI and no T\+AG yet received in reply. This variable should only be accessed while holding the mutex lock. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.\+lflang/src/lib/core/\mbox{\hyperlink{federate_8h}{federate.\+h}}\end{DoxyCompactItemize}

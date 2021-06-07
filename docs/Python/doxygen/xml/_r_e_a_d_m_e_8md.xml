@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Lingua<sp/>Franca<sp/>Base</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>package<sp/>contains<sp/>the<sp/>following<sp/>two<sp/>modules:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">functions.py<sp/>which<sp/>contains<sp/>some<sp/>useful<sp/>functions<sp/>used<sp/>in<sp/>Lingua<sp/>Franca<sp/>programs</highlight></codeline>
+<codeline><highlight class="normal">constants.py<sp/>which<sp/>contains<sp/>handy<sp/>shortcuts<sp/>for<sp/>some<sp/>concepts<sp/>such<sp/>as<sp/>&apos;interval_t&apos;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>package<sp/>is<sp/>required<sp/>for<sp/>Python<sp/>generated<sp/>code<sp/>to<sp/>function<sp/>properly.</highlight></codeline>
+<codeline><highlight class="normal">To<sp/>build<sp/>and<sp/>install,<sp/>run:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>python3<sp/>setup.py<sp/>build</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>python3<sp/>setup.py<sp/>install</highlight></codeline>
+    </programlisting>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/README.md"/>
+  </compounddef>
+</doxygen>

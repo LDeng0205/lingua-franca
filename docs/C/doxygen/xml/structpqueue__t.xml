@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpqueue__t" kind="struct" language="C++" prot="public">
+    <compoundname>pqueue_t</compoundname>
+    <includes refid="pqueue_8h" local="no">pqueue.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t pqueue_t::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>number of elements in this queue plus 1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" line="63" column="12" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpqueue__t_1a2edc2359d1420efc7031677ecd19c1ec" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t pqueue_t::avail</definition>
+        <argsstring></argsstring>
+        <name>avail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>slots available in this queue </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" line="64" column="12" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpqueue__t_1ab405fbb415065192ce9a1a39b5f45978" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t pqueue_t::step</definition>
+        <argsstring></argsstring>
+        <name>step</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>growth stepping setting </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" line="65" column="12" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpqueue__t_1af44c1953e47510529147cfbea33489ef" prot="public" static="no" mutable="no">
+        <type>pqueue_cmp_pri_f</type>
+        <definition>pqueue_cmp_pri_f pqueue_t::cmppri</definition>
+        <argsstring></argsstring>
+        <name>cmppri</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>callback to compare priorities </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" line="66" column="22" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" prot="public" static="no" mutable="no">
+        <type><ref refid="pqueue_8h_1aa84f0100faf971295df5aed226c390a6" kindref="member">pqueue_get_pri_f</ref></type>
+        <definition>pqueue_get_pri_f pqueue_t::getpri</definition>
+        <argsstring></argsstring>
+        <name>getpri</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>callback to get priority of a node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" line="67" column="22" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpqueue__t_1a20a38eccf17fb90e2c483503326c3fba" prot="public" static="no" mutable="no">
+        <type><ref refid="pqueue_8h_1a31ca7927983005bd7866021819ad7037" kindref="member">pqueue_get_pos_f</ref></type>
+        <definition>pqueue_get_pos_f pqueue_t::getpos</definition>
+        <argsstring></argsstring>
+        <name>getpos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>callback to get position of a node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" line="68" column="22" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpqueue__t_1a0960bed72e0c851bccf1591c39360c73" prot="public" static="no" mutable="no">
+        <type>pqueue_set_pos_f</type>
+        <definition>pqueue_set_pos_f pqueue_t::setpos</definition>
+        <argsstring></argsstring>
+        <name>setpos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>callback to set position of a node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" line="69" column="22" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpqueue__t_1a27ad9197156c9be3cbc2845478223f32" prot="public" static="no" mutable="no">
+        <type>pqueue_eq_elem_f</type>
+        <definition>pqueue_eq_elem_f pqueue_t::eqelem</definition>
+        <argsstring></argsstring>
+        <name>eqelem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>callback to compare elements </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" line="70" column="22" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpqueue__t_1aeb48e61916a065bb67c7dc3cc963ffeb" prot="public" static="no" mutable="no">
+        <type><ref refid="pqueue_8h_1a884902da135214a6167f1536ad4ed4bc" kindref="member">pqueue_print_entry_f</ref></type>
+        <definition>pqueue_print_entry_f pqueue_t::prt</definition>
+        <argsstring></argsstring>
+        <name>prt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>callback to print elements </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" line="71" column="26" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" prot="public" static="no" mutable="no">
+        <type>void **</type>
+        <definition>void** pqueue_t::d</definition>
+        <argsstring></argsstring>
+        <name>d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The actual queue in binary heap form </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" line="72" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>the priority queue handle </para>
+    </detaileddescription>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" line="62" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.h" bodystart="61" bodyend="73"/>
+    <listofallmembers>
+      <member refid="structpqueue__t_1a2edc2359d1420efc7031677ecd19c1ec" prot="public" virt="non-virtual"><scope>pqueue_t</scope><name>avail</name></member>
+      <member refid="structpqueue__t_1af44c1953e47510529147cfbea33489ef" prot="public" virt="non-virtual"><scope>pqueue_t</scope><name>cmppri</name></member>
+      <member refid="structpqueue__t_1a92b9ee0486259382e9087cd1f05f2792" prot="public" virt="non-virtual"><scope>pqueue_t</scope><name>d</name></member>
+      <member refid="structpqueue__t_1a27ad9197156c9be3cbc2845478223f32" prot="public" virt="non-virtual"><scope>pqueue_t</scope><name>eqelem</name></member>
+      <member refid="structpqueue__t_1a20a38eccf17fb90e2c483503326c3fba" prot="public" virt="non-virtual"><scope>pqueue_t</scope><name>getpos</name></member>
+      <member refid="structpqueue__t_1ae1c098eb8c14bdfbce6797ede3f0c387" prot="public" virt="non-virtual"><scope>pqueue_t</scope><name>getpri</name></member>
+      <member refid="structpqueue__t_1aeb48e61916a065bb67c7dc3cc963ffeb" prot="public" virt="non-virtual"><scope>pqueue_t</scope><name>prt</name></member>
+      <member refid="structpqueue__t_1a0960bed72e0c851bccf1591c39360c73" prot="public" virt="non-virtual"><scope>pqueue_t</scope><name>setpos</name></member>
+      <member refid="structpqueue__t_1a37a81db394494e542cdaec80ce4f2f42" prot="public" virt="non-virtual"><scope>pqueue_t</scope><name>size</name></member>
+      <member refid="structpqueue__t_1ab405fbb415065192ce9a1a39b5f45978" prot="public" virt="non-virtual"><scope>pqueue_t</scope><name>step</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

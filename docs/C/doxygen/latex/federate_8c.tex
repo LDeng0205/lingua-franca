@@ -1,0 +1,773 @@
+\hypertarget{federate_8c}{}\doxysection{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/federate.c File Reference}
+\label{federate_8c}\index{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/federate.c@{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/federate.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$netdb.\+h$>$}\newline
+{\ttfamily \#include $<$strings.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}net\+\_\+util.\+c\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rti.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}reactor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}platform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}clock-\/sync.\+c\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}federate.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{federate_8c_a0ed912257c1b82c7727c549aec8f3a73}{listen\+\_\+to\+\_\+federates}} (void $\ast$args)
+\item 
+void \mbox{\hyperlink{federate_8c_a0e2425b519aae66167fbf454f896df92}{create\+\_\+server}} (int specified\+\_\+port)
+\item 
+int \mbox{\hyperlink{federate_8c_a76f0bc068b7a7c4a30983172eea59767}{send\+\_\+message}} (int message\+\_\+type, unsigned short port, unsigned short federate, const char $\ast$next\+\_\+destination\+\_\+str, size\+\_\+t length, unsigned char $\ast$message)
+\item 
+int \mbox{\hyperlink{federate_8c_ad6916d42278d4c199272aaa884a1e01f}{send\+\_\+timed\+\_\+message}} (\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} additional\+\_\+delay, int message\+\_\+type, unsigned short port, unsigned short federate, const char $\ast$next\+\_\+destination\+\_\+str, size\+\_\+t length, unsigned char $\ast$message)
+\item 
+void \mbox{\hyperlink{federate_8c_a2c9ffe8e9c42d3c8c7e5bb170bfa6471}{\+\_\+lf\+\_\+send\+\_\+time}} (unsigned char type, \mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} time)
+\item 
+void \mbox{\hyperlink{federate_8c_aa894b9efe5e8be30222d2d34b1c8c2be}{\+\_\+lf\+\_\+send\+\_\+tag}} (unsigned char type, \mbox{\hyperlink{structtag__t}{tag\+\_\+t}} tag)
+\item 
+void $\ast$ \mbox{\hyperlink{federate_8c_ade1ea1b03d383abebf7303b10a05f370}{handle\+\_\+p2p\+\_\+connections\+\_\+from\+\_\+federates}} (void $\ast$ignored)
+\item 
+void \mbox{\hyperlink{federate_8c_ab74e4453a091929855ab82a38074150e}{\+\_\+lf\+\_\+close\+\_\+outbound\+\_\+socket}} (int fed\+\_\+id)
+\item 
+void $\ast$ \mbox{\hyperlink{federate_8c_af5f3bc3822dd7bbfd67d52b91bf9d382}{listen\+\_\+for\+\_\+upstream\+\_\+messages\+\_\+from\+\_\+downstream\+\_\+federates}} (void $\ast$fed\+\_\+id\+\_\+ptr)
+\item 
+void \mbox{\hyperlink{federate_8c_ae531b26446e581af75969ca6d9dc71f5}{connect\+\_\+to\+\_\+federate}} (\mbox{\hyperlink{reactor_8h_a3fa7784c89589b49764048e9909d0e07}{ushort}} remote\+\_\+federate\+\_\+id)
+\item 
+void \mbox{\hyperlink{federate_8c_ac4fb5cd6e02f70979dd3e30310d4b2bb}{connect\+\_\+to\+\_\+rti}} (char $\ast$hostname, int port)
+\item 
+\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} \mbox{\hyperlink{federate_8c_aacc9f1bfb95d8b6c852a52832a9ecd9e}{get\+\_\+start\+\_\+time\+\_\+from\+\_\+rti}} (\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} my\+\_\+physical\+\_\+time)
+\item 
+\mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}} $\ast$ \mbox{\hyperlink{federate_8c_a7754be26c0ad41c264f391253cf03ecd}{\+\_\+\+\_\+action\+\_\+for\+\_\+port}} (int port\+\_\+id)
+\item 
+void \mbox{\hyperlink{federate_8c_a26a55f84538e1d96832c6247d74e7da6}{set\+\_\+network\+\_\+port\+\_\+status}} (int port\+ID, \mbox{\hyperlink{reactor_8h_a759ba374f75ea0025b9af1bb35f14d7e}{port\+\_\+status\+\_\+t}} status)
+\item 
+void \mbox{\hyperlink{federate_8c_a07d570a16cab26d91c4b47fa5dd6ef6a}{mark\+\_\+all\+\_\+unknown\+\_\+ports\+\_\+as\+\_\+absent}} ()
+\item 
+bool \mbox{\hyperlink{federate_8c_a943c3d7aa45a6af5b6d1567cd4ce841c}{is\+\_\+input\+\_\+control\+\_\+reaction\+\_\+blocked}} ()
+\item 
+void \mbox{\hyperlink{federate_8c_a0858ebda70e9bc60f76b9d2aa3df39ef}{update\+\_\+last\+\_\+known\+\_\+status\+\_\+on\+\_\+input\+\_\+ports}} (\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} tag)
+\item 
+void \mbox{\hyperlink{federate_8c_aa9f7065af94169d68152aa9db4a15cc5}{update\+\_\+last\+\_\+known\+\_\+status\+\_\+on\+\_\+input\+\_\+port}} (\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} tag, int port\+\_\+id)
+\item 
+void \mbox{\hyperlink{federate_8c_af89b0ab26ec13c6deafeb05c3c14a88e}{reset\+\_\+status\+\_\+fields\+\_\+on\+\_\+input\+\_\+port\+\_\+triggers}} ()
+\item 
+void \mbox{\hyperlink{federate_8c_ad92ed203ebed8e9d8a3727d9b2583c56}{mark\+\_\+control\+\_\+reaction\+\_\+waiting}} (int port\+ID, bool waiting)
+\item 
+\mbox{\hyperlink{reactor_8h_a759ba374f75ea0025b9af1bb35f14d7e}{port\+\_\+status\+\_\+t}} \mbox{\hyperlink{federate_8c_a123194949f44242acbab252bc1ffed4f}{get\+\_\+current\+\_\+port\+\_\+status}} (int port\+ID)
+\item 
+void \mbox{\hyperlink{federate_8c_a351f84aa3eb871fe8f51e3a6f18e67f6}{enqueue\+\_\+network\+\_\+input\+\_\+control\+\_\+reactions}} (\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$reaction\+\_\+q)
+\item 
+void \mbox{\hyperlink{federate_8c_a58c068ed5637620f62d0be0da850bbc3}{enqueue\+\_\+network\+\_\+output\+\_\+control\+\_\+reactions}} (\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$reaction\+\_\+q)
+\item 
+void \mbox{\hyperlink{federate_8c_ae3810deff6321784705bf27c79a07d32}{enqueue\+\_\+network\+\_\+control\+\_\+reactions}} (\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$reaction\+\_\+q)
+\item 
+void \mbox{\hyperlink{federate_8c_a4a188ed34f9cf3a6d2ede7a033089bdd}{send\+\_\+port\+\_\+absent\+\_\+to\+\_\+federate}} (\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} additional\+\_\+delay, unsigned short port\+\_\+\+ID, unsigned short fed\+\_\+\+ID)
+\item 
+void \mbox{\hyperlink{federate_8c_af4e0b0634806dadc6bda729c63dc700f}{wait\+\_\+until\+\_\+port\+\_\+status\+\_\+known}} (int port\+\_\+\+ID, \mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} S\+TP)
+\item 
+\mbox{\hyperlink{reactor_8h_a5ad7d32f3a1ddabdc2933223ca6ce2ea}{handle\+\_\+t}} \mbox{\hyperlink{federate_8c_a1f1332f247555c60e142c03189a34dff}{schedule\+\_\+message\+\_\+received\+\_\+from\+\_\+network\+\_\+already\+\_\+locked}} (\mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}} $\ast$trigger, \mbox{\hyperlink{structtag__t}{tag\+\_\+t}} tag, \mbox{\hyperlink{structlf__token__t}{lf\+\_\+token\+\_\+t}} $\ast$token)
+\item 
+int \mbox{\hyperlink{federate_8c_ad48351e45d74393e322780dfeabad776}{\+\_\+lf\+\_\+request\+\_\+close\+\_\+inbound\+\_\+socket}} (int fed\+\_\+id)
+\item 
+void \mbox{\hyperlink{federate_8c_a89f25989edc5bf8e0c8bf46efe9310d0}{\+\_\+lf\+\_\+close\+\_\+inbound\+\_\+socket}} (int fed\+\_\+id)
+\item 
+void \mbox{\hyperlink{federate_8c_a3a5875ee5db1e60f40b6dd8c98f3eec3}{handle\+\_\+port\+\_\+absent\+\_\+message}} (int socket, int fed\+\_\+id)
+\item 
+void \mbox{\hyperlink{federate_8c_a8a059641cbcf0e192594ea898cd09983}{handle\+\_\+message}} (int socket, int fed\+\_\+id)
+\item 
+void \mbox{\hyperlink{federate_8c_a79c416c42bbbfb8d65af0b78e6ce31c4}{handle\+\_\+timed\+\_\+message}} (int socket, int fed\+\_\+id)
+\item 
+void \mbox{\hyperlink{federate_8c_a7853e005f220474d4ce35be7a6560b2f}{handle\+\_\+tag\+\_\+advance\+\_\+grant}} ()
+\item 
+void \mbox{\hyperlink{federate_8c_a77aa8325df62cb64364fb8af6b1c2334}{\+\_\+lf\+\_\+logical\+\_\+tag\+\_\+complete}} (\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} tag\+\_\+to\+\_\+send)
+\item 
+void \mbox{\hyperlink{federate_8c_ab1d3825f70289972e7f2ab9fed3b24f4}{handle\+\_\+provisional\+\_\+tag\+\_\+advance\+\_\+grant}} ()
+\item 
+void \mbox{\hyperlink{federate_8c_a60ec02f52c1a7db4c7bdbc2871eae636}{\+\_\+lf\+\_\+fd\+\_\+send\+\_\+stop\+\_\+request\+\_\+to\+\_\+rti}} ()
+\item 
+void \mbox{\hyperlink{federate_8c_a295baf41cee4f9450aaf7c95abede7e8}{handle\+\_\+stop\+\_\+granted\+\_\+message}} ()
+\item 
+void \mbox{\hyperlink{federate_8c_a5fe22b3d14b1992c6981d2cfcb89c425}{handle\+\_\+stop\+\_\+request\+\_\+message}} ()
+\item 
+void \mbox{\hyperlink{federate_8c_a114c79dc673219d5df3b794552ca88d7}{terminate\+\_\+execution}} ()
+\item 
+void $\ast$ \mbox{\hyperlink{federate_8c_a601736facfe06a4521ba59e7cff6c7b7}{listen\+\_\+to\+\_\+rti\+\_\+\+T\+CP}} (void $\ast$args)
+\item 
+void \mbox{\hyperlink{federate_8c_ad83fe9661682934029a42954b8fe6e2f}{synchronize\+\_\+with\+\_\+other\+\_\+federates}} ()
+\item 
+bool \mbox{\hyperlink{federate_8c_aa4e74edba14fe2d25b2f05c3497c1054}{\+\_\+lf\+\_\+bounded\+\_\+\+N\+ET}} (\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} $\ast$tag)
+\item 
+\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} \mbox{\hyperlink{federate_8c_acd313a38ec1a25c22cc94333146ba8fc}{\+\_\+lf\+\_\+send\+\_\+next\+\_\+event\+\_\+tag}} (\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} tag, bool wait\+\_\+for\+\_\+reply)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{federate_8c_a881ede210402a3c26d9e30e2031f824e}\label{federate_8c_a881ede210402a3c26d9e30e2031f824e}} 
+char $\ast$ {\bfseries E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D\+I\+N\+G\+\_\+\+H\+E\+A\+D\+ER} = \char`\"{}E\+R\+R\+OR sending header information to federate via R\+TI\char`\"{}
+\item 
+\mbox{\Hypertarget{federate_8c_a0eb9d322e65732ec508efed2bebfec31}\label{federate_8c_a0eb9d322e65732ec508efed2bebfec31}} 
+char $\ast$ {\bfseries E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D\+I\+N\+G\+\_\+\+M\+E\+S\+S\+A\+GE} = \char`\"{}E\+R\+R\+OR sending message to federate via R\+TI\char`\"{}
+\item 
+\mbox{\Hypertarget{federate_8c_a1de2c61d36e14fae8de7043ff2661a34}\label{federate_8c_a1de2c61d36e14fae8de7043ff2661a34}} 
+lf\+\_\+mutex\+\_\+t {\bfseries outbound\+\_\+socket\+\_\+mutex}
+\item 
+\mbox{\Hypertarget{federate_8c_ac31c3ee54cd862c9381fbf980fa7d9ef}\label{federate_8c_ac31c3ee54cd862c9381fbf980fa7d9ef}} 
+lf\+\_\+cond\+\_\+t {\bfseries port\+\_\+status\+\_\+changed}
+\item 
+\mbox{\hyperlink{structfederate__instance__t}{federate\+\_\+instance\+\_\+t}} \mbox{\hyperlink{federate_8c_a8dd2a9d602522afd72f6c524356868e4}{\+\_\+fed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Edward A. Lee (\href{mailto:eal@berkeley.edu}{\texttt{ eal@berkeley.\+edu}})
+\end{DoxyAuthor}
+\hypertarget{util_8h_LICENSE}{}\doxysubsection{L\+I\+C\+E\+N\+SE}\label{util_8h_LICENSE}
+Copyright (c) 2020, The University of California at Berkeley.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.\hypertarget{util_8h_DESCRIPTION}{}\doxysubsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}\label{util_8h_DESCRIPTION}
+Utility functions for a federate in a federated execution. The main entry point is \mbox{\hyperlink{federate_8c_ad83fe9661682934029a42954b8fe6e2f}{synchronize\+\_\+with\+\_\+other\+\_\+federates()}}. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{federate_8c_a7754be26c0ad41c264f391253cf03ecd}\label{federate_8c_a7754be26c0ad41c264f391253cf03ecd}} 
+\index{federate.c@{federate.c}!\_\_action\_for\_port@{\_\_action\_for\_port}}
+\index{\_\_action\_for\_port@{\_\_action\_for\_port}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{\_\_action\_for\_port()}{\_\_action\_for\_port()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}}$\ast$ \+\_\+\+\_\+action\+\_\+for\+\_\+port (\begin{DoxyParamCaption}\item[{int}]{port\+\_\+id }\end{DoxyParamCaption})}
+
+Placeholder for a generated function that returns a pointer to the \mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}} struct for the action corresponding to the specified port ID. 
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+id} & The port ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a \mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}} struct or null if the ID is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{federate_8c_aa4e74edba14fe2d25b2f05c3497c1054}\label{federate_8c_aa4e74edba14fe2d25b2f05c3497c1054}} 
+\index{federate.c@{federate.c}!\_lf\_bounded\_NET@{\_lf\_bounded\_NET}}
+\index{\_lf\_bounded\_NET@{\_lf\_bounded\_NET}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_bounded\_NET()}{\_lf\_bounded\_NET()}}
+{\footnotesize\ttfamily bool \+\_\+lf\+\_\+bounded\+\_\+\+N\+ET (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} $\ast$}]{tag }\end{DoxyParamCaption})}
+
+Modify the specified tag, if necessary, to be an earlier tag based on the current physical time. The earlier tag is necessary if this federate has downstream federates and also has physical actions that may trigger outputs. In that case, the earlier tag will be the current physical time plus the minimum delay on all such physical actions plus any other delays along the path from the triggering physical action to the output port minus one nanosecond. The modified tag is assured of being less than any output tag that might later be produced. 
+\begin{DoxyParams}{Parameters}
+{\em tag} & A pointer to the proposed N\+ET. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if this federate requires this modification and the tag was modified. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{federate_8c_a89f25989edc5bf8e0c8bf46efe9310d0}\label{federate_8c_a89f25989edc5bf8e0c8bf46efe9310d0}} 
+\index{federate.c@{federate.c}!\_lf\_close\_inbound\_socket@{\_lf\_close\_inbound\_socket}}
+\index{\_lf\_close\_inbound\_socket@{\_lf\_close\_inbound\_socket}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_close\_inbound\_socket()}{\_lf\_close\_inbound\_socket()}}
+{\footnotesize\ttfamily void \+\_\+lf\+\_\+close\+\_\+inbound\+\_\+socket (\begin{DoxyParamCaption}\item[{int}]{fed\+\_\+id }\end{DoxyParamCaption})}
+
+Close the socket that receives incoming messages from the specified federate ID or R\+TI. This function should be called when a read of incoming socket fails or when an E\+OF is received.
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & ID of the peer federate sending messages to this federate, or -\/1 if the R\+TI. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{federate_8c_ab74e4453a091929855ab82a38074150e}\label{federate_8c_ab74e4453a091929855ab82a38074150e}} 
+\index{federate.c@{federate.c}!\_lf\_close\_outbound\_socket@{\_lf\_close\_outbound\_socket}}
+\index{\_lf\_close\_outbound\_socket@{\_lf\_close\_outbound\_socket}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_close\_outbound\_socket()}{\_lf\_close\_outbound\_socket()}}
+{\footnotesize\ttfamily void \+\_\+lf\+\_\+close\+\_\+outbound\+\_\+socket (\begin{DoxyParamCaption}\item[{int}]{fed\+\_\+id }\end{DoxyParamCaption})}
+
+Close the socket that sends outgoing messages to the specified federate ID. This function assumes the caller holds the outbound\+\_\+socket\+\_\+mutex mutex lock. 
+\begin{DoxyParams}{Parameters}
+{\em The} & ID of the peer federate receiving messages from this federate, or -\/1 if the R\+TI (centralized coordination). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{federate_8c_a60ec02f52c1a7db4c7bdbc2871eae636}\label{federate_8c_a60ec02f52c1a7db4c7bdbc2871eae636}} 
+\index{federate.c@{federate.c}!\_lf\_fd\_send\_stop\_request\_to\_rti@{\_lf\_fd\_send\_stop\_request\_to\_rti}}
+\index{\_lf\_fd\_send\_stop\_request\_to\_rti@{\_lf\_fd\_send\_stop\_request\_to\_rti}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_fd\_send\_stop\_request\_to\_rti()}{\_lf\_fd\_send\_stop\_request\_to\_rti()}}
+{\footnotesize\ttfamily void \+\_\+lf\+\_\+fd\+\_\+send\+\_\+stop\+\_\+request\+\_\+to\+\_\+rti (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Send a S\+T\+O\+P\+\_\+\+R\+E\+Q\+U\+E\+ST message to the R\+TI with payload equal to the current tag plus one microstep.
+
+This function raises a global barrier on logical tag at the current tag.
+
+This function assumes the caller holds the mutex lock. \mbox{\Hypertarget{federate_8c_a77aa8325df62cb64364fb8af6b1c2334}\label{federate_8c_a77aa8325df62cb64364fb8af6b1c2334}} 
+\index{federate.c@{federate.c}!\_lf\_logical\_tag\_complete@{\_lf\_logical\_tag\_complete}}
+\index{\_lf\_logical\_tag\_complete@{\_lf\_logical\_tag\_complete}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_logical\_tag\_complete()}{\_lf\_logical\_tag\_complete()}}
+{\footnotesize\ttfamily void \+\_\+lf\+\_\+logical\+\_\+tag\+\_\+complete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtag__t}{tag\+\_\+t}}}]{tag\+\_\+to\+\_\+send }\end{DoxyParamCaption})}
+
+Send a logical tag complete (L\+TC) message to the R\+TI unless an equal or later L\+TC has previously been sent. This function assumes the caller holds the mutex lock.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag\+\_\+to\+\_\+send} & The tag to send. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{federate_8c_ad48351e45d74393e322780dfeabad776}\label{federate_8c_ad48351e45d74393e322780dfeabad776}} 
+\index{federate.c@{federate.c}!\_lf\_request\_close\_inbound\_socket@{\_lf\_request\_close\_inbound\_socket}}
+\index{\_lf\_request\_close\_inbound\_socket@{\_lf\_request\_close\_inbound\_socket}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_request\_close\_inbound\_socket()}{\_lf\_request\_close\_inbound\_socket()}}
+{\footnotesize\ttfamily int \+\_\+lf\+\_\+request\+\_\+close\+\_\+inbound\+\_\+socket (\begin{DoxyParamCaption}\item[{int}]{fed\+\_\+id }\end{DoxyParamCaption})}
+
+Request to close the socket that receives incoming messages from the specified federate ID. This sends a message to the upstream federate requesting that it close the socket. If the message is sent successfully, this returns 1. Otherwise it returns 0, which presumably means that the socket is already closed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & ID of the peer federate sending messages to this federate.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the C\+L\+O\+S\+E\+\_\+\+R\+E\+Q\+U\+E\+ST message is sent successfully, 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{federate_8c_acd313a38ec1a25c22cc94333146ba8fc}\label{federate_8c_acd313a38ec1a25c22cc94333146ba8fc}} 
+\index{federate.c@{federate.c}!\_lf\_send\_next\_event\_tag@{\_lf\_send\_next\_event\_tag}}
+\index{\_lf\_send\_next\_event\_tag@{\_lf\_send\_next\_event\_tag}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_send\_next\_event\_tag()}{\_lf\_send\_next\_event\_tag()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtag__t}{tag\+\_\+t}} \+\_\+lf\+\_\+send\+\_\+next\+\_\+event\+\_\+tag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtag__t}{tag\+\_\+t}}}]{tag,  }\item[{bool}]{wait\+\_\+for\+\_\+reply }\end{DoxyParamCaption})}
+
+If this federate depends on upstream federates or sends data to downstream federates, then send to the R\+TI either a N\+ET or a T\+AN, depending on whether there are network outputs that depend on physical actions. If there are no such outputs, then send next event tag (N\+ET), which will give the tag of the earliest event on the event queue, or, if the queue is empty, the timeout time, or, if there is no timeout, F\+O\+R\+E\+V\+ER.
+
+A N\+ET or T\+AN is a promise saying that, absent network inputs, this federate will not produce an output message with tag earlier than the N\+ET value or (T\+AN,0).
+
+If there are upstream federates, then after sending a N\+ET, this will block until either the R\+TI grants the advance to the requested time or the wait for the response from the R\+TI is interrupted by a change in the event queue (e.\+g., a physical action triggered or a network message arrived). If there are no upstream federates, then it will not wait for a T\+AG (which won\textquotesingle{}t be forthcoming anyway) and returns the earliest tag on the event queue.
+
+If the federate has neither upstream nor downstream federates, then this returns the specified tag immediately without sending anything to the R\+TI.
+
+If there is at least one physical action somewhere in the federate that can trigger an output to a downstream federate, then the N\+ET is required to be less than the current physical time. If physical time is less than the earliest event in the event queue (or the event queue is empty), then this function will send a Time Advance Notice (T\+AN) message instead of N\+ET. That message does not require a response from the R\+TI. The T\+AN message will be sent repeatedly as physical time advances with the time interval between messages controlled by the target parameter coordination-\/options\+: \{advance-\/message-\/interval timevalue\}. It will switch back to sending a N\+ET message if and when its event queue has an event with a timestamp less than physical time.
+
+If wait\+\_\+for\+\_\+reply is false, then this function will simply send the specified tag and return that tag immediately. This is useful when a federate is shutting down and will not be sending any more messages at all.
+
+In all cases, this returns either the specified tag or another tag when it is safe to advance logical time to the returned tag. The returned tag may be less than the specified tag if there are upstream federates and either the R\+TI responds with a lesser tag or the wait for a response from the R\+TI is interrupted by a change in the event queue.
+
+This function is used in centralized coordination only.
+
+This function assumes the caller holds the mutex lock.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & The tag. \\
+\hline
+{\em wait\+\_\+for\+\_\+reply} & If true, wait for a reply. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{federate_8c_aa894b9efe5e8be30222d2d34b1c8c2be}\label{federate_8c_aa894b9efe5e8be30222d2d34b1c8c2be}} 
+\index{federate.c@{federate.c}!\_lf\_send\_tag@{\_lf\_send\_tag}}
+\index{\_lf\_send\_tag@{\_lf\_send\_tag}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_send\_tag()}{\_lf\_send\_tag()}}
+{\footnotesize\ttfamily void \+\_\+lf\+\_\+send\+\_\+tag (\begin{DoxyParamCaption}\item[{unsigned char}]{type,  }\item[{\mbox{\hyperlink{structtag__t}{tag\+\_\+t}}}]{tag }\end{DoxyParamCaption})}
+
+Send a tag to the R\+TI. This is not synchronized. It assumes the caller is. 
+\begin{DoxyParams}{Parameters}
+{\em type} & The message type (N\+E\+X\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+AG or L\+O\+G\+I\+C\+A\+L\+\_\+\+T\+A\+G\+\_\+\+C\+O\+M\+P\+L\+E\+TE). \\
+\hline
+{\em tag} & The tag. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{federate_8c_a2c9ffe8e9c42d3c8c7e5bb170bfa6471}\label{federate_8c_a2c9ffe8e9c42d3c8c7e5bb170bfa6471}} 
+\index{federate.c@{federate.c}!\_lf\_send\_time@{\_lf\_send\_time}}
+\index{\_lf\_send\_time@{\_lf\_send\_time}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_send\_time()}{\_lf\_send\_time()}}
+{\footnotesize\ttfamily void \+\_\+lf\+\_\+send\+\_\+time (\begin{DoxyParamCaption}\item[{unsigned char}]{type,  }\item[{\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}}}]{time }\end{DoxyParamCaption})}
+
+Send a time to the R\+TI. This is not synchronized. It assumes the caller is. 
+\begin{DoxyParams}{Parameters}
+{\em type} & The message type (T\+I\+M\+E\+S\+T\+A\+MP or T\+I\+M\+E\+\_\+\+A\+D\+V\+A\+N\+C\+E\+\_\+\+N\+O\+T\+I\+CE). \\
+\hline
+{\em time} & The time. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{federate_8c_ae531b26446e581af75969ca6d9dc71f5}\label{federate_8c_ae531b26446e581af75969ca6d9dc71f5}} 
+\index{federate.c@{federate.c}!connect\_to\_federate@{connect\_to\_federate}}
+\index{connect\_to\_federate@{connect\_to\_federate}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{connect\_to\_federate()}{connect\_to\_federate()}}
+{\footnotesize\ttfamily void connect\+\_\+to\+\_\+federate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{reactor_8h_a3fa7784c89589b49764048e9909d0e07}{ushort}}}]{remote\+\_\+federate\+\_\+id }\end{DoxyParamCaption})}
+
+Connect to the federate with the specified id. This established connection will then be used in functions such as \mbox{\hyperlink{federate_8c_ad6916d42278d4c199272aaa884a1e01f}{send\+\_\+timed\+\_\+message()}} to send messages directly to the specified federate. This function first sends an A\+D\+D\+R\+E\+S\+S\+\_\+\+Q\+U\+E\+RY message to the R\+TI to obtain the IP address and port number of the specified federate. It then attempts to establish a socket connection to the specified federate. If this fails, the program exits. If it succeeds, it sets element \mbox{[}id\mbox{]} of the \+\_\+fed.\+sockets\+\_\+for\+\_\+outbound\+\_\+p2p\+\_\+connections global array to refer to the socket for communicating directly with the federate. 
+\begin{DoxyParams}{Parameters}
+{\em remote\+\_\+federate\+\_\+id} & The ID of the remote federate. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{federate_8c_ac4fb5cd6e02f70979dd3e30310d4b2bb}\label{federate_8c_ac4fb5cd6e02f70979dd3e30310d4b2bb}} 
+\index{federate.c@{federate.c}!connect\_to\_rti@{connect\_to\_rti}}
+\index{connect\_to\_rti@{connect\_to\_rti}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{connect\_to\_rti()}{connect\_to\_rti()}}
+{\footnotesize\ttfamily void connect\+\_\+to\+\_\+rti (\begin{DoxyParamCaption}\item[{char $\ast$}]{hostname,  }\item[{int}]{port }\end{DoxyParamCaption})}
+
+Connect to the R\+TI at the specified host and port and return the socket descriptor for the connection. If this fails, the program exits. If it succeeds, it sets the \+\_\+fed.\+socket\+\_\+\+T\+C\+P\+\_\+\+R\+TI global variable to refer to the socket for communicating with the R\+TI. 
+\begin{DoxyParams}{Parameters}
+{\em hostname} & A hostname, such as \char`\"{}localhost\char`\"{}. \\
+\hline
+{\em port} & A port number. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{federate_8c_a0e2425b519aae66167fbf454f896df92}\label{federate_8c_a0e2425b519aae66167fbf454f896df92}} 
+\index{federate.c@{federate.c}!create\_server@{create\_server}}
+\index{create\_server@{create\_server}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{create\_server()}{create\_server()}}
+{\footnotesize\ttfamily void create\+\_\+server (\begin{DoxyParamCaption}\item[{int}]{specified\+\_\+port }\end{DoxyParamCaption})}
+
+Create a server to listen to incoming physical connections from remote federates. This function only handles the creation of the server socket. The reserved port for the server socket is then sent to the R\+TI by sending an A\+D\+D\+R\+E\+S\+S\+\_\+\+AD message (\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{rti_8h}{rti.\+h}}). This function expects no response from the R\+TI.
+\end{DoxySeeAlso}
+If a port is specified by the user, that will be used as the only possibility for the server. This function will fail if that port is not available. If a port is not specified, the S\+T\+A\+R\+T\+I\+N\+G\+\_\+\+P\+O\+RT (\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{rti_8h}{rti.\+h}}) will be used. The function will keep incrementing the port in this case until the number of tries reaches \mbox{\hyperlink{rti_8h_aff81692fc67e6f7838d9d1cff402d7f6}{P\+O\+R\+T\+\_\+\+R\+A\+N\+G\+E\+\_\+\+L\+I\+M\+IT}}.
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+This function is similar to create\+\_\+server(...) in \mbox{\hyperlink{rti_8c}{rti.\+c}}. However, it contains specific log messages for the peer to peer connections between federates. It also additionally sends an address advertisement (A\+D\+D\+R\+E\+S\+S\+\_\+\+AD) message to the R\+TI informing it of the port.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em specified\+\_\+port} & The specified port by the user. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{federate_8c_ae3810deff6321784705bf27c79a07d32}\label{federate_8c_ae3810deff6321784705bf27c79a07d32}} 
+\index{federate.c@{federate.c}!enqueue\_network\_control\_reactions@{enqueue\_network\_control\_reactions}}
+\index{enqueue\_network\_control\_reactions@{enqueue\_network\_control\_reactions}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{enqueue\_network\_control\_reactions()}{enqueue\_network\_control\_reactions()}}
+{\footnotesize\ttfamily void enqueue\+\_\+network\+\_\+control\+\_\+reactions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$}]{reaction\+\_\+q }\end{DoxyParamCaption})}
+
+Enqueue network control reactions. \mbox{\Hypertarget{federate_8c_a351f84aa3eb871fe8f51e3a6f18e67f6}\label{federate_8c_a351f84aa3eb871fe8f51e3a6f18e67f6}} 
+\index{federate.c@{federate.c}!enqueue\_network\_input\_control\_reactions@{enqueue\_network\_input\_control\_reactions}}
+\index{enqueue\_network\_input\_control\_reactions@{enqueue\_network\_input\_control\_reactions}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{enqueue\_network\_input\_control\_reactions()}{enqueue\_network\_input\_control\_reactions()}}
+{\footnotesize\ttfamily void enqueue\+\_\+network\+\_\+input\+\_\+control\+\_\+reactions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$}]{reaction\+\_\+q }\end{DoxyParamCaption})}
+
+Enqueue network input control reactions that determine if the trigger for a given network input port is going to be present at the current logical time or absent. \mbox{\Hypertarget{federate_8c_a58c068ed5637620f62d0be0da850bbc3}\label{federate_8c_a58c068ed5637620f62d0be0da850bbc3}} 
+\index{federate.c@{federate.c}!enqueue\_network\_output\_control\_reactions@{enqueue\_network\_output\_control\_reactions}}
+\index{enqueue\_network\_output\_control\_reactions@{enqueue\_network\_output\_control\_reactions}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{enqueue\_network\_output\_control\_reactions()}{enqueue\_network\_output\_control\_reactions()}}
+{\footnotesize\ttfamily void enqueue\+\_\+network\+\_\+output\+\_\+control\+\_\+reactions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$}]{reaction\+\_\+q }\end{DoxyParamCaption})}
+
+Enqueue network output control reactions that will send a P\+O\+R\+T\+\_\+\+A\+B\+S\+E\+NT message to downstream federates if a given network output port is not present. \mbox{\Hypertarget{federate_8c_a123194949f44242acbab252bc1ffed4f}\label{federate_8c_a123194949f44242acbab252bc1ffed4f}} 
+\index{federate.c@{federate.c}!get\_current\_port\_status@{get\_current\_port\_status}}
+\index{get\_current\_port\_status@{get\_current\_port\_status}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{get\_current\_port\_status()}{get\_current\_port\_status()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reactor_8h_a759ba374f75ea0025b9af1bb35f14d7e}{port\+\_\+status\+\_\+t}} get\+\_\+current\+\_\+port\+\_\+status (\begin{DoxyParamCaption}\item[{int}]{port\+ID }\end{DoxyParamCaption})}
+
+Return the status of the port at the current tag.
+
+This assumes that the caller holds the mutex.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+ID} & the ID of the port to determine status for \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{federate_8c_aacc9f1bfb95d8b6c852a52832a9ecd9e}\label{federate_8c_aacc9f1bfb95d8b6c852a52832a9ecd9e}} 
+\index{federate.c@{federate.c}!get\_start\_time\_from\_rti@{get\_start\_time\_from\_rti}}
+\index{get\_start\_time\_from\_rti@{get\_start\_time\_from\_rti}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{get\_start\_time\_from\_rti()}{get\_start\_time\_from\_rti()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} get\+\_\+start\+\_\+time\+\_\+from\+\_\+rti (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}}}]{my\+\_\+physical\+\_\+time }\end{DoxyParamCaption})}
+
+Send the specified timestamp to the R\+TI and wait for a response. The specified timestamp should be current physical time of the federate, and the response will be the designated start time for the federate. This procedure blocks until the response is received from the R\+TI. 
+\begin{DoxyParams}{Parameters}
+{\em my\+\_\+physical\+\_\+time} & The physical time at this federate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The designated start time for the federate. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{federate_8c_a8a059641cbcf0e192594ea898cd09983}\label{federate_8c_a8a059641cbcf0e192594ea898cd09983}} 
+\index{federate.c@{federate.c}!handle\_message@{handle\_message}}
+\index{handle\_message@{handle\_message}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{handle\_message()}{handle\_message()}}
+{\footnotesize\ttfamily void handle\+\_\+message (\begin{DoxyParamCaption}\item[{int}]{socket,  }\item[{int}]{fed\+\_\+id }\end{DoxyParamCaption})}
+
+Handle a message being received from a remote federate.
+
+This function assumes the caller does not hold the mutex lock. 
+\begin{DoxyParams}{Parameters}
+{\em socket} & The socket to read the message from \\
+\hline
+{\em buffer} & The buffer to read \\
+\hline
+{\em fed\+\_\+id} & The sending federate ID or -\/1 if the centralized coordination. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{federate_8c_ade1ea1b03d383abebf7303b10a05f370}\label{federate_8c_ade1ea1b03d383abebf7303b10a05f370}} 
+\index{federate.c@{federate.c}!handle\_p2p\_connections\_from\_federates@{handle\_p2p\_connections\_from\_federates}}
+\index{handle\_p2p\_connections\_from\_federates@{handle\_p2p\_connections\_from\_federates}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{handle\_p2p\_connections\_from\_federates()}{handle\_p2p\_connections\_from\_federates()}}
+{\footnotesize\ttfamily void$\ast$ handle\+\_\+p2p\+\_\+connections\+\_\+from\+\_\+federates (\begin{DoxyParamCaption}\item[{void $\ast$}]{ignored }\end{DoxyParamCaption})}
+
+Thread to accept connections from other federates that send this federate messages directly (not through the R\+TI). This thread starts a thread for each accepted socket connection and, once it has opened all expected sockets, exits. 
+\begin{DoxyParams}{Parameters}
+{\em ignored} & No argument needed for this thread. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{federate_8c_a3a5875ee5db1e60f40b6dd8c98f3eec3}\label{federate_8c_a3a5875ee5db1e60f40b6dd8c98f3eec3}} 
+\index{federate.c@{federate.c}!handle\_port\_absent\_message@{handle\_port\_absent\_message}}
+\index{handle\_port\_absent\_message@{handle\_port\_absent\_message}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{handle\_port\_absent\_message()}{handle\_port\_absent\_message()}}
+{\footnotesize\ttfamily void handle\+\_\+port\+\_\+absent\+\_\+message (\begin{DoxyParamCaption}\item[{int}]{socket,  }\item[{int}]{fed\+\_\+id }\end{DoxyParamCaption})}
+
+Handle a port absent message received from a remote federate. This just sets the last known status tag of the port specified in the message.
+
+This assumes the caller does not hold the mutex, which it acquires.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & The socket to read the message from \\
+\hline
+{\em buffer} & The buffer to read \\
+\hline
+{\em fed\+\_\+id} & The sending federate ID or -\/1 if the centralized coordination. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{federate_8c_ab1d3825f70289972e7f2ab9fed3b24f4}\label{federate_8c_ab1d3825f70289972e7f2ab9fed3b24f4}} 
+\index{federate.c@{federate.c}!handle\_provisional\_tag\_advance\_grant@{handle\_provisional\_tag\_advance\_grant}}
+\index{handle\_provisional\_tag\_advance\_grant@{handle\_provisional\_tag\_advance\_grant}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{handle\_provisional\_tag\_advance\_grant()}{handle\_provisional\_tag\_advance\_grant()}}
+{\footnotesize\ttfamily void handle\+\_\+provisional\+\_\+tag\+\_\+advance\+\_\+grant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Handle a provisional tag advance grant (P\+T\+AG) message from the R\+TI. This updates the last known T\+A\+G/\+P\+T\+AG and broadcasts a notification of this update, which may unblock whichever worker thread is trying to advance time. If current\+\_\+time is less than the specified P\+T\+AG, then this will also insert into the event\+\_\+q a dummy event with the specified tag. This will ensure that the federate advances time to the specified tag and, for centralized coordination, inserts blocking reactions and null-\/message-\/sending output reactions at that tag.
+
+This function assumes the caller does not hold the mutex lock, which it acquires.
+
+\begin{DoxyNote}{Note}
+This function is similar to \mbox{\hyperlink{federate_8c_a7853e005f220474d4ce35be7a6560b2f}{handle\+\_\+tag\+\_\+advance\+\_\+grant()}} except that it sets last\+\_\+\+T\+A\+G\+\_\+was\+\_\+provisional to true and also it does not update the last known tag for input ports. 
+\end{DoxyNote}
+\mbox{\Hypertarget{federate_8c_a295baf41cee4f9450aaf7c95abede7e8}\label{federate_8c_a295baf41cee4f9450aaf7c95abede7e8}} 
+\index{federate.c@{federate.c}!handle\_stop\_granted\_message@{handle\_stop\_granted\_message}}
+\index{handle\_stop\_granted\_message@{handle\_stop\_granted\_message}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{handle\_stop\_granted\_message()}{handle\_stop\_granted\_message()}}
+{\footnotesize\ttfamily void handle\+\_\+stop\+\_\+granted\+\_\+message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Handle a S\+T\+O\+P\+\_\+\+G\+R\+A\+N\+T\+ED message from the R\+TI.
+
+This function removes the global barrier on logical time raised when \mbox{\hyperlink{reactor_8h_af629769c213699f0e4c9360811ee7251}{request\+\_\+stop()}} was called.
+
+This function assumes the caller does not hold the mutex lock, therefore, it acquires it. \mbox{\Hypertarget{federate_8c_a5fe22b3d14b1992c6981d2cfcb89c425}\label{federate_8c_a5fe22b3d14b1992c6981d2cfcb89c425}} 
+\index{federate.c@{federate.c}!handle\_stop\_request\_message@{handle\_stop\_request\_message}}
+\index{handle\_stop\_request\_message@{handle\_stop\_request\_message}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{handle\_stop\_request\_message()}{handle\_stop\_request\_message()}}
+{\footnotesize\ttfamily void handle\+\_\+stop\+\_\+request\+\_\+message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Handle a S\+T\+O\+P\+\_\+\+R\+E\+Q\+U\+E\+ST message from the R\+TI.
+
+This function assumes the caller does not hold the mutex lock, therefore, it acquires it. \mbox{\Hypertarget{federate_8c_a7853e005f220474d4ce35be7a6560b2f}\label{federate_8c_a7853e005f220474d4ce35be7a6560b2f}} 
+\index{federate.c@{federate.c}!handle\_tag\_advance\_grant@{handle\_tag\_advance\_grant}}
+\index{handle\_tag\_advance\_grant@{handle\_tag\_advance\_grant}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{handle\_tag\_advance\_grant()}{handle\_tag\_advance\_grant()}}
+{\footnotesize\ttfamily void handle\+\_\+tag\+\_\+advance\+\_\+grant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Handle a time advance grant (T\+AG) message from the R\+TI. This updates the last known status tag for each network input port, and broadcasts a signal, which may cause a blocking control reaction to unblock.
+
+In addition, this updates the last known T\+A\+G/\+P\+T\+AG and broadcasts a notification of this update, which may unblock whichever worker thread is trying to advance time.
+
+This function assumes the caller does not hold the mutex lock, which it acquires.
+
+\begin{DoxyNote}{Note}
+This function is very similar to handle\+\_\+provisinal\+\_\+tag\+\_\+advance\+\_\+grant() except that it sets last\+\_\+\+T\+A\+G\+\_\+was\+\_\+provisional to false. 
+\end{DoxyNote}
+\mbox{\Hypertarget{federate_8c_a79c416c42bbbfb8d65af0b78e6ce31c4}\label{federate_8c_a79c416c42bbbfb8d65af0b78e6ce31c4}} 
+\index{federate.c@{federate.c}!handle\_timed\_message@{handle\_timed\_message}}
+\index{handle\_timed\_message@{handle\_timed\_message}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{handle\_timed\_message()}{handle\_timed\_message()}}
+{\footnotesize\ttfamily void handle\+\_\+timed\+\_\+message (\begin{DoxyParamCaption}\item[{int}]{socket,  }\item[{int}]{fed\+\_\+id }\end{DoxyParamCaption})}
+
+Handle a timed message being received from a remote federate via the R\+TI or directly from other federates. This will read the tag encoded in the header and calculate an offset to pass to the schedule function. This function assumes the caller does not hold the mutex lock. Instead of holding the mutex lock, this function calls \+\_\+lf\+\_\+increment\+\_\+global\+\_\+tag\+\_\+barrier with the tag carried in the message header as an argument. This ensures that the current tag will not advance to the tag of the message if it is in the future, or the tag will not advance at all if the tag of the message is now or in the past. 
+\begin{DoxyParams}{Parameters}
+{\em socket} & The socket to read the message from. \\
+\hline
+{\em buffer} & The buffer to read. \\
+\hline
+{\em fed\+\_\+id} & The sending federate ID or -\/1 if the centralized coordination. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{federate_8c_a943c3d7aa45a6af5b6d1567cd4ce841c}\label{federate_8c_a943c3d7aa45a6af5b6d1567cd4ce841c}} 
+\index{federate.c@{federate.c}!is\_input\_control\_reaction\_blocked@{is\_input\_control\_reaction\_blocked}}
+\index{is\_input\_control\_reaction\_blocked@{is\_input\_control\_reaction\_blocked}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{is\_input\_control\_reaction\_blocked()}{is\_input\_control\_reaction\_blocked()}}
+{\footnotesize\ttfamily bool is\+\_\+input\+\_\+control\+\_\+reaction\+\_\+blocked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return true if there is an input control reaction blocked waiting for input. This assumes the caller holds the mutex. \mbox{\Hypertarget{federate_8c_af5f3bc3822dd7bbfd67d52b91bf9d382}\label{federate_8c_af5f3bc3822dd7bbfd67d52b91bf9d382}} 
+\index{federate.c@{federate.c}!listen\_for\_upstream\_messages\_from\_downstream\_federates@{listen\_for\_upstream\_messages\_from\_downstream\_federates}}
+\index{listen\_for\_upstream\_messages\_from\_downstream\_federates@{listen\_for\_upstream\_messages\_from\_downstream\_federates}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{listen\_for\_upstream\_messages\_from\_downstream\_federates()}{listen\_for\_upstream\_messages\_from\_downstream\_federates()}}
+{\footnotesize\ttfamily void$\ast$ listen\+\_\+for\+\_\+upstream\+\_\+messages\+\_\+from\+\_\+downstream\+\_\+federates (\begin{DoxyParamCaption}\item[{void $\ast$}]{fed\+\_\+id\+\_\+ptr }\end{DoxyParamCaption})}
+
+For each incoming message socket, we create this thread that listens for upstream messages. Currently, the only possible upstream message is C\+L\+O\+S\+E\+\_\+\+R\+E\+Q\+U\+E\+ST. If this thread receives that message, then closes the socket. The idea here is that a peer-\/to-\/peer socket connection is always closed from the sending end, never from the receiving end. This way, any sends in progress complete before the socket is actually closed. \mbox{\Hypertarget{federate_8c_a0ed912257c1b82c7727c549aec8f3a73}\label{federate_8c_a0ed912257c1b82c7727c549aec8f3a73}} 
+\index{federate.c@{federate.c}!listen\_to\_federates@{listen\_to\_federates}}
+\index{listen\_to\_federates@{listen\_to\_federates}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{listen\_to\_federates()}{listen\_to\_federates()}}
+{\footnotesize\ttfamily void $\ast$ listen\+\_\+to\+\_\+federates (\begin{DoxyParamCaption}\item[{void $\ast$}]{fed\+\_\+id\+\_\+ptr }\end{DoxyParamCaption})}
+
+Thread that listens for inputs from other federates. This thread listens for messages of type P2\+P\+\_\+\+T\+I\+M\+E\+D\+\_\+\+M\+E\+S\+S\+A\+GE from the specified peer federate and calls schedule to schedule an event. If an error occurs or an E\+OF is received from the peer, then this procedure returns, terminating the thread. 
+\begin{DoxyParams}{Parameters}
+{\em fed\+\_\+id\+\_\+ptr} & A pointer to a ushort containing federate ID being listened to. This procedure frees the memory pointed to before returning.\\
+\hline
+\end{DoxyParams}
+Thread that listens for inputs from other federates. This thread listens for messages of type P2\+P\+\_\+\+M\+E\+S\+S\+A\+GE, P2\+P\+\_\+\+T\+I\+M\+E\+D\+\_\+\+M\+E\+S\+S\+A\+GE, or P\+O\+R\+T\+\_\+\+A\+B\+S\+E\+NT (\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{rti_8h}{rti.\+h}}) from the specified peer federate and calls the appropriate handling function for each message type. If an \mbox{\hyperlink{util_8h_aad9796c174f7ef5d226cd169f2520fd5}{error}} occurs or an E\+OF is received from the peer, then this procedure sets the corresponding socket in \+\_\+fed.\+sockets\+\_\+for\+\_\+inbound\+\_\+p2p\+\_\+connections to -\/1 and returns, terminating the thread. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em fed\+\_\+id\+\_\+ptr} & A pointer to a ushort containing federate ID being listened to. This procedure frees the memory pointed to before returning. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{federate_8c_a601736facfe06a4521ba59e7cff6c7b7}\label{federate_8c_a601736facfe06a4521ba59e7cff6c7b7}} 
+\index{federate.c@{federate.c}!listen\_to\_rti\_TCP@{listen\_to\_rti\_TCP}}
+\index{listen\_to\_rti\_TCP@{listen\_to\_rti\_TCP}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{listen\_to\_rti\_TCP()}{listen\_to\_rti\_TCP()}}
+{\footnotesize\ttfamily void$\ast$ listen\+\_\+to\+\_\+rti\+\_\+\+T\+CP (\begin{DoxyParamCaption}\item[{void $\ast$}]{args }\end{DoxyParamCaption})}
+
+Thread that listens for T\+CP inputs from the R\+TI. When a physical message arrives, this calls schedule. \mbox{\Hypertarget{federate_8c_a07d570a16cab26d91c4b47fa5dd6ef6a}\label{federate_8c_a07d570a16cab26d91c4b47fa5dd6ef6a}} 
+\index{federate.c@{federate.c}!mark\_all\_unknown\_ports\_as\_absent@{mark\_all\_unknown\_ports\_as\_absent}}
+\index{mark\_all\_unknown\_ports\_as\_absent@{mark\_all\_unknown\_ports\_as\_absent}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{mark\_all\_unknown\_ports\_as\_absent()}{mark\_all\_unknown\_ports\_as\_absent()}}
+{\footnotesize\ttfamily void mark\+\_\+all\+\_\+unknown\+\_\+ports\+\_\+as\+\_\+absent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Mark all status fields of unknown network input ports as absent. \mbox{\Hypertarget{federate_8c_ad92ed203ebed8e9d8a3727d9b2583c56}\label{federate_8c_ad92ed203ebed8e9d8a3727d9b2583c56}} 
+\index{federate.c@{federate.c}!mark\_control\_reaction\_waiting@{mark\_control\_reaction\_waiting}}
+\index{mark\_control\_reaction\_waiting@{mark\_control\_reaction\_waiting}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{mark\_control\_reaction\_waiting()}{mark\_control\_reaction\_waiting()}}
+{\footnotesize\ttfamily void mark\+\_\+control\+\_\+reaction\+\_\+waiting (\begin{DoxyParamCaption}\item[{int}]{port\+ID,  }\item[{bool}]{waiting }\end{DoxyParamCaption})}
+
+Mark the trigger associated with the specified port to indicate whether a control reaction is waiting. \mbox{\Hypertarget{federate_8c_af89b0ab26ec13c6deafeb05c3c14a88e}\label{federate_8c_af89b0ab26ec13c6deafeb05c3c14a88e}} 
+\index{federate.c@{federate.c}!reset\_status\_fields\_on\_input\_port\_triggers@{reset\_status\_fields\_on\_input\_port\_triggers}}
+\index{reset\_status\_fields\_on\_input\_port\_triggers@{reset\_status\_fields\_on\_input\_port\_triggers}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{reset\_status\_fields\_on\_input\_port\_triggers()}{reset\_status\_fields\_on\_input\_port\_triggers()}}
+{\footnotesize\ttfamily void reset\+\_\+status\+\_\+fields\+\_\+on\+\_\+input\+\_\+port\+\_\+triggers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reset the status fields on network input ports to unknown.
+
+\begin{DoxyNote}{Note}
+This function must be called at the beginning of each logical time. 
+\end{DoxyNote}
+\mbox{\Hypertarget{federate_8c_a1f1332f247555c60e142c03189a34dff}\label{federate_8c_a1f1332f247555c60e142c03189a34dff}} 
+\index{federate.c@{federate.c}!schedule\_message\_received\_from\_network\_already\_locked@{schedule\_message\_received\_from\_network\_already\_locked}}
+\index{schedule\_message\_received\_from\_network\_already\_locked@{schedule\_message\_received\_from\_network\_already\_locked}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{schedule\_message\_received\_from\_network\_already\_locked()}{schedule\_message\_received\_from\_network\_already\_locked()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{reactor_8h_a5ad7d32f3a1ddabdc2933223ca6ce2ea}{handle\+\_\+t}} schedule\+\_\+message\+\_\+received\+\_\+from\+\_\+network\+\_\+already\+\_\+locked (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}} $\ast$}]{trigger,  }\item[{\mbox{\hyperlink{structtag__t}{tag\+\_\+t}}}]{tag,  }\item[{\mbox{\hyperlink{structlf__token__t}{lf\+\_\+token\+\_\+t}} $\ast$}]{token }\end{DoxyParamCaption})}
+
+Version of \mbox{\hyperlink{ctarget_8h_a7e122ceb9688a43baa97a5a0dc7818e1}{schedule\+\_\+value()}} similar to that in reactor\+\_\+common.\+c except that it does not acquire the mutex lock and has a special behavior during startup where it can inject reactions to the reaction queue if execution has not started yet. It is also responsible for setting the intended tag of the network message based on the calculated delay. This function assumes that the caller holds the mutex lock.
+
+This is used for handling incoming timed messages to a federate.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action or timer to be triggered. \\
+\hline
+{\em tag} & The tag of the message received over the network. \\
+\hline
+{\em value} & Dynamically allocated memory containing the value to send. \\
+\hline
+{\em length} & The length of the array, if it is an array, or 1 for a scalar and 0 for no payload. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A handle to the event, or 0 if no event was scheduled, or -\/1 for error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{federate_8c_a76f0bc068b7a7c4a30983172eea59767}\label{federate_8c_a76f0bc068b7a7c4a30983172eea59767}} 
+\index{federate.c@{federate.c}!send\_message@{send\_message}}
+\index{send\_message@{send\_message}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{send\_message()}{send\_message()}}
+{\footnotesize\ttfamily int send\+\_\+message (\begin{DoxyParamCaption}\item[{int}]{message\+\_\+type,  }\item[{unsigned short}]{port,  }\item[{unsigned short}]{federate,  }\item[{const char $\ast$}]{next\+\_\+destination\+\_\+str,  }\item[{size\+\_\+t}]{length,  }\item[{unsigned char $\ast$}]{message }\end{DoxyParamCaption})}
+
+Send a message to another federate directly or via the R\+TI. This method assumes that the caller does not hold the outbound\+\_\+socket\+\_\+mutex lock, which it acquires to perform the send.
+
+If the socket connection to the remote federate or the R\+TI has been broken, then this returns 0 without sending. Otherwise, it returns 1.
+
+\begin{DoxyNote}{Note}
+This function is similar to \mbox{\hyperlink{federate_8c_ad6916d42278d4c199272aaa884a1e01f}{send\+\_\+timed\+\_\+message()}} except that it does not deal with time and timed\+\_\+messages.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em message\+\_\+type} & The type of the message being sent. Currently can be T\+I\+M\+E\+D\+\_\+\+M\+E\+S\+S\+A\+GE for messages sent via R\+TI or P2\+P\+\_\+\+T\+I\+M\+E\+D\+\_\+\+M\+E\+S\+S\+A\+GE for messages sent between federates. \\
+\hline
+{\em port} & The ID of the destination port. \\
+\hline
+{\em federate} & The ID of the destination federate. \\
+\hline
+{\em next\+\_\+destination\+\_\+str} & The name of the next destination in string format \\
+\hline
+{\em length} & The message length. \\
+\hline
+{\em message} & The message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the message has been sent, 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{federate_8c_a4a188ed34f9cf3a6d2ede7a033089bdd}\label{federate_8c_a4a188ed34f9cf3a6d2ede7a033089bdd}} 
+\index{federate.c@{federate.c}!send\_port\_absent\_to\_federate@{send\_port\_absent\_to\_federate}}
+\index{send\_port\_absent\_to\_federate@{send\_port\_absent\_to\_federate}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{send\_port\_absent\_to\_federate()}{send\_port\_absent\_to\_federate()}}
+{\footnotesize\ttfamily void send\+\_\+port\+\_\+absent\+\_\+to\+\_\+federate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}}}]{additional\+\_\+delay,  }\item[{unsigned short}]{port\+\_\+\+ID,  }\item[{unsigned short}]{fed\+\_\+\+ID }\end{DoxyParamCaption})}
+
+Send a port absent message to federate with fed\+\_\+\+ID, informing the remote federate that the current federate will not produce an event on this network port at the current logical time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em additional\+\_\+delay} & The offset applied to the timestamp using after. The additional delay will be greater or equal to zero if an after is used on the connection. If no after is given in the program, -\/1 is passed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{federate_8c_ad6916d42278d4c199272aaa884a1e01f}\label{federate_8c_ad6916d42278d4c199272aaa884a1e01f}} 
+\index{federate.c@{federate.c}!send\_timed\_message@{send\_timed\_message}}
+\index{send\_timed\_message@{send\_timed\_message}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{send\_timed\_message()}{send\_timed\_message()}}
+{\footnotesize\ttfamily int send\+\_\+timed\+\_\+message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}}}]{additional\+\_\+delay,  }\item[{int}]{message\+\_\+type,  }\item[{unsigned short}]{port,  }\item[{unsigned short}]{federate,  }\item[{const char $\ast$}]{next\+\_\+destination\+\_\+str,  }\item[{size\+\_\+t}]{length,  }\item[{unsigned char $\ast$}]{message }\end{DoxyParamCaption})}
+
+Send the specified timestamped message to the specified port in the specified federate via the R\+TI or directly to a federate depending on the given socket. The timestamp is calculated as current\+\_\+logical\+\_\+time + additional delay which is greater than or equal to zero. The port should be an input port of a reactor in the destination federate. This version does include the timestamp in the message. The caller can reuse or free the memory after this returns.
+
+If the socket connection to the remote federate or the R\+TI has been broken, then this returns 0 without sending. Otherwise, it returns 1.
+
+This method assumes that the caller does not hold the outbound\+\_\+socket\+\_\+mutex lock, which it acquires to perform the send.
+
+\begin{DoxyNote}{Note}
+This function is similar to \mbox{\hyperlink{federate_8c_a76f0bc068b7a7c4a30983172eea59767}{send\+\_\+message()}} except that it sends timed messages and also contains logics related to time.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em additional\+\_\+delay} & The offset applied to the timestamp using after. The additional delay will be greater or equal to zero if an after is used on the connection. If no after is given in the program, -\/1 is passed. \\
+\hline
+{\em message\+\_\+type} & The type of the message being sent. Currently can be T\+I\+M\+E\+D\+\_\+\+M\+E\+S\+S\+A\+GE for messages sent via R\+TI or P2\+P\+\_\+\+T\+I\+M\+E\+D\+\_\+\+M\+E\+S\+S\+A\+GE for messages sent between federates. \\
+\hline
+{\em port} & The ID of the destination port. \\
+\hline
+{\em federate} & The ID of the destination federate. \\
+\hline
+{\em next\+\_\+destination\+\_\+str} & The next destination in string format (R\+TI or federate) (used for reporting errors). \\
+\hline
+{\em length} & The message length. \\
+\hline
+{\em message} & The message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the message has been sent, 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{federate_8c_a26a55f84538e1d96832c6247d74e7da6}\label{federate_8c_a26a55f84538e1d96832c6247d74e7da6}} 
+\index{federate.c@{federate.c}!set\_network\_port\_status@{set\_network\_port\_status}}
+\index{set\_network\_port\_status@{set\_network\_port\_status}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{set\_network\_port\_status()}{set\_network\_port\_status()}}
+{\footnotesize\ttfamily void set\+\_\+network\+\_\+port\+\_\+status (\begin{DoxyParamCaption}\item[{int}]{port\+ID,  }\item[{\mbox{\hyperlink{reactor_8h_a759ba374f75ea0025b9af1bb35f14d7e}{port\+\_\+status\+\_\+t}}}]{status }\end{DoxyParamCaption})}
+
+Set the status of network port with id port\+ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+ID} & The network port ID \\
+\hline
+{\em status} & The network port status (port\+\_\+status\+\_\+t) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{federate_8c_ad83fe9661682934029a42954b8fe6e2f}\label{federate_8c_ad83fe9661682934029a42954b8fe6e2f}} 
+\index{federate.c@{federate.c}!synchronize\_with\_other\_federates@{synchronize\_with\_other\_federates}}
+\index{synchronize\_with\_other\_federates@{synchronize\_with\_other\_federates}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{synchronize\_with\_other\_federates()}{synchronize\_with\_other\_federates()}}
+{\footnotesize\ttfamily void synchronize\+\_\+with\+\_\+other\+\_\+federates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Synchronize the start with other federates via the R\+TI. This assumes that a connection to the R\+TI is already made and \+\_\+fed.\+socket\+\_\+\+T\+C\+P\+\_\+\+R\+TI is valid. It then sends the current logical time to the R\+TI and waits for the R\+TI to respond with a specified time. It starts a thread to listen for messages from the R\+TI. It then waits for physical time to match the specified time, sets current logical time to the time returned by the R\+TI, and then returns. If --fast was specified, then this does not wait for physical time to match the logical start time returned by the R\+TI.
+
+F\+I\+X\+ME\+: Possibly should be renamed \mbox{\Hypertarget{federate_8c_a114c79dc673219d5df3b794552ca88d7}\label{federate_8c_a114c79dc673219d5df3b794552ca88d7}} 
+\index{federate.c@{federate.c}!terminate\_execution@{terminate\_execution}}
+\index{terminate\_execution@{terminate\_execution}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{terminate\_execution()}{terminate\_execution()}}
+{\footnotesize\ttfamily void terminate\+\_\+execution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Close sockets used to communicate with other federates, if they are open, and send a R\+E\+S\+I\+GN message to the R\+TI. This implements the function defined in \mbox{\hyperlink{reactor_8h}{reactor.\+h}}. For unfederated execution, the code generator generates an empty implementation. \mbox{\Hypertarget{federate_8c_aa9f7065af94169d68152aa9db4a15cc5}\label{federate_8c_aa9f7065af94169d68152aa9db4a15cc5}} 
+\index{federate.c@{federate.c}!update\_last\_known\_status\_on\_input\_port@{update\_last\_known\_status\_on\_input\_port}}
+\index{update\_last\_known\_status\_on\_input\_port@{update\_last\_known\_status\_on\_input\_port}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{update\_last\_known\_status\_on\_input\_port()}{update\_last\_known\_status\_on\_input\_port()}}
+{\footnotesize\ttfamily void update\+\_\+last\+\_\+known\+\_\+status\+\_\+on\+\_\+input\+\_\+port (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtag__t}{tag\+\_\+t}}}]{tag,  }\item[{int}]{port\+\_\+id }\end{DoxyParamCaption})}
+
+Update the last known status tag of a network input port to the value of \char`\"{}tag\char`\"{}. This is the largest tag at which the status (present or absent) of the port was known.
+
+This function assumes the caller holds the mutex, and, if the tag actually increases, it notifies the waiting control reaction if there is one.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & The tag on which the latest status of network input ports is known. \\
+\hline
+{\em port\+ID} & The port ID \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{federate_8c_a0858ebda70e9bc60f76b9d2aa3df39ef}\label{federate_8c_a0858ebda70e9bc60f76b9d2aa3df39ef}} 
+\index{federate.c@{federate.c}!update\_last\_known\_status\_on\_input\_ports@{update\_last\_known\_status\_on\_input\_ports}}
+\index{update\_last\_known\_status\_on\_input\_ports@{update\_last\_known\_status\_on\_input\_ports}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{update\_last\_known\_status\_on\_input\_ports()}{update\_last\_known\_status\_on\_input\_ports()}}
+{\footnotesize\ttfamily void update\+\_\+last\+\_\+known\+\_\+status\+\_\+on\+\_\+input\+\_\+ports (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtag__t}{tag\+\_\+t}}}]{tag }\end{DoxyParamCaption})}
+
+Update the last known status tag of all network input ports to the value of {\ttfamily tag}, unless that the provided {\ttfamily tag} is less than the last\+\_\+known\+\_\+status\+\_\+tag of the port. This is called when all inputs to network ports with tags up to an including {\ttfamily tag} have been received by those ports. If any update occurs and if there are control reactions blocked, then this broadcasts a signal to potentially unblock those control reactions.
+
+This assumes the caller holds the mutex.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & The tag on which the latest status of network input ports is known. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{federate_8c_af4e0b0634806dadc6bda729c63dc700f}\label{federate_8c_af4e0b0634806dadc6bda729c63dc700f}} 
+\index{federate.c@{federate.c}!wait\_until\_port\_status\_known@{wait\_until\_port\_status\_known}}
+\index{wait\_until\_port\_status\_known@{wait\_until\_port\_status\_known}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{wait\_until\_port\_status\_known()}{wait\_until\_port\_status\_known()}}
+{\footnotesize\ttfamily void wait\+\_\+until\+\_\+port\+\_\+status\+\_\+known (\begin{DoxyParamCaption}\item[{int}]{port\+\_\+\+ID,  }\item[{\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}}}]{S\+TP }\end{DoxyParamCaption})}
+
+Wait until the status of network port \char`\"{}port\+\_\+\+I\+D\char`\"{} is known.
+
+In decentralized coordination mode, the wait time is capped by \char`\"{}\+S\+T\+P\char`\"{}, after which the status of the port is presumed to be absent.
+
+This function assumes the holder does not hold a mutex.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+\_\+\+ID} & The ID of the network port \\
+\hline
+{\em S\+TP} & The S\+TP offset of the port \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{federate_8c_a8dd2a9d602522afd72f6c524356868e4}\label{federate_8c_a8dd2a9d602522afd72f6c524356868e4}} 
+\index{federate.c@{federate.c}!\_fed@{\_fed}}
+\index{\_fed@{\_fed}!federate.c@{federate.c}}
+\doxysubsubsection{\texorpdfstring{\_fed}{\_fed}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structfederate__instance__t}{federate\+\_\+instance\+\_\+t}} \+\_\+fed}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{        .socket\_TCP\_RTI = -\/1,}
+\DoxyCodeLine{        .number\_of\_inbound\_p2p\_connections = 0,}
+\DoxyCodeLine{        .inbound\_socket\_listeners = NULL,}
+\DoxyCodeLine{        .number\_of\_outbound\_p2p\_connections = 0,}
+\DoxyCodeLine{        .sockets\_for\_inbound\_p2p\_connections = \{ -\/1 \},}
+\DoxyCodeLine{        .sockets\_for\_outbound\_p2p\_connections = \{ -\/1 \},}
+\DoxyCodeLine{        .inbound\_p2p\_handling\_thread\_id = 0,}
+\DoxyCodeLine{        .server\_socket = -\/1,}
+\DoxyCodeLine{        .server\_port = -\/1,}
+\DoxyCodeLine{        .last\_TAG = \{.time = NEVER, .microstep = 0u\},}
+\DoxyCodeLine{        .is\_last\_TAG\_provisional = \textcolor{keyword}{false},}
+\DoxyCodeLine{        .waiting\_for\_TAG = \textcolor{keyword}{false},}
+\DoxyCodeLine{        .has\_upstream = \textcolor{keyword}{false},}
+\DoxyCodeLine{        .has\_downstream = \textcolor{keyword}{false},}
+\DoxyCodeLine{        .sent\_a\_stop\_request\_to\_rti = \textcolor{keyword}{false},}
+\DoxyCodeLine{        .last\_sent\_LTC = (\mbox{\hyperlink{structtag__t}{tag\_t}}) \{.time = NEVER, .microstep = 0u\},}
+\DoxyCodeLine{        .last\_sent\_NET = (\mbox{\hyperlink{structtag__t}{tag\_t}}) \{.time = NEVER, .microstep = 0u\},}
+\DoxyCodeLine{        .min\_delay\_from\_physical\_action\_to\_federate\_output = NEVER,}
+\DoxyCodeLine{        .triggers\_for\_network\_input\_control\_reactions = NULL,}
+\DoxyCodeLine{        .triggers\_for\_network\_input\_control\_reactions\_size = 0,}
+\DoxyCodeLine{        .trigger\_for\_network\_output\_control\_reactions = NULL}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+The state of this federate instance. 

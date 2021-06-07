@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structtag__t" kind="struct" language="C++" prot="public">
+    <compoundname>tag_t</compoundname>
+    <includes refid="tag_8h" local="no">tag.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtag__t_1ad6fc78329d72e52bc7e449036f64937d" prot="public" static="no" mutable="no">
+        <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+        <definition>instant_t tag_t::time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="89" column="15" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtag__t_1a2ecfcdcf77463769a58980f47d0a813c" prot="public" static="no" mutable="no">
+        <type><ref refid="tag_8h_1a818d416d39f7c82f1fbeb5c5d3149f0d" kindref="member">microstep_t</ref></type>
+        <definition>microstep_t tag_t::microstep</definition>
+        <argsstring></argsstring>
+        <name>microstep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="90" column="17" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A tag is a time, microstep pair. </para>
+    </detaileddescription>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="88" column="15" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="88" bodyend="91"/>
+    <listofallmembers>
+      <member refid="structtag__t_1a2ecfcdcf77463769a58980f47d0a813c" prot="public" virt="non-virtual"><scope>tag_t</scope><name>microstep</name></member>
+      <member refid="structtag__t_1ad6fc78329d72e52bc7e449036f64937d" prot="public" virt="non-virtual"><scope>tag_t</scope><name>time</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

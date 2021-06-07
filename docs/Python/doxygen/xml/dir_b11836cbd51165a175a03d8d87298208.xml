@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_b11836cbd51165a175a03d8d87298208" kind="dir">
+    <compoundname>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang</compoundname>
+    <innerdir refid="dir_af4706f0e5a17c44cf29f92ff62f955b">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/"/>
+  </compounddef>
+</doxygen>

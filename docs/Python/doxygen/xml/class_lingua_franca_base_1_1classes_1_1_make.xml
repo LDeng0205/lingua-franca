@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_lingua_franca_base_1_1classes_1_1_make" kind="class" language="Python" prot="public">
+    <compoundname>LinguaFrancaBase::classes::Make</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_lingua_franca_base_1_1classes_1_1_make_1af7a316812f3fb8c628683dbf39a7fe85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def LinguaFrancaBase.classes.Make.__getattr__</definition>
+        <argsstring>(self, name)</argsstring>
+        <name>__getattr__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/classes.py" line="4" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/classes.py" bodystart="4" bodyend="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/classes.py" line="3" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/classes.py" bodystart="3" bodyend="6"/>
+    <listofallmembers>
+      <member refid="class_lingua_franca_base_1_1classes_1_1_make_1af7a316812f3fb8c628683dbf39a7fe85" prot="public" virt="non-virtual"><scope>LinguaFrancaBase::classes::Make</scope><name>__getattr__</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

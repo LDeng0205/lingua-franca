@@ -1,0 +1,420 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structfederate__instance__t" kind="struct" language="C++" prot="public">
+    <compoundname>federate_instance_t</compoundname>
+    <includes refid="federate_8h" local="no">federate.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfederate__instance__t_1aacdc19a638ccdc9fae494ce641f4cb04" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int federate_instance_t::socket_TCP_RTI</definition>
+        <argsstring></argsstring>
+        <name>socket_TCP_RTI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The TCP socket descriptor for this federate to communicate with the RTI. This is set by <ref refid="federate_8c_1ac4fb5cd6e02f70979dd3e30310d4b2bb" kindref="member">connect_to_rti()</ref>, which must be called before other functions that communicate with the rti are called. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="48" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1a5b6b4b5912a7bb7df1c8987f38e12004" prot="public" static="no" mutable="no">
+        <type>lf_thread_t</type>
+        <definition>lf_thread_t federate_instance_t::RTI_socket_listener</definition>
+        <argsstring></argsstring>
+        <name>RTI_socket_listener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Thread listening for incoming TCP messages from the RTI. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="53" column="13" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1a189bc35e092cd0c6908267aa9ff663e5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int federate_instance_t::number_of_inbound_p2p_connections</definition>
+        <argsstring></argsstring>
+        <name>number_of_inbound_p2p_connections</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of inbound physical connections to the federate. This can be either physical connections, or logical connections in the decentralized coordination, or both. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="60" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1ac751250db764f954659deb15f1427044" prot="public" static="no" mutable="no">
+        <type>lf_thread_t *</type>
+        <definition>lf_thread_t* federate_instance_t::inbound_socket_listeners</definition>
+        <argsstring></argsstring>
+        <name>inbound_socket_listeners</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Array of thread IDs for threads that listen for incoming messages. This is NULL if there are none and otherwise has size given by number_of_inbound_p2p_connections. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="67" column="13" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1a26af9633fce5c849b670f9e4ebec020e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int federate_instance_t::number_of_outbound_p2p_connections</definition>
+        <argsstring></argsstring>
+        <name>number_of_outbound_p2p_connections</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of outbound peer-to-peer connections from the federate. This can be either physical connections, or logical connections in the decentralized coordination, or both. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="74" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1a244a65a4b9ca9e27230c87ce9021b7e1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int federate_instance_t::sockets_for_inbound_p2p_connections[NUMBER_OF_FEDERATES]</definition>
+        <argsstring>[NUMBER_OF_FEDERATES]</argsstring>
+        <name>sockets_for_inbound_p2p_connections</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An array that holds the socket descriptors for inbound connections from each federate. The index will be the federate ID of the remote sending federate. This is initialized at startup to -1 and is set to a socket ID by <ref refid="federate_8c_1ade1ea1b03d383abebf7303b10a05f370" kindref="member">handle_p2p_connections_from_federates()</ref> when the socket is opened.</para>
+<para><simplesect kind="note"><para>There will not be an inbound socket unless a physical connection or a p2p logical connection (by setting the coordination target property to &quot;distributed&quot;) is specified in the Lingua Franca program where this federate is the destination. Multiple incoming p2p connections from the same remote federate will use the same socket. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="89" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1a9e1cde7330bec95f787bb7a85d509c9a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int federate_instance_t::sockets_for_outbound_p2p_connections[NUMBER_OF_FEDERATES]</definition>
+        <argsstring>[NUMBER_OF_FEDERATES]</argsstring>
+        <name>sockets_for_outbound_p2p_connections</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An array that holds the socket descriptors for outbound direct connections to each remote federate. The index will be the federate ID of the remote receiving federate. This is initialized at startup to -1 and is set to a socket ID by <ref refid="federate_8c_1ae531b26446e581af75969ca6d9dc71f5" kindref="member">connect_to_federate()</ref> when the socket is opened.</para>
+<para><simplesect kind="note"><para>This federate will not open an outbound socket unless a physical connection or a p2p logical connection (by setting the coordination target property to &quot;distributed&quot;) is specified in the Lingua Franca program where this federate acts as the source. Multiple outgoing p2p connections to the same remote federate will use the same socket. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="104" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1ab441abf042a2ff79099bdf2860aeb058" prot="public" static="no" mutable="no">
+        <type>lf_thread_t</type>
+        <definition>lf_thread_t federate_instance_t::inbound_p2p_handling_thread_id</definition>
+        <argsstring></argsstring>
+        <name>inbound_p2p_handling_thread_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Thread ID for a thread that accepts sockets and then supervises listening to those sockets for incoming P2P (physical) connections. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="110" column="13" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1a20c5d19d5166ec82a09efe072c2f1b49" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int federate_instance_t::server_socket</definition>
+        <argsstring></argsstring>
+        <name>server_socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A socket descriptor for the socket server of the federate. This is assigned in <ref refid="federate_8c_1a0e2425b519aae66167fbf454f896df92" kindref="member">create_server()</ref>. This socket is used to listen to incoming physical connections from remote federates. Once an incoming connection is accepted, the opened socket will be stored in federate_sockets_for_inbound_p2p_connections. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="120" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1a309c9672d657f20cd1d3661edc7d5179" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int federate_instance_t::server_port</definition>
+        <argsstring></argsstring>
+        <name>server_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The port used for the server socket to listen for messages from other federates. The federate informs the RTI of this port once it has created its socket server by sending an ADDRESS_AD message (<simplesect kind="see"><para><ref refid="rti_8h" kindref="compound">rti.h</ref>). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="129" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1aa66a2f08ea9173743106c7ff18f1846a" prot="public" static="no" mutable="no">
+        <type><ref refid="structtag__t" kindref="compound">tag_t</ref></type>
+        <definition>tag_t federate_instance_t::last_TAG</definition>
+        <argsstring></argsstring>
+        <name>last_TAG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Most recent TIME_ADVANCE_GRANT received from the RTI, or NEVER if none has been received. This is used to communicate between the listen_to_rti_TCP thread and the main federate thread. This variable should only be accessed while holding the mutex lock. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="138" column="7" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1a05a9586ad89b82d0bf5f969a194ef69c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool federate_instance_t::is_last_TAG_provisional</definition>
+        <argsstring></argsstring>
+        <name>is_last_TAG_provisional</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates whether the last TAG received is provisional or an ordinary TAG. If the last TAG has been provisional, network control reactions must be inserted. This variable should only be accessed while holding the mutex lock. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="146" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1a9812f0499dda0efd9f2718981be2e905" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool federate_instance_t::waiting_for_TAG</definition>
+        <argsstring></argsstring>
+        <name>waiting_for_TAG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicator of whether a NET has been sent to the RTI and no TAG yet received in reply. This variable should only be accessed while holding the mutex lock. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="153" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1a603662cf0155920b8a76659e7dacb9ef" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool federate_instance_t::has_upstream</definition>
+        <argsstring></argsstring>
+        <name>has_upstream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicator of whether this federate has upstream federates. The default value of false may be overridden in __initialize_trigger_objects. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="159" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1ac130c67ec68fe84d6753a54e6e73d59a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool federate_instance_t::has_downstream</definition>
+        <argsstring></argsstring>
+        <name>has_downstream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicator of whether this federate has downstream federates. The default value of false may be overridden in __initialize_trigger_objects. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="165" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1a5bed997749ef910209491c67e3ece6b4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool federate_instance_t::sent_a_stop_request_to_rti</definition>
+        <argsstring></argsstring>
+        <name>sent_a_stop_request_to_rti</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to prevent the federate from sending a REQUEST_STOP message multiple times to the RTI. This variable should only be accessed while holding the mutex lock. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="172" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1ae95f54a01b0367048faa6460ff86e987" prot="public" static="no" mutable="no">
+        <type><ref refid="structtag__t" kindref="compound">tag_t</ref></type>
+        <definition>tag_t federate_instance_t::last_sent_LTC</definition>
+        <argsstring></argsstring>
+        <name>last_sent_LTC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A record of the most recently sent LTC (logical tag complete) message. In some situations, federates can send logical_tag_complete for the same tag twice or more in-a-row to the RTI. For example, when __next() returns without advancing tag. To prevent overwhelming the RTI with extra messages, record the last sent logical tag complete message and check against it in <ref refid="federate_8c_1a77aa8325df62cb64364fb8af6b1c2334" kindref="member">_lf_logical_tag_complete()</ref>.</para>
+<para><simplesect kind="note"><para>Here, the underlying assumption is that the TCP stack will deliver the Logical TAG Complete message to the RTI eventually if it is deliverable </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="187" column="7" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1a42618a45ae75b42e1caec4b373471d96" prot="public" static="no" mutable="no">
+        <type><ref refid="structtag__t" kindref="compound">tag_t</ref></type>
+        <definition>tag_t federate_instance_t::last_sent_NET</definition>
+        <argsstring></argsstring>
+        <name>last_sent_NET</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A record of the most recently sent NET (next event tag) message. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="192" column="7" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1a91a34b0d7f0f604c2f21cf062dbe0314" prot="public" static="no" mutable="no">
+        <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+        <definition>instant_t federate_instance_t::min_delay_from_physical_action_to_federate_output</definition>
+        <argsstring></argsstring>
+        <name>min_delay_from_physical_action_to_federate_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For use in federates with centralized coordination, the minimum time delay between a physical action within this federate and an output from this federate. This is NEVER if there is causal path from a physical action to any output. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="200" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1a8385397cd2996dbf5f79828e077926f2" prot="public" static="no" mutable="no">
+        <type><ref refid="structtrigger__t" kindref="compound">trigger_t</ref> **</type>
+        <definition>trigger_t** federate_instance_t::triggers_for_network_input_control_reactions</definition>
+        <argsstring></argsstring>
+        <name>triggers_for_network_input_control_reactions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This list is also used to determine the status of a given network input port at a given logical time. The status of the port (trigger-&gt;status) can be: present, absent, or unknown. To determine the status of that port, for a given trigger &apos;t&apos; in this list, a (number of) network input control reactions are inserted into the reaction queue, which is are special kind of reaction that wait long enough until the status of the port becomes known. In the centralized coordination, this wait is until the RTI informs the reaction of the status of the port. In the decentralized coordination, this wait is until the STP offset expires (or the status is somehow becomes known sooner). List of triggers for network input control reactions, used to trigger these reaction at the beginning of every tag. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="217" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1a55752090527a6364765bf510c94b4837" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int federate_instance_t::triggers_for_network_input_control_reactions_size</definition>
+        <argsstring></argsstring>
+        <name>triggers_for_network_input_control_reactions_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="218" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__instance__t_1a786701f771e06e14c369be4b0a6519b5" prot="public" static="no" mutable="no">
+        <type><ref refid="structtrigger__t" kindref="compound">trigger_t</ref> *</type>
+        <definition>trigger_t* federate_instance_t::trigger_for_network_output_control_reactions</definition>
+        <argsstring></argsstring>
+        <name>trigger_for_network_output_control_reactions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The triggers for all network output control reactions.</para>
+<para>This is used to trigger network output control reactions that will potentially send an ABSENT message to any downstream federate that might be blocking on the network port. The ABSENT message will only be sent if the output is not present. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="230" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Structure that a federate instance uses to keep track of its own state. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>federate_instance_t</label>
+        <link refid="structfederate__instance__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>triggers_for_network_input_control_reactions</edgelabel>
+          <edgelabel>trigger_for_network_output_control_reactions</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>last_TAG</edgelabel>
+          <edgelabel>last_sent_NET</edgelabel>
+          <edgelabel>last_sent_LTC</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>reaction_t</label>
+        <link refid="structreaction__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>triggers</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>last_enabling_reaction</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>event_t</label>
+        <link refid="structevent__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>token</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>trigger</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>tag_t</label>
+        <link refid="structtag__t"/>
+      </node>
+      <node id="4">
+        <label>lf_token_t</label>
+        <link refid="structlf__token__t"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>next_free</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>trigger_t</label>
+        <link refid="structtrigger__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>last</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>token</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>reactions</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="42" column="34" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="42" bodyend="232"/>
+    <listofallmembers>
+      <member refid="structfederate__instance__t_1ac130c67ec68fe84d6753a54e6e73d59a" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>has_downstream</name></member>
+      <member refid="structfederate__instance__t_1a603662cf0155920b8a76659e7dacb9ef" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>has_upstream</name></member>
+      <member refid="structfederate__instance__t_1ab441abf042a2ff79099bdf2860aeb058" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>inbound_p2p_handling_thread_id</name></member>
+      <member refid="structfederate__instance__t_1ac751250db764f954659deb15f1427044" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>inbound_socket_listeners</name></member>
+      <member refid="structfederate__instance__t_1a05a9586ad89b82d0bf5f969a194ef69c" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>is_last_TAG_provisional</name></member>
+      <member refid="structfederate__instance__t_1ae95f54a01b0367048faa6460ff86e987" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>last_sent_LTC</name></member>
+      <member refid="structfederate__instance__t_1a42618a45ae75b42e1caec4b373471d96" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>last_sent_NET</name></member>
+      <member refid="structfederate__instance__t_1aa66a2f08ea9173743106c7ff18f1846a" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>last_TAG</name></member>
+      <member refid="structfederate__instance__t_1a91a34b0d7f0f604c2f21cf062dbe0314" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>min_delay_from_physical_action_to_federate_output</name></member>
+      <member refid="structfederate__instance__t_1a189bc35e092cd0c6908267aa9ff663e5" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>number_of_inbound_p2p_connections</name></member>
+      <member refid="structfederate__instance__t_1a26af9633fce5c849b670f9e4ebec020e" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>number_of_outbound_p2p_connections</name></member>
+      <member refid="structfederate__instance__t_1a5b6b4b5912a7bb7df1c8987f38e12004" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>RTI_socket_listener</name></member>
+      <member refid="structfederate__instance__t_1a5bed997749ef910209491c67e3ece6b4" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>sent_a_stop_request_to_rti</name></member>
+      <member refid="structfederate__instance__t_1a309c9672d657f20cd1d3661edc7d5179" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>server_port</name></member>
+      <member refid="structfederate__instance__t_1a20c5d19d5166ec82a09efe072c2f1b49" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>server_socket</name></member>
+      <member refid="structfederate__instance__t_1aacdc19a638ccdc9fae494ce641f4cb04" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>socket_TCP_RTI</name></member>
+      <member refid="structfederate__instance__t_1a244a65a4b9ca9e27230c87ce9021b7e1" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>sockets_for_inbound_p2p_connections</name></member>
+      <member refid="structfederate__instance__t_1a9e1cde7330bec95f787bb7a85d509c9a" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>sockets_for_outbound_p2p_connections</name></member>
+      <member refid="structfederate__instance__t_1a786701f771e06e14c369be4b0a6519b5" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>trigger_for_network_output_control_reactions</name></member>
+      <member refid="structfederate__instance__t_1a8385397cd2996dbf5f79828e077926f2" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>triggers_for_network_input_control_reactions</name></member>
+      <member refid="structfederate__instance__t_1a55752090527a6364765bf510c94b4837" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>triggers_for_network_input_control_reactions_size</name></member>
+      <member refid="structfederate__instance__t_1a9812f0499dda0efd9f2718981be2e905" prot="public" virt="non-virtual"><scope>federate_instance_t</scope><name>waiting_for_TAG</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structlf__wav__format__t" kind="struct" language="C++" prot="public">
+    <compoundname>lf_wav_format_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlf__wav__format__t_1a57e5f5a678f3e707e72f9fe8d08343dc" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char lf_wav_format_t::subchunk_id[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>subchunk_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" line="65" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlf__wav__format__t_1adfd9e75e1cac08a0c8a8743d98f8885d" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t lf_wav_format_t::subchunk_size</definition>
+        <argsstring></argsstring>
+        <name>subchunk_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" line="66" column="14" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlf__wav__format__t_1a52979bb4f51994d359760876aa1c9db8" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t lf_wav_format_t::audio_format</definition>
+        <argsstring></argsstring>
+        <name>audio_format</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" line="67" column="14" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlf__wav__format__t_1a94176b96fa481451960f8b727746a886" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t lf_wav_format_t::num_channels</definition>
+        <argsstring></argsstring>
+        <name>num_channels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" line="68" column="14" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlf__wav__format__t_1a0c32112d0731f41f6997ebbd647ae8f4" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t lf_wav_format_t::sample_rate</definition>
+        <argsstring></argsstring>
+        <name>sample_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" line="69" column="14" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlf__wav__format__t_1ae5f203a6ff05911332cfa0cbd6919f97" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t lf_wav_format_t::byte_rate</definition>
+        <argsstring></argsstring>
+        <name>byte_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" line="70" column="14" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlf__wav__format__t_1ade6b07a7115880ebae5f1bd89642a047" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t lf_wav_format_t::BlockAlign</definition>
+        <argsstring></argsstring>
+        <name>BlockAlign</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" line="71" column="14" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlf__wav__format__t_1a42e5dc32b57640eafe36773bf924d005" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t lf_wav_format_t::bits_per_sample</definition>
+        <argsstring></argsstring>
+        <name>bits_per_sample</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" line="72" column="14" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The first subchunk within a .wav file is a &apos;fmt &apos; chunk, identified by an ID that is an int formed by the sequence of four chars &apos;fmt &apos;. </para>
+    </detaileddescription>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" line="64" column="15" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.c" bodystart="64" bodyend="73"/>
+    <listofallmembers>
+      <member refid="structlf__wav__format__t_1a52979bb4f51994d359760876aa1c9db8" prot="public" virt="non-virtual"><scope>lf_wav_format_t</scope><name>audio_format</name></member>
+      <member refid="structlf__wav__format__t_1a42e5dc32b57640eafe36773bf924d005" prot="public" virt="non-virtual"><scope>lf_wav_format_t</scope><name>bits_per_sample</name></member>
+      <member refid="structlf__wav__format__t_1ade6b07a7115880ebae5f1bd89642a047" prot="public" virt="non-virtual"><scope>lf_wav_format_t</scope><name>BlockAlign</name></member>
+      <member refid="structlf__wav__format__t_1ae5f203a6ff05911332cfa0cbd6919f97" prot="public" virt="non-virtual"><scope>lf_wav_format_t</scope><name>byte_rate</name></member>
+      <member refid="structlf__wav__format__t_1a94176b96fa481451960f8b727746a886" prot="public" virt="non-virtual"><scope>lf_wav_format_t</scope><name>num_channels</name></member>
+      <member refid="structlf__wav__format__t_1a0c32112d0731f41f6997ebbd647ae8f4" prot="public" virt="non-virtual"><scope>lf_wav_format_t</scope><name>sample_rate</name></member>
+      <member refid="structlf__wav__format__t_1a57e5f5a678f3e707e72f9fe8d08343dc" prot="public" virt="non-virtual"><scope>lf_wav_format_t</scope><name>subchunk_id</name></member>
+      <member refid="structlf__wav__format__t_1adfd9e75e1cac08a0c8a8743d98f8885d" prot="public" virt="non-virtual"><scope>lf_wav_format_t</scope><name>subchunk_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

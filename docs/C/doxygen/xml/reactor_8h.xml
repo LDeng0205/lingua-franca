@@ -1,0 +1,2015 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="reactor_8h" kind="file" language="C++">
+    <compoundname>reactor.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">time.h</includes>
+    <includes local="no">limits.h</includes>
+    <includes local="no">errno.h</includes>
+    <includes refid="pqueue_8h" local="yes">pqueue.h</includes>
+    <includes refid="util_8h" local="yes">util.h</includes>
+    <includes refid="tag_8h" local="yes">tag.h</includes>
+    <includes refid="trace_8h" local="yes">trace.h</includes>
+    <includedby refid="ctarget_8h" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h</includedby>
+    <includedby refid="rti_8h" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h</includedby>
+    <includedby refid="federate_8c" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.c</includedby>
+    <includedby refid="reactor__common_8c" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor_common.c</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+      <node id="10">
+        <label>util.h</label>
+        <link refid="util_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>pqueue.h</label>
+        <link refid="pqueue_8h"/>
+      </node>
+      <node id="11">
+        <label>stdarg.h</label>
+      </node>
+      <node id="13">
+        <label>trace.h</label>
+        <link refid="trace_8h"/>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="8">
+        <label>errno.h</label>
+      </node>
+      <node id="12">
+        <label>tag.h</label>
+        <link refid="tag_8h"/>
+      </node>
+      <node id="7">
+        <label>limits.h</label>
+      </node>
+      <node id="5">
+        <label>string.h</label>
+      </node>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h</label>
+        <link refid="reactor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>time.h</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h</label>
+        <link refid="ctarget_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.c</label>
+        <link refid="federate_8c"/>
+      </node>
+      <node id="7">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.c</label>
+        <link refid="rti_8c"/>
+      </node>
+      <node id="4">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h</label>
+        <link refid="rti_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c</label>
+        <link refid="clock-sync_8c"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/sensor_simulator.c</label>
+        <link refid="sensor__simulator_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h</label>
+        <link refid="reactor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlf__token__t" prot="public">lf_token_t</innerclass>
+    <innerclass refid="structtoken__present__t" prot="public">token_present_t</innerclass>
+    <innerclass refid="structreaction__t" prot="public">reaction_t</innerclass>
+    <innerclass refid="structevent__t" prot="public">event_t</innerclass>
+    <innerclass refid="structtrigger__t" prot="public">trigger_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="reactor_8h_1a71bcdce172253c19667053352afdf496" prot="public" static="no">
+        <name>CONSTRUCTOR</name>
+        <param><defname>classname</defname></param>
+        <initializer>(new_ ## classname)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="71" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reactor_8h_1ac783147cb265dcb8f2920def647037e0" prot="public" static="no">
+        <name>SELF_STRUCT_T</name>
+        <param><defname>classname</defname></param>
+        <initializer>(classname ## _self_t)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="72" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reactor_8h_1a88789cadebf89616a6c179b429f64a72" prot="public" static="no">
+        <name>INITIAL_EVENT_QUEUE_SIZE</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="75" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reactor_8h_1ab90a33a3249c67258eed6ac36793bd39" prot="public" static="no">
+        <name>INITIAL_REACT_QUEUE_SIZE</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="76" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reactor_8h_1af5f7e281be573bc680ed652ad54f5386" prot="public" static="no">
+        <name>_LF_SET</name>
+        <param><defname>out</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>do { \
+    out-&gt;value = val; \
+    out-&gt;is_present = true; \
+} while(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the specified output (or input of a contained reactor) to the specified value.</para>
+<para>This version is used for primitive types such as int, double, etc. as well as the built-in types bool and string. The value is copied and therefore the variable carrying the value can be subsequently modified without changing the output. This can also be used for structs with a type defined by a typedef so that the type designating string does not end in &apos;*&apos;. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output port (by name) or input of a contained reactor in form input_name.port_name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to insert into the self struct. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="101" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reactor_8h_1a8a4001d12854ff4675f7d119dfb0b952" prot="public" static="no">
+        <name>_LF_SET_ARRAY</name>
+        <param><defname>out</defname></param>
+        <param><defname>val</defname></param>
+        <param><defname>element_size</defname></param>
+        <param><defname>length</defname></param>
+        <initializer>do { \
+    out-&gt;is_present = true; \
+    <ref refid="structlf__token__t" kindref="compound">lf_token_t</ref>* token = __initialize_token_with_value(out-&gt;token, val, length); \
+    token-&gt;ref_count = out-&gt;num_destinations; \
+    out-&gt;token = token; \
+    out-&gt;value = token-&gt;value; \
+} while(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Version of set for output types given as &apos;type[]&apos; where you want to send a previously dynamically allocated array.</para>
+<para>The deallocation is delegated to downstream reactors, which automatically deallocate when the reference count drops to zero. It also sets the corresponding _is_present variable in the self struct to true (which causes the object message to be sent). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output port (by name). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array to send (a pointer to the first element). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the array to send. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="structlf__token__t" kindref="compound">lf_token_t</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="121" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reactor_8h_1ae6d69be73768b3d144a524fa87f0d069" prot="public" static="no">
+        <name>_LF_SET_NEW</name>
+        <param><defname>out</defname></param>
+        <initializer>do { \
+    out-&gt;is_present = true; \
+    <ref refid="structlf__token__t" kindref="compound">lf_token_t</ref>* token = __set_new_array_impl(out-&gt;token, 1, out-&gt;num_destinations); \
+    out-&gt;value = token-&gt;value; \
+    out-&gt;token = token; \
+} while(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Version of set() for output types given as &apos;type*&apos; that allocates a new object of the type of the specified output port.</para>
+<para>This macro dynamically allocates enough memory to contain one instance of the output datatype and sets the variable named by the argument to point to the newly allocated memory. The user code can then populate it with whatever value it wishes to send.</para>
+<para>This macro also sets the corresponding _is_present variable in the self struct to true (which causes the object message to be sent), <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output port (by name). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="154" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reactor_8h_1a64c4d124085ac4279bac7158ad144218" prot="public" static="no">
+        <name>_LF_SET_NEW_ARRAY</name>
+        <param><defname>out</defname></param>
+        <param><defname>len</defname></param>
+        <initializer>do { \
+    out-&gt;is_present = true; \
+    <ref refid="structlf__token__t" kindref="compound">lf_token_t</ref>* token = __set_new_array_impl(out-&gt;token, len, out-&gt;num_destinations); \
+    out-&gt;value = token-&gt;value; \
+    out-&gt;token = token; \
+    out-&gt;length = len; \
+} while(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Version of set() for output types given as &apos;type[]&apos;.</para>
+<para>This allocates a new array of the specified length, sets the corresponding _is_present variable in the self struct to true (which causes the array message to be sent), and sets the variable given by the first argument to point to the new array so that the user code can populate the array. The freeing of the dynamically allocated array will be handled automatically when the last downstream reader of the message has finished. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output port (by name). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the array to be sent. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="176" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reactor_8h_1a26960b6a12ebe9eff3f276c2b07096ab" prot="public" static="no">
+        <name>_LF_SET_PRESENT</name>
+        <param><defname>out</defname></param>
+        <initializer>do { \
+    out-&gt;is_present = true; \
+} while(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Version of set() for output types given as &apos;type[number]&apos;.</para>
+<para>This sets the _is_present variable corresponding to the specified output to true (which causes the array message to be sent). The values in the output are normally written directly to the array or struct before or after this is called. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output port (by name). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="203" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reactor_8h_1a5f45a70cbab4e36efdc9efdcf37a7bb9" prot="public" static="no">
+        <name>_LF_SET_TOKEN</name>
+        <param><defname>out</defname></param>
+        <param><defname>newtoken</defname></param>
+        <initializer>do { \
+    out-&gt;is_present = true; \
+    out-&gt;value = newtoken-&gt;value; \
+    out-&gt;token = newtoken; \
+    newtoken-&gt;ref_count += out-&gt;num_destinations; \
+    out-&gt;is_present = true; \
+    out-&gt;length = newtoken-&gt;length; \
+} while(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Version of set() for output types given as &apos;type*&apos; or &apos;type[]&apos; where you want to forward an input or action without copying it.</para>
+<para>The deallocation of memory is delegated to downstream reactors, which automatically deallocate when the reference count drops to zero. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output port (by name). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>token</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to token obtained from an input or action. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="218" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reactor_8h_1a4aab573132838d44997ee99002d3e6d0" prot="public" static="no">
+        <name>DEADLINE</name>
+        <param><defname>index</defname></param>
+        <initializer>(index &amp; 0x7FFFFFFFFFFF0000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for extracting the deadline from the index of a reaction. The reaction queue is sorted according to this index, and the use of the deadline here results in an earliest deadline first (EDF) scheduling poicy. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="246" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reactor_8h_1a6d86a8b9f2059af4b3f9f1862fdb2145" prot="public" static="no">
+        <name>LEVEL</name>
+        <param><defname>index</defname></param>
+        <initializer>(index &amp; 0xFFFF)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for extracting the level from the index of a reaction. A reaction that has no upstream reactions has level 0. Other reactions have a level that is the length of the longest upstream chain to a reaction with level 0 (inclusive). This is used, along with the deadline, to sort reactions in the reaction queue. It ensures that reactions that are upstream in the dependence graph execute before reactions that are downstream. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="258" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reactor_8h_1aff9931d7524c88e07743af6535b20761" prot="public" static="no">
+        <name>MAX</name>
+        <param><defname>X</defname></param>
+        <param><defname>Y</defname></param>
+        <initializer>(((X) &gt; (Y)) ? (X) : (Y))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Utility for finding the maximum of two values. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="261" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reactor_8h_1ad2f3678bf5eae3684fc497130b946eae" prot="public" static="no">
+        <name>MIN</name>
+        <param><defname>X</defname></param>
+        <param><defname>Y</defname></param>
+        <initializer>(((X) &lt; (Y)) ? (X) : (Y))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Utility for finding the minimum of two values. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="264" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reactor_8h_1a05ad7b5ea629e5f900ed750be8b1a357" prot="public" static="no">
+        <name>OVERLAPPING</name>
+        <param><defname>chain1</defname></param>
+        <param><defname>chain2</defname></param>
+        <initializer>((chain1 &amp; chain2) != 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for determining whether two reactions are in the same chain (one depends on the other). This is conservative. If it returns false, then they are surely not in the same chain, but if it returns true, they may be in the same chain. This is in reactor_threaded.c to execute reactions in parallel on multiple cores even if their levels are different. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="274" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="reactor_8h_1a20b6cff12498f2db056084f86154d9a4" prot="public" static="no">
+        <name>OK_TO_FREE</name>
+        <initializer>token_and_value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The flag OK_TO_FREE is used to indicate whether the void* in toke_t should be freed or not. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="330" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="reactor_8h_1a0183c0b43037a172a1cd9aa6ed6b3822" prot="public" static="no" strong="no">
+        <type></type>
+        <name>lf_spacing_policy_t</name>
+        <enumvalue id="reactor_8h_1a0183c0b43037a172a1cd9aa6ed6b3822a893b1cf0de04eaf44a009fecabd16b90" prot="public">
+          <name>defer</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="reactor_8h_1a0183c0b43037a172a1cd9aa6ed6b3822a1e34755950041e469ca91ff2b7d1c019" prot="public">
+          <name>drop</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="reactor_8h_1a0183c0b43037a172a1cd9aa6ed6b3822a8a4df390c6f816287b90cb2b33ab4323" prot="public">
+          <name>replace</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Policy for handling scheduled events that violate the specified minimum interarrival time. The default policy is <computeroutput>defer</computeroutput>: adjust the tag to that the minimum interarrival time is satisfied. The <computeroutput>drop</computeroutput> policy simply drops events that are scheduled too early. The <computeroutput>replace</computeroutput> policy will attempt to replace the value of the event that it preceded it. Unless the preceding event has already been handled, its gets assigned the value of the new event. If the preceding event has already been popped off the event queue, the <computeroutput>defer</computeroutput> policy is fallen back to. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="300" column="14" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="300" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="enum" id="reactor_8h_1a174f339edecd4463df25e673366a2b16" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ok_to_free_t</name>
+        <enumvalue id="reactor_8h_1a174f339edecd4463df25e673366a2b16a8fe4a05f1addc1b9a4aae17d7b166646" prot="public">
+          <name>no</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="reactor_8h_1a174f339edecd4463df25e673366a2b16aad3aafaeae035f5d1c986b0b59e77458" prot="public">
+          <name>token_and_value</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="reactor_8h_1a174f339edecd4463df25e673366a2b16aea2a62f409bdd1a145204606c8efb75b" prot="public">
+          <name>token_only</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="306" column="14" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="306" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="enum" id="reactor_8h_1a759ba374f75ea0025b9af1bb35f14d7e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>port_status_t</name>
+        <enumvalue id="reactor_8h_1a759ba374f75ea0025b9af1bb35f14d7ea1a8fae68a24a59c5629c241401fabb08" prot="public">
+          <name>absent</name>
+          <initializer>= false</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="reactor_8h_1a759ba374f75ea0025b9af1bb35f14d7eaaeb73d7cb56b19bff3d9f80426ed3267" prot="public">
+          <name>present</name>
+          <initializer>= true</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="reactor_8h_1a759ba374f75ea0025b9af1bb35f14d7ea5b9f6d065e6e98483b3d3ed01f4f6cbe" prot="public">
+          <name>unknown</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Status of a given port at a given logical time.</para>
+<para>If the value is &apos;present&apos;, it is an indicator that the port is present at the given logical time. If the value is &apos;absent&apos;, it is an indicator that the port is absent at the given logical time. If the value is &apos;unknown&apos;, it is unknown whether the port is present or absent (e.g., in a distributed application).</para>
+<para><simplesect kind="note"><para>For non-network ports, unknown is unused. </para>
+</simplesect>
+<simplesect kind="note"><para>The absent and present fields need to be compatible with false and true respectively because for non-network ports, the status can either be present or absent (no possibility of unknown). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="321" column="14" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="321" bodyend="321"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="reactor_8h_1a3fa7784c89589b49764048e9909d0e07" prot="public" static="no">
+        <type>unsigned short int</type>
+        <definition>typedef unsigned short int ushort</definition>
+        <argsstring></argsstring>
+        <name>ushort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ushort type. Redefine here for portability if sys/types.h is not included. <simplesect kind="see"><para>sys/types.h</para>
+</simplesect>
+<simplesect kind="note"><para>using sizeof(ushort) should be okay but not sizeof ushort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="285" column="28" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" prot="public" static="no">
+        <type>int</type>
+        <definition>typedef int handle_t</definition>
+        <argsstring></argsstring>
+        <name>handle_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles for scheduled triggers. These handles are returned by <ref refid="ctarget_8h_1a961a0ed618d8dbb43f9f3b2bf3541af4" kindref="member">schedule()</ref> functions. The intent is that the handle can be used to cancel a future scheduled event, but this is not implemented yet. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="339" column="13" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="339" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reactor_8h_1a4505c08c065b48840a30eedd9845cce2" prot="public" static="no">
+        <type>char *</type>
+        <definition>typedef char* string</definition>
+        <argsstring></argsstring>
+        <name>string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String type so that we don&apos;t have to use {= char* =}. Use this for strings that are not dynamically allocated. For dynamically allocated strings that have to be freed after being consumed downstream, use type char*. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="348" column="14" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="348" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reactor_8h_1a4448d06be794d3f5412d0edb412dc00e" prot="public" static="no">
+        <type><ref refid="pqueue_8h_1ad8239ddc32134716f57e54bb972f6bf0" kindref="member">pqueue_pri_t</ref></type>
+        <definition>typedef pqueue_pri_t index_t</definition>
+        <argsstring></argsstring>
+        <name>index_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Topological order index for reactions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="354" column="22" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="354" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reactor_8h_1a149e5fee1c1841bcc96c72f200601d90" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* reaction_function_t) (void *)</definition>
+        <argsstring>)(void *)</argsstring>
+        <name>reaction_function_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reaction function type. The argument passed to one of these reaction functions is a pointer to the self struct for the reactor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="361" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="361" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reactor_8h_1ae98c19a4a03c495fdd3044c206e99afc" prot="public" static="no">
+        <type>struct <ref refid="structtrigger__t" kindref="compound">trigger_t</ref></type>
+        <definition>typedef struct trigger_t trigger_t</definition>
+        <argsstring></argsstring>
+        <name>trigger_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Trigger struct representing an output, timer, action, or input. See below. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="361" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="364" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reactor_8h_1a973e404c4c1bd798a54501d0e1d640f9" prot="public" static="no">
+        <type>struct <ref refid="structlf__token__t" kindref="compound">lf_token_t</ref></type>
+        <definition>typedef struct lf_token_t lf_token_t</definition>
+        <argsstring></argsstring>
+        <name>lf_token_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Token type for dynamically allocated arrays and structs sent as messages.</para>
+<para>In the C LF target, a type for an output that ends in &apos;*&apos; is treated specially. The value carried by the output is assumed to be in dynamically allocated memory, and, using reference counting, after the last downstream reader of the value has finished, the memory will be freed. To prevent this freeing from occurring, the output type can be specified using the syntax {= type* =}; this will not be treated as dynamically allocated memory. Alternatively, the programmer can give a typedef in the preamble that masks the trailing *.</para>
+<para>This struct is the wrapper around the dynamically allocated memory that carries the message. The message can be an array of values, where the size of each value is element_size (in bytes). If it is not an array, the length == 1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="409" column="12"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reactor_8h_1a2c506d193748554de2ff32e5f7cee41e" prot="public" static="no">
+        <type>struct <ref refid="structtoken__present__t" kindref="compound">token_present_t</ref></type>
+        <definition>typedef struct token_present_t token_present_t</definition>
+        <argsstring></argsstring>
+        <name>token_present_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A struct with a pointer to a <ref refid="structlf__token__t" kindref="compound">lf_token_t</ref> and an _is_present variable for use to initialize actions in start_time_step(). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="419" column="17"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reactor_8h_1a1f0f71b6c8e0c54c65cbfaa154b40694" prot="public" static="no">
+        <type>struct <ref refid="structreaction__t" kindref="compound">reaction_t</ref></type>
+        <definition>typedef struct reaction_t reaction_t</definition>
+        <argsstring></argsstring>
+        <name>reaction_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reaction activation record to push onto the reaction queue. Some of the information in this struct is common among all instances of the reactor, and some is specific to each particular instance. These are marked below COMMON or INSTANCE accordingly. The COMMON information is set in the constructor. The fields marked RUNTIME have values that change during execution. Instances of this struct are put onto the reaction queue (reaction_q). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="372" column="19" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="431" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reactor_8h_1a59f5f6b9c6023baebf9c49c328b639a1" prot="public" static="no">
+        <type>struct <ref refid="structevent__t" kindref="compound">event_t</ref></type>
+        <definition>typedef struct event_t event_t</definition>
+        <argsstring></argsstring>
+        <name>event_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Typedef for <ref refid="structevent__t" kindref="compound">event_t</ref> struct, used for storing activation records. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="372" column="19" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="467" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="reactor_8h_1a39f588e1df453139dbb9a4157dda2027" prot="public" static="no" mutable="no">
+        <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+        <definition>interval_t _lf_global_time_STP_offset</definition>
+        <argsstring></argsstring>
+        <name>_lf_global_time_STP_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Global STP offset uniformly applied to advancement of each time step in federated execution. This can be retrieved in user code by calling <ref refid="reactor_8h_1a54be08fbc7990c2d8082a31cbbf6e019" kindref="member">get_stp_offset()</ref> and adjusted by calling <ref refid="reactor_8h_1a75a5bf324229d35fb88541a04449c95b" kindref="member">set_stp_offset(interval_t offset)</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="372" column="19" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor_common.c" bodystart="111" bodyend="-1" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="372" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="variable" id="reactor_8h_1af74a2782bda0d66298d22d637ad964b5" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int _lf_number_of_threads</definition>
+        <argsstring></argsstring>
+        <name>_lf_number_of_threads</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of worker threads for threaded execution. By default, execution is not threaded and this variable will have value 0, meaning that the execution is not threaded. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="794" column="21" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor_common.c" bodystart="54" bodyend="-1" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="794" declcolumn="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="reactor_8h_1a8b4f2e4e87e43670217c0c53099ae2f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+        <definition>instant_t get_start_time</definition>
+        <argsstring>()</argsstring>
+        <name>get_start_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the time of the start of execution in nanoseconds. This is both the starting physical and starting logical time. On many platforms, this is the number of nanoseconds since January 1, 1970, but it is actually platform dependent. <simplesect kind="return"><para>A time instant.</para>
+</simplesect>
+Return the physical time of the start of execution in nanoseconds. * On many platforms, this is the number of nanoseconds since January 1, 1970, but it is actually platform dependent. * <simplesect kind="return"><para>A time instant. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="536" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.c" bodystart="237" bodyend="239" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="536" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1a54be08fbc7990c2d8082a31cbbf6e019" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+        <definition>interval_t get_stp_offset</definition>
+        <argsstring>()</argsstring>
+        <name>get_stp_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the global STP offset on advancement of logical time for federated execution. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="542" column="12" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor_common.c" bodystart="157" bodyend="159" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="542" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1a75a5bf324229d35fb88541a04449c95b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void set_stp_offset</definition>
+        <argsstring>(interval_t offset)</argsstring>
+        <name>set_stp_offset</name>
+        <param>
+          <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the global STP offset on advancement of logical time for federated execution.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A positive time value to be applied as the STP offset. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="551" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor_common.c" bodystart="168" bodyend="172" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="551" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1ad96dc6cbe1d3365e52aad6aecbf036d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_snapshot</definition>
+        <argsstring>()</argsstring>
+        <name>print_snapshot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Print a snapshot of the priority queues used during execution (for debugging).</para>
+<para>If DEBUG logging is enabled, prints the status of the event queue, the reaction queue, and the executing queue. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="557" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.c" bodystart="114" bodyend="120" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="557" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1af629769c213699f0e4c9360811ee7251" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void request_stop</definition>
+        <argsstring>()</argsstring>
+        <name>request_stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Request a stop to execution as soon as possible. In a non-federated execution, this will occur at the conclusion of the current logical time. In a federated execution, it will likely occur at a later logical time determined by the RTI so that all federates stop at the same logical time.</para>
+<para>Stop execution at the conclusion of the next microstep. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="567" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.c" bodystart="287" bodyend="292" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="567" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1aedbba6d4986cc6d46b07d53d3752270f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void __set_default_command_line_options</definition>
+        <argsstring>()</argsstring>
+        <name>__set_default_command_line_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generated function that optionally sets default command-line options. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="572" column="6" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="572" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1af8aacf433fcf349ffa1b163962eb3681" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void __start_time_step</definition>
+        <argsstring>()</argsstring>
+        <name>__start_time_step</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generated function that resets outputs to be absent at the start of a new time step.</para>
+<para>Use tables to reset is_present fields to false, set intended_tag fields in federated execution to the current_tag, and decrement reference counts between time steps and at the end of execution. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="578" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor_common.c" bodystart="429" bodyend="458" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="578" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1a868e02a04eabb4ffed63f6141f5f64a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void __initialize_trigger_objects</definition>
+        <argsstring>()</argsstring>
+        <name>__initialize_trigger_objects</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generated function that produces a table containing all triggers (i.e., inputs, timers, and actions). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="584" column="6" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="584" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1a1825238bcb81ecc6aeeb6dd42d308089" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void __pop_events</definition>
+        <argsstring>()</argsstring>
+        <name>__pop_events</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pop all events from event_q with timestamp equal to current_time, extract all the reactions triggered by these events, and stick them into the reaction queue.</para>
+<para>Pop all events from event_q with timestamp equal to current_tag.time, extract all the reactions triggered by these events, and stick them into the reaction queue. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="591" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor_common.c" bodystart="577" bodyend="690" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="591" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1a1b914dafd583948c817b0ae6ce739b6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref></type>
+        <definition>handle_t __schedule</definition>
+        <argsstring>(trigger_t *trigger, interval_t delay, lf_token_t *token)</argsstring>
+        <name>__schedule</name>
+        <param>
+          <type><ref refid="structtrigger__t" kindref="compound">trigger_t</ref> *</type>
+          <declname>trigger</declname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+          <declname>delay</declname>
+          <defname>extra_delay</defname>
+        </param>
+        <param>
+          <type><ref refid="structlf__token__t" kindref="compound">lf_token_t</ref> *</type>
+          <declname>token</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Internal version of the <ref refid="ctarget_8h_1a961a0ed618d8dbb43f9f3b2bf3541af4" kindref="member">schedule()</ref> function, used by generated __start_timers() function. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trigger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The action or timer to be triggered. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset of the event release. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>token</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The token payload. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A handle to the event, or 0 if no event was scheduled, or -1 for error.</para>
+</simplesect>
+Schedule the specified trigger at current_tag.time plus the offset of the specified trigger plus the delay. See <ref refid="ctarget_8h_1ab666cf351f7ca211945793b37cb29f58" kindref="member">schedule_token()</ref> in <ref refid="reactor_8h" kindref="compound">reactor.h</ref> for details. This is the internal implementation shared by both the threaded and non-threaded versions.</para>
+<para>The value is required to be either NULL or a pointer to a token wrapping the payload. The token carries a reference count, and when the reference count decrements to 0, the will be freed. Hence, it is essential that the payload be in memory allocated using malloc.</para>
+<para>There are three conditions under which this function will not actually put an event on the event queue and decrement the reference count of the token (if there is one), which could result in the payload being freed. In all three cases, this function returns 0. Otherwise, it returns a handle to the scheduled trigger, which is an integer greater than 0.</para>
+<para>The first condition is that a stop has been requested and the trigger offset plus the extra delay is greater than zero. The second condition is that the trigger offset plus the extra delay is greater that the requested stop time (timeout). The third condition is that the trigger argument is null.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trigger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The trigger to be invoked at a later logical time. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>extra_delay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The logical time delay, which gets added to the trigger&apos;s minimum delay, if it has one. If this number is negative, then zero is used instead. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>token</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The token wrapping the payload or NULL for no payload. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A handle to the event, or 0 if no new event was scheduled, or -1 for error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="601" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor_common.c" bodystart="1032" bodyend="1261" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="601" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1ae3c5c84c6f22c1bdf98af8b1a55a9f4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void __initialize_timers</definition>
+        <argsstring>()</argsstring>
+        <name>__initialize_timers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function (to be code generated) to schedule timers. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="606" column="6" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="606" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1a1d807ba211ee2edb588750d4553090c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void __trigger_startup_reactions</definition>
+        <argsstring>()</argsstring>
+        <name>__trigger_startup_reactions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function (to be code generated) to trigger startup reactions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="611" column="6" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="611" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1a114c79dc673219d5df3b794552ca88d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void terminate_execution</definition>
+        <argsstring>()</argsstring>
+        <name>terminate_execution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function (to be code generated) to terminate execution. This will be invoked after all shutdown actions have completed.</para>
+<para>Close sockets used to communicate with other federates, if they are open, and send a RESIGN message to the RTI. This implements the function defined in <ref refid="reactor_8h" kindref="compound">reactor.h</ref>. For unfederated execution, the code generator generates an empty implementation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="618" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.c" bodystart="2131" bodyend="2179" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="618" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1a9ea1110b1a18ccf10931bf5f9adaf299" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool __trigger_shutdown_reactions</definition>
+        <argsstring>()</argsstring>
+        <name>__trigger_shutdown_reactions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function (to be code generated) to trigger shutdown reactions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="623" column="6" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="623" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1a9d8ea5bc3ac4d18edafab309bc2a9c8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlf__token__t" kindref="compound">lf_token_t</ref> *</type>
+        <definition>lf_token_t* create_token</definition>
+        <argsstring>(size_t element_size)</argsstring>
+        <name>create_token</name>
+        <param>
+          <type>size_t</type>
+          <declname>element_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new token and initialize it. The value pointer will be NULL and the length will be 0. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>element_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of an element carried in the payload or 0 if there is no payload. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to a new or recycled <ref refid="structlf__token__t" kindref="compound">lf_token_t</ref> struct.</para>
+</simplesect>
+Create a new token and initialize it. The value pointer will be NULL and the length will be 0. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>element_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of an element carried in the payload or 0 if there is no payload. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new or recycled <ref refid="structlf__token__t" kindref="compound">lf_token_t</ref> struct.</para>
+</simplesect>
+<simplesect kind="note"><para>For multithreaded applications, the caller must hold the mutex lock because it accesses global variables. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="632" column="12" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor_common.c" bodystart="501" bodyend="507" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="632" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1aa715873b79dee5b9f50daa2fef88cf34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref></type>
+        <definition>handle_t _lf_schedule_int</definition>
+        <argsstring>(void *action, interval_t extra_delay, int value)</argsstring>
+        <name>_lf_schedule_int</name>
+        <param>
+          <type>void *</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+          <declname>extra_delay</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Schedule the specified action with an integer value at a later logical time that depends on whether the action is logical or physical and what its parameter values are. This wraps a copy of the integer value in a token. See <ref refid="ctarget_8h_1ab666cf351f7ca211945793b37cb29f58" kindref="member">schedule_token()</ref> for more details. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The action to be triggered. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>extra_delay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Extra offset of the event release above that in the action. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to send. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A handle to the event, or 0 if no event was scheduled, or -1 for error.</para>
+</simplesect>
+Variant of schedule_value when the value is an integer. See <ref refid="reactor_8h" kindref="compound">reactor.h</ref> for documentation. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an action on the self struct. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="644" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor_common.c" bodystart="1404" bodyend="1416" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="644" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1a116897d2fd982e8836d2118af641b575" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structevent__t" kindref="compound">event_t</ref> *</type>
+        <definition>event_t* _lf_get_new_event</definition>
+        <argsstring>()</argsstring>
+        <name>_lf_get_new_event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a new event. If there is a recycled event available, use that. If not, allocate a new one. In either case, all fields will be zero&apos;ed out. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="650" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor_common.c" bodystart="730" bodyend="740" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="650" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1a662cfd5714e5930f5e1c880f13deba6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _lf_recycle_event</definition>
+        <argsstring>(event_t *e)</argsstring>
+        <name>_lf_recycle_event</name>
+        <param>
+          <type><ref refid="structevent__t" kindref="compound">event_t</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recycle the given event. Zero it out and pushed it onto the recycle queue. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="656" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor_common.c" bodystart="746" bodyend="757" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="656" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1af1f3a3c4613102e28fc0105408731c5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _lf_schedule_at_tag</definition>
+        <argsstring>(trigger_t *trigger, tag_t tag, lf_token_t *token)</argsstring>
+        <name>_lf_schedule_at_tag</name>
+        <param>
+          <type><ref refid="structtrigger__t" kindref="compound">trigger_t</ref> *</type>
+          <declname>trigger</declname>
+        </param>
+        <param>
+          <type><ref refid="structtag__t" kindref="compound">tag_t</ref></type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type><ref refid="structlf__token__t" kindref="compound">lf_token_t</ref> *</type>
+          <declname>token</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Schedule events at a specific tag (time, microstep), provided that the tag is in the future relative to the current tag. The input time values are absolute.</para>
+<para>If there is an event found at the requested tag, the payload is replaced and 0 is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trigger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The trigger to be invoked at a later logical time. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Logical tag of the event </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>token</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The token wrapping the payload or NULL for no payload.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 for success, 0 if no new event was scheduled (instead, the payload was updated), or -1 for error.</para>
+</simplesect>
+Schedule events at a specific tag (time, microstep), provided that the tag is in the future relative to the current tag. The input time values are absolute.</para>
+<para>If there is an event found at the requested tag, the payload is replaced and 0 is returned.</para>
+<para>Note that this function is an internal API that must be called with tags that are in order for a given trigger. This means that the following order is illegal: _lf_schedule_at_tag(trigger1, bigger_tag, ...); _lf_schedule_at_tag(trigger1, smaller_tag, ...); where bigger_tag &gt; smaller_tag. This function is primarily used for network communication (which is assumed to be in order).</para>
+<para>This function assumes the caller holds the mutex lock.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trigger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The trigger to be invoked at a later logical time. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Logical tag of the event </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>token</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The token wrapping the payload or NULL for no payload.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 for success, 0 if no new event was scheduled (instead, the payload was updated), or -1 for error (the tag is equal to or less than the current tag). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="672" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor_common.c" bodystart="829" bodyend="998" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="672" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1aed87bffa17d8c4ac396b288ba4c0c88b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structevent__t" kindref="compound">event_t</ref> *</type>
+        <definition>event_t* _lf_create_dummy_event</definition>
+        <argsstring>(trigger_t *trigger, instant_t time, event_t *next, unsigned int offset)</argsstring>
+        <name>_lf_create_dummy_event</name>
+        <param>
+          <type><ref refid="structtrigger__t" kindref="compound">trigger_t</ref> *</type>
+          <declname>trigger</declname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type><ref refid="structevent__t" kindref="compound">event_t</ref> *</type>
+          <declname>next</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a dummy event to be used as a spacer in the event queue. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="677" column="9" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="677" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1a369700b5e0906335f3d304a67eec5f29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref></type>
+        <definition>handle_t _lf_schedule_token</definition>
+        <argsstring>(void *action, interval_t extra_delay, lf_token_t *token)</argsstring>
+        <name>_lf_schedule_token</name>
+        <param>
+          <type>void *</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+          <declname>extra_delay</declname>
+        </param>
+        <param>
+          <type><ref refid="structlf__token__t" kindref="compound">lf_token_t</ref> *</type>
+          <declname>token</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Schedule the specified action with the specified token as a payload. This will trigger an event at a later logical time that depends on whether the action is logical or physical and what its parameter values are.</para>
+<para>logical action: A logical action has an offset (default is zero) and a minimum interarrival time (MIT), which also defaults to zero. The logical time at which this scheduled event will trigger is the current time plus the offset plus the delay argument given to this function. If, however, that time is not greater than a prior triggering of this logical action by at least the MIT, then the one of two things can happen depending on the policy specified for the action. If the action&apos;s policy is DROP (default), then the action is simply dropped and the memory pointed to by value argument is freed. If the policy is DEFER, then the time will be increased to equal the time of the most recent triggering plus the MIT.</para>
+<para>For the above, &quot;current time&quot; means the logical time of the reaction that is calling this function. Logical actions should always be scheduled within a reaction invocation, never asynchronously from the outside. FIXME: This needs to be checked.</para>
+<para>physical action: A physical action has all the same parameters as a logical action, but its timestamp will be the larger of the current physical time and the time it would be assigned if it were a logical action.</para>
+<para>The token is required to be either NULL or a pointer to a token created using <ref refid="reactor_8h_1a9d8ea5bc3ac4d18edafab309bc2a9c8a" kindref="member">create_token()</ref>.</para>
+<para>There are three conditions under which this function will not actually put an event on the event queue and decrement the reference count of the token (if there is one), which could result in the payload being freed. In all three cases, this function returns 0. Otherwise, it returns a handle to the scheduled trigger, which is an integer greater than 0.</para>
+<para>The first condition is that stop() has been called and the time offset of this event is greater than zero. The second condition is that the logical time of the event is greater that the stop time (timeout) that is specified in the target properties or on the command line. The third condition is that the trigger argument is null.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The action to be triggered. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>extra_delay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Extra offset of the event release above that in the action. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>token</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The token to carry the payload or null for no payload. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A handle to the event, or 0 if no event was scheduled, or -1 for error.</para>
+</simplesect>
+Runtime infrastructure for the non-threaded version of the C target of Lingua Franca.</para>
+<para><simplesect kind="author"><para>{Edward A. Lee <ulink url="mailto:eal@berkeley.edu">eal@berkeley.edu</ulink>} </para>
+</simplesect>
+<simplesect kind="author"><para>{Marten Lohstroh <ulink url="mailto:marten@berkeley.edu">marten@berkeley.edu</ulink>} </para>
+</simplesect>
+<simplesect kind="author"><para>{Soroush Bateni <ulink url="mailto:soroush@utdallas.edu">soroush@utdallas.edu</ulink>} Schedule the specified trigger at current_tag.time plus the offset of the specified trigger plus the delay. See <ref refid="reactor_8h" kindref="compound">reactor.h</ref> for documentation.</para>
+</simplesect>
+Schedule the specified trigger at current_tag.time plus the offset of the specified trigger plus the delay. See <ref refid="reactor_8h" kindref="compound">reactor.h</ref> for documentation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="729" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.c" bodystart="45" bodyend="48" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="729" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1aa0a09f1dc9ee5870a6d225a3569388df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref></type>
+        <definition>handle_t _lf_schedule_value</definition>
+        <argsstring>(void *action, interval_t extra_delay, void *value, int length)</argsstring>
+        <name>_lf_schedule_value</name>
+        <param>
+          <type>void *</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+          <declname>extra_delay</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variant of schedule_token that creates a token to carry the specified value. The value is required to be malloc&apos;d memory with a size equal to the element_size of the specifies action times the length parameter. See <ref refid="ctarget_8h_1ab666cf351f7ca211945793b37cb29f58" kindref="member">schedule_token()</ref> for details. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The action to be triggered. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>extra_delay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Extra offset of the event release above that in the action. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dynamically allocated memory containing the value to send. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the array, if it is an array, or 1 for a scalar and 0 for no payload. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A handle to the event, or 0 if no event was scheduled, or -1 for error.</para>
+</simplesect>
+Variant of schedule_token that creates a token to carry the specified value. See <ref refid="reactor_8h" kindref="compound">reactor.h</ref> for documentation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="743" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.c" bodystart="54" bodyend="60" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="743" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1a2c07a7b9e616070f32fa88b4959fba53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref></type>
+        <definition>handle_t _lf_schedule_copy</definition>
+        <argsstring>(void *action, interval_t offset, void *value, int length)</argsstring>
+        <name>_lf_schedule_copy</name>
+        <param>
+          <type>void *</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Schedule an action to occur with the specified value and time offset with a copy of the specified value. If the value is non-null, then it will be copied into newly allocated memory under the assumption that its size is given in the trigger&apos;s token object&apos;s element_size field multiplied by the specified length. See <ref refid="ctarget_8h_1ab666cf351f7ca211945793b37cb29f58" kindref="member">schedule_token()</ref>, which this uses, for details. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an action on a self struct. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time offset over and above that in the action. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the value to copy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length, if an array, 1 if a scalar, and 0 if value is NULL. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A handle to the event, or 0 if no event was scheduled, or -1 for error.</para>
+</simplesect>
+Schedule an action to occur with the specified value and time offset with a copy of the specified value. See <ref refid="reactor_8h" kindref="compound">reactor.h</ref> for documentation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="758" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.c" bodystart="67" bodyend="83" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="758" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1a60ec02f52c1a7db4c7bdbc2871eae636" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _lf_fd_send_stop_request_to_rti</definition>
+        <argsstring>()</argsstring>
+        <name>_lf_fd_send_stop_request_to_rti</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For a federated execution, send a STOP_REQUEST message to the RTI.</para>
+<para>Send a STOP_REQUEST message to the RTI with payload equal to the current tag plus one microstep.</para>
+<para>This function raises a global barrier on logical tag at the current tag.</para>
+<para>This function assumes the caller holds the mutex lock. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="764" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.c" bodystart="1981" bodyend="2006" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="764" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1abadead0c4f54963b062503cf6cb7ace7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _lf_advance_logical_time</definition>
+        <argsstring>(instant_t next_time)</argsstring>
+        <name>_lf_advance_logical_time</name>
+        <param>
+          <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+          <declname>next_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Advance from the current tag to the next. If the given next_time is equal to the current time, then increase the microstep. Otherwise, update the current time and set the microstep to zero.</para>
+<para>Advance from the current tag to the next. If the given next_time is equal to the current time, then increase the microstep. Otherwise, update the current time and set the microstep to zero.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>next_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time step to advance to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="771" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor_common.c" bodystart="1368" bodyend="1397" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="771" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1aa46a83ed702e2c83d42625a8c78a9f50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _lf_notify_workers</definition>
+        <argsstring>()</argsstring>
+        <name>_lf_notify_workers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If multithreaded, notify workers that something has changed on the reaction_q. Otherwise, do nothing.</para>
+<para>Do nothing. This implementation is not multithreaded.</para>
+<para>Notify workers that something has changed on the reaction_q. Notification is performed only if there is a reaction on the reaction queue that is ready to execute and there is an idle worker thread. This function acquires the mutex lock. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="777" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.c" bodystart="297" bodyend="298" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="777" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="reactor_8h_1ab461661c6c9757862959540fe57e3554" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool _lf_is_blocked_by_executing_reaction</definition>
+        <argsstring>()</argsstring>
+        <name>_lf_is_blocked_by_executing_reaction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If multithreaded and the reaction is blocked by a currently executing reaction, return true. Otherwise, return false. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reaction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reaction.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Return false. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reaction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reaction. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="785" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.c" bodystart="304" bodyend="306" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" declline="785" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Edward A. Lee (<ulink url="mailto:eal@berkeley.edu">eal@berkeley.edu</ulink>) </para>
+</simplesect>
+<simplesect kind="author"><para>Marten Lohstroh (<ulink url="mailto:marten@berkeley.edu">marten@berkeley.edu</ulink>) </para>
+</simplesect>
+<simplesect kind="author"><para>Chris Gill (<ulink url="mailto:cdgill@wustl.edu">cdgill@wustl.edu</ulink>) </para>
+</simplesect>
+<simplesect kind="author"><para>Mehrdad Niknami (<ulink url="mailto:mniknami@berkeley.edu">mniknami@berkeley.edu</ulink>)</para>
+</simplesect>
+</para>
+<sect1 id="util_8h_1LICENSE">
+<title>LICENSE</title>
+<para>Copyright (c) 2019, The University of California at Berkeley.</para>
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</para>
+<para><orderedlist>
+<listitem><para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem><para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem></orderedlist>
+</para>
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+</sect1>
+<sect1 id="util_8h_1DESCRIPTION">
+<title>DESCRIPTION</title>
+<para>Header file for the infrastructure for the C target of Lingua Franca. This file contains header information used by both the threaded and non-threaded versions of the C runtime. A generated C program will have either #include reactor.c or #include reactor_threaded.c. Those two files #include this header file.</para>
+<para>This header file defines the functions and macros that programmers use in the body of reactions for reading and writing inputs and outputs and scheduling future events. The LF compiler does not parse that C code. This fact strongly affects the design.</para>
+<para>The intent of the C target for Lingua Franca not to provide a safe programming environment (The C++ and TypeScript targets are better choices for that), but rather to find the lowest possible overhead implementation of Lingua Franca. The API herein can easily be misused, leading to memory leaks, nondeterminism, or program crashes. </para>
+</sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="51"><highlight class="preprocessor">#ifndef<sp/>REACTOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REACTOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;errno.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pqueue_8h" kindref="compound">pqueue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="util_8h" kindref="compound">util.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tag_8h" kindref="compound">tag.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Time-related<sp/>types<sp/>and<sp/>functions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>following<sp/>file<sp/>is<sp/>also<sp/>included,<sp/>but<sp/>must<sp/>be<sp/>included</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>after<sp/>its<sp/>requirements<sp/>are<sp/>met,<sp/>so<sp/>the<sp/>#include<sp/>appears<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/>then<sp/>end.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&quot;trace.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>========<sp/>Macros<sp/>========<sp/><sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONSTRUCTOR(classname)<sp/>(new_<sp/>##<sp/>classname)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SELF_STRUCT_T(classname)<sp/>(classname<sp/>##<sp/>_self_t)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">//<sp/>FIXME:<sp/>May<sp/>want<sp/>these<sp/>to<sp/>application<sp/>dependent,<sp/>hence<sp/>code<sp/>generated.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INITIAL_EVENT_QUEUE_SIZE<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INITIAL_REACT_QUEUE_SIZE<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NOTE:<sp/>According<sp/>to<sp/>the<sp/>&quot;Swallowing<sp/>the<sp/>Semicolon&quot;<sp/>section<sp/>on<sp/>this<sp/>page:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>https://gcc.gnu.org/onlinedocs/gcc-3.0.1/cpp_3.html</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>following<sp/>macros<sp/>should<sp/>use<sp/>an<sp/>odd<sp/>do-while<sp/>construct<sp/>to<sp/>avoid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//<sp/>problems<sp/>with<sp/>if<sp/>...<sp/>else<sp/>statements<sp/>that<sp/>do<sp/>not<sp/>use<sp/>braces<sp/>around<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">//<sp/>two<sp/>branches.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="reactor_8h_1af5f7e281be573bc680ed652ad54f5386" refkind="member"><highlight class="preprocessor">#define<sp/>_LF_SET(out,<sp/>val)<sp/>\</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor">do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;value<sp/>=<sp/>val;<sp/>\</highlight></codeline>
+<codeline lineno="104"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;is_present<sp/>=<sp/>true;<sp/>\</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor">}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor">#ifndef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="reactor_8h_1a8a4001d12854ff4675f7d119dfb0b952" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_LF_SET_ARRAY(out,<sp/>val,<sp/>element_size,<sp/>length)<sp/>\</highlight></codeline>
+<codeline lineno="122"><highlight class="preprocessor">do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="123"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;is_present<sp/>=<sp/>true;<sp/>\</highlight></codeline>
+<codeline lineno="124"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>lf_token_t*<sp/>token<sp/>=<sp/>__initialize_token_with_value(out-&gt;token,<sp/>val,<sp/>length);<sp/>\</highlight></codeline>
+<codeline lineno="125"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>token-&gt;ref_count<sp/>=<sp/>out-&gt;num_destinations;<sp/>\</highlight></codeline>
+<codeline lineno="126"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;token<sp/>=<sp/>token;<sp/>\</highlight></codeline>
+<codeline lineno="127"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;value<sp/>=<sp/>token-&gt;value;<sp/>\</highlight></codeline>
+<codeline lineno="128"><highlight class="preprocessor">}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_LF_SET_ARRAY(out,<sp/>val,<sp/>element_size,<sp/>length)<sp/>\</highlight></codeline>
+<codeline lineno="131"><highlight class="preprocessor">do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="132"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;is_present<sp/>=<sp/>true;<sp/>\</highlight></codeline>
+<codeline lineno="133"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>lf_token_t*<sp/>token<sp/>=<sp/>__initialize_token_with_value(out-&gt;token,<sp/>val,<sp/>length);<sp/>\</highlight></codeline>
+<codeline lineno="134"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>token-&gt;ref_count<sp/>=<sp/>out-&gt;num_destinations;<sp/>\</highlight></codeline>
+<codeline lineno="135"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;token<sp/>=<sp/>token;<sp/>\</highlight></codeline>
+<codeline lineno="136"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;value<sp/>=<sp/>static_cast&lt;decltype(out-&gt;value)&gt;(token-&gt;value);<sp/>\</highlight></codeline>
+<codeline lineno="137"><highlight class="preprocessor">}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="reactor_8h_1ae6d69be73768b3d144a524fa87f0d069" refkind="member"><highlight class="preprocessor">#define<sp/>_LF_SET_NEW(out)<sp/>\</highlight></codeline>
+<codeline lineno="155"><highlight class="preprocessor">do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="156"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;is_present<sp/>=<sp/>true;<sp/>\</highlight></codeline>
+<codeline lineno="157"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>lf_token_t*<sp/>token<sp/>=<sp/>__set_new_array_impl(out-&gt;token,<sp/>1,<sp/>out-&gt;num_destinations);<sp/>\</highlight></codeline>
+<codeline lineno="158"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;value<sp/>=<sp/>token-&gt;value;<sp/>\</highlight></codeline>
+<codeline lineno="159"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;token<sp/>=<sp/>token;<sp/>\</highlight></codeline>
+<codeline lineno="160"><highlight class="preprocessor">}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="preprocessor">#ifndef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="reactor_8h_1a64c4d124085ac4279bac7158ad144218" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_LF_SET_NEW_ARRAY(out,<sp/>len)<sp/>\</highlight></codeline>
+<codeline lineno="177"><highlight class="preprocessor">do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="178"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;is_present<sp/>=<sp/>true;<sp/>\</highlight></codeline>
+<codeline lineno="179"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>lf_token_t*<sp/>token<sp/>=<sp/>__set_new_array_impl(out-&gt;token,<sp/>len,<sp/>out-&gt;num_destinations);<sp/>\</highlight></codeline>
+<codeline lineno="180"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;value<sp/>=<sp/>token-&gt;value;<sp/>\</highlight></codeline>
+<codeline lineno="181"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;token<sp/>=<sp/>token;<sp/>\</highlight></codeline>
+<codeline lineno="182"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;length<sp/>=<sp/>len;<sp/>\</highlight></codeline>
+<codeline lineno="183"><highlight class="preprocessor">}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_LF_SET_NEW_ARRAY(out,<sp/>len)<sp/>\</highlight></codeline>
+<codeline lineno="186"><highlight class="preprocessor">do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="187"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;is_present<sp/>=<sp/>true;<sp/>\</highlight></codeline>
+<codeline lineno="188"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>lf_token_t*<sp/>token<sp/>=<sp/>__set_new_array_impl(out-&gt;token,<sp/>len,<sp/>out-&gt;num_destinations);<sp/>\</highlight></codeline>
+<codeline lineno="189"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;value<sp/>=<sp/>static_cast&lt;decltype(out-&gt;value)&gt;(token-&gt;value);<sp/>\</highlight></codeline>
+<codeline lineno="190"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;token<sp/>=<sp/>token;<sp/>\</highlight></codeline>
+<codeline lineno="191"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;length<sp/>=<sp/>len;<sp/>\</highlight></codeline>
+<codeline lineno="192"><highlight class="preprocessor">}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="reactor_8h_1a26960b6a12ebe9eff3f276c2b07096ab" refkind="member"><highlight class="preprocessor">#define<sp/>_LF_SET_PRESENT(out)<sp/>\</highlight></codeline>
+<codeline lineno="204"><highlight class="preprocessor">do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="205"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;is_present<sp/>=<sp/>true;<sp/>\</highlight></codeline>
+<codeline lineno="206"><highlight class="preprocessor">}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="preprocessor">#ifndef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="reactor_8h_1a5f45a70cbab4e36efdc9efdcf37a7bb9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_LF_SET_TOKEN(out,<sp/>newtoken)<sp/>\</highlight></codeline>
+<codeline lineno="219"><highlight class="preprocessor">do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="220"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;is_present<sp/>=<sp/>true;<sp/>\</highlight></codeline>
+<codeline lineno="221"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;value<sp/>=<sp/>newtoken-&gt;value;<sp/>\</highlight></codeline>
+<codeline lineno="222"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;token<sp/>=<sp/>newtoken;<sp/>\</highlight></codeline>
+<codeline lineno="223"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>newtoken-&gt;ref_count<sp/>+=<sp/>out-&gt;num_destinations;<sp/>\</highlight></codeline>
+<codeline lineno="224"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;is_present<sp/>=<sp/>true;<sp/>\</highlight></codeline>
+<codeline lineno="225"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;length<sp/>=<sp/>newtoken-&gt;length;<sp/>\</highlight></codeline>
+<codeline lineno="226"><highlight class="preprocessor">}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_LF_SET_TOKEN(out,<sp/>newtoken)<sp/>\</highlight></codeline>
+<codeline lineno="229"><highlight class="preprocessor">do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="230"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;is_present<sp/>=<sp/>true;<sp/>\</highlight></codeline>
+<codeline lineno="231"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;value<sp/>=<sp/>static_cast&lt;decltype(out-&gt;value)&gt;(newtoken-&gt;value);<sp/>\</highlight></codeline>
+<codeline lineno="232"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;token<sp/>=<sp/>newtoken;<sp/>\</highlight></codeline>
+<codeline lineno="233"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>newtoken-&gt;ref_count<sp/>+=<sp/>out-&gt;num_destinations;<sp/>\</highlight></codeline>
+<codeline lineno="234"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;is_present<sp/>=<sp/>true;<sp/>\</highlight></codeline>
+<codeline lineno="235"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>out-&gt;length<sp/>=<sp/>newtoken-&gt;length;<sp/>\</highlight></codeline>
+<codeline lineno="236"><highlight class="preprocessor">}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="reactor_8h_1a4aab573132838d44997ee99002d3e6d0" refkind="member"><highlight class="preprocessor">#define<sp/>DEADLINE(index)<sp/>(index<sp/>&amp;<sp/>0x7FFFFFFFFFFF0000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258" refid="reactor_8h_1a6d86a8b9f2059af4b3f9f1862fdb2145" refkind="member"><highlight class="preprocessor">#define<sp/>LEVEL(index)<sp/>(index<sp/>&amp;<sp/>0xFFFF)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261" refid="reactor_8h_1aff9931d7524c88e07743af6535b20761" refkind="member"><highlight class="preprocessor">#define<sp/>MAX(X,<sp/>Y)<sp/>(((X)<sp/>&gt;<sp/>(Y))<sp/>?<sp/>(X)<sp/>:<sp/>(Y))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264" refid="reactor_8h_1ad2f3678bf5eae3684fc497130b946eae" refkind="member"><highlight class="preprocessor">#define<sp/>MIN(X,<sp/>Y)<sp/>(((X)<sp/>&lt;<sp/>(Y))<sp/>?<sp/>(X)<sp/>:<sp/>(Y))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274" refid="reactor_8h_1a05ad7b5ea629e5f900ed750be8b1a357" refkind="member"><highlight class="preprocessor">#define<sp/>OVERLAPPING(chain1,<sp/>chain2)<sp/>((chain1<sp/>&amp;<sp/>chain2)<sp/>!=<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>========<sp/>Type<sp/>definitions<sp/>========<sp/><sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="preprocessor">#ifndef<sp/>_SYS_TYPES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285" refid="reactor_8h_1a3fa7784c89589b49764048e9909d0e07" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1a3fa7784c89589b49764048e9909d0e07" kindref="member">ushort</ref>;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300" refid="reactor_8h_1a0183c0b43037a172a1cd9aa6ed6b3822" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{defer,<sp/>drop,<sp/>replace}<sp/><ref refid="reactor_8h_1a0183c0b43037a172a1cd9aa6ed6b3822" kindref="member">lf_spacing_policy_t</ref>;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>An<sp/>enum<sp/>that<sp/>enables<sp/>the<sp/>C<sp/>core<sp/>library<sp/>to</highlight></codeline>
+<codeline lineno="303"><highlight class="comment"><sp/>*<sp/>ignore<sp/>freeing<sp/>the<sp/>void*<sp/>inside<sp/>a<sp/>token<sp/>if<sp/>the<sp/>void*</highlight></codeline>
+<codeline lineno="304"><highlight class="comment"><sp/>*<sp/>value<sp/>is<sp/>garbage<sp/>collected<sp/>by<sp/>an<sp/>external<sp/>controller</highlight></codeline>
+<codeline lineno="305"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{no=0,<sp/>token_and_value,<sp/>token_only}<sp/>ok_to_free_t;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321" refid="reactor_8h_1a759ba374f75ea0025b9af1bb35f14d7e" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{absent<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>present<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>unknown}<sp/><ref refid="reactor_8h_1a759ba374f75ea0025b9af1bb35f14d7e" kindref="member">port_status_t</ref>;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="preprocessor">#ifdef<sp/>__GARBAGE_COLLECTED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OK_TO_FREE<sp/>token_only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330" refid="reactor_8h_1a20b6cff12498f2db056084f86154d9a4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OK_TO_FREE<sp/>token_and_value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339" refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref>;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="preprocessor">#ifndef<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348" refid="reactor_8h_1a4505c08c065b48840a30eedd9845cce2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="reactor_8h_1a4505c08c065b48840a30eedd9845cce2" kindref="member">string</ref>;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight><highlight class="preprocessor">#warning<sp/>&quot;string<sp/>typedef<sp/>has<sp/>been<sp/>previously<sp/>given.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354" refid="reactor_8h_1a4448d06be794d3f5412d0edb412dc00e" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="pqueue_8h_1ad8239ddc32134716f57e54bb972f6bf0" kindref="member">pqueue_pri_t</ref><sp/><ref refid="reactor_8h_1a4448d06be794d3f5412d0edb412dc00e" kindref="member">index_t</ref>;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361" refid="reactor_8h_1a149e5fee1c1841bcc96c72f200601d90" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void(*<ref refid="reactor_8h_1a149e5fee1c1841bcc96c72f200601d90" kindref="member">reaction_function_t</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364" refid="reactor_8h_1ae98c19a4a03c495fdd3044c206e99afc" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtrigger__t" kindref="compound">trigger_t</ref><sp/><ref refid="structtrigger__t" kindref="compound">trigger_t</ref>;</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/><ref refid="reactor_8h_1a39f588e1df453139dbb9a4157dda2027" kindref="member">_lf_global_time_STP_offset</ref>;</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="392" refid="structlf__token__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlf__token__t" kindref="compound">lf_token_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="394" refid="structlf__token__t_1a96f790f8f8dcc01474dbc255e05ceaa8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="structlf__token__t_1a96f790f8f8dcc01474dbc255e05ceaa8" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="396" refid="structlf__token__t_1af2b9d91b8dcfbc640f0cf52d4fac6035" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structlf__token__t_1af2b9d91b8dcfbc640f0cf52d4fac6035" kindref="member">element_size</ref>;</highlight></codeline>
+<codeline lineno="398" refid="structlf__token__t_1aa907a3d0901bd1ae3ab88fecb8dc11e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structlf__token__t_1aa907a3d0901bd1ae3ab88fecb8dc11e5" kindref="member">length</ref>;</highlight></codeline>
+<codeline lineno="400" refid="structlf__token__t_1ab1043c1cbbd70a0cb0d10058b3d5290b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structlf__token__t_1ab1043c1cbbd70a0cb0d10058b3d5290b" kindref="member">ref_count</ref>;</highlight></codeline>
+<codeline lineno="406" refid="structlf__token__t_1aa002374ec3b3165193393952dd216a90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ok_to_free_t<sp/><ref refid="structlf__token__t_1aa002374ec3b3165193393952dd216a90" kindref="member">ok_to_free</ref>;</highlight></codeline>
+<codeline lineno="408" refid="structlf__token__t_1a3b993d54120f7b0137785c99f7ddc118" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlf__token__t" kindref="compound">lf_token_t</ref>*<sp/><ref refid="structlf__token__t_1a3b993d54120f7b0137785c99f7ddc118" kindref="member">next_free</ref>;</highlight></codeline>
+<codeline lineno="409"><highlight class="normal">}<sp/><ref refid="reactor_8h_1a973e404c4c1bd798a54501d0e1d640f9" kindref="member">lf_token_t</ref>;</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight></codeline>
+<codeline lineno="414" refid="structtoken__present__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtoken__present__t" kindref="compound">token_present_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlf__token__t" kindref="compound">lf_token_t</ref>**<sp/>token;</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reactor_8h_1a759ba374f75ea0025b9af1bb35f14d7e" kindref="member">port_status_t</ref>*<sp/>status;<sp/></highlight><highlight class="comment">//<sp/>FIXME:<sp/>This<sp/>structure<sp/>is<sp/>used<sp/>to<sp/>present<sp/>the<sp/>status<sp/>of<sp/>tokens</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>both<sp/>ports<sp/>and<sp/>actions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>reset_is_present;<sp/></highlight><highlight class="comment">//<sp/>True<sp/>to<sp/>set<sp/>is_present<sp/>to<sp/>false<sp/>after<sp/>calling<sp/>done_using().</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="419"><highlight class="normal">}<sp/><ref refid="reactor_8h_1a2c506d193748554de2ff32e5f7cee41e" kindref="member">token_present_t</ref>;</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight></codeline>
+<codeline lineno="431" refid="reactor_8h_1a1f0f71b6c8e0c54c65cbfaa154b40694" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structreaction__t" kindref="compound">reaction_t</ref><sp/><ref refid="structreaction__t" kindref="compound">reaction_t</ref>;</highlight></codeline>
+<codeline lineno="432" refid="structreaction__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structreaction__t" kindref="compound">reaction_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reactor_8h_1a149e5fee1c1841bcc96c72f200601d90" kindref="member">reaction_function_t</ref><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>The<sp/>reaction<sp/>function.<sp/>COMMON.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>a<sp/>struct<sp/>with<sp/>the<sp/>reactor&apos;s<sp/>state.<sp/>INSTANCE.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>number;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>number<sp/>of<sp/>the<sp/>reaction<sp/>in<sp/>the<sp/>reactor<sp/>(0<sp/>is<sp/>the<sp/>first<sp/>reaction).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reactor_8h_1a4448d06be794d3f5412d0edb412dc00e" kindref="member">index_t</ref><sp/>index;<sp/></highlight><highlight class="comment">//<sp/>Inverse<sp/>priority<sp/>determined<sp/>by<sp/>dependency<sp/>analysis.<sp/>INSTANCE.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>chain_id;<sp/></highlight><highlight class="comment">//<sp/>Binary<sp/>encoding<sp/>of<sp/>the<sp/>branches<sp/>that<sp/>this<sp/>reaction<sp/>has<sp/>upstream<sp/>in<sp/>the<sp/>dependency<sp/>graph.<sp/>INSTANCE.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pos;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Current<sp/>position<sp/>in<sp/>the<sp/>priority<sp/>queue.<sp/>RUNTIME.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structreaction__t" kindref="compound">reaction_t</ref>*<sp/>last_enabling_reaction;<sp/></highlight><highlight class="comment">//<sp/>The<sp/>last<sp/>enabling<sp/>reaction,<sp/>or<sp/>NULL<sp/>if<sp/>there<sp/>is<sp/>none.<sp/>Used<sp/>for<sp/>optimization.<sp/>INSTANCE.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_outputs;<sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>outputs<sp/>that<sp/>may<sp/>possibly<sp/>be<sp/>produced<sp/>by<sp/>this<sp/>function.<sp/>COMMON.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">**<sp/>output_produced;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Array<sp/>of<sp/>pointers<sp/>to<sp/>booleans<sp/>indicating<sp/>whether<sp/>outputs<sp/>were<sp/>produced.<sp/>COMMON.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>triggered_sizes;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>array<sp/>of<sp/>ints<sp/>with<sp/>number<sp/>of<sp/>triggers<sp/>per<sp/>output.<sp/>INSTANCE.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtrigger__t" kindref="compound">trigger_t</ref><sp/>***triggers;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Array<sp/>of<sp/>pointers<sp/>to<sp/>arrays<sp/>of<sp/>pointers<sp/>to<sp/>triggers<sp/>triggered<sp/>by<sp/>each<sp/>output.<sp/>INSTANCE.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>running;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Indicator<sp/>that<sp/>this<sp/>reaction<sp/>has<sp/>already<sp/>started<sp/>executing.<sp/>RUNTIME.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>deadline;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Deadline<sp/>relative<sp/>to<sp/>the<sp/>time<sp/>stamp<sp/>for<sp/>invocation<sp/>of<sp/>the<sp/>reaction.<sp/>INSTANCE.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_STP_violated;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Indicator<sp/>of<sp/>STP<sp/>violation<sp/>in<sp/>one<sp/>of<sp/>the<sp/>input<sp/>triggers<sp/>to<sp/>this<sp/>reaction.<sp/>default<sp/>=<sp/>false.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Value<sp/>of<sp/>True<sp/>indicates<sp/>to<sp/>the<sp/>runtime<sp/>that<sp/>this<sp/>reaction<sp/>contains<sp/>trigger(s)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>that<sp/>are<sp/>triggered<sp/>at<sp/>a<sp/>later<sp/>logical<sp/>time<sp/>that<sp/>was<sp/>originally<sp/>anticipated.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Currently,<sp/>this<sp/>is<sp/>only<sp/>possible<sp/>if<sp/>logical</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>connections<sp/>are<sp/>used<sp/>in<sp/>a<sp/>decentralized<sp/>federated</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>execution.<sp/>COMMON.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reactor_8h_1a149e5fee1c1841bcc96c72f200601d90" kindref="member">reaction_function_t</ref><sp/>deadline_violation_handler;<sp/></highlight><highlight class="comment">//<sp/>Deadline<sp/>violation<sp/>handler.<sp/>COMMON.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reactor_8h_1a149e5fee1c1841bcc96c72f200601d90" kindref="member">reaction_function_t</ref><sp/>STP_handler;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>STP<sp/>handler.<sp/>Invoked<sp/>when<sp/>a<sp/>trigger<sp/>to<sp/>this<sp/>reaction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>was<sp/>triggered<sp/>at<sp/>a<sp/>later<sp/>logical<sp/>time<sp/>than<sp/>originally</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>intended.<sp/>Currently,<sp/>this<sp/>is<sp/>only<sp/>possible<sp/>if<sp/>logical</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>connections<sp/>are<sp/>used<sp/>in<sp/>a<sp/>decentralized<sp/>federated</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>execution.<sp/>COMMON.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_a_control_reaction;<sp/></highlight><highlight class="comment">//<sp/>Indicates<sp/>whether<sp/>this<sp/>reaction<sp/>is<sp/>a<sp/>control<sp/>reaction.<sp/>Control</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reactions<sp/>will<sp/>not<sp/>set<sp/>ports<sp/>or<sp/>actions<sp/>and<sp/>don&apos;t<sp/>require<sp/>scheduling</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>any<sp/>output<sp/>reactions.<sp/>Default<sp/>is<sp/>false.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>logging<sp/>is<sp/>set<sp/>to<sp/>LOG<sp/>or<sp/>higher,<sp/>then<sp/>this<sp/>will</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>point<sp/>to<sp/>the<sp/>full<sp/>name<sp/>of<sp/>the<sp/>reactor<sp/>followed<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>reaction<sp/>number.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="464"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"></highlight></codeline>
+<codeline lineno="467" refid="reactor_8h_1a59f5f6b9c6023baebf9c49c328b639a1" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structevent__t" kindref="compound">event_t</ref><sp/><ref refid="structevent__t" kindref="compound">event_t</ref>;</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"></highlight></codeline>
+<codeline lineno="470" refid="structevent__t" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structevent__t" kindref="compound">event_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/>time;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Time<sp/>of<sp/>release.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtrigger__t" kindref="compound">trigger_t</ref>*<sp/>trigger;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Associated<sp/>trigger,<sp/>NULL<sp/>if<sp/>this<sp/>is<sp/>a<sp/>dummy<sp/>event.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pos;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Position<sp/>in<sp/>the<sp/>priority<sp/>queue.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlf__token__t" kindref="compound">lf_token_t</ref>*<sp/>token;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>token<sp/>wrapping<sp/>the<sp/>value.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_dummy;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Flag<sp/>to<sp/>indicate<sp/>whether<sp/>this<sp/>event<sp/>is<sp/>merely<sp/>a<sp/>placeholder<sp/>or<sp/>an<sp/>actual<sp/>event.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="476"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>FEDERATED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtag__t" kindref="compound">tag_t</ref><sp/>intended_tag;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>intended<sp/>tag.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="478"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structevent__t" kindref="compound">event_t</ref>*<sp/>next;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>next<sp/>event<sp/>lined<sp/>up<sp/>in<sp/>superdense<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="480"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"></highlight></codeline>
+<codeline lineno="486" refid="structtrigger__t" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtrigger__t" kindref="compound">trigger_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structreaction__t" kindref="compound">reaction_t</ref>**<sp/>reactions;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Array<sp/>of<sp/>pointers<sp/>to<sp/>reactions<sp/>sensitive<sp/>to<sp/>this<sp/>trigger.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>number_of_reactions;<sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>reactions<sp/>sensitive<sp/>to<sp/>this<sp/>trigger.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_timer;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>True<sp/>if<sp/>this<sp/>is<sp/>a<sp/>timer<sp/>(a<sp/>special<sp/>kind<sp/>of<sp/>action),<sp/>false<sp/>otherwise.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>offset;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Minimum<sp/>delay<sp/>of<sp/>an<sp/>action.<sp/>For<sp/>a<sp/>timer,<sp/>this<sp/>is<sp/>also<sp/>the<sp/>maximum<sp/>delay.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>period;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Minimum<sp/>interarrival<sp/>time<sp/>of<sp/>an<sp/>action.<sp/>For<sp/>a<sp/>timer,<sp/>this<sp/>is<sp/>also<sp/>the<sp/>maximal<sp/>interarrival<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlf__token__t" kindref="compound">lf_token_t</ref>*<sp/>token;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>a<sp/>token<sp/>wrapping<sp/>the<sp/>payload<sp/>(or<sp/>NULL<sp/>if<sp/>there<sp/>is<sp/>none).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_physical;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Indicator<sp/>that<sp/>this<sp/>denotes<sp/>a<sp/>physical<sp/>action.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structevent__t" kindref="compound">event_t</ref>*<sp/>last;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>last<sp/>event<sp/>that<sp/>was<sp/>scheduled<sp/>for<sp/>this<sp/>action.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reactor_8h_1a0183c0b43037a172a1cd9aa6ed6b3822" kindref="member">lf_spacing_policy_t</ref><sp/>policy;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Indicates<sp/>which<sp/>policy<sp/>to<sp/>use<sp/>when<sp/>an<sp/>event<sp/>is<sp/>scheduled<sp/>too<sp/>early.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>element_size;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>size<sp/>of<sp/>the<sp/>payload,<sp/>if<sp/>there<sp/>is<sp/>one,<sp/>zero<sp/>otherwise.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>payload<sp/>is<sp/>an<sp/>array,<sp/>then<sp/>this<sp/>is<sp/>the<sp/>size<sp/>of<sp/>an<sp/>element<sp/>of<sp/>the<sp/>array.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reactor_8h_1a759ba374f75ea0025b9af1bb35f14d7e" kindref="member">port_status_t</ref><sp/>status;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Determines<sp/>the<sp/>status<sp/>of<sp/>the<sp/>port<sp/>at<sp/>the<sp/>current<sp/>logical<sp/>time.<sp/>Therefore,<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>value<sp/>needs<sp/>to<sp/>be<sp/>reset<sp/>at<sp/>the<sp/>beginning<sp/>of<sp/>each<sp/>logical<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>status<sp/>is<sp/>especially<sp/>needed<sp/>for<sp/>the<sp/>distributed<sp/>execution<sp/>because<sp/>the<sp/>receiver<sp/>logic<sp/>will<sp/>need<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>know<sp/>what<sp/>it<sp/>should<sp/>do<sp/>if<sp/>it<sp/>receives<sp/>a<sp/>message<sp/>with<sp/>&apos;intended<sp/>tag<sp/>=<sp/>current<sp/>tag&apos;<sp/>from<sp/>another<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>federate.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-<sp/>If<sp/>status<sp/>is<sp/>&apos;unknown&apos;,<sp/>it<sp/>means<sp/>that<sp/>the<sp/>federate<sp/>has<sp/>still<sp/>no<sp/>idea<sp/>what<sp/>the<sp/>status<sp/>of<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>this<sp/>port<sp/>is<sp/>and<sp/>thus<sp/>has<sp/>refrained<sp/>from<sp/>executing<sp/>any<sp/>reaction<sp/>that<sp/>has<sp/>that<sp/>port<sp/>as<sp/>its<sp/>input.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>This<sp/>means<sp/>that<sp/>the<sp/>receiver<sp/>logic<sp/>can<sp/>directly<sp/>inject<sp/>the<sp/>triggered<sp/>reactions<sp/>into<sp/>the<sp/>reaction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>queue<sp/>at<sp/>the<sp/>current<sp/>logical<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-<sp/>If<sp/>the<sp/>status<sp/>is<sp/>absent,<sp/>it<sp/>means<sp/>that<sp/>the<sp/>federate<sp/>has<sp/>assumed<sp/>that<sp/>the<sp/>port<sp/>is<sp/>&apos;absent&apos;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>for<sp/>the<sp/>current<sp/>logical<sp/>time.<sp/>Therefore,<sp/>receiving<sp/>a<sp/>message<sp/>with<sp/>&apos;intended<sp/>tag<sp/>=<sp/>current<sp/>tag&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>is<sp/>an<sp/>error<sp/>that<sp/>should<sp/>be<sp/>handled,<sp/>for<sp/>example,<sp/>as<sp/>a<sp/>violation<sp/>of<sp/>the<sp/>STP<sp/>offset<sp/>in<sp/>the<sp/>decentralized<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>coordination.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-<sp/>Finally,<sp/>if<sp/>status<sp/>is<sp/>&apos;present&apos;,<sp/>then<sp/>this<sp/>is<sp/>an<sp/>error<sp/>since<sp/>multiple<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>downstream<sp/>messages<sp/>have<sp/>been<sp/>produced<sp/>for<sp/>the<sp/>same<sp/>port<sp/>for<sp/>the<sp/>same<sp/>logical<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="514"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>FEDERATED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtag__t" kindref="compound">tag_t</ref><sp/>last_known_status_tag;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Last<sp/>known<sp/>status<sp/>of<sp/>the<sp/>port,<sp/>either<sp/>via<sp/>a<sp/>timed<sp/>message,<sp/>a<sp/>port<sp/>absent,<sp/>or<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TAG<sp/>from<sp/>the<sp/>RTI.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_a_control_reaction_waiting;<sp/></highlight><highlight class="comment">//<sp/>Indicates<sp/>whether<sp/>at<sp/>least<sp/>one<sp/>control<sp/>reaction<sp/>is<sp/>waiting<sp/>for<sp/>this<sp/>trigger</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>it<sp/>belongs<sp/>to<sp/>a<sp/>network<sp/>input<sp/>port.<sp/>Must<sp/>be<sp/>false<sp/>by<sp/>default.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtag__t" kindref="compound">tag_t</ref><sp/>intended_tag;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>amount<sp/>of<sp/>discrepency<sp/>in<sp/>logical<sp/>time<sp/>between<sp/>the<sp/>original<sp/>intended</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>trigger<sp/>time<sp/>of<sp/>this<sp/>trigger<sp/>and<sp/>the<sp/>actual<sp/>trigger<sp/>time.<sp/>This<sp/>currently</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>can<sp/>only<sp/>happen<sp/>when<sp/>logical<sp/>connections<sp/>are<sp/>used<sp/>using<sp/>a<sp/>decentralized<sp/>coordination</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>mechanism<sp/>(@see<sp/>https://github.com/icyphy/lingua-franca/wiki/Logical-Connections).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/>physical_time_of_arrival;<sp/></highlight><highlight class="comment">//<sp/>The<sp/>physical<sp/>time<sp/>at<sp/>which<sp/>the<sp/>message<sp/>has<sp/>been<sp/>received<sp/>on<sp/>the<sp/>network<sp/>according<sp/>to<sp/>the<sp/>local<sp/>clock.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note:<sp/>The<sp/>physical_time_of_arrival<sp/>is<sp/>only<sp/>passed<sp/>down<sp/>one<sp/>level<sp/>of<sp/>the<sp/>hierarchy.<sp/>Default:<sp/>NEVER.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="525"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="526"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>========<sp/>Function<sp/>Declarations<sp/>========<sp/><sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="528"><highlight class="normal"></highlight></codeline>
+<codeline lineno="536"><highlight class="normal"><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/><ref refid="reactor_8h_1a8b4f2e4e87e43670217c0c53099ae2f5" kindref="member">get_start_time</ref>();</highlight></codeline>
+<codeline lineno="537"><highlight class="normal"></highlight></codeline>
+<codeline lineno="542"><highlight class="normal"><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/><ref refid="reactor_8h_1a54be08fbc7990c2d8082a31cbbf6e019" kindref="member">get_stp_offset</ref>();</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"></highlight></codeline>
+<codeline lineno="551"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1a75a5bf324229d35fb88541a04449c95b" kindref="member">set_stp_offset</ref>(<ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>offset);</highlight></codeline>
+<codeline lineno="552"><highlight class="normal"></highlight></codeline>
+<codeline lineno="557"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1ad96dc6cbe1d3365e52aad6aecbf036d8" kindref="member">print_snapshot</ref>();</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"></highlight></codeline>
+<codeline lineno="567"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1af629769c213699f0e4c9360811ee7251" kindref="member">request_stop</ref>();</highlight></codeline>
+<codeline lineno="568"><highlight class="normal"></highlight></codeline>
+<codeline lineno="572"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1aedbba6d4986cc6d46b07d53d3752270f" kindref="member">__set_default_command_line_options</ref>();</highlight></codeline>
+<codeline lineno="573"><highlight class="normal"></highlight></codeline>
+<codeline lineno="578"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1af8aacf433fcf349ffa1b163962eb3681" kindref="member">__start_time_step</ref>();</highlight></codeline>
+<codeline lineno="579"><highlight class="normal"></highlight></codeline>
+<codeline lineno="584"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1a868e02a04eabb4ffed63f6141f5f64a2" kindref="member">__initialize_trigger_objects</ref>();</highlight></codeline>
+<codeline lineno="585"><highlight class="normal"></highlight></codeline>
+<codeline lineno="591"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1a1825238bcb81ecc6aeeb6dd42d308089" kindref="member">__pop_events</ref>();</highlight></codeline>
+<codeline lineno="592"><highlight class="normal"></highlight></codeline>
+<codeline lineno="601"><highlight class="normal"><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref><sp/><ref refid="reactor_8h_1a1b914dafd583948c817b0ae6ce739b6d" kindref="member">__schedule</ref>(<ref refid="structtrigger__t" kindref="compound">trigger_t</ref>*<sp/>trigger,<sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>delay,<sp/><ref refid="structlf__token__t" kindref="compound">lf_token_t</ref>*<sp/>token);</highlight></codeline>
+<codeline lineno="602"><highlight class="normal"></highlight></codeline>
+<codeline lineno="606"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1ae3c5c84c6f22c1bdf98af8b1a55a9f4b" kindref="member">__initialize_timers</ref>();</highlight></codeline>
+<codeline lineno="607"><highlight class="normal"></highlight></codeline>
+<codeline lineno="611"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1a1d807ba211ee2edb588750d4553090c1" kindref="member">__trigger_startup_reactions</ref>();</highlight></codeline>
+<codeline lineno="612"><highlight class="normal"></highlight></codeline>
+<codeline lineno="613"><highlight class="normal"></highlight></codeline>
+<codeline lineno="618"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1a114c79dc673219d5df3b794552ca88d7" kindref="member">terminate_execution</ref>();</highlight></codeline>
+<codeline lineno="619"><highlight class="normal"></highlight></codeline>
+<codeline lineno="623"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1a9ea1110b1a18ccf10931bf5f9adaf299" kindref="member">__trigger_shutdown_reactions</ref>();</highlight></codeline>
+<codeline lineno="624"><highlight class="normal"></highlight></codeline>
+<codeline lineno="632"><highlight class="normal"><ref refid="structlf__token__t" kindref="compound">lf_token_t</ref>*<sp/><ref refid="reactor_8h_1a9d8ea5bc3ac4d18edafab309bc2a9c8a" kindref="member">create_token</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>element_size);</highlight></codeline>
+<codeline lineno="633"><highlight class="normal"></highlight></codeline>
+<codeline lineno="644"><highlight class="normal"><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref><sp/><ref refid="reactor_8h_1aa715873b79dee5b9f50daa2fef88cf34" kindref="member">_lf_schedule_int</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>action,<sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>extra_delay,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="645"><highlight class="normal"></highlight></codeline>
+<codeline lineno="650"><highlight class="normal"><ref refid="structevent__t" kindref="compound">event_t</ref>*<sp/><ref refid="reactor_8h_1a116897d2fd982e8836d2118af641b575" kindref="member">_lf_get_new_event</ref>();</highlight></codeline>
+<codeline lineno="651"><highlight class="normal"></highlight></codeline>
+<codeline lineno="656"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1a662cfd5714e5930f5e1c880f13deba6d" kindref="member">_lf_recycle_event</ref>(<ref refid="structevent__t" kindref="compound">event_t</ref>*<sp/>e);</highlight></codeline>
+<codeline lineno="657"><highlight class="normal"></highlight></codeline>
+<codeline lineno="672"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1af1f3a3c4613102e28fc0105408731c5e" kindref="member">_lf_schedule_at_tag</ref>(<ref refid="structtrigger__t" kindref="compound">trigger_t</ref>*<sp/>trigger,<sp/><ref refid="structtag__t" kindref="compound">tag_t</ref><sp/>tag,<sp/><ref refid="structlf__token__t" kindref="compound">lf_token_t</ref>*<sp/>token);</highlight></codeline>
+<codeline lineno="673"><highlight class="normal"></highlight></codeline>
+<codeline lineno="677"><highlight class="normal"><ref refid="structevent__t" kindref="compound">event_t</ref>*<sp/><ref refid="reactor_8h_1aed87bffa17d8c4ac396b288ba4c0c88b" kindref="member">_lf_create_dummy_event</ref>(<ref refid="structtrigger__t" kindref="compound">trigger_t</ref>*<sp/>trigger,<sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/>time,<sp/><ref refid="structevent__t" kindref="compound">event_t</ref>*<sp/>next,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset);</highlight></codeline>
+<codeline lineno="678"><highlight class="normal"></highlight></codeline>
+<codeline lineno="729"><highlight class="normal"><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref><sp/><ref refid="reactor_8h_1a369700b5e0906335f3d304a67eec5f29" kindref="member">_lf_schedule_token</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>action,<sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>extra_delay,<sp/><ref refid="structlf__token__t" kindref="compound">lf_token_t</ref>*<sp/>token);</highlight></codeline>
+<codeline lineno="730"><highlight class="normal"></highlight></codeline>
+<codeline lineno="743"><highlight class="normal"><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref><sp/><ref refid="reactor_8h_1aa0a09f1dc9ee5870a6d225a3569388df" kindref="member">_lf_schedule_value</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>action,<sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>extra_delay,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>value,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
+<codeline lineno="744"><highlight class="normal"></highlight></codeline>
+<codeline lineno="758"><highlight class="normal"><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref><sp/><ref refid="reactor_8h_1a2c07a7b9e616070f32fa88b4959fba53" kindref="member">_lf_schedule_copy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>action,<sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>offset,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>value,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
+<codeline lineno="759"><highlight class="normal"></highlight></codeline>
+<codeline lineno="764"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1a60ec02f52c1a7db4c7bdbc2871eae636" kindref="member">_lf_fd_send_stop_request_to_rti</ref>();</highlight></codeline>
+<codeline lineno="765"><highlight class="normal"></highlight></codeline>
+<codeline lineno="771"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1abadead0c4f54963b062503cf6cb7ace7" kindref="member">_lf_advance_logical_time</ref>(<ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/>next_time);</highlight></codeline>
+<codeline lineno="772"><highlight class="normal"></highlight></codeline>
+<codeline lineno="777"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1aa46a83ed702e2c83d42625a8c78a9f50" kindref="member">_lf_notify_workers</ref>();</highlight></codeline>
+<codeline lineno="778"><highlight class="normal"></highlight></codeline>
+<codeline lineno="785"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1ab461661c6c9757862959540fe57e3554" kindref="member">_lf_is_blocked_by_executing_reaction</ref>();</highlight></codeline>
+<codeline lineno="786"><highlight class="normal"></highlight></codeline>
+<codeline lineno="787"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>********<sp/>Global<sp/>Variables<sp/>********<sp/><sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="788"><highlight class="normal"></highlight></codeline>
+<codeline lineno="794"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1af74a2782bda0d66298d22d637ad964b5" kindref="member">_lf_number_of_threads</ref>;</highlight></codeline>
+<codeline lineno="795"><highlight class="normal"></highlight></codeline>
+<codeline lineno="796"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>********<sp/>Begin<sp/>Windows<sp/>Support<sp/>********<sp/><sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="797"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Windows<sp/>is<sp/>not<sp/>POSIX,<sp/>so<sp/>we<sp/>include<sp/>here<sp/>compatibility<sp/>definitions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="798"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>_WIN32<sp/>||<sp/>WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="799"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable:<sp/>4204<sp/>4255<sp/>4459<sp/>4710)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="800"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>_M_X64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="801"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>intptr_t;</highlight></codeline>
+<codeline lineno="802"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="803"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>intptr_t;</highlight></codeline>
+<codeline lineno="804"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="805"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>intptr_t<sp/>INTPTR_T;</highlight></codeline>
+<codeline lineno="806"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">HINSTANCE__<sp/>*HINSTANCE;</highlight></codeline>
+<codeline lineno="807"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>HINSTANCE<sp/>HMODULE;</highlight></codeline>
+<codeline lineno="808"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>INTPTR_T<sp/>(__stdcall<sp/>*FARPROC)();</highlight></codeline>
+<codeline lineno="809"><highlight class="normal">HMODULE<sp/>__stdcall<sp/>GetModuleHandleA(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*lpModuleName);</highlight></codeline>
+<codeline lineno="810"><highlight class="normal">FARPROC<sp/>__stdcall<sp/>GetProcAddress(HMODULE<sp/>hModule,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*lpProcName);</highlight></codeline>
+<codeline lineno="811"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>NTSTATUS;</highlight></codeline>
+<codeline lineno="812"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">_LARGE_INTEGER<sp/>*PLARGE_INTEGER;</highlight></codeline>
+<codeline lineno="813"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>NTSTATUS<sp/>__stdcall<sp/>NtDelayExecution_t(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>Alertable,</highlight></codeline>
+<codeline lineno="814"><highlight class="normal"><sp/><sp/>PLARGE_INTEGER<sp/>Interval);</highlight></codeline>
+<codeline lineno="815"><highlight class="normal">NtDelayExecution_t<sp/>*NtDelayExecution;</highlight></codeline>
+<codeline lineno="816"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>NTSTATUS<sp/>__stdcall<sp/>NtQueryPerformanceCounter_t(</highlight></codeline>
+<codeline lineno="817"><highlight class="normal"><sp/><sp/>PLARGE_INTEGER<sp/>PerformanceCounter,<sp/>PLARGE_INTEGER<sp/>PerformanceFrequency);</highlight></codeline>
+<codeline lineno="818"><highlight class="normal">NtQueryPerformanceCounter_t<sp/>*NtQueryPerformanceCounter;</highlight></codeline>
+<codeline lineno="819"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>NTSTATUS<sp/>__stdcall<sp/>NtQuerySystemTime_t(PLARGE_INTEGER<sp/>SystemTime);<sp/></highlight></codeline>
+<codeline lineno="820"><highlight class="normal">NtQuerySystemTime_t<sp/>*NtQuerySystemTime;</highlight></codeline>
+<codeline lineno="821"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CLOCK_REALTIME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="822"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_REALTIME<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="823"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="824"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CLOCK_MONOTONIC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="825"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLOCK_MONOTONIC<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="826"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="827"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>clockid_t;</highlight></codeline>
+<codeline lineno="828"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>clock_gettime(clockid_t<sp/>clk_id,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timespec<sp/>*tp);</highlight></codeline>
+<codeline lineno="829"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nanosleep(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timespec<sp/>*req,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timespec<sp/>*rem);</highlight></codeline>
+<codeline lineno="830"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="831"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>********<sp/>End<sp/>Windows<sp/>Support<sp/>********<sp/><sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="832"><highlight class="normal"></highlight></codeline>
+<codeline lineno="833"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="trace_8h" kindref="compound">trace.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="834"><highlight class="normal"></highlight></codeline>
+<codeline lineno="835"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>REACTOR_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="836"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h"/>
+  </compounddef>
+</doxygen>

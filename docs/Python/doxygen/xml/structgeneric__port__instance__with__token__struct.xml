@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structgeneric__port__instance__with__token__struct" kind="struct" language="C++" prot="public">
+    <compoundname>generic_port_instance_with_token_struct</compoundname>
+    <includes refid="pythontarget_8h" local="no">pythontarget.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgeneric__port__instance__with__token__struct_1a127c670b2d8307451e46f2321cbc315f" prot="public" static="no" mutable="no">
+        <type>PyObject_HEAD PyObject *</type>
+        <definition>PyObject_HEAD PyObject* generic_port_instance_with_token_struct::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" line="140" column="14" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgeneric__port__instance__with__token__struct_1a0053306b7782b09f8138faac4bd07193" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool generic_port_instance_with_token_struct::is_present</definition>
+        <argsstring></argsstring>
+        <name>is_present</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" line="141" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgeneric__port__instance__with__token__struct_1ac3e57059068c88a1a6fad32d38489398" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int generic_port_instance_with_token_struct::num_destinations</definition>
+        <argsstring></argsstring>
+        <name>num_destinations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" line="142" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgeneric__port__instance__with__token__struct_1a09c37a1158d6e091159e99249ca29aa0" prot="public" static="no" mutable="no">
+        <type>lf_token_t *</type>
+        <definition>lf_token_t* generic_port_instance_with_token_struct::token</definition>
+        <argsstring></argsstring>
+        <name>token</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" line="143" column="16" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgeneric__port__instance__with__token__struct_1a402f4829402c2a88fb34f721ee18c2f3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int generic_port_instance_with_token_struct::length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" line="144" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Special version of the template_input_output_port_struct for dynamic arrays. FIXME: This is currently kept for compatibility reasons and should be removed soon. </para>
+    </detaileddescription>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" line="138" column="15" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" bodystart="138" bodyend="145"/>
+    <listofallmembers>
+      <member refid="structgeneric__port__instance__with__token__struct_1a0053306b7782b09f8138faac4bd07193" prot="public" virt="non-virtual"><scope>generic_port_instance_with_token_struct</scope><name>is_present</name></member>
+      <member refid="structgeneric__port__instance__with__token__struct_1a402f4829402c2a88fb34f721ee18c2f3" prot="public" virt="non-virtual"><scope>generic_port_instance_with_token_struct</scope><name>length</name></member>
+      <member refid="structgeneric__port__instance__with__token__struct_1ac3e57059068c88a1a6fad32d38489398" prot="public" virt="non-virtual"><scope>generic_port_instance_with_token_struct</scope><name>num_destinations</name></member>
+      <member refid="structgeneric__port__instance__with__token__struct_1a09c37a1158d6e091159e99249ca29aa0" prot="public" virt="non-virtual"><scope>generic_port_instance_with_token_struct</scope><name>token</name></member>
+      <member refid="structgeneric__port__instance__with__token__struct_1a127c670b2d8307451e46f2321cbc315f" prot="public" virt="non-virtual"><scope>generic_port_instance_with_token_struct</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

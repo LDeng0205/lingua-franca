@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structtoken__present__t" kind="struct" language="C++" prot="public">
+    <compoundname>token_present_t</compoundname>
+    <includes refid="reactor_8h" local="no">reactor.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtoken__present__t_1a9543ccc49cdda1a63c2dcc71a1f199e9" prot="public" static="no" mutable="no">
+        <type><ref refid="structlf__token__t" kindref="compound">lf_token_t</ref> **</type>
+        <definition>lf_token_t** token_present_t::token</definition>
+        <argsstring></argsstring>
+        <name>token</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="415" column="16" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtoken__present__t_1a6fba04c24e4e49088464a0e9b2fa231d" prot="public" static="no" mutable="no">
+        <type><ref refid="reactor_8h_1a759ba374f75ea0025b9af1bb35f14d7e" kindref="member">port_status_t</ref> *</type>
+        <definition>port_status_t* token_present_t::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="416" column="19" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtoken__present__t_1aa8a58416b02e87198d2e67af2a6061c0" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool token_present_t::reset_is_present</definition>
+        <argsstring></argsstring>
+        <name>reset_is_present</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="418" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A struct with a pointer to a <ref refid="structlf__token__t" kindref="compound">lf_token_t</ref> and an _is_present variable for use to initialize actions in start_time_step(). </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>token_present_t</label>
+        <link refid="structtoken__present__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>token</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lf_token_t</label>
+        <link refid="structlf__token__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>next_free</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="414" column="30" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="414" bodyend="419"/>
+    <listofallmembers>
+      <member refid="structtoken__present__t_1aa8a58416b02e87198d2e67af2a6061c0" prot="public" virt="non-virtual"><scope>token_present_t</scope><name>reset_is_present</name></member>
+      <member refid="structtoken__present__t_1a6fba04c24e4e49088464a0e9b2fa231d" prot="public" virt="non-virtual"><scope>token_present_t</scope><name>status</name></member>
+      <member refid="structtoken__present__t_1a9543ccc49cdda1a63c2dcc71a1f199e9" prot="public" virt="non-virtual"><scope>token_present_t</scope><name>token</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

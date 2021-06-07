@@ -1,0 +1,850 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="clock-sync_8c" kind="file" language="C++">
+    <compoundname>clock-sync.c</compoundname>
+    <includes refid="clock-sync_8h" local="yes">clock-sync.h</includes>
+    <includes refid="rti_8h" local="yes">rti.h</includes>
+    <includedby refid="federate_8c" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.c</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>stdbool.h</label>
+      </node>
+      <node id="14">
+        <label>util.h</label>
+        <link refid="util_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>pqueue.h</label>
+        <link refid="pqueue_8h"/>
+      </node>
+      <node id="15">
+        <label>stdarg.h</label>
+      </node>
+      <node id="17">
+        <label>trace.h</label>
+        <link refid="trace_8h"/>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="12">
+        <label>errno.h</label>
+      </node>
+      <node id="16">
+        <label>tag.h</label>
+        <link refid="tag_8h"/>
+      </node>
+      <node id="11">
+        <label>limits.h</label>
+      </node>
+      <node id="4">
+        <label>pthread.h</label>
+      </node>
+      <node id="9">
+        <label>string.h</label>
+      </node>
+      <node id="3">
+        <label>rti.h</label>
+        <link refid="rti_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c</label>
+        <link refid="clock-sync_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>clock-sync.h</label>
+        <link refid="clock-sync_8h"/>
+      </node>
+      <node id="5">
+        <label>reactor.h</label>
+        <link refid="reactor_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>time.h</label>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.c</label>
+        <link refid="federate_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c</label>
+        <link refid="clock-sync_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="clock-sync_8c_1aca692f1141783acf8a992f9d4713ebf0" prot="public" static="no" mutable="no">
+        <type><ref refid="structsocket__stat__t" kindref="compound">socket_stat_t</ref></type>
+        <definition>socket_stat_t _lf_rti_socket_stat</definition>
+        <argsstring></argsstring>
+        <name>_lf_rti_socket_stat</name>
+        <initializer>= {
+    .remote_physical_clock_snapshot_T1 = NEVER,
+    .local_physical_clock_snapshot_T2 = NEVER,
+    .local_delay = 0LL,
+    .received_T4_messages_in_current_sync_window = 0,
+    .history = 0LL,
+    .network_stat_round_trip_delay_max = 0LL,
+    .network_stat_sample_index = 0,
+    .clock_synchronization_error_bound = 0LL
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Keep a record of connection statistics and the remote physical clock of the RTI. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" line="40" column="15" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="clock-sync_8c_1aa7b61bf176d2a9ed52aa9c4f14d61577" prot="public" static="no" mutable="no">
+        <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+        <definition>instant_t _lf_last_clock_sync_instant</definition>
+        <argsstring></argsstring>
+        <name>_lf_last_clock_sync_instant</name>
+        <initializer>= 0LL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Records the physical time at which the clock of this federate was synchronized with the RTI. Used to calculate the drift. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" line="55" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="clock-sync_8c_1aae34b5d2d5b70ef1783aef6292810208" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _lf_rti_socket_UDP</definition>
+        <argsstring></argsstring>
+        <name>_lf_rti_socket_UDP</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The UDP socket descriptor for this federate to communicate with the RTI. This is set by <ref refid="clock-sync_8c_1aefb38f85188382621177f531f5134a89" kindref="member">setup_clock_synchronization_with_rti()</ref> in <ref refid="federate_8c_1ac4fb5cd6e02f70979dd3e30310d4b2bb" kindref="member">connect_to_rti()</ref> in <ref refid="federate_8c" kindref="compound">federate.c</ref>, which must be called before other functions that communicate with the rti are called. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" line="63" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="clock-sync_8c_1ae267d03a5f2263604459ca4c1aef2c2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reset_socket_stat</definition>
+        <argsstring>(struct socket_stat_t *socket_stat)</argsstring>
+        <name>reset_socket_stat</name>
+        <param>
+          <type>struct <ref refid="structsocket__stat__t" kindref="compound">socket_stat_t</ref> *</type>
+          <declname>socket_stat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reset statistics on the socket.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socket_stat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="structsocket__stat__t" kindref="compound">socket_stat_t</ref> struct that keeps track of stats for a given connection </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" line="124" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" bodystart="124" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="clock-sync_8c_1aefb38f85188382621177f531f5134a89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="reactor_8h_1a3fa7784c89589b49764048e9909d0e07" kindref="member">ushort</ref></type>
+        <definition>ushort setup_clock_synchronization_with_rti</definition>
+        <argsstring>()</argsstring>
+        <name>setup_clock_synchronization_with_rti</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setup necessary functionalities to synchronize clock with the RTI.</para>
+<para><simplesect kind="return"><para>port number to be sent to the RTI If clock synchronization is off compeltely, USHRT_MAX is returned. If clock synchronization is set to initial, 0 is sent. If clock synchronization is set to on, a reserved UDP port number will be sent. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" line="139" column="8" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" bodystart="139" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="clock-sync_8c_1a8a95b04db741b4fd04fb2ee4941fc8c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void synchronize_initial_physical_clock_with_rti</definition>
+        <argsstring>(int rti_socket_TCP)</argsstring>
+        <name>synchronize_initial_physical_clock_with_rti</name>
+        <param>
+          <type>int</type>
+          <declname>rti_socket_TCP</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Synchronize the initial physical clock with the RTI. A call to this function is inserted into the startup sequence by the code generator if initial clock synchronization is required.</para>
+<para>This is a blocking function that expects to read a PHYSICAL_CLOCK_SYNC_MESSAGE_T1 from the RTI TCP socket. It will then follow the PTP protocol to synchronize the local physical clock with the RTI. Failing to complete this protocol is treated as a catastrophic error that causes the federate to exit.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rti_socket_TCP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rti&apos;s socket </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" line="207" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" bodystart="207" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="clock-sync_8c_1ace14df89540b56b069c6c619e8f37493" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int handle_T1_clock_sync_message</definition>
+        <argsstring>(unsigned char *buffer, int socket, instant_t t2)</argsstring>
+        <name>handle_T1_clock_sync_message</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>socket</declname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+          <declname>t2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle a clock synchroninzation message T1 coming from the RTI. T1 is the first message in a PTP exchange. This replies to the RTI with a T3 message. It also measures the time it takes between when the method is called and the reply has been sent. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer containing the message, including the message type. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>socket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket (either _lf_rti_socket_TCP or _lf_rti_socket_UDP). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The physical time at which the T1 message was received. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if T3 reply is successfully sent, -1 otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" line="261" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" bodystart="261" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="clock-sync_8c_1a1b35d21eda090ea4bf8a79f401dbdad0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void handle_T4_clock_sync_message</definition>
+        <argsstring>(unsigned char *buffer, int socket, instant_t r4)</argsstring>
+        <name>handle_T4_clock_sync_message</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>socket</declname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+          <declname>r4</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle a clock synchronization message T4 coming from the RTI. If the socket is _lf_rti_socket_TCP, then assume we are in the initial clock synchronization phase and set the clock offset based on the estimated clock synchronization error. Otherwise, if the socket is _lf_rti_socket_UDP, then this looks also for a subsequent &quot;coded probe&quot; message on the socket. If the delay between the T4 and the coded probe message is not as expected, then reject this clock synchronization round. If it is not rejected, then make an adjustment to the clock offset based on the estimated error. This function does not acquire the socket_mutex lock. The caller should acquire it unless it is sure there is only one thread running. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer containing the message, including the message type. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>socket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket (either _lf_rti_socket_TCP or _lf_rti_socket_UDP). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r4</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The physical time at which this T4 message was received. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" line="309" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" bodystart="309" bodyend="449"/>
+      </memberdef>
+      <memberdef kind="function" id="clock-sync_8c_1ae471d3256d0e072e5ee6bb83b0d0e99b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* listen_to_rti_UDP_thread</definition>
+        <argsstring>(void *args)</argsstring>
+        <name>listen_to_rti_UDP_thread</name>
+        <param>
+          <type>void *</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Thread that listens for UDP inputs from the RTI. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" line="454" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" bodystart="454" bodyend="544"/>
+      </memberdef>
+      <memberdef kind="function" id="clock-sync_8c_1ac094b53ced87d3cbd617a66591f4282a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int create_clock_sync_thread</definition>
+        <argsstring>(lf_thread_t *thread_id)</argsstring>
+        <name>create_clock_sync_thread</name>
+        <param>
+          <type>lf_thread_t *</type>
+          <declname>thread_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create the thread responsible for handling clock synchronization with the RTI if (runtime) clock synchronization is on. Otherwise, do nothing an return 0.</para>
+<para><simplesect kind="return"><para>On success, returns 0; On error, it returns an error number. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" line="553" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c" bodystart="553" bodyend="559"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Edward A. Lee (<ulink url="mailto:eal@berkeley.edu">eal@berkeley.edu</ulink>) </para>
+</simplesect>
+<simplesect kind="author"><para>Soroush Bateni (<ulink url="mailto:soroush@utdallas.edu">soroush@utdallas.edu</ulink>)</para>
+</simplesect>
+</para>
+<sect1 id="util_8h_1LICENSE">
+<title>LICENSE</title>
+<para>Copyright (c) 2020-21, The University of California at Berkeley.</para>
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</para>
+<para><orderedlist>
+<listitem><para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem><para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem></orderedlist>
+</para>
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+</sect1>
+<sect1 id="util_8h_1DESCRIPTION">
+<title>DESCRIPTION</title>
+<para>Utility functions for clock synchronization. </para>
+</sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="33"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="clock-sync_8h" kindref="compound">clock-sync.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rti_8h" kindref="compound">rti.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><ref refid="structsocket__stat__t" kindref="compound">socket_stat_t</ref><sp/><ref refid="clock-sync_8c_1aca692f1141783acf8a992f9d4713ebf0" kindref="member">_lf_rti_socket_stat</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>.remote_physical_clock_snapshot_T1<sp/>=<sp/>NEVER,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>.local_physical_clock_snapshot_T2<sp/>=<sp/>NEVER,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>.local_delay<sp/>=<sp/>0LL,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>.received_T4_messages_in_current_sync_window<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>.history<sp/>=<sp/>0LL,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>.network_stat_round_trip_delay_max<sp/>=<sp/>0LL,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>.network_stat_sample_index<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>.clock_synchronization_error_bound<sp/>=<sp/>0LL</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/><ref refid="clock-sync_8c_1aa7b61bf176d2a9ed52aa9c4f14d61577" kindref="member">_lf_last_clock_sync_instant</ref><sp/>=<sp/>0LL;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="clock-sync_8c_1aae34b5d2d5b70ef1783aef6292810208" kindref="member">_lf_rti_socket_UDP</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_LF_CLOCK_SYNC_COLLECT_STATS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update_socket_stat(<ref refid="structsocket__stat__t" kindref="compound">socket_stat_t</ref>*<sp/>socket_stat,<sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>network_round_trip_delay,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>clock_synchronization_error)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>the<sp/>data<sp/>point</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>socket_stat-&gt;network_stat_samples[socket_stat-&gt;network_stat_sample_index]<sp/>=<sp/>network_round_trip_delay;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>socket_stat-&gt;network_stat_sample_index++;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>maximums</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(socket_stat-&gt;<ref refid="structsocket__stat__t_1a2d53d66644d18d6e948aafd2913b638d" kindref="member">network_stat_round_trip_delay_max</ref><sp/>&lt;<sp/>network_round_trip_delay)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>socket_stat-&gt;<ref refid="structsocket__stat__t_1a2d53d66644d18d6e948aafd2913b638d" kindref="member">network_stat_round_trip_delay_max</ref><sp/>=<sp/>network_round_trip_delay;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(socket_stat-&gt;clock_synchronization_error_bound<sp/>&lt;<sp/>clock_synchronization_error)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>socket_stat-&gt;clock_synchronization_error_bound<sp/>=<sp/>clock_synchronization_error;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><ref refid="structlf__stat__ll" kindref="compound">lf_stat_ll</ref><sp/>calculate_socket_stat(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structsocket__stat__t" kindref="compound">socket_stat_t</ref>*<sp/>socket_stat)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>stat<sp/>struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlf__stat__ll" kindref="compound">lf_stat_ll</ref><sp/>stats<sp/>=<sp/>{0,<sp/>0,<sp/>0,<sp/>0};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>the<sp/>average<sp/>and<sp/>max</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>socket_stat-&gt;network_stat_sample_index;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(socket_stat-&gt;network_stat_samples[i]<sp/>&gt;<sp/>stats.max)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stats.max<sp/>=<sp/>socket_stat-&gt;network_stat_samples[i];</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stats.average<sp/>+=<sp/>socket_stat-&gt;network_stat_samples[i]<sp/>/<sp/>socket_stat-&gt;network_stat_sample_index;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>socket_stat-&gt;network_stat_sample_index;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>delta<sp/>=<sp/>socket_stat-&gt;network_stat_samples[i]<sp/>-<sp/>stats.average;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stats.variance<sp/>+=<sp/>powl(delta,<sp/>2);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>stats.variance<sp/>/=<sp/>socket_stat-&gt;network_stat_sample_index;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>stats.standard_deviation<sp/>=<sp/>sqrtl(stats.variance);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stats;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="clock-sync_8c_1ae267d03a5f2263604459ca4c1aef2c2c" kindref="member">reset_socket_stat</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structsocket__stat__t" kindref="compound">socket_stat_t</ref>*<sp/>socket_stat)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>socket_stat-&gt;received_T4_messages_in_current_sync_window<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>socket_stat-&gt;history<sp/>=<sp/>0LL;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>socket_stat-&gt;network_stat_sample_index<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><ref refid="reactor_8h_1a3fa7784c89589b49764048e9909d0e07" kindref="member">ushort</ref><sp/><ref refid="clock-sync_8c_1aefb38f85188382621177f531f5134a89" kindref="member">setup_clock_synchronization_with_rti</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reactor_8h_1a3fa7784c89589b49764048e9909d0e07" kindref="member">ushort</ref><sp/>port_to_return<sp/>=<sp/>USHRT_MAX;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_LF_CLOCK_SYNC_ON</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>UDP<sp/>socket</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock-sync_8c_1aae34b5d2d5b70ef1783aef6292810208" kindref="member">_lf_rti_socket_UDP</ref><sp/>=<sp/>socket(AF_INET,<sp/>SOCK_DGRAM,<sp/>0);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>necessary<sp/>information<sp/>for<sp/>the<sp/>UDP<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sockaddr_in<sp/>federate_UDP_addr;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>federate_UDP_addr.sin_family<sp/>=<sp/>AF_INET;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>federate_UDP_addr.sin_port<sp/>=<sp/>htons(0u);<sp/></highlight><highlight class="comment">//<sp/>Port<sp/>0<sp/>indicates<sp/>to<sp/>bind<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>it<sp/>can<sp/>assign<sp/>any<sp/>port<sp/>to<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>socket.<sp/>This<sp/>is<sp/>okay<sp/>because</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>port<sp/>number<sp/>is<sp/>then<sp/>sent</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>the<sp/>RTI.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>federate_UDP_addr.sin_addr.s_addr<sp/>=<sp/>INADDR_ANY;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bind(</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clock-sync_8c_1aae34b5d2d5b70ef1783aef6292810208" kindref="member">_lf_rti_socket_UDP</ref>,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sockaddr<sp/>*)<sp/>&amp;federate_UDP_addr,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(federate_UDP_addr))<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a7389ef15e70a377a52086e6d6b956d70" kindref="member">error_print_and_exit</ref>(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>bind<sp/>its<sp/>UDP<sp/>socket:<sp/>%s.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strerror(errno));</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Retrieve<sp/>the<sp/>port<sp/>number<sp/>that<sp/>was<sp/>assigned<sp/>by<sp/>the<sp/>operating<sp/>system</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>socklen_t<sp/>addr_length<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(federate_UDP_addr);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(getsockname(<ref refid="clock-sync_8c_1aae34b5d2d5b70ef1783aef6292810208" kindref="member">_lf_rti_socket_UDP</ref>,<sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sockaddr<sp/>*)&amp;federate_UDP_addr,<sp/>&amp;addr_length)<sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FIXME:<sp/>Send<sp/>0<sp/>UDP_PORT<sp/>message<sp/>instead<sp/>of<sp/>exiting.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>That<sp/>will<sp/>disable<sp/>clock<sp/>synchronization.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a7389ef15e70a377a52086e6d6b956d70" kindref="member">error_print_and_exit</ref>(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>retrieve<sp/>UDP<sp/>port:<sp/>%s.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strerror(errno));</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="util_8h_1a0a27a0fa2f8d9461204242121941696c" kindref="member">DEBUG_PRINT</ref>(</highlight><highlight class="stringliteral">&quot;Assigned<sp/>UDP<sp/>port<sp/>number<sp/>%u<sp/>to<sp/>its<sp/>socket.&quot;</highlight><highlight class="normal">,<sp/>ntohs(federate_UDP_addr.sin_port));</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>port_to_return<sp/>=<sp/>ntohs(federate_UDP_addr.sin_port);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>option<sp/>for<sp/>this<sp/>socket<sp/>to<sp/>reuse<sp/>the<sp/>same<sp/>address<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(setsockopt(<ref refid="clock-sync_8c_1aae34b5d2d5b70ef1783aef6292810208" kindref="member">_lf_rti_socket_UDP</ref>,<sp/>SOL_SOCKET,<sp/>SO_REUSEADDR,<sp/>&amp;(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">){1},<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(int))<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a1c6c13db619d78a55e0517405f226cc3" kindref="member">error_print</ref>(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>set<sp/>SO_REUSEADDR<sp/>option<sp/>on<sp/>the<sp/>socket:<sp/>%s.&quot;</highlight><highlight class="normal">,<sp/>strerror(errno));</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>timeout<sp/>on<sp/>the<sp/>UDP<sp/>socket<sp/>so<sp/>that<sp/>read<sp/>and<sp/>write<sp/>operations<sp/>don&apos;t<sp/>block<sp/>for<sp/>too<sp/>long</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/>timeout_time<sp/>=<sp/>{.tv_sec<sp/>=<sp/><ref refid="rti_8h_1aac9f4a449d302b4f39e69a14b3a4c8d5" kindref="member">UDP_TIMEOUT_TIME</ref><sp/>/<sp/>BILLION,<sp/>.tv_usec<sp/>=<sp/>(<ref refid="rti_8h_1aac9f4a449d302b4f39e69a14b3a4c8d5" kindref="member">UDP_TIMEOUT_TIME</ref><sp/>%<sp/>BILLION)<sp/>/<sp/>1000};<sp/></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(setsockopt(<ref refid="clock-sync_8c_1aae34b5d2d5b70ef1783aef6292810208" kindref="member">_lf_rti_socket_UDP</ref>,<sp/>SOL_SOCKET,<sp/>SO_RCVTIMEO,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)&amp;timeout_time,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(timeout_time))<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a1c6c13db619d78a55e0517405f226cc3" kindref="member">error_print</ref>(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>set<sp/>SO_RCVTIMEO<sp/>option<sp/>on<sp/>the<sp/>socket:<sp/>%s.&quot;</highlight><highlight class="normal">,<sp/>strerror(errno));</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(setsockopt(<ref refid="clock-sync_8c_1aae34b5d2d5b70ef1783aef6292810208" kindref="member">_lf_rti_socket_UDP</ref>,<sp/>SOL_SOCKET,<sp/>SO_SNDTIMEO,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)&amp;timeout_time,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(timeout_time))<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a1c6c13db619d78a55e0517405f226cc3" kindref="member">error_print</ref>(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>set<sp/>SO_SNDTIMEO<sp/>option<sp/>on<sp/>the<sp/>socket:<sp/>%s.&quot;</highlight><highlight class="normal">,<sp/>strerror(errno));</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/>//<sp/>No<sp/>runtime<sp/>clock<sp/>synchronization.<sp/>Send<sp/>port<sp/>-1<sp/>or<sp/>0<sp/>instead.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_LF_CLOCK_SYNC_INITIAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>port_to_return<sp/>=<sp/>0u;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>_LF_CLOCK_SYNC_ON</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>port_to_return;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="clock-sync_8c_1a8a95b04db741b4fd04fb2ee4941fc8c6" kindref="member">synchronize_initial_physical_clock_with_rti</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rti_socket_TCP)<sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="util_8h_1a0a27a0fa2f8d9461204242121941696c" kindref="member">DEBUG_PRINT</ref>(</highlight><highlight class="stringliteral">&quot;Waiting<sp/>for<sp/>initial<sp/>clock<sp/>synchronization<sp/>messages<sp/>from<sp/>the<sp/>RTI.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>message_size<sp/>=<sp/>1<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref>);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buffer[message_size];</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i<sp/>&lt;<sp/><ref refid="clock-sync_8h_1ab0eeaea19d6e5c9217a4eed928c32141" kindref="member">_LF_CLOCK_SYNC_EXCHANGES_PER_INTERVAL</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>first<sp/>message<sp/>expected<sp/>from<sp/>the<sp/>RTI<sp/>is<sp/>PHYSICAL_CLOCK_SYNC_MESSAGE_T1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="net__util_8c_1a9d26e19c03e782593ba0f1791b7f35b5" kindref="member">read_from_socket_errexit</ref>(rti_socket_TCP,<sp/>message_size,<sp/>buffer,</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Federate<sp/>%d<sp/>did<sp/>not<sp/>get<sp/>the<sp/>initial<sp/>clock<sp/>synchronization<sp/>message<sp/>T1<sp/>from<sp/>the<sp/>RTI.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a2c4180118c19ff02a0d42f4c6758bdd3" kindref="member">_lf_my_fed_id</ref>);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>local<sp/>physical<sp/>time<sp/>before<sp/>doing<sp/>anything<sp/>else.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/>receive_time<sp/>=<sp/><ref refid="tag_8c_1a84d52b3843db3b4fcb932326d6b288c4" kindref="member">get_physical_time</ref>();</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>that<sp/>this<sp/>is<sp/>the<sp/>T1<sp/>message.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(buffer[0]<sp/>!=<sp/><ref refid="rti_8h_1a31f24c0e324077c60e4ded8a30b15978" kindref="member">PHYSICAL_CLOCK_SYNC_MESSAGE_T1</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a7389ef15e70a377a52086e6d6b956d70" kindref="member">error_print_and_exit</ref>(</highlight><highlight class="stringliteral">&quot;Initial<sp/>clock<sp/>sync:<sp/>Expected<sp/>T1<sp/>message<sp/>from<sp/>RTI.<sp/>Got<sp/>%x.&quot;</highlight><highlight class="normal">,<sp/>buffer[0]);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Handle<sp/>the<sp/>message<sp/>and<sp/>send<sp/>a<sp/>reply<sp/>T3<sp/>message.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOTE:<sp/>No<sp/>need<sp/>to<sp/>acquire<sp/>the<sp/>mutex<sp/>lock<sp/>during<sp/>initialization<sp/>because<sp/>only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>one<sp/>thread<sp/>is<sp/>running.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="clock-sync_8c_1ace14df89540b56b069c6c619e8f37493" kindref="member">handle_T1_clock_sync_message</ref>(buffer,<sp/>rti_socket_TCP,<sp/>receive_time)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a7389ef15e70a377a52086e6d6b956d70" kindref="member">error_print_and_exit</ref>(</highlight><highlight class="stringliteral">&quot;Initial<sp/>clock<sp/>sync:<sp/>Failed<sp/>to<sp/>send<sp/>T3<sp/>reply<sp/>to<sp/>RTI.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Next<sp/>message<sp/>from<sp/>the<sp/>RTI<sp/>is<sp/>required<sp/>to<sp/>be<sp/>PHYSICAL_CLOCK_SYNC_MESSAGE_T4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="net__util_8c_1a9d26e19c03e782593ba0f1791b7f35b5" kindref="member">read_from_socket_errexit</ref>(rti_socket_TCP,<sp/>message_size,<sp/>buffer,</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Federate<sp/>%d<sp/>did<sp/>not<sp/>get<sp/>the<sp/>clock<sp/>synchronization<sp/>message<sp/>T4<sp/>from<sp/>the<sp/>RTI.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a2c4180118c19ff02a0d42f4c6758bdd3" kindref="member">_lf_my_fed_id</ref>);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>that<sp/>this<sp/>is<sp/>the<sp/>T4<sp/>message.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(buffer[0]<sp/>!=<sp/>PHYSICAL_CLOCK_SYNC_MESSAGE_T4)<sp/>{</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a7389ef15e70a377a52086e6d6b956d70" kindref="member">error_print_and_exit</ref>(</highlight><highlight class="stringliteral">&quot;Federate<sp/>%d<sp/>expected<sp/>T4<sp/>message<sp/>from<sp/>RTI.<sp/>Got<sp/>%x.&quot;</highlight><highlight class="normal">,<sp/><ref refid="util_8c_1a2c4180118c19ff02a0d42f4c6758bdd3" kindref="member">_lf_my_fed_id</ref>,<sp/>buffer[0]);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Handle<sp/>the<sp/>message.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clock-sync_8c_1a1b35d21eda090ea4bf8a79f401dbdad0" kindref="member">handle_T4_clock_sync_message</ref>(buffer,<sp/>rti_socket_TCP,<sp/>receive_time);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="util_8h_1a02ab3aea33a20e71b0f50923d3b222a7" kindref="member">LOG_PRINT</ref>(</highlight><highlight class="stringliteral">&quot;Finished<sp/>initial<sp/>clock<sp/>synchronization<sp/>with<sp/>the<sp/>RTI.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="clock-sync_8c_1ace14df89540b56b069c6c619e8f37493" kindref="member">handle_T1_clock_sync_message</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>socket,<sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/>t2)<sp/>{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Extract<sp/>the<sp/>payload</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/>t1<sp/>=<sp/><ref refid="net__util_8c_1a3c03766b3fd76c7ad5901581a766caa8" kindref="member">extract_ll</ref>(&amp;(buffer[1]));</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="util_8h_1a0a27a0fa2f8d9461204242121941696c" kindref="member">DEBUG_PRINT</ref>(</highlight><highlight class="stringliteral">&quot;Received<sp/>T1<sp/>message<sp/>with<sp/>time<sp/>payload<sp/>%lld<sp/>from<sp/>RTI<sp/>at<sp/>local<sp/>time<sp/>%lld.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t1,<sp/>t2);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Store<sp/>snapshots<sp/>of<sp/>remote<sp/>(master)<sp/>and<sp/>local<sp/>physical<sp/>clock</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock-sync_8c_1aca692f1141783acf8a992f9d4713ebf0" kindref="member">_lf_rti_socket_stat</ref>.remote_physical_clock_snapshot_T1<sp/>=<sp/>t1;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock-sync_8c_1aca692f1141783acf8a992f9d4713ebf0" kindref="member">_lf_rti_socket_stat</ref>.local_physical_clock_snapshot_T2<sp/><sp/>=<sp/>t2;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>a<sp/>message<sp/>to<sp/>the<sp/>RTI<sp/>and<sp/>calculate<sp/>the<sp/>local<sp/>delay</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>T3-T2<sp/>between<sp/>receiving<sp/>the<sp/>T1<sp/>message<sp/>and<sp/>replying.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reply<sp/>will<sp/>have<sp/>the<sp/>federate<sp/>ID<sp/>as<sp/>a<sp/>payload.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>reply_buffer[1<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(int)];</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>reply_buffer[0]<sp/>=<sp/>PHYSICAL_CLOCK_SYNC_MESSAGE_T3;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="net__util_8c_1af4312040e137fb9d644f96edaa74075d" kindref="member">encode_int</ref>(<ref refid="util_8c_1a2c4180118c19ff02a0d42f4c6758bdd3" kindref="member">_lf_my_fed_id</ref>,<sp/>&amp;(reply_buffer[1]));</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>the<sp/>reply<sp/>to<sp/>the<sp/>socket.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="util_8h_1a0a27a0fa2f8d9461204242121941696c" kindref="member">DEBUG_PRINT</ref>(</highlight><highlight class="stringliteral">&quot;Sending<sp/>T3<sp/>message<sp/>to<sp/>RTI.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="net__util_8c_1ae9bab7965862259f354a419e4140b564" kindref="member">write_to_socket</ref>(socket,<sp/>1<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">),<sp/>reply_buffer)<sp/>!=<sp/>1<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a1c6c13db619d78a55e0517405f226cc3" kindref="member">error_print</ref>(</highlight><highlight class="stringliteral">&quot;Clock<sp/>sync:<sp/>Failed<sp/>to<sp/>send<sp/>T3<sp/>message<sp/>to<sp/>RTI.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Measure<sp/>the<sp/>time<sp/>_after_<sp/>the<sp/>write<sp/>on<sp/>the<sp/>assumption<sp/>that<sp/>the<sp/>read</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>from<sp/>the<sp/>socket,<sp/>which<sp/>occurs<sp/>before<sp/>this<sp/>function<sp/>is<sp/>called,<sp/>takes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>about<sp/>the<sp/>same<sp/>amount<sp/>of<sp/>time<sp/>as<sp/>the<sp/>write<sp/>of<sp/>the<sp/>reply.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock-sync_8c_1aca692f1141783acf8a992f9d4713ebf0" kindref="member">_lf_rti_socket_stat</ref>.local_delay<sp/>=<sp/><ref refid="tag_8c_1a84d52b3843db3b4fcb932326d6b288c4" kindref="member">get_physical_time</ref>()<sp/>-<sp/>t2;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="clock-sync_8c_1a1b35d21eda090ea4bf8a79f401dbdad0" kindref="member">handle_T4_clock_sync_message</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>socket,<sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/>r4)<sp/>{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Increment<sp/>the<sp/>number<sp/>of<sp/>received<sp/>T4<sp/>messages</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock-sync_8c_1aca692f1141783acf8a992f9d4713ebf0" kindref="member">_lf_rti_socket_stat</ref>.received_T4_messages_in_current_sync_window++;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Extract<sp/>the<sp/>payload</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/>t4<sp/>=<sp/><ref refid="net__util_8c_1a3c03766b3fd76c7ad5901581a766caa8" kindref="member">extract_ll</ref>(&amp;(buffer[1]));</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="util_8h_1a0a27a0fa2f8d9461204242121941696c" kindref="member">DEBUG_PRINT</ref>(</highlight><highlight class="stringliteral">&quot;Clock<sp/>sync:<sp/>Received<sp/>T4<sp/>message<sp/>with<sp/>time<sp/>payload<sp/>%lld<sp/>from<sp/>RTI<sp/>at<sp/>local<sp/>time<sp/>%lld.<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;(difference<sp/>%lld)&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t4,<sp/>r4,<sp/>r4<sp/>-<sp/>t4);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>the<sp/>round<sp/>trip<sp/>delay<sp/>from<sp/>T1<sp/>to<sp/>T4:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(T4<sp/>-<sp/>T1)<sp/>-<sp/>(T3<sp/>-<sp/>T2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>network_round_trip_delay<sp/>=<sp/>(t4</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/><ref refid="clock-sync_8c_1aca692f1141783acf8a992f9d4713ebf0" kindref="member">_lf_rti_socket_stat</ref>.remote_physical_clock_snapshot_T1)</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/><ref refid="clock-sync_8c_1aca692f1141783acf8a992f9d4713ebf0" kindref="member">_lf_rti_socket_stat</ref>.local_delay;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Estimate<sp/>the<sp/>clock<sp/>synchronization<sp/>error<sp/>based<sp/>on<sp/>the<sp/>assumption</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>that<sp/>the<sp/>channel<sp/>delay<sp/>is<sp/>symmetric:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>one_way_channel_delay<sp/>-<sp/>(T2<sp/>-<sp/>T1).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>number<sp/>is<sp/>positive<sp/>if<sp/>the<sp/>clock<sp/>at<sp/>the<sp/>federate<sp/>(T2)<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>behind<sp/>the<sp/>clock<sp/>at<sp/>the<sp/>RTI<sp/>(T1).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>estimated_clock_error<sp/>=</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>network_round_trip_delay/2</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>(<ref refid="clock-sync_8c_1aca692f1141783acf8a992f9d4713ebf0" kindref="member">_lf_rti_socket_stat</ref>.local_physical_clock_snapshot_T2</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/><ref refid="clock-sync_8c_1aca692f1141783acf8a992f9d4713ebf0" kindref="member">_lf_rti_socket_stat</ref>.remote_physical_clock_snapshot_T1);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="util_8h_1a0a27a0fa2f8d9461204242121941696c" kindref="member">DEBUG_PRINT</ref>(</highlight><highlight class="stringliteral">&quot;Clock<sp/>sync:<sp/>Estimated<sp/>clock<sp/>error:<sp/>%lld.&quot;</highlight><highlight class="normal">,<sp/>estimated_clock_error);</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>adjustment<sp/>to<sp/>the<sp/>clock<sp/>offset<sp/>(to<sp/>be<sp/>calculated)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>adjustment<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>socket<sp/>is<sp/>_lf_rti_socket_UDP,<sp/>then</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>after<sp/>sending<sp/>T4,<sp/>the<sp/>RTI<sp/>sends<sp/>a<sp/>&quot;coded<sp/>probe&quot;<sp/>message,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>which<sp/>can<sp/>be<sp/>used<sp/>to<sp/>filter<sp/>out<sp/>noise.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(socket<sp/>==<sp/><ref refid="clock-sync_8c_1aae34b5d2d5b70ef1783aef6292810208" kindref="member">_lf_rti_socket_UDP</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>the<sp/>coded<sp/>probe<sp/>message.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>can<sp/>reuse<sp/>the<sp/>same<sp/>buffer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bytes_read<sp/>=<sp/><ref refid="net__util_8c_1a9426930d10448b1f16f6afee07777f88" kindref="member">read_from_socket</ref>(socket,<sp/>1<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref>),<sp/>buffer);</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/>r5<sp/>=<sp/><ref refid="tag_8c_1a84d52b3843db3b4fcb932326d6b288c4" kindref="member">get_physical_time</ref>();</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bytes_read<sp/>&lt;<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(1<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref>))</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>buffer[0]<sp/>!=<sp/><ref refid="rti_8h_1a20be238dc0a124a1bab9b7f5bf449fc7" kindref="member">PHYSICAL_CLOCK_SYNC_MESSAGE_T4_CODED_PROBE</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a31c6c0670e0e0d97586def29f10bf7d4" kindref="member">warning_print</ref>(</highlight><highlight class="stringliteral">&quot;Clock<sp/>sync:<sp/>Did<sp/>not<sp/>get<sp/>the<sp/>expected<sp/>coded<sp/>probe<sp/>message<sp/>from<sp/>the<sp/>RTI.<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Skipping<sp/>clock<sp/>synchronization<sp/>round.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Filter<sp/>out<sp/>noise.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/>t5<sp/>=<sp/><ref refid="net__util_8c_1a3c03766b3fd76c7ad5901581a766caa8" kindref="member">extract_ll</ref>(&amp;(buffer[1]));<sp/><sp/></highlight><highlight class="comment">//<sp/>Time<sp/>at<sp/>the<sp/>RTI<sp/>of<sp/>sending<sp/>the<sp/>coded<sp/>probe.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compare<sp/>the<sp/>difference<sp/>in<sp/>time<sp/>at<sp/>the<sp/>RTI<sp/>between<sp/>sending<sp/>T4<sp/>and<sp/>the<sp/>coded<sp/>probe</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>against<sp/>the<sp/>difference<sp/>in<sp/>time<sp/>at<sp/>this<sp/>federate<sp/>of<sp/>receiving<sp/>these<sp/>two<sp/>message.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>coded_probe_distance<sp/>=<sp/>llabs((r5<sp/>-<sp/>r4)<sp/>-<sp/>(t5<sp/>-<sp/>t4));</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8h_1a0a27a0fa2f8d9461204242121941696c" kindref="member">DEBUG_PRINT</ref>(</highlight><highlight class="stringliteral">&quot;Clock<sp/>sync:<sp/>Received<sp/>code<sp/>probe<sp/>that<sp/>reveals<sp/>a<sp/>time<sp/>discrepancy<sp/>between<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;messages<sp/>of<sp/>%lld.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>coded_probe_distance);</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>against<sp/>the<sp/>guard<sp/>band.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(coded_probe_distance<sp/>&gt;=<sp/><ref refid="clock-sync_8h_1a0810a64801750ce9b148848c228c86e9" kindref="member">CLOCK_SYNC_GUARD_BAND</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Discard<sp/>this<sp/>clock<sp/>sync<sp/>cycle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8h_1a02ab3aea33a20e71b0f50923d3b222a7" kindref="member">LOG_PRINT</ref>(</highlight><highlight class="stringliteral">&quot;Clock<sp/>sync:<sp/>Skipping<sp/>the<sp/>current<sp/>clock<sp/>synchronization<sp/>cycle<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;due<sp/>to<sp/>impure<sp/>coded<sp/>probes.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8h_1a02ab3aea33a20e71b0f50923d3b222a7" kindref="member">LOG_PRINT</ref>(</highlight><highlight class="stringliteral">&quot;Clock<sp/>sync:<sp/>Coded<sp/>probe<sp/>packet<sp/>stats:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Distance:<sp/>%lld.<sp/>r5<sp/>-<sp/>r4<sp/>=<sp/>%lld.<sp/>t5<sp/>-<sp/>t4<sp/>=<sp/>%lld.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>coded_probe_distance,</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r5<sp/>-<sp/>r4,</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t5<sp/>-<sp/>t4);</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clock-sync_8c_1aca692f1141783acf8a992f9d4713ebf0" kindref="member">_lf_rti_socket_stat</ref>.received_T4_messages_in_current_sync_window--;</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Apply<sp/>a<sp/>jitter<sp/>attenuator<sp/>to<sp/>the<sp/>estimated<sp/>clock<sp/>error<sp/>to<sp/>prevent</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>large<sp/>jumps<sp/>in<sp/>the<sp/>underlying<sp/>clock.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note<sp/>that<sp/>estimated_clock_error<sp/>is<sp/>calculated<sp/>using<sp/>get_physical_time()<sp/>which<sp/>includes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>_lf_global_physical_clock_offset<sp/>adjustment.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>adjustment<sp/>=<sp/>estimated_clock_error<sp/>/<sp/><ref refid="clock-sync_8h_1a532da6f271eb75c9ac745571b995c404" kindref="member">_LF_CLOCK_SYNC_ATTENUATION</ref>;</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FIXME:<sp/>Adjust<sp/>drift.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>_lf_global_physical_clock_drift<sp/>=<sp/>((r1<sp/>-<sp/>t1)<sp/>-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(_lf_rti_socket_stat.local_physical_clock_snapshot_T2<sp/>-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_lf_rti_socket_stat.remote_physical_clock_snapshot_T1))<sp/>/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(t1<sp/>-<sp/>_lf_rti_socket_stat.remote_physical_clock_snapshot_T1);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>of<sp/>TCP<sp/>socket<sp/>means<sp/>we<sp/>are<sp/>in<sp/>the<sp/>startup<sp/>phase,<sp/>so</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>rather<sp/>than<sp/>adjust<sp/>the<sp/>clock<sp/>offset,<sp/>we<sp/>simply<sp/>set<sp/>it<sp/>to<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>estimated<sp/>error.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>adjustment<sp/>=<sp/><sp/>estimated_clock_error;</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_LF_CLOCK_SYNC_COLLECT_STATS<sp/>//<sp/>Enabled<sp/>by<sp/>default<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>RTI&apos;s<sp/>socket<sp/>stats</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/>update_socket_stat(&amp;<ref refid="clock-sync_8c_1aca692f1141783acf8a992f9d4713ebf0" kindref="member">_lf_rti_socket_stat</ref>,<sp/>network_round_trip_delay,<sp/>estimated_clock_error);</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FIXME:<sp/>Enable<sp/>alternative<sp/>regression<sp/>mechanism<sp/>here.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="util_8h_1a0a27a0fa2f8d9461204242121941696c" kindref="member">DEBUG_PRINT</ref>(</highlight><highlight class="stringliteral">&quot;Clock<sp/>sync:<sp/>Adjusting<sp/>clock<sp/>offset<sp/>running<sp/>average<sp/>by<sp/>%lld.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>adjustment/<ref refid="clock-sync_8h_1ab0eeaea19d6e5c9217a4eed928c32141" kindref="member">_LF_CLOCK_SYNC_EXCHANGES_PER_INTERVAL</ref>);</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>the<sp/>running<sp/>average</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="clock-sync_8c_1aca692f1141783acf8a992f9d4713ebf0" kindref="member">_lf_rti_socket_stat</ref>.history<sp/>+=<sp/>adjustment/<ref refid="clock-sync_8h_1ab0eeaea19d6e5c9217a4eed928c32141" kindref="member">_LF_CLOCK_SYNC_EXCHANGES_PER_INTERVAL</ref>;</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="clock-sync_8c_1aca692f1141783acf8a992f9d4713ebf0" kindref="member">_lf_rti_socket_stat</ref>.received_T4_messages_in_current_sync_window<sp/>&gt;=</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clock-sync_8h_1ab0eeaea19d6e5c9217a4eed928c32141" kindref="member">_LF_CLOCK_SYNC_EXCHANGES_PER_INTERVAL</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structlf__stat__ll" kindref="compound">lf_stat_ll</ref><sp/>stats<sp/>=<sp/>{0,<sp/>0,<sp/>0,<sp/>0};</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_LF_CLOCK_SYNC_COLLECT_STATS<sp/>//<sp/>Enabled<sp/>by<sp/>default<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stats<sp/>=<sp/>calculate_socket_stat(&amp;<ref refid="clock-sync_8c_1aca692f1141783acf8a992f9d4713ebf0" kindref="member">_lf_rti_socket_stat</ref>);</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Issue<sp/>a<sp/>warning<sp/>if<sp/>standard<sp/>deviation<sp/>is<sp/>high<sp/>in<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stats.standard_deviation<sp/>&gt;=<sp/><ref refid="clock-sync_8h_1a0810a64801750ce9b148848c228c86e9" kindref="member">CLOCK_SYNC_GUARD_BAND</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reset<sp/>the<sp/>stats</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8h_1a02ab3aea33a20e71b0f50923d3b222a7" kindref="member">LOG_PRINT</ref>(</highlight><highlight class="stringliteral">&quot;Clock<sp/>sync:<sp/>Large<sp/>standard<sp/>deviation<sp/>detected<sp/>in<sp/>network<sp/>delays<sp/>(%lld)<sp/>for<sp/>the<sp/>current<sp/>period.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>Clock<sp/>synchronization<sp/>offset<sp/>might<sp/>not<sp/>be<sp/>accurate.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stats.standard_deviation);</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clock-sync_8c_1ae267d03a5f2263604459ca4c1aef2c2c" kindref="member">reset_socket_stat</ref>(&amp;<ref refid="clock-sync_8c_1aca692f1141783acf8a992f9d4713ebf0" kindref="member">_lf_rti_socket_stat</ref>);</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>number<sp/>of<sp/>received<sp/>T4<sp/>messages<sp/>has<sp/>reached<sp/>_LF_CLOCK_SYNC_EXCHANGES_PER_INTERVAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>which<sp/>means<sp/>we<sp/>can<sp/>now<sp/>adjust<sp/>the<sp/>clock<sp/>offset.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>the<sp/>AVG<sp/>algorithm,<sp/>history<sp/>is<sp/>a<sp/>running<sp/>average<sp/>and<sp/>can<sp/>be<sp/>directly</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>applied<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tag_8c_1a25a4105de2c979a2af935f5381058f15" kindref="member">_lf_global_physical_clock_offset</ref><sp/>+=<sp/><ref refid="clock-sync_8c_1aca692f1141783acf8a992f9d4713ebf0" kindref="member">_lf_rti_socket_stat</ref>.history;</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>@note<sp/>AVG<sp/>and<sp/>SD<sp/>will<sp/>be<sp/>zero<sp/>if<sp/>collect-stats<sp/>is<sp/>set<sp/>to<sp/>false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8h_1a02ab3aea33a20e71b0f50923d3b222a7" kindref="member">LOG_PRINT</ref>(</highlight><highlight class="stringliteral">&quot;Clock<sp/>sync:&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>New<sp/>offset:<sp/>%lld.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>Round<sp/>trip<sp/>delay<sp/>to<sp/>RTI<sp/>(now):<sp/>%lld.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>(AVG):<sp/>%lld.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>(SD):<sp/>%lld.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>Local<sp/>round<sp/>trip<sp/>delay:<sp/>%lld.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>Test<sp/>offset:<sp/>%lld.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tag_8c_1a25a4105de2c979a2af935f5381058f15" kindref="member">_lf_global_physical_clock_offset</ref>,</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>network_round_trip_delay,</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stats.average,</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stats.standard_deviation,</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clock-sync_8c_1aca692f1141783acf8a992f9d4713ebf0" kindref="member">_lf_rti_socket_stat</ref>.local_delay,</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tag_8c_1a0fb7f81b3b001d51f72b052a8a23c6d2" kindref="member">_lf_global_test_physical_clock_offset</ref>);</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reset<sp/>the<sp/>stats</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clock-sync_8c_1ae267d03a5f2263604459ca4c1aef2c2c" kindref="member">reset_socket_stat</ref>(&amp;<ref refid="clock-sync_8c_1aca692f1141783acf8a992f9d4713ebf0" kindref="member">_lf_rti_socket_stat</ref>);</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>last<sp/>instant<sp/>at<sp/>which<sp/>the<sp/>clocks<sp/>were<sp/>synchronized</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clock-sync_8c_1aa7b61bf176d2a9ed52aa9c4f14d61577" kindref="member">_lf_last_clock_sync_instant</ref><sp/>=<sp/>r4;</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="449"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"></highlight></codeline>
+<codeline lineno="454"><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="clock-sync_8c_1ae471d3256d0e072e5ee6bb83b0d0e99b" kindref="member">listen_to_rti_UDP_thread</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Listen<sp/>for<sp/>UDP<sp/>messages<sp/>from<sp/>the<sp/>RTI.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>only<sp/>expected<sp/>messages<sp/>are<sp/>T1<sp/>and<sp/>T4,<sp/>which<sp/>have</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>payload<sp/>of<sp/>a<sp/>time<sp/>value.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>message_size<sp/>=<sp/>1<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref>);</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buffer[message_size];</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>thread<sp/>will<sp/>be<sp/>either<sp/>waiting<sp/>for<sp/>T1<sp/>or<sp/>waiting</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>T4.<sp/>Track<sp/>the<sp/>mode<sp/>with<sp/>this<sp/>variable:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>waiting_for_T1<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Even<sp/>though<sp/>UDP<sp/>messages<sp/>are<sp/>connectionless,<sp/>we<sp/>need<sp/>to<sp/>call<sp/>connect()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>at<sp/>least<sp/>once<sp/>to<sp/>record<sp/>the<sp/>address<sp/>of<sp/>the<sp/>RTI&apos;s<sp/>UDP<sp/>port.<sp/>The<sp/>RTI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>uses<sp/>bind()<sp/>to<sp/>reserve<sp/>that<sp/>address,<sp/>so<sp/>recording<sp/>it<sp/>once<sp/>is<sp/>sufficient.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>connected<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sockaddr_in<sp/>RTI_UDP_addr;</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>socklen_t<sp/>RTI_UDP_addr_length<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(RTI_UDP_addr);</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bytes_read<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>from<sp/>the<sp/>UDP<sp/>socket</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bytes<sp/>=<sp/>recvfrom(<ref refid="clock-sync_8c_1aae34b5d2d5b70ef1783aef6292810208" kindref="member">_lf_rti_socket_UDP</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>UDP<sp/>socket</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;buffer[bytes_read],<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>buffer<sp/>to<sp/>read<sp/>into</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>message_size<sp/>-<sp/>bytes_read,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>bytes<sp/>to<sp/>read</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSG_WAITALL,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>the<sp/>entire<sp/>datagram</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sockaddr*)&amp;RTI_UDP_addr,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Record<sp/>the<sp/>RTI&apos;s<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;RTI_UDP_addr_length);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>RTI&apos;s<sp/>address<sp/>length</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Try<sp/>reading<sp/>again<sp/>if<sp/>errno<sp/>indicates<sp/>the<sp/>need<sp/>to<sp/>try<sp/>again<sp/>and<sp/>there<sp/>are<sp/>more</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bytes<sp/>to<sp/>read.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bytes<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bytes_read<sp/>+=<sp/>bytes;</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((errno<sp/>==<sp/>EAGAIN<sp/>||<sp/>errno<sp/>==<sp/>EWOULDBLOCK)<sp/>&amp;&amp;<sp/>bytes_read<sp/>&lt;<sp/>message_size);</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"></highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>local<sp/>physical<sp/>time<sp/>before<sp/>doing<sp/>anything<sp/>else.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/>receive_time<sp/>=<sp/><ref refid="tag_8c_1a84d52b3843db3b4fcb932326d6b288c4" kindref="member">get_physical_time</ref>();</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"></highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bytes_read<sp/>&lt;<sp/>message_size)<sp/>{</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Either<sp/>the<sp/>socket<sp/>has<sp/>closed<sp/>or<sp/>the<sp/>RTI<sp/>has<sp/>sent<sp/>EOF.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Exit<sp/>the<sp/>thread<sp/>to<sp/>halt<sp/>clock<sp/>synchronization.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a1c6c13db619d78a55e0517405f226cc3" kindref="member">error_print</ref>(</highlight><highlight class="stringliteral">&quot;Clock<sp/>sync:<sp/>UDP<sp/>socket<sp/>to<sp/>RTI<sp/>is<sp/>broken:<sp/>%s.<sp/>Clock<sp/>sync<sp/>is<sp/>now<sp/>disabled.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strerror(errno));</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8h_1a0a27a0fa2f8d9461204242121941696c" kindref="member">DEBUG_PRINT</ref>(</highlight><highlight class="stringliteral">&quot;Clock<sp/>sync:<sp/>Received<sp/>UDP<sp/>message<sp/>%u<sp/>from<sp/>RTI<sp/>on<sp/>port<sp/>%u.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer[0],<sp/>ntohs(RTI_UDP_addr.sin_port));</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"></highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Handle<sp/>the<sp/>message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(waiting_for_T1)<sp/>{</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(buffer[0]<sp/>==<sp/><ref refid="rti_8h_1a31f24c0e324077c60e4ded8a30b15978" kindref="member">PHYSICAL_CLOCK_SYNC_MESSAGE_T1</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>waiting_for_T1<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>reply<sp/>(or<sp/>return)<sp/>address<sp/>is<sp/>given<sp/>in<sp/>RTI_UDP_addr.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>utilize<sp/>the<sp/>connect()<sp/>function<sp/>to<sp/>set<sp/>the<sp/>default<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>of<sp/>the<sp/>_lf_rti_socket_UDP<sp/>socket<sp/>to<sp/>RTI_UDP_addr.<sp/>This<sp/>is<sp/>convenient</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>because<sp/>subsequent<sp/>calls<sp/>to<sp/>write_to_socket<sp/>do<sp/>not<sp/>need<sp/>this<sp/>address.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note<sp/>that<sp/>this<sp/>only<sp/>needs<sp/>to<sp/>be<sp/>done<sp/>for<sp/>handle_T1_clock_sync_message()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>because<sp/>it<sp/>is<sp/>the<sp/>only<sp/>function<sp/>that<sp/>needs<sp/>to<sp/>reply<sp/>to<sp/>the<sp/>RTI.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!connected</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>connect(<ref refid="clock-sync_8c_1aae34b5d2d5b70ef1783aef6292810208" kindref="member">_lf_rti_socket_UDP</ref>,</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sockaddr*)&amp;RTI_UDP_addr,</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RTI_UDP_addr_length)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a1c6c13db619d78a55e0517405f226cc3" kindref="member">error_print</ref>(</highlight><highlight class="stringliteral">&quot;Clock<sp/>sync:<sp/>Federate<sp/>%d<sp/>failed<sp/>to<sp/>register<sp/>RTI&apos;s<sp/>UDP<sp/>reply<sp/>address.<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Clock<sp/>synchronization<sp/>has<sp/>stopped.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a2c4180118c19ff02a0d42f4c6758bdd3" kindref="member">_lf_my_fed_id</ref>);</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>connected<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="clock-sync_8c_1ace14df89540b56b069c6c619e8f37493" kindref="member">handle_T1_clock_sync_message</ref>(buffer,<sp/><ref refid="clock-sync_8c_1aae34b5d2d5b70ef1783aef6292810208" kindref="member">_lf_rti_socket_UDP</ref>,<sp/>receive_time)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Failed<sp/>to<sp/>send<sp/>T3<sp/>reply.<sp/>Wait<sp/>for<sp/>the<sp/>next<sp/>T1.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>waiting_for_T1<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Waiting<sp/>for<sp/>a<sp/>T1<sp/>message,<sp/>but<sp/>received<sp/>something<sp/>else.<sp/>Discard<sp/>message.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a31c6c0670e0e0d97586def29f10bf7d4" kindref="member">warning_print</ref>(</highlight><highlight class="stringliteral">&quot;Clock<sp/>sync:<sp/>Received<sp/>%u<sp/>message<sp/>from<sp/>RTI,<sp/>but<sp/>waiting<sp/>for<sp/>%u<sp/>(T1).<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Discarding<sp/>the<sp/>message.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="528"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer[0],</highlight></codeline>
+<codeline lineno="529"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rti_8h_1a31f24c0e324077c60e4ded8a30b15978" kindref="member">PHYSICAL_CLOCK_SYNC_MESSAGE_T1</ref>);</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(buffer[0]<sp/>==<sp/>PHYSICAL_CLOCK_SYNC_MESSAGE_T4)<sp/>{</highlight></codeline>
+<codeline lineno="533"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clock-sync_8c_1a1b35d21eda090ea4bf8a79f401dbdad0" kindref="member">handle_T4_clock_sync_message</ref>(buffer,<sp/><ref refid="clock-sync_8c_1aae34b5d2d5b70ef1783aef6292810208" kindref="member">_lf_rti_socket_UDP</ref>,<sp/>receive_time);</highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>waiting_for_T1<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="util_8c_1a31c6c0670e0e0d97586def29f10bf7d4" kindref="member">warning_print</ref>(</highlight><highlight class="stringliteral">&quot;Clock<sp/>sync:<sp/>Received<sp/>from<sp/>RTI<sp/>an<sp/>unexpected<sp/>UDP<sp/>message<sp/>type:<sp/>%u.<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="537"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Discarding<sp/>the<sp/>message<sp/>and<sp/>skipping<sp/>this<sp/>round.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer[0]);</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Ignore<sp/>further<sp/>clock<sp/>sync<sp/>messages<sp/>until<sp/>we<sp/>get<sp/>a<sp/>T1.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>waiting_for_T1<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="542"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="544"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="545"><highlight class="normal"></highlight></codeline>
+<codeline lineno="553"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="clock-sync_8c_1ac094b53ced87d3cbd617a66591f4282a" kindref="member">create_clock_sync_thread</ref>(lf_thread_t*<sp/>thread_id)<sp/>{</highlight></codeline>
+<codeline lineno="554"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_LF_CLOCK_SYNC_ON</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="555"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>One<sp/>for<sp/>UDP<sp/>messages<sp/>if<sp/>clock<sp/>synchronization<sp/>is<sp/>enabled<sp/>for<sp/>this<sp/>federate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="556"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>lf_thread_create(thread_id,<sp/><ref refid="clock-sync_8c_1ae471d3256d0e072e5ee6bb83b0d0e99b" kindref="member">listen_to_rti_UDP_thread</ref>,<sp/>NULL);</highlight></codeline>
+<codeline lineno="557"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>_LF_CLOCK_SYNC_ON</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="559"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c"/>
+  </compounddef>
+</doxygen>

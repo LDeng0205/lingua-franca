@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespace_lingua_franca_base_1_1functions" kind="namespace" language="Python">
+    <compoundname>LinguaFrancaBase::functions</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="functions_8py_1a508ee351e0cde164869b1af704acba2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def LinguaFrancaBase.functions.NSEC</definition>
+        <argsstring>(t)</argsstring>
+        <name>NSEC</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" line="3" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" bodystart="3" bodyend="4"/>
+      </memberdef>
+      <memberdef kind="function" id="functions_8py_1ac1601c4219c59d3a1366767d9b1a29ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def LinguaFrancaBase.functions.NSECS</definition>
+        <argsstring>(t)</argsstring>
+        <name>NSECS</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" line="5" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" bodystart="5" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="functions_8py_1a8cf5a96eafcd8f584857f2fbd559b612" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def LinguaFrancaBase.functions.USEC</definition>
+        <argsstring>(t)</argsstring>
+        <name>USEC</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" line="7" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" bodystart="7" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="functions_8py_1a573377b32232be452d628fd6d38cfcdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def LinguaFrancaBase.functions.USECS</definition>
+        <argsstring>(t)</argsstring>
+        <name>USECS</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" line="9" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" bodystart="9" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="functions_8py_1a7ab70b77a6db4404b3395a233d9e06b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def LinguaFrancaBase.functions.MSEC</definition>
+        <argsstring>(t)</argsstring>
+        <name>MSEC</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" line="11" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" bodystart="11" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="functions_8py_1af9954dc02ba481076fc38bb953aaff54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def LinguaFrancaBase.functions.MSECS</definition>
+        <argsstring>(t)</argsstring>
+        <name>MSECS</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" line="13" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" bodystart="13" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="functions_8py_1a0fc690c67777a772a30c153b013e3364" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def LinguaFrancaBase.functions.SEC</definition>
+        <argsstring>(t)</argsstring>
+        <name>SEC</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" line="15" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" bodystart="15" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="functions_8py_1ad2280873c19d8ec3afb780cb37fd12d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def LinguaFrancaBase.functions.SECS</definition>
+        <argsstring>(t)</argsstring>
+        <name>SECS</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" line="17" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" bodystart="17" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="functions_8py_1a5110d593d45250560d22c219965c1394" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def LinguaFrancaBase.functions.MINUTE</definition>
+        <argsstring>(t)</argsstring>
+        <name>MINUTE</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" line="19" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" bodystart="19" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="functions_8py_1a8b5e50823c6c88ffe8ce83a5ccdec46e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def LinguaFrancaBase.functions.MINUTES</definition>
+        <argsstring>(t)</argsstring>
+        <name>MINUTES</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" line="21" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" bodystart="21" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="functions_8py_1a057c67457d585b1511f8c6d4697f7292" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def LinguaFrancaBase.functions.HOUR</definition>
+        <argsstring>(t)</argsstring>
+        <name>HOUR</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" line="23" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" bodystart="23" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="functions_8py_1a1b1ab109eada4bbbc66d7b4abcd7dea9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def LinguaFrancaBase.functions.HOURS</definition>
+        <argsstring>(t)</argsstring>
+        <name>HOURS</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" line="25" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" bodystart="25" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="functions_8py_1af05c7491d59f81530f058428e06f9899" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def LinguaFrancaBase.functions.DAY</definition>
+        <argsstring>(t)</argsstring>
+        <name>DAY</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" line="27" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" bodystart="27" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="functions_8py_1a1fac255eae5facecb22e3b51ae43ee26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def LinguaFrancaBase.functions.DAYS</definition>
+        <argsstring>(t)</argsstring>
+        <name>DAYS</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" line="29" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" bodystart="29" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="functions_8py_1a626389182eeadbb3f21213362c9c2009" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def LinguaFrancaBase.functions.WEEK</definition>
+        <argsstring>(t)</argsstring>
+        <name>WEEK</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" line="31" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" bodystart="31" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="functions_8py_1ac0c84717ab1aad0a206da7b99fc05390" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def LinguaFrancaBase.functions.WEEKS</definition>
+        <argsstring>(t)</argsstring>
+        <name>WEEKS</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" line="33" column="1" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" bodystart="33" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/LinguaFrancaBase/functions.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

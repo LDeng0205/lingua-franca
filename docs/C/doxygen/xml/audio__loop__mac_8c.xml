@@ -1,0 +1,636 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="audio__loop__mac_8c" kind="file" language="C++">
+    <compoundname>audio_loop_mac.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">pthread.h</includes>
+    <includes refid="audio__loop_8h" local="yes">audio_loop.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="yes">AudioToolbox/AudioToolbox.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c</label>
+        <link refid="audio__loop__mac_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>audio_loop.h</label>
+        <link refid="audio__loop_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>wave_file_reader.h</label>
+        <link refid="wave__file__reader_8h"/>
+      </node>
+      <node id="8">
+        <label>core/tag.h</label>
+        <link refid="tag_8h"/>
+      </node>
+      <node id="5">
+        <label>pthread.h</label>
+      </node>
+      <node id="10">
+        <label>AudioToolbox/AudioToolbox.h</label>
+      </node>
+      <node id="9">
+        <label>unistd.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structnote" prot="public">note</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="audio__loop__mac_8c_1a5e30a57f8fad978147855883093ad9a6" prot="public" static="no" mutable="no">
+        <type>pthread_mutex_t</type>
+        <definition>pthread_mutex_t lf_audio_mutex</definition>
+        <argsstring></argsstring>
+        <name>lf_audio_mutex</name>
+        <initializer>= PTHREAD_MUTEX_INITIALIZER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" line="44" column="17" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="audio__loop__mac_8c_1a34cd348b8ae48a298eda2f450ff1c73b" prot="public" static="no" mutable="no">
+        <type>pthread_cond_t</type>
+        <definition>pthread_cond_t lf_audio_cond</definition>
+        <argsstring></argsstring>
+        <name>lf_audio_cond</name>
+        <initializer>= PTHREAD_COND_INITIALIZER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" line="45" column="16" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="audio__loop__mac_8c_1aa29555260d55b88cf8cb57a94a3e6b33" prot="public" static="no" mutable="no">
+        <type>int16_t *</type>
+        <definition>int16_t* next_buffer</definition>
+        <argsstring></argsstring>
+        <name>next_buffer</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" line="49" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="audio__loop__mac_8c_1a784b39be6414a39499da33247f5fccef" prot="public" static="no" mutable="no">
+        <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+        <definition>instant_t next_buffer_start_time</definition>
+        <argsstring></argsstring>
+        <name>next_buffer_start_time</name>
+        <initializer>= NEVER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" line="50" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="audio__loop__mac_8c_1aa289199cd513300864295dd003b671e2" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structnote" kindref="compound">note</ref></type>
+        <definition>struct note notes[NUM_NOTES]</definition>
+        <argsstring>[NUM_NOTES]</argsstring>
+        <name>notes</name>
+        <initializer>= { 0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" line="50" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="audio__loop__mac_8c_1ab2c16ae407fd99b96ec58edf6cf0c6d7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int note_counter</definition>
+        <argsstring></argsstring>
+        <name>note_counter</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" line="65" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="audio__loop__mac_8c_1a34f33cc639766b02125ec0fc19eff705" prot="public" static="no" mutable="no">
+        <type>pthread_t</type>
+        <definition>pthread_t loop_thread_id</definition>
+        <argsstring></argsstring>
+        <name>loop_thread_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" line="204" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="audio__loop__mac_8c_1ad31062a1d6536676ea4a0837a23ecb94" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool loop_thread_started</definition>
+        <argsstring></argsstring>
+        <name>loop_thread_started</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" line="205" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="audio__loop__mac_8c_1ae0d2efe97b2aac751245705e32d2c927" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void add_to_sound</definition>
+        <argsstring>(int index_offset, double value)</argsstring>
+        <name>add_to_sound</name>
+        <param>
+          <type>int</type>
+          <declname>index_offset</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add the given value to the current write buffer at the specified index. If the resulting value is larger than what can be represented in the 16-bit short, truncate it. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Where in the buffer to add the amplitude. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amplitude to add to whatever amplitude is already there. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" line="74" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" bodystart="74" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="audio__loop__mac_8c_1a84211de54f3d6c0fa430f5a31291fcd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void callback</definition>
+        <argsstring>(void *ignored, AudioQueueRef queue, AudioQueueBufferRef buf_ref)</argsstring>
+        <name>callback</name>
+        <param>
+          <type>void *</type>
+          <declname>ignored</declname>
+        </param>
+        <param>
+          <type>AudioQueueRef</type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type>AudioQueueBufferRef</type>
+          <declname>buf_ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that is called by the audio loop to fill the audio buffer with the next batch of audio data. When this callback occurs, this grabs the mutex lock, copies the buffer that the main program has been filling into the destination buffer, clears the next buffer, and updates the start time of the next buffer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" line="91" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" bodystart="91" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="audio__loop__mac_8c_1a06639dc7e23a325c97fc0d3bd9b3beaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* run_audio_loop</definition>
+        <argsstring>(void *ignored)</argsstring>
+        <name>run_audio_loop</name>
+        <param>
+          <type>void *</type>
+          <declname>ignored</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Run the audio loop indefinitely. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" line="146" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" bodystart="146" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="audio__loop__mac_8c_1a7e03b277fd2f2b3ae6aa029e5256da3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lf_start_audio_loop</definition>
+        <argsstring>(instant_t start_time)</argsstring>
+        <name>lf_start_audio_loop</name>
+        <param>
+          <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+          <declname>start_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Start an audio loop thread that becomes ready to receive audio amplitude samples via <ref refid="audio__loop__mac_8c_1ae0d2efe97b2aac751245705e32d2c927" kindref="member">add_to_sound()</ref>. If there is already an audio loop running, then do nothing. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The logical time that aligns with the first audio buffer. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" line="214" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" bodystart="214" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="audio__loop__mac_8c_1a65266402bd1ede8be91b6a0a5a34f767" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lf_stop_audio_loop</definition>
+        <argsstring>()</argsstring>
+        <name>lf_stop_audio_loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stop the audio loop thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" line="238" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" bodystart="238" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="audio__loop__mac_8c_1a20d5fc7b37764eb8c3a4e917e93ad7d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lf_play_audio_waveform</definition>
+        <argsstring>(lf_waveform_t *waveform, float emphasis, instant_t start_time)</argsstring>
+        <name>lf_play_audio_waveform</name>
+        <param>
+          <type><ref refid="structlf__waveform__t" kindref="compound">lf_waveform_t</ref> *</type>
+          <declname>waveform</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>emphasis</declname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+          <declname>start_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Play the specified waveform with the specified emphasis at the specified time. If the waveform is null, play a simple tick (an impulse). If the waveform has length zero or volume 0, play nothing.</para>
+<para>If the time is too far in the future (beyond the window of the current audio write buffer), then block until the audio output catches up. If the audio playback has already passed the specified point, then play the waveform as soon as possible and return 1. Otherwise, return 0.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>waveform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The waveform to play or NULL to just play a tick. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>emphasis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The emphasis (0.0 for silence, 1.0 for waveform volume). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time to start playing the waveform. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" line="259" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c" bodystart="259" bodyend="328"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Edward A. Lee</para>
+</simplesect>
+</para>
+<sect1 id="util_8h_1LICENSE">
+<title>LICENSE</title>
+<para>Copyright (c) 2020, The University of California at Berkeley and TU Dresden</para>
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</para>
+<para><orderedlist>
+<listitem><para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem><para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem></orderedlist>
+</para>
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+</sect1>
+<sect1 id="util_8h_1DESCRIPTION">
+<title>DESCRIPTION</title>
+<para>Audio functions for MacOS.</para>
+<para>See <ref refid="audio__loop_8h" kindref="compound">audio_loop.h</ref> for instructions. </para>
+</sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="36"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pthread.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="audio__loop_8h" kindref="compound">audio_loop.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AudioToolbox/AudioToolbox.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">pthread_mutex_t<sp/>lf_audio_mutex<sp/>=<sp/>PTHREAD_MUTEX_INITIALIZER;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">pthread_cond_t<sp/>lf_audio_cond<sp/>=<sp/>PTHREAD_COND_INITIALIZER;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>the<sp/>buffer<sp/>into<sp/>which<sp/>to<sp/>currently<sp/>write.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>null<sp/>before<sp/>the<sp/>buffer<sp/>is<sp/>ready.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">int16_t*<sp/>next_buffer<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/>next_buffer_start_time<sp/>=<sp/>NEVER;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structnote" kindref="compound">note</ref><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlf__waveform__t" kindref="compound">lf_waveform_t</ref>*<sp/>waveform;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>position;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Starts<sp/>at<sp/>0<sp/>when<sp/>note<sp/>starts.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>volume;<sp/><sp/></highlight><highlight class="comment">//<sp/>0.0<sp/>for<sp/>not<sp/>active.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Array<sp/>keeping<sp/>track<sp/>of<sp/>notes<sp/>being<sp/>played.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structnote" kindref="compound">note</ref><sp/>notes[NUM_NOTES]<sp/>=<sp/>{<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Notes<sp/>are<sp/>added<sp/>sequentially.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/>When<sp/>we<sp/>reach<sp/>the<sp/>end<sp/>of<sp/>the<sp/>notes<sp/>array,<sp/>we<sp/>cycle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//<sp/>back<sp/>to<sp/>the<sp/>beginning.<sp/>If<sp/>the<sp/>oldest<sp/>note<sp/>has<sp/>not</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/>yet<sp/>finished<sp/>playing,<sp/>it<sp/>will<sp/>be<sp/>replaced<sp/>by<sp/>the<sp/>new<sp/>note.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>note_counter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="audio__loop__mac_8c_1ae0d2efe97b2aac751245705e32d2c927" kindref="member">add_to_sound</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index_offset,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sample_value<sp/>=<sp/>next_buffer[index_offset]<sp/>+<sp/>value;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sample_value<sp/>&gt;<sp/>MAX_AMPLITUDE)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sample_value<sp/>=<sp/>MAX_AMPLITUDE;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sample_value<sp/>&lt;<sp/>-MAX_AMPLITUDE)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sample_value<sp/>=<sp/>-MAX_AMPLITUDE;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>next_buffer[index_offset]<sp/>=<sp/>(int16_t)sample_value;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="audio__loop__mac_8c_1a84211de54f3d6c0fa430f5a31291fcd0" kindref="member">callback</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ignored,<sp/>AudioQueueRef<sp/>queue,<sp/>AudioQueueBufferRef<sp/>buf_ref)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>a<sp/>C<sp/>pointer<sp/>from<sp/>the<sp/>reference<sp/>passed<sp/>in.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>AudioQueueBuffer<sp/>*buf<sp/>=<sp/>buf_ref;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Array<sp/>of<sp/>samples<sp/>in<sp/>the<sp/>buffer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/>*samples<sp/>=<sp/>buf-&gt;mAudioData;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_mutex_lock(&amp;lf_audio_mutex);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>this<sp/>the<sp/>new<sp/>buffer<sp/>to<sp/>write<sp/>into.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>next_buffer<sp/>=<sp/>buf-&gt;mAudioData;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>out<sp/>the<sp/>next<sp/>buffer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(next_buffer,<sp/>0,<sp/>AUDIO_BUFFER_SIZE<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(int16_t));</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>next_buffer_start_time<sp/>+=<sp/>BUFFER_DURATION_NS;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fill<sp/>the<sp/>buffer<sp/>with<sp/>any<sp/>trailing<sp/>sample<sp/>data<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>didn&apos;t<sp/>fit<sp/>in<sp/>the<sp/>previous<sp/>buffer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>note_to_use<sp/>=<sp/>0;<sp/>note_to_use<sp/>&lt;<sp/>NUM_NOTES;<sp/>note_to_use++)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structnote" kindref="compound">note</ref>*<sp/>note_instance<sp/>=<sp/>&amp;(notes[note_to_use]);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>as<sp/>much<sp/>of<sp/>the<sp/>note<sp/>instance<sp/>into<sp/>the<sp/>buffer<sp/>as<sp/>will<sp/>fit.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>AUDIO_BUFFER_SIZE;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(note_instance-&gt;waveform<sp/>==<sp/>NULL<sp/>||<sp/>note_instance-&gt;volume<sp/>==<sp/>0.0)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>the<sp/>value<sp/>to<sp/>add<sp/>to<sp/>the<sp/>sound<sp/>by<sp/>averaging<sp/>all<sp/>the<sp/>channels.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>channel<sp/>=<sp/>0;<sp/>channel<sp/>&lt;<sp/>note_instance-&gt;waveform-&gt;num_channels;<sp/>channel++)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>+=<sp/>note_instance-&gt;waveform-&gt;waveform[note_instance-&gt;position<sp/>+<sp/>channel];</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>=<sp/>value<sp/>/<sp/>note_instance-&gt;waveform-&gt;num_channels;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="audio__loop__mac_8c_1ae0d2efe97b2aac751245705e32d2c927" kindref="member">add_to_sound</ref>(i,<sp/>value<sp/>*<sp/>note_instance-&gt;volume);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>note_instance-&gt;position<sp/>+=<sp/>note_instance-&gt;waveform-&gt;num_channels;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(note_instance-&gt;position<sp/>&gt;=<sp/>note_instance-&gt;waveform-&gt;length<sp/>-<sp/>note_instance-&gt;waveform-&gt;num_channels)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reached<sp/>the<sp/>end<sp/>of<sp/>the<sp/>note.<sp/>Reset<sp/>the<sp/>note.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>note_instance-&gt;volume<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>note_instance-&gt;position<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>note_instance-&gt;waveform<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reinsert<sp/>this<sp/>same<sp/>audio<sp/>buffer<sp/>at<sp/>the<sp/>end<sp/>of<sp/>the<sp/>queue.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>AudioQueueEnqueueBuffer<sp/>(queue,<sp/>buf_ref,<sp/>0,<sp/>NULL);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>In<sp/>case<sp/>the<sp/>other<sp/>thread<sp/>is<sp/>waiting<sp/>for<sp/>this<sp/>event,<sp/>notify</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(the<sp/>other<sp/>thread<sp/>should<sp/>not<sp/>be<sp/>waiting).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_cond_signal(&amp;lf_audio_cond);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_mutex_unlock(&amp;lf_audio_mutex);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="audio__loop__mac_8c_1a06639dc7e23a325c97fc0d3bd9b3beaa" kindref="member">run_audio_loop</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>ignored)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>an<sp/>audio<sp/>format<sp/>description.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>AudioStreamBasicDescription<sp/>fmt<sp/>=<sp/>{<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>fmt.mSampleRate<sp/>=<sp/>44100;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>fmt.mFormatID<sp/>=<sp/>kAudioFormatLinearPCM;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>fmt.mFormatFlags<sp/>=<sp/>kAudioFormatFlagIsSignedInteger<sp/>|<sp/>kAudioFormatFlagIsPacked;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>fmt.mFramesPerPacket<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>fmt.mChannelsPerFrame<sp/>=<sp/>1;<sp/></highlight><highlight class="comment">//<sp/>2<sp/>for<sp/>stereo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>fmt.mBytesPerPacket<sp/>=<sp/>fmt.mBytesPerFrame<sp/>=<sp/>2;<sp/></highlight><highlight class="comment">//<sp/>x2<sp/>for<sp/>stereo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>fmt.mBitsPerChannel<sp/>=<sp/>16;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>AudioQueueRef<sp/>queue;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Double<sp/>buffering.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>AudioQueueBufferRef<sp/>buf_ref1,<sp/>buf_ref2;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>buffer_size_bytes<sp/>=<sp/>AUDIO_BUFFER_SIZE<sp/>*<sp/>2;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>an<sp/>audio<sp/>queue<sp/>output<sp/>with<sp/>the<sp/>specified<sp/>format.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Third<sp/>argument<sp/>is<sp/>an<sp/>optional<sp/>pointer<sp/>to<sp/>pass<sp/>to<sp/>the<sp/>callback<sp/>function.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(AudioQueueNewOutput(&amp;fmt,<sp/><ref refid="audio__loop__mac_8c_1a84211de54f3d6c0fa430f5a31291fcd0" kindref="member">callback</ref>,<sp/>NULL,<sp/>CFRunLoopGetCurrent(),<sp/>kCFRunLoopCommonModes,<sp/>0,<sp/>&amp;queue)<sp/>!=<sp/>0</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>AudioQueueAllocateBuffer<sp/>(queue,<sp/>buffer_size_bytes,<sp/>&amp;buf_ref1)<sp/>!=<sp/>0</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>AudioQueueAllocateBuffer<sp/>(queue,<sp/>buffer_size_bytes,<sp/>&amp;buf_ref2)<sp/>!=<sp/>0</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;WARNING:<sp/>Failed<sp/>to<sp/>create<sp/>audio<sp/>output.<sp/>No<sp/>audio<sp/>will<sp/>be<sp/>produced&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Convert<sp/>reference<sp/>to<sp/>a<sp/>C<sp/>pointer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>AudioQueueBuffer*<sp/>buf1<sp/>=<sp/>buf_ref1;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>AudioQueueBuffer*<sp/>buf2<sp/>=<sp/>buf_ref2;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>buffer<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>buf1-&gt;mAudioDataByteSize<sp/>=<sp/>buffer_size_bytes;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>buf2-&gt;mAudioDataByteSize<sp/>=<sp/>buffer_size_bytes;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Put<sp/>both<sp/>buffers<sp/>in<sp/>the<sp/>queue.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="audio__loop__mac_8c_1a84211de54f3d6c0fa430f5a31291fcd0" kindref="member">callback</ref><sp/>(NULL,<sp/>queue,<sp/>buf_ref1);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="audio__loop__mac_8c_1a84211de54f3d6c0fa430f5a31291fcd0" kindref="member">callback</ref><sp/>(NULL,<sp/>queue,<sp/>buf_ref2);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>At<sp/>this<sp/>point,<sp/>next_buffer_start_time<sp/>==<sp/>start<sp/>time<sp/>of<sp/>the<sp/>model.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>second<sp/>buffer<sp/>to<sp/>be<sp/>the<sp/>one<sp/>being<sp/>currently<sp/>written<sp/>into.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>next_buffer<sp/>=<sp/>buf2-&gt;mAudioData;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>volume.<sp/>(Ignoring<sp/>errors)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>AudioQueueSetParameter<sp/>(queue,<sp/>kAudioQueueParam_Volume,<sp/>1.0);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>audio<sp/>at<sp/>start<sp/>time<sp/>plus<sp/>one<sp/>buffer<sp/>duration.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">AudioTimeStamp<sp/>time_stamp<sp/>=<sp/>{<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>time_stamp.mHostTime<sp/>=<sp/>next_buffer_start_time<sp/>+<sp/>BUFFER_DURATION_NS;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>as<sp/>soon<sp/>as<sp/>possible.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(AudioQueueStart<sp/>(queue,<sp/>&amp;time_stamp)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;WARNING:<sp/>Failed<sp/>to<sp/>start<sp/>audio<sp/>output.<sp/>No<sp/>audio<sp/>will<sp/>be<sp/>produced&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>CFRunLoopRun();</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal">pthread_t<sp/>loop_thread_id;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>loop_thread_started<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="audio__loop__mac_8c_1a7e03b277fd2f2b3ae6aa029e5256da3e" kindref="member">lf_start_audio_loop</ref>(<ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/><ref refid="tag_8c_1a20b56e8fb05c017508f1c4fa2e311a87" kindref="member">start_time</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(loop_thread_started)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>loop_thread_started<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>start<sp/>time<sp/>of<sp/>the<sp/>current<sp/>buffer<sp/>to<sp/>the<sp/>current<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>minus<sp/>twice<sp/>the<sp/>buffer<sp/>duration.<sp/>The<sp/>two<sp/>calls<sp/>to<sp/>callback()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>during<sp/>setup<sp/>will<sp/>increment<sp/>this<sp/>to<sp/>equal<sp/>to<sp/>the<sp/>start<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Then<sp/>create<sp/>a<sp/>thread<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>start<sp/>the<sp/>audio<sp/>loop.<sp/>That<sp/>thread<sp/>will<sp/>place</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>two<sp/>empty<sp/>audio<sp/>buffers<sp/>in<sp/>the<sp/>queue<sp/>and<sp/>will<sp/>schedule<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>audio<sp/>to<sp/>start<sp/>at<sp/>the<sp/>current<sp/>logical<sp/>time<sp/>plus<sp/>the<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>duration.<sp/>The<sp/>current<sp/>buffer<sp/>being<sp/>filled<sp/>(the<sp/>second<sp/>buffer)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>will<sp/>have<sp/>logical<sp/>start<sp/>time<sp/>0,<sp/>but<sp/>will<sp/>play<sp/>later<sp/>by<sp/>less</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>than<sp/>the<sp/>buffer<sp/>duration.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>next_buffer_start_time<sp/>=<sp/><ref refid="tag_8c_1a20b56e8fb05c017508f1c4fa2e311a87" kindref="member">start_time</ref><sp/>-<sp/>2<sp/>*<sp/>BUFFER_DURATION_NS;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>the<sp/>audio<sp/>loop<sp/>thread.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_create(&amp;loop_thread_id,<sp/>NULL,<sp/>&amp;<ref refid="audio__loop__mac_8c_1a06639dc7e23a325c97fc0d3bd9b3beaa" kindref="member">run_audio_loop</ref>,<sp/>NULL);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="audio__loop__mac_8c_1a65266402bd1ede8be91b6a0a5a34f767" kindref="member">lf_stop_audio_loop</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>CFRunLoopStop(CFRunLoopGetCurrent());</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="audio__loop__mac_8c_1a20d5fc7b37764eb8c3a4e917e93ad7d7" kindref="member">lf_play_audio_waveform</ref>(<ref refid="structlf__waveform__t" kindref="compound">lf_waveform_t</ref>*<sp/>waveform,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>emphasis,<sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/><ref refid="tag_8c_1a20b56e8fb05c017508f1c4fa2e311a87" kindref="member">start_time</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_mutex_lock(&amp;lf_audio_mutex);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>buffer<sp/>into<sp/>which<sp/>to<sp/>write<sp/>has<sp/>not<sp/>yet<sp/>been<sp/>set<sp/>up,<sp/>wait.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(next_buffer<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pthread_cond_wait(&amp;lf_audio_cond,<sp/>&amp;lf_audio_mutex);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/>time_offset<sp/>=<sp/><ref refid="tag_8c_1a20b56e8fb05c017508f1c4fa2e311a87" kindref="member">start_time</ref><sp/>-<sp/>next_buffer_start_time;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>this<sp/>is<sp/>late,<sp/>then<sp/>tick<sp/>right<sp/>away.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(time_offset<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printf(&quot;WARNING:<sp/>audio<sp/>has<sp/>passed<sp/>the<sp/>specified<sp/>time<sp/>by<sp/>%lld.\n&quot;,<sp/>time_offset);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time_offset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>the<sp/>index<sp/>of<sp/>the<sp/>tick.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index_offset<sp/>=<sp/>(time_offset<sp/>*<sp/>SAMPLE_RATE)<sp/>/<sp/>BILLION;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>offset<sp/>is<sp/>beyond<sp/>the<sp/>end<sp/>of<sp/>the<sp/>audio<sp/>buffer,<sp/>then<sp/>the<sp/>program</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>has<sp/>gotten<sp/>ahead<sp/>of<sp/>the<sp/>audio.<sp/>Wait<sp/>for<sp/>audio<sp/>to<sp/>catch<sp/>up.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>happens<sp/>when<sp/>a<sp/>timestamp<sp/>is<sp/>at<sp/>or<sp/>close<sp/>to<sp/>the<sp/>start<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>the<sp/>buffer<sp/>because<sp/>the<sp/>audio<sp/>system<sp/>has<sp/>not<sp/>yet<sp/>invoked<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>callback<sp/>to<sp/>swap<sp/>buffers.<sp/><sp/>Here,<sp/>we<sp/>wait<sp/>for<sp/>the<sp/>callback<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>occur.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(index_offset<sp/>&gt;=<sp/>AUDIO_BUFFER_SIZE)<sp/>{</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pthread_cond_wait(&amp;lf_audio_cond,<sp/>&amp;lf_audio_mutex);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time_offset<sp/>=<sp/><ref refid="tag_8c_1a9da5960071964c9c2bdb602526da0565" kindref="member">get_logical_time</ref>()<sp/>-<sp/>next_buffer_start_time;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index_offset<sp/>=<sp/>(time_offset<sp/>*<sp/>SAMPLE_RATE)<sp/>/<sp/>BILLION;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(waveform<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Waveform<sp/>ID<sp/>is<sp/>out<sp/>of<sp/>range.<sp/>Just<sp/>emit<sp/>a<sp/>tick.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="audio__loop__mac_8c_1ae0d2efe97b2aac751245705e32d2c927" kindref="member">add_to_sound</ref>(index_offset,<sp/>MAX_AMPLITUDE<sp/>*<sp/>emphasis);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>note_to_use<sp/>=<sp/>note_counter++;<sp/></highlight><highlight class="comment">//<sp/>Increment<sp/>so<sp/>that<sp/>the<sp/>next<sp/>note<sp/>uses<sp/>a<sp/>new<sp/>slot.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(note_counter<sp/>&gt;=<sp/>NUM_NOTES)<sp/>{</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>note_counter<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>Wrap<sp/>around.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>note<sp/>instance<sp/>to<sp/>start<sp/>playing.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structnote" kindref="compound">note</ref>*<sp/>note_instance<sp/>=<sp/>&amp;notes[note_to_use];</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>note_instance-&gt;waveform<sp/>=<sp/>waveform;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>waveform<sp/>length<sp/>is<sp/>0,<sp/>do<sp/>not<sp/>play<sp/>anything.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(waveform-&gt;length<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>note_instance-&gt;volume<sp/>=<sp/>emphasis;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>note_instance-&gt;position<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>as<sp/>much<sp/>of<sp/>the<sp/>note<sp/>instance<sp/>into<sp/>the<sp/>buffer<sp/>as<sp/>will<sp/>fit.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>index_offset;<sp/>i<sp/>&lt;<sp/>AUDIO_BUFFER_SIZE;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>the<sp/>value<sp/>to<sp/>add<sp/>to<sp/>the<sp/>sound<sp/>by<sp/>averaging<sp/>all<sp/>the<sp/>channels.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>channel<sp/>=<sp/>0;<sp/>channel<sp/>&lt;<sp/>waveform-&gt;num_channels;<sp/>channel++)<sp/>{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>+=<sp/>waveform-&gt;waveform[note_instance-&gt;position<sp/>+<sp/>channel];</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>=<sp/>value<sp/>/<sp/>waveform-&gt;num_channels;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="audio__loop__mac_8c_1ae0d2efe97b2aac751245705e32d2c927" kindref="member">add_to_sound</ref>(i,<sp/>value<sp/>*<sp/>emphasis);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>note_instance-&gt;position<sp/>+=<sp/>note_instance-&gt;waveform-&gt;num_channels;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(note_instance-&gt;position<sp/>&gt;=<sp/>note_instance-&gt;waveform-&gt;length<sp/>-<sp/>note_instance-&gt;waveform-&gt;num_channels)<sp/>{</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reached<sp/>the<sp/>end<sp/>of<sp/>the<sp/>note.<sp/>Reset<sp/>the<sp/>note.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>note_instance-&gt;volume<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>note_instance-&gt;position<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/>pthread_mutex_unlock(&amp;lf_audio_mutex);</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="328"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c"/>
+  </compounddef>
+</doxygen>

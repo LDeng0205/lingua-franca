@@ -1,0 +1,386 @@
+\hypertarget{trace_8c}{}\doxysection{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/trace.c File Reference}
+\label{trace_8c}\index{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/trace.c@{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/trace.c}}
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}platform.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{trace_8c_a7e540fdcdbf452d4198f88859699ce18}{\+\_\+\+L\+F\+\_\+\+T\+R\+A\+C\+E\+\_\+\+F\+A\+I\+L\+U\+RE}}(trace\+\_\+file)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{trace_8c_a292c73e4f09daa50330b53079df620a9}{\+\_\+lf\+\_\+register\+\_\+trace\+\_\+event}} (void $\ast$pointer1, void $\ast$pointer2, \+\_\+lf\+\_\+trace\+\_\+object\+\_\+t type, char $\ast$description)
+\item 
+int \mbox{\hyperlink{trace_8c_a9f1d309784e7483c7e3570349d8ca2c6}{register\+\_\+user\+\_\+trace\+\_\+event}} (char $\ast$description)
+\item 
+int \mbox{\hyperlink{trace_8c_ae4b7f1b628d3202a369e4bab1220abcc}{write\+\_\+trace\+\_\+header}} ()
+\item 
+void $\ast$ \mbox{\hyperlink{trace_8c_a59ccb06dfedbfda7abb65737018b80e3}{flush\+\_\+trace}} (void $\ast$args)
+\item 
+void \mbox{\hyperlink{trace_8c_a86c0cbfa4153faa765c9f3d7f3e15ce8}{flush\+\_\+trace\+\_\+to\+\_\+file\+\_\+locked}} (int worker)
+\item 
+void \mbox{\hyperlink{trace_8c_abedd63424159bb6a418b8c989ce9d520}{flush\+\_\+trace\+\_\+to\+\_\+file}} (int worker)
+\item 
+void \mbox{\hyperlink{trace_8c_a7db60d81b5b339239544a09f07c2d4b5}{start\+\_\+trace}} (char $\ast$filename)
+\item 
+void \mbox{\hyperlink{trace_8c_aff3f7c314f0f0849b57f51477201763d}{tracepoint}} (\mbox{\hyperlink{trace_8h_ab02e9e69539d60297cedb38c2193a453}{trace\+\_\+event\+\_\+t}} event\+\_\+type, void $\ast$pointer, int reaction\+\_\+number, int worker, \mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} $\ast$physical\+\_\+time, \mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}} $\ast$trigger, \mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} extra\+\_\+delay)
+\item 
+void \mbox{\hyperlink{trace_8c_ade61b59eed2f970f376f319ffaf2541d}{tracepoint\+\_\+reaction\+\_\+starts}} (\mbox{\hyperlink{structreaction__t}{reaction\+\_\+t}} $\ast$reaction, int worker)
+\item 
+void \mbox{\hyperlink{trace_8c_ad9628a6d76f5bad7a0c093f00731364b}{tracepoint\+\_\+reaction\+\_\+ends}} (\mbox{\hyperlink{structreaction__t}{reaction\+\_\+t}} $\ast$reaction, int worker)
+\item 
+void \mbox{\hyperlink{trace_8c_a896a14a2ac7b800e93d4d2210321448e}{tracepoint\+\_\+schedule}} (\mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}} $\ast$trigger, \mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} extra\+\_\+delay)
+\item 
+void \mbox{\hyperlink{trace_8c_a68f463b93ec266e65bf6b72ee32a540a}{tracepoint\+\_\+user\+\_\+event}} (char $\ast$description)
+\item 
+void \mbox{\hyperlink{trace_8c_a964a1b9e5b2e7941d4c37609aecc7b1b}{tracepoint\+\_\+user\+\_\+value}} (char $\ast$description, long long value)
+\item 
+void \mbox{\hyperlink{trace_8c_aa6b088266f62c6f156ae241d52cdf415}{tracepoint\+\_\+worker\+\_\+wait\+\_\+starts}} (int worker)
+\item 
+void \mbox{\hyperlink{trace_8c_a04892321c2313cbd11dd85bee1a9d251}{tracepoint\+\_\+worker\+\_\+wait\+\_\+ends}} (int worker)
+\item 
+void \mbox{\hyperlink{trace_8c_acaec136e0b3327ef233f13e89666b87c}{tracepoint\+\_\+worker\+\_\+advancing\+\_\+time\+\_\+starts}} (int worker)
+\item 
+void \mbox{\hyperlink{trace_8c_aad8dcf334448b94525bb7fa4d57c64a2}{tracepoint\+\_\+worker\+\_\+advancing\+\_\+time\+\_\+ends}} (int worker)
+\item 
+void \mbox{\hyperlink{trace_8c_a6dabaa8855fdeb4b896d459fa3196256}{stop\+\_\+trace}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{trace_8c_a60cdf206e0f44081034f532b41f568ef}\label{trace_8c_a60cdf206e0f44081034f532b41f568ef}} 
+lf\+\_\+mutex\+\_\+t {\bfseries \+\_\+lf\+\_\+trace\+\_\+mutex}
+\item 
+\mbox{\Hypertarget{trace_8c_a27420e40a24ad2b61b84d7e30f4bf2b7}\label{trace_8c_a27420e40a24ad2b61b84d7e30f4bf2b7}} 
+lf\+\_\+cond\+\_\+t {\bfseries \+\_\+lf\+\_\+flush\+\_\+finished}
+\item 
+\mbox{\Hypertarget{trace_8c_acaf876be8e2e7c8cb57236eeaaa666b5}\label{trace_8c_acaf876be8e2e7c8cb57236eeaaa666b5}} 
+lf\+\_\+cond\+\_\+t {\bfseries \+\_\+lf\+\_\+flush\+\_\+needed}
+\item 
+\mbox{\Hypertarget{trace_8c_aad0cffd2c8d44038c96c9436d9a3d9ac}\label{trace_8c_aad0cffd2c8d44038c96c9436d9a3d9ac}} 
+lf\+\_\+thread\+\_\+t {\bfseries \+\_\+lf\+\_\+flush\+\_\+trace\+\_\+thread}
+\item 
+trace\+\_\+record\+\_\+t $\ast$$\ast$ \mbox{\hyperlink{trace_8c_a35622f0680c4d66b6ac2d14ead593cbc}{\+\_\+lf\+\_\+trace\+\_\+buffer}} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{trace_8c_a020646a917bd0ef27bafe281fe412e5f}\label{trace_8c_a020646a917bd0ef27bafe281fe412e5f}} 
+int $\ast$ {\bfseries \+\_\+lf\+\_\+trace\+\_\+buffer\+\_\+size} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{trace_8c_a0b114d024d2d303913ce7c1249b876e0}\label{trace_8c_a0b114d024d2d303913ce7c1249b876e0}} 
+trace\+\_\+record\+\_\+t $\ast$$\ast$ {\bfseries \+\_\+lf\+\_\+trace\+\_\+buffer\+\_\+to\+\_\+flush} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{trace_8c_a40588e022e69b560f3c9a2d9082b07af}\label{trace_8c_a40588e022e69b560f3c9a2d9082b07af}} 
+int $\ast$ {\bfseries \+\_\+lf\+\_\+trace\+\_\+buffer\+\_\+size\+\_\+to\+\_\+flush} = N\+U\+LL
+\item 
+int \mbox{\hyperlink{trace_8c_a143958fccee03b6d931bdb53ac00dff1}{\+\_\+lf\+\_\+number\+\_\+of\+\_\+trace\+\_\+buffers}}
+\item 
+int \mbox{\hyperlink{trace_8c_a5a3bbaf504f73248cf2dd343c19a64f0}{\+\_\+lf\+\_\+trace\+\_\+stop}} = 1
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{trace_8c_a9373e5b6f9a93fae3bbac278df36e0bb}{\+\_\+lf\+\_\+trace\+\_\+file}}
+\item 
+object\+\_\+description\+\_\+t \mbox{\hyperlink{trace_8c_a8fdb97e55822d6ae545d5248d5a3df89}{\+\_\+lf\+\_\+trace\+\_\+object\+\_\+descriptions}} \mbox{[}T\+R\+A\+C\+E\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+I\+ZE\mbox{]}
+\item 
+\mbox{\Hypertarget{trace_8c_a4f857eb84a862d13b0a568bd2aa407a1}\label{trace_8c_a4f857eb84a862d13b0a568bd2aa407a1}} 
+int {\bfseries \+\_\+lf\+\_\+trace\+\_\+object\+\_\+descriptions\+\_\+size} = 0
+\item 
+bool \mbox{\hyperlink{trace_8c_acb7c96e202d992a664c7a7e8d4713a79}{\+\_\+lf\+\_\+trace\+\_\+header\+\_\+written}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Edward A. Lee
+\end{DoxyAuthor}
+\hypertarget{util_8h_LICENSE}{}\doxysubsection{L\+I\+C\+E\+N\+SE}\label{util_8h_LICENSE}
+Copyright (c) 2020, The University of California at Berkeley and TU Dresden
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.\hypertarget{util_8h_DESCRIPTION}{}\doxysubsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}\label{util_8h_DESCRIPTION}
+Include this file instead of \mbox{\hyperlink{trace_8h}{trace.\+h}} to get tracing. See \mbox{\hyperlink{trace_8h}{trace.\+h}} file for instructions. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{trace_8c_a7e540fdcdbf452d4198f88859699ce18}\label{trace_8c_a7e540fdcdbf452d4198f88859699ce18}} 
+\index{trace.c@{trace.c}!\_LF\_TRACE\_FAILURE@{\_LF\_TRACE\_FAILURE}}
+\index{\_LF\_TRACE\_FAILURE@{\_LF\_TRACE\_FAILURE}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{\_LF\_TRACE\_FAILURE}{\_LF\_TRACE\_FAILURE}}
+{\footnotesize\ttfamily \#define \+\_\+\+L\+F\+\_\+\+T\+R\+A\+C\+E\+\_\+\+F\+A\+I\+L\+U\+RE(\begin{DoxyParamCaption}\item[{}]{trace\+\_\+file }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{        fprintf(stderr, \textcolor{stringliteral}{"WARNING: Access to trace file failed.\(\backslash\)n"}); \(\backslash\)}
+\DoxyCodeLine{        fclose(trace\_file); \(\backslash\)}
+\DoxyCodeLine{        trace\_file = NULL; \(\backslash\)}
+\DoxyCodeLine{        lf\_mutex\_unlock(\&\_lf\_trace\_mutex); \(\backslash\)}
+\DoxyCodeLine{        return -\/1; \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+Macro to use when access to trace file fails. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{trace_8c_a292c73e4f09daa50330b53079df620a9}\label{trace_8c_a292c73e4f09daa50330b53079df620a9}} 
+\index{trace.c@{trace.c}!\_lf\_register\_trace\_event@{\_lf\_register\_trace\_event}}
+\index{\_lf\_register\_trace\_event@{\_lf\_register\_trace\_event}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_register\_trace\_event()}{\_lf\_register\_trace\_event()}}
+{\footnotesize\ttfamily int \+\_\+lf\+\_\+register\+\_\+trace\+\_\+event (\begin{DoxyParamCaption}\item[{void $\ast$}]{pointer1,  }\item[{void $\ast$}]{pointer2,  }\item[{\+\_\+lf\+\_\+trace\+\_\+object\+\_\+t}]{type,  }\item[{char $\ast$}]{description }\end{DoxyParamCaption})}
+
+Register a trace event. 
+\begin{DoxyParams}{Parameters}
+{\em pointer1} & Pointer that identifies the object, typically to a reactor self struct. \\
+\hline
+{\em pointer2} & Further identifying pointer, typically to a trigger (action or timer) or N\+U\+LL if irrelevant. \\
+\hline
+{\em type} & The type of trace object. \\
+\hline
+{\em description} & The human-\/readable description of the object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if successful, 0 if the trace object table is full. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{trace_8c_a59ccb06dfedbfda7abb65737018b80e3}\label{trace_8c_a59ccb06dfedbfda7abb65737018b80e3}} 
+\index{trace.c@{trace.c}!flush\_trace@{flush\_trace}}
+\index{flush\_trace@{flush\_trace}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{flush\_trace()}{flush\_trace()}}
+{\footnotesize\ttfamily void$\ast$ flush\+\_\+trace (\begin{DoxyParamCaption}\item[{void $\ast$}]{args }\end{DoxyParamCaption})}
+
+Thread that actually flushes the buffers to a file. \mbox{\Hypertarget{trace_8c_abedd63424159bb6a418b8c989ce9d520}\label{trace_8c_abedd63424159bb6a418b8c989ce9d520}} 
+\index{trace.c@{trace.c}!flush\_trace\_to\_file@{flush\_trace\_to\_file}}
+\index{flush\_trace\_to\_file@{flush\_trace\_to\_file}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{flush\_trace\_to\_file()}{flush\_trace\_to\_file()}}
+{\footnotesize\ttfamily void flush\+\_\+trace\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{int}]{worker }\end{DoxyParamCaption})}
+
+Flush trace so far to the trace file. We use double buffering, so unless the flush thread is busy flushing the previous buffer for this worker, this returns immediately. 
+\begin{DoxyParams}{Parameters}
+{\em worker} & The worker thread or 0 for the main (or only) thread. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{trace_8c_a86c0cbfa4153faa765c9f3d7f3e15ce8}\label{trace_8c_a86c0cbfa4153faa765c9f3d7f3e15ce8}} 
+\index{trace.c@{trace.c}!flush\_trace\_to\_file\_locked@{flush\_trace\_to\_file\_locked}}
+\index{flush\_trace\_to\_file\_locked@{flush\_trace\_to\_file\_locked}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{flush\_trace\_to\_file\_locked()}{flush\_trace\_to\_file\_locked()}}
+{\footnotesize\ttfamily void flush\+\_\+trace\+\_\+to\+\_\+file\+\_\+locked (\begin{DoxyParamCaption}\item[{int}]{worker }\end{DoxyParamCaption})}
+
+Flush trace so far to the trace file. This version assumes the mutex is already held. 
+\begin{DoxyParams}{Parameters}
+{\em worker} & The worker thread or 0 for the main (or only) thread. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{trace_8c_a9f1d309784e7483c7e3570349d8ca2c6}\label{trace_8c_a9f1d309784e7483c7e3570349d8ca2c6}} 
+\index{trace.c@{trace.c}!register\_user\_trace\_event@{register\_user\_trace\_event}}
+\index{register\_user\_trace\_event@{register\_user\_trace\_event}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{register\_user\_trace\_event()}{register\_user\_trace\_event()}}
+{\footnotesize\ttfamily int register\+\_\+user\+\_\+trace\+\_\+event (\begin{DoxyParamCaption}\item[{char $\ast$}]{description }\end{DoxyParamCaption})}
+
+Register a user trace event. This should be called once, providing a pointer to a string that describes a phenomenon being traced. Use the same pointer as the first argument to \mbox{\hyperlink{trace_8c_a68f463b93ec266e65bf6b72ee32a540a}{tracepoint\+\_\+user\+\_\+event()}} and \mbox{\hyperlink{trace_8c_a964a1b9e5b2e7941d4c37609aecc7b1b}{tracepoint\+\_\+user\+\_\+value()}}. 
+\begin{DoxyParams}{Parameters}
+{\em description} & Pointer to a human-\/readable description of the event. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if successful, 0 if the trace object table is full. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{trace_8c_a7db60d81b5b339239544a09f07c2d4b5}\label{trace_8c_a7db60d81b5b339239544a09f07c2d4b5}} 
+\index{trace.c@{trace.c}!start\_trace@{start\_trace}}
+\index{start\_trace@{start\_trace}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{start\_trace()}{start\_trace()}}
+{\footnotesize\ttfamily void start\+\_\+trace (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+Open a trace file and start tracing. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & The filename for the trace file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{trace_8c_a6dabaa8855fdeb4b896d459fa3196256}\label{trace_8c_a6dabaa8855fdeb4b896d459fa3196256}} 
+\index{trace.c@{trace.c}!stop\_trace@{stop\_trace}}
+\index{stop\_trace@{stop\_trace}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{stop\_trace()}{stop\_trace()}}
+{\footnotesize\ttfamily void stop\+\_\+trace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Flush any buffered trace records to the trace file and close the file. \mbox{\Hypertarget{trace_8c_aff3f7c314f0f0849b57f51477201763d}\label{trace_8c_aff3f7c314f0f0849b57f51477201763d}} 
+\index{trace.c@{trace.c}!tracepoint@{tracepoint}}
+\index{tracepoint@{tracepoint}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{tracepoint()}{tracepoint()}}
+{\footnotesize\ttfamily void tracepoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{trace_8h_ab02e9e69539d60297cedb38c2193a453}{trace\+\_\+event\+\_\+t}}}]{event\+\_\+type,  }\item[{void $\ast$}]{pointer,  }\item[{int}]{reaction\+\_\+number,  }\item[{int}]{worker,  }\item[{\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} $\ast$}]{physical\+\_\+time,  }\item[{\mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}} $\ast$}]{trigger,  }\item[{\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}}}]{extra\+\_\+delay }\end{DoxyParamCaption})}
+
+Trace an event identified by a type and an identifying pointer. The pointer can be, for example, to the self struct of the reactor instance. This is a generic tracepoint function. It is better to use one of the specific functions. 
+\begin{DoxyParams}{Parameters}
+{\em event\+\_\+type} & The type of event (see trace\+\_\+event\+\_\+t in \mbox{\hyperlink{trace_8h}{trace.\+h}}) \\
+\hline
+{\em pointer} & The identifying pointer. \\
+\hline
+{\em reaction\+\_\+number} & The number of the reaction or -\/1 if the trace is not of a reaction or the reaction number if not known. \\
+\hline
+{\em worker} & The thread number of the worker thread or 0 for unthreaded execution or -\/1 for an unknown thread. \\
+\hline
+{\em physical\+\_\+time} & If the caller has already accessed physical time, provide it here. Otherwise, provide N\+U\+LL. This argument avoids a second call to get\+\_\+physical\+\_\+time and ensures that the physical time in the trace is the same as that used by the caller. \\
+\hline
+{\em trigger} & Pointer to the \mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}} struct for calls to schedule or N\+U\+LL otherwise. \\
+\hline
+{\em extra\+\_\+delay} & The extra delay passed to \mbox{\hyperlink{ctarget_8h_a961a0ed618d8dbb43f9f3b2bf3541af4}{schedule()}}. If not relevant for this event type, pass 0. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{trace_8c_ad9628a6d76f5bad7a0c093f00731364b}\label{trace_8c_ad9628a6d76f5bad7a0c093f00731364b}} 
+\index{trace.c@{trace.c}!tracepoint\_reaction\_ends@{tracepoint\_reaction\_ends}}
+\index{tracepoint\_reaction\_ends@{tracepoint\_reaction\_ends}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{tracepoint\_reaction\_ends()}{tracepoint\_reaction\_ends()}}
+{\footnotesize\ttfamily void tracepoint\+\_\+reaction\+\_\+ends (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structreaction__t}{reaction\+\_\+t}} $\ast$}]{reaction,  }\item[{int}]{worker }\end{DoxyParamCaption})}
+
+Trace the end of a reaction execution. 
+\begin{DoxyParams}{Parameters}
+{\em reaction} & Pointer to the \mbox{\hyperlink{structreaction__t}{reaction\+\_\+t}} struct for the reaction. \\
+\hline
+{\em worker} & The thread number of the worker thread or 0 for unthreaded execution. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{trace_8c_ade61b59eed2f970f376f319ffaf2541d}\label{trace_8c_ade61b59eed2f970f376f319ffaf2541d}} 
+\index{trace.c@{trace.c}!tracepoint\_reaction\_starts@{tracepoint\_reaction\_starts}}
+\index{tracepoint\_reaction\_starts@{tracepoint\_reaction\_starts}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{tracepoint\_reaction\_starts()}{tracepoint\_reaction\_starts()}}
+{\footnotesize\ttfamily void tracepoint\+\_\+reaction\+\_\+starts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structreaction__t}{reaction\+\_\+t}} $\ast$}]{reaction,  }\item[{int}]{worker }\end{DoxyParamCaption})}
+
+Trace the start of a reaction execution. 
+\begin{DoxyParams}{Parameters}
+{\em reaction} & Pointer to the \mbox{\hyperlink{structreaction__t}{reaction\+\_\+t}} struct for the reaction. \\
+\hline
+{\em worker} & The thread number of the worker thread or 0 for unthreaded execution. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{trace_8c_a896a14a2ac7b800e93d4d2210321448e}\label{trace_8c_a896a14a2ac7b800e93d4d2210321448e}} 
+\index{trace.c@{trace.c}!tracepoint\_schedule@{tracepoint\_schedule}}
+\index{tracepoint\_schedule@{tracepoint\_schedule}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{tracepoint\_schedule()}{tracepoint\_schedule()}}
+{\footnotesize\ttfamily void tracepoint\+\_\+schedule (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}} $\ast$}]{trigger,  }\item[{\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}}}]{extra\+\_\+delay }\end{DoxyParamCaption})}
+
+Trace a call to schedule. 
+\begin{DoxyParams}{Parameters}
+{\em trigger} & Pointer to the \mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}} struct for the trigger. \\
+\hline
+{\em extra\+\_\+delay} & The extra delay passed to \mbox{\hyperlink{ctarget_8h_a961a0ed618d8dbb43f9f3b2bf3541af4}{schedule()}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{trace_8c_a68f463b93ec266e65bf6b72ee32a540a}\label{trace_8c_a68f463b93ec266e65bf6b72ee32a540a}} 
+\index{trace.c@{trace.c}!tracepoint\_user\_event@{tracepoint\_user\_event}}
+\index{tracepoint\_user\_event@{tracepoint\_user\_event}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{tracepoint\_user\_event()}{tracepoint\_user\_event()}}
+{\footnotesize\ttfamily void tracepoint\+\_\+user\+\_\+event (\begin{DoxyParamCaption}\item[{char $\ast$}]{description }\end{DoxyParamCaption})}
+
+Trace a user-\/defined event. Before calling this, you must call \mbox{\hyperlink{trace_8c_a9f1d309784e7483c7e3570349d8ca2c6}{register\+\_\+user\+\_\+trace\+\_\+event()}} with a pointer to the same string or else the event will not be recognized. 
+\begin{DoxyParams}{Parameters}
+{\em description} & Pointer to the description string. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{trace_8c_a964a1b9e5b2e7941d4c37609aecc7b1b}\label{trace_8c_a964a1b9e5b2e7941d4c37609aecc7b1b}} 
+\index{trace.c@{trace.c}!tracepoint\_user\_value@{tracepoint\_user\_value}}
+\index{tracepoint\_user\_value@{tracepoint\_user\_value}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{tracepoint\_user\_value()}{tracepoint\_user\_value()}}
+{\footnotesize\ttfamily void tracepoint\+\_\+user\+\_\+value (\begin{DoxyParamCaption}\item[{char $\ast$}]{description,  }\item[{long long}]{value }\end{DoxyParamCaption})}
+
+Trace a user-\/defined event with a value. Before calling this, you must call \mbox{\hyperlink{trace_8c_a9f1d309784e7483c7e3570349d8ca2c6}{register\+\_\+user\+\_\+trace\+\_\+event()}} with a pointer to the same string or else the event will not be recognized. 
+\begin{DoxyParams}{Parameters}
+{\em description} & Pointer to the description string. \\
+\hline
+{\em value} & The value of the event. This is a long long for convenience so that time values can be passed unchanged. But int values work as well. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{trace_8c_aad8dcf334448b94525bb7fa4d57c64a2}\label{trace_8c_aad8dcf334448b94525bb7fa4d57c64a2}} 
+\index{trace.c@{trace.c}!tracepoint\_worker\_advancing\_time\_ends@{tracepoint\_worker\_advancing\_time\_ends}}
+\index{tracepoint\_worker\_advancing\_time\_ends@{tracepoint\_worker\_advancing\_time\_ends}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{tracepoint\_worker\_advancing\_time\_ends()}{tracepoint\_worker\_advancing\_time\_ends()}}
+{\footnotesize\ttfamily void tracepoint\+\_\+worker\+\_\+advancing\+\_\+time\+\_\+ends (\begin{DoxyParamCaption}\item[{int}]{worker }\end{DoxyParamCaption})}
+
+Trace the end of a worker waiting for logical time to advance or an event to appear on the event queue. 
+\begin{DoxyParams}{Parameters}
+{\em worker} & The thread number of the worker thread or 0 for unthreaded execution. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{trace_8c_acaec136e0b3327ef233f13e89666b87c}\label{trace_8c_acaec136e0b3327ef233f13e89666b87c}} 
+\index{trace.c@{trace.c}!tracepoint\_worker\_advancing\_time\_starts@{tracepoint\_worker\_advancing\_time\_starts}}
+\index{tracepoint\_worker\_advancing\_time\_starts@{tracepoint\_worker\_advancing\_time\_starts}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{tracepoint\_worker\_advancing\_time\_starts()}{tracepoint\_worker\_advancing\_time\_starts()}}
+{\footnotesize\ttfamily void tracepoint\+\_\+worker\+\_\+advancing\+\_\+time\+\_\+starts (\begin{DoxyParamCaption}\item[{int}]{worker }\end{DoxyParamCaption})}
+
+Trace the start of a worker waiting for logical time to advance or an event to appear on the event queue. 
+\begin{DoxyParams}{Parameters}
+{\em worker} & The thread number of the worker thread or 0 for unthreaded execution. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{trace_8c_a04892321c2313cbd11dd85bee1a9d251}\label{trace_8c_a04892321c2313cbd11dd85bee1a9d251}} 
+\index{trace.c@{trace.c}!tracepoint\_worker\_wait\_ends@{tracepoint\_worker\_wait\_ends}}
+\index{tracepoint\_worker\_wait\_ends@{tracepoint\_worker\_wait\_ends}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{tracepoint\_worker\_wait\_ends()}{tracepoint\_worker\_wait\_ends()}}
+{\footnotesize\ttfamily void tracepoint\+\_\+worker\+\_\+wait\+\_\+ends (\begin{DoxyParamCaption}\item[{int}]{worker }\end{DoxyParamCaption})}
+
+Trace the end of a worker waiting for something to change on the event or reaction queue. 
+\begin{DoxyParams}{Parameters}
+{\em worker} & The thread number of the worker thread or 0 for unthreaded execution. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{trace_8c_aa6b088266f62c6f156ae241d52cdf415}\label{trace_8c_aa6b088266f62c6f156ae241d52cdf415}} 
+\index{trace.c@{trace.c}!tracepoint\_worker\_wait\_starts@{tracepoint\_worker\_wait\_starts}}
+\index{tracepoint\_worker\_wait\_starts@{tracepoint\_worker\_wait\_starts}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{tracepoint\_worker\_wait\_starts()}{tracepoint\_worker\_wait\_starts()}}
+{\footnotesize\ttfamily void tracepoint\+\_\+worker\+\_\+wait\+\_\+starts (\begin{DoxyParamCaption}\item[{int}]{worker }\end{DoxyParamCaption})}
+
+Trace the start of a worker waiting for something to change on the event or reaction queue. 
+\begin{DoxyParams}{Parameters}
+{\em worker} & The thread number of the worker thread or 0 for unthreaded execution. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{trace_8c_ae4b7f1b628d3202a369e4bab1220abcc}\label{trace_8c_ae4b7f1b628d3202a369e4bab1220abcc}} 
+\index{trace.c@{trace.c}!write\_trace\_header@{write\_trace\_header}}
+\index{write\_trace\_header@{write\_trace\_header}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{write\_trace\_header()}{write\_trace\_header()}}
+{\footnotesize\ttfamily int write\+\_\+trace\+\_\+header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Write the trace header information. See \mbox{\hyperlink{trace_8h}{trace.\+h}}. \begin{DoxyReturn}{Returns}
+The number of items written to the object table or -\/1 for failure. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{trace_8c_a143958fccee03b6d931bdb53ac00dff1}\label{trace_8c_a143958fccee03b6d931bdb53ac00dff1}} 
+\index{trace.c@{trace.c}!\_lf\_number\_of\_trace\_buffers@{\_lf\_number\_of\_trace\_buffers}}
+\index{\_lf\_number\_of\_trace\_buffers@{\_lf\_number\_of\_trace\_buffers}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_number\_of\_trace\_buffers}{\_lf\_number\_of\_trace\_buffers}}
+{\footnotesize\ttfamily int \+\_\+lf\+\_\+number\+\_\+of\+\_\+trace\+\_\+buffers}
+
+The number of trace buffers allocated when tracing starts. \mbox{\Hypertarget{trace_8c_a35622f0680c4d66b6ac2d14ead593cbc}\label{trace_8c_a35622f0680c4d66b6ac2d14ead593cbc}} 
+\index{trace.c@{trace.c}!\_lf\_trace\_buffer@{\_lf\_trace\_buffer}}
+\index{\_lf\_trace\_buffer@{\_lf\_trace\_buffer}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_trace\_buffer}{\_lf\_trace\_buffer}}
+{\footnotesize\ttfamily trace\+\_\+record\+\_\+t$\ast$$\ast$ \+\_\+lf\+\_\+trace\+\_\+buffer = N\+U\+LL}
+
+Array of buffers into which traces are written. When each buffer gets full, the trace is flushed to the trace file. We use a double buffering strategy. When a buffer becomes full, tracing continues in a new buffer while a separate thread writes the old buffer to the file. \mbox{\Hypertarget{trace_8c_a9373e5b6f9a93fae3bbac278df36e0bb}\label{trace_8c_a9373e5b6f9a93fae3bbac278df36e0bb}} 
+\index{trace.c@{trace.c}!\_lf\_trace\_file@{\_lf\_trace\_file}}
+\index{\_lf\_trace\_file@{\_lf\_trace\_file}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_trace\_file}{\_lf\_trace\_file}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ \+\_\+lf\+\_\+trace\+\_\+file}
+
+The file into which traces are written. \mbox{\Hypertarget{trace_8c_acb7c96e202d992a664c7a7e8d4713a79}\label{trace_8c_acb7c96e202d992a664c7a7e8d4713a79}} 
+\index{trace.c@{trace.c}!\_lf\_trace\_header\_written@{\_lf\_trace\_header\_written}}
+\index{\_lf\_trace\_header\_written@{\_lf\_trace\_header\_written}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_trace\_header\_written}{\_lf\_trace\_header\_written}}
+{\footnotesize\ttfamily bool \+\_\+lf\+\_\+trace\+\_\+header\+\_\+written = false}
+
+Indicator that the trace header information has been written to the file. \mbox{\Hypertarget{trace_8c_a8fdb97e55822d6ae545d5248d5a3df89}\label{trace_8c_a8fdb97e55822d6ae545d5248d5a3df89}} 
+\index{trace.c@{trace.c}!\_lf\_trace\_object\_descriptions@{\_lf\_trace\_object\_descriptions}}
+\index{\_lf\_trace\_object\_descriptions@{\_lf\_trace\_object\_descriptions}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_trace\_object\_descriptions}{\_lf\_trace\_object\_descriptions}}
+{\footnotesize\ttfamily object\+\_\+description\+\_\+t \+\_\+lf\+\_\+trace\+\_\+object\+\_\+descriptions\mbox{[}T\+R\+A\+C\+E\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+I\+ZE\mbox{]}}
+
+Table of pointers to a description of the object. \mbox{\Hypertarget{trace_8c_a5a3bbaf504f73248cf2dd343c19a64f0}\label{trace_8c_a5a3bbaf504f73248cf2dd343c19a64f0}} 
+\index{trace.c@{trace.c}!\_lf\_trace\_stop@{\_lf\_trace\_stop}}
+\index{\_lf\_trace\_stop@{\_lf\_trace\_stop}!trace.c@{trace.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_trace\_stop}{\_lf\_trace\_stop}}
+{\footnotesize\ttfamily int \+\_\+lf\+\_\+trace\+\_\+stop = 1}
+
+Marker that tracing is stopping or has stopped. 

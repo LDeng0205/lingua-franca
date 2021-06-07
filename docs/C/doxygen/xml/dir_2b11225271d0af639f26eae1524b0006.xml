@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_2b11225271d0af639f26eae1524b0006" kind="dir">
+    <compoundname>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform</compoundname>
+    <innerfile refid="lf___c11__threads__support_8c">lf_C11_threads_support.c</innerfile>
+    <innerfile refid="lf___c11__threads__support_8h">lf_C11_threads_support.h</innerfile>
+    <innerfile refid="lf__linux__support_8c">lf_linux_support.c</innerfile>
+    <innerfile refid="lf__linux__support_8h">lf_linux_support.h</innerfile>
+    <innerfile refid="lf__macos__support_8c">lf_macos_support.c</innerfile>
+    <innerfile refid="lf__macos__support_8h">lf_macos_support.h</innerfile>
+    <innerfile refid="lf___p_o_s_i_x__threads__support_8c">lf_POSIX_threads_support.c</innerfile>
+    <innerfile refid="lf___p_o_s_i_x__threads__support_8h">lf_POSIX_threads_support.h</innerfile>
+    <innerfile refid="lf__windows__support_8c">lf_windows_support.c</innerfile>
+    <innerfile refid="lf__windows__support_8h">lf_windows_support.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/platform/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structnote" kind="struct" language="C++" prot="public">
+    <compoundname>note</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structnote_1a03bc4ceb2310ccb5004584a1f619e047" prot="public" static="no" mutable="no">
+        <type><ref refid="structlf__waveform__t" kindref="compound">lf_waveform_t</ref> *</type>
+        <definition>lf_waveform_t * note::waveform</definition>
+        <argsstring></argsstring>
+        <name>waveform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_linux.c" line="63" column="19" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_linux.c" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnote_1a3ff50afa7da37a9524a48386c543a124" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int note::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_linux.c" line="64" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_linux.c" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnote_1aa4319bcddbd921967134c6031b5a8276" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double note::volume</definition>
+        <argsstring></argsstring>
+        <name>volume</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_linux.c" line="65" column="12" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_linux.c" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>note</label>
+        <link refid="structnote"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>waveform</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lf_waveform_t</label>
+        <link refid="structlf__waveform__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_linux.c" line="62" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_linux.c" bodystart="62" bodyend="66"/>
+    <listofallmembers>
+      <member refid="structnote_1a3ff50afa7da37a9524a48386c543a124" prot="public" virt="non-virtual"><scope>note</scope><name>position</name></member>
+      <member refid="structnote_1aa4319bcddbd921967134c6031b5a8276" prot="public" virt="non-virtual"><scope>note</scope><name>volume</name></member>
+      <member refid="structnote_1a03bc4ceb2310ccb5004584a1f619e047" prot="public" virt="non-virtual"><scope>note</scope><name>waveform</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

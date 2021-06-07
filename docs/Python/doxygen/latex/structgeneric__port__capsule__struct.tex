@@ -1,0 +1,41 @@
+\hypertarget{structgeneric__port__capsule__struct}{}\doxysection{generic\+\_\+port\+\_\+capsule\+\_\+struct Struct Reference}
+\label{structgeneric__port__capsule__struct}\index{generic\_port\_capsule\_struct@{generic\_port\_capsule\_struct}}
+
+
+{\ttfamily \#include $<$pythontarget.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structgeneric__port__capsule__struct_aa3a80180dd9fe54b3beb52b198edc974}\label{structgeneric__port__capsule__struct_aa3a80180dd9fe54b3beb52b198edc974}} 
+Py\+Object\+\_\+\+H\+E\+AD Py\+Object $\ast$ {\bfseries port}
+\item 
+\mbox{\Hypertarget{structgeneric__port__capsule__struct_ace74af8e4955d6950dc37ec76ab06e0d}\label{structgeneric__port__capsule__struct_ace74af8e4955d6950dc37ec76ab06e0d}} 
+Py\+Object $\ast$ {\bfseries value}
+\item 
+\mbox{\Hypertarget{structgeneric__port__capsule__struct_ade3934351aa6dc67dbf7e7a5febd4a36}\label{structgeneric__port__capsule__struct_ade3934351aa6dc67dbf7e7a5febd4a36}} 
+bool {\bfseries is\+\_\+present}
+\item 
+\mbox{\Hypertarget{structgeneric__port__capsule__struct_a8336292b3d416c8bcd8af788ab71ee9a}\label{structgeneric__port__capsule__struct_a8336292b3d416c8bcd8af788ab71ee9a}} 
+int {\bfseries width}
+\item 
+\mbox{\Hypertarget{structgeneric__port__capsule__struct_a5b0e7dd65c0dde044de7de97398ccdb5}\label{structgeneric__port__capsule__struct_a5b0e7dd65c0dde044de7de97398ccdb5}} 
+int {\bfseries current\+\_\+index}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The struct used to represent ports in Python This template is used as a blueprint to create Python objects that follow the same structure. The resulting Python object will have the type port\+\_\+capsule\+\_\+t in C (Lingua\+Franca.\+port\+\_\+capsule in Python).
+
+port\+: A Py\+Capsule (\href{https://docs.python.org/3/c-api/capsule.html}{\texttt{ https\+://docs.\+python.\+org/3/c-\/api/capsule.\+html}}) that safely holds a C void$\ast$ inside a Python object. This capsule is passed through the Python code and is extracted in C functions like set and {\bfseries{getitem}}. value\+: The value of the port at the time of invocation of \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{pythontarget_8h_aeddc8cc41a9c71f3e325c2ef536c66cb}{convert\+\_\+\+C\+\_\+port\+\_\+to\+\_\+py}}. The value and is\+\_\+present are copied from the port if it is not a multiport and can be accessed as port.\+value. For multiports, is\+\_\+present will be false and value will be None. The value of each individual port can be accessed as port\mbox{[}idx\mbox{]}.value (
+
+port\+\_\+capsule\+\_\+get\+\_\+item). Subsequent calls to set will also need to update the value and is\+\_\+present fields so that they are reflected in Python code. is\+\_\+present\+: Indicates if the value of the singular port is present at the current logical time width\+: Indicates the width of the multiport. This is set to -\/2 for non-\/multiports. current\+\_\+index\+: Used to facilitate iterative functions (
+
+port\+\_\+iter) 
+\end{DoxySeeAlso}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.\+lflang/src/lib/\+Python/\mbox{\hyperlink{pythontarget_8h}{pythontarget.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="audio__loop_8h" kind="file" language="C++">
+    <compoundname>audio_loop.h</compoundname>
+    <includes refid="wave__file__reader_8h" local="yes">wave_file_reader.h</includes>
+    <includes refid="tag_8h" local="yes">core/tag.h</includes>
+    <includedby refid="audio__loop__linux_8c" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_linux.c</includedby>
+    <includedby refid="audio__loop__mac_8c" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h</label>
+        <link refid="audio__loop_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>wave_file_reader.h</label>
+        <link refid="wave__file__reader_8h"/>
+      </node>
+      <node id="3">
+        <label>core/tag.h</label>
+        <link refid="tag_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c</label>
+        <link refid="audio__loop__mac_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h</label>
+        <link refid="audio__loop_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_linux.c</label>
+        <link refid="audio__loop__linux_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="audio__loop_8h_1a4b76a0c2859cfd819a343a780070ee2b" prot="public" static="no">
+        <name>SAMPLE_RATE</name>
+        <initializer>44100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h" line="76" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="audio__loop_8h_1a1d48237cb63c5ae67aab6d00cc64afb6" prot="public" static="no">
+        <name>AUDIO_BUFFER_SIZE</name>
+        <initializer>4410</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h" line="77" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="audio__loop_8h_1aaee12bd1b49481f758a5a3cf1876268c" prot="public" static="no">
+        <name>BUFFER_DURATION_NS</name>
+        <initializer>100000000LL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h" line="78" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="audio__loop_8h_1ae5597ce31d23d11493e6e674fe257d73" prot="public" static="no">
+        <name>NUM_CHANNELS</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h" line="79" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="audio__loop_8h_1a141b139da77580918b0f9821ab3dbb99" prot="public" static="no">
+        <name>MAX_AMPLITUDE</name>
+        <initializer>32765</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h" line="81" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="audio__loop_8h_1a5b0b677cb9527865430a9b3d7a71cb03" prot="public" static="no">
+        <name>NUM_NOTES</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h" line="83" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="audio__loop_8h_1a7e03b277fd2f2b3ae6aa029e5256da3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lf_start_audio_loop</definition>
+        <argsstring>(instant_t start_time)</argsstring>
+        <name>lf_start_audio_loop</name>
+        <param>
+          <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+          <declname>start_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Start an audio loop thread that becomes ready to receive audio amplitude samples via <ref refid="audio__loop__linux_8c_1ae0d2efe97b2aac751245705e32d2c927" kindref="member">add_to_sound()</ref>. If there is already an audio loop running, then do nothing. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The logical time that aligns with the first audio buffer. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h" line="92" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_linux.c" bodystart="322" bodyend="341" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h" declline="92" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="audio__loop_8h_1a65266402bd1ede8be91b6a0a5a34f767" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lf_stop_audio_loop</definition>
+        <argsstring>()</argsstring>
+        <name>lf_stop_audio_loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stop the audio loop thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h" line="97" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_linux.c" bodystart="346" bodyend="348" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h" declline="97" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="audio__loop_8h_1a20d5fc7b37764eb8c3a4e917e93ad7d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lf_play_audio_waveform</definition>
+        <argsstring>(lf_waveform_t *waveform, float emphasis, instant_t start_time)</argsstring>
+        <name>lf_play_audio_waveform</name>
+        <param>
+          <type><ref refid="structlf__waveform__t" kindref="compound">lf_waveform_t</ref> *</type>
+          <declname>waveform</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>emphasis</declname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+          <declname>start_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Play the specified waveform with the specified emphasis at the specified time. If the waveform is null, play a simple tick (an impulse). If the waveform has length zero or volume 0, play nothing.</para>
+<para>If the time is too far in the future (beyond the window of the current audio write buffer), then block until the audio output catches up. If the audio playback has already passed the specified point, then play the waveform as soon as possible and return 1. Otherwise, return 0.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>waveform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The waveform to play or NULL to just play a tick. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>emphasis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The emphasis (0.0 for silence, 1.0 for waveform volume). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time to start playing the waveform. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h" line="116" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_linux.c" bodystart="367" bodyend="436" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h" declline="116" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Edward A. Lee </para>
+</simplesect>
+<simplesect kind="author"><para>Soroush Bateni</para>
+</simplesect>
+</para>
+<sect1 id="util_8h_1LICENSE">
+<title>LICENSE</title>
+<para>Copyright (c) 2020, The University of California at Berkeley and UT Dallas</para>
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</para>
+<para><orderedlist>
+<listitem><para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem><para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem></orderedlist>
+</para>
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+</sect1>
+<sect1 id="util_8h_1DESCRIPTION">
+<title>DESCRIPTION</title>
+<para>Audio functions for Linux. To start an audio loop, call <computeroutput>lf_start_audio_loop</computeroutput>, passing it the logical time at which you would like the loop to start. To play a waveform, call <computeroutput><ref refid="audio__loop_8h_1a20d5fc7b37764eb8c3a4e917e93ad7d7" kindref="member">lf_play_audio_waveform()</ref></computeroutput>. A waveform may be synthesized or read from a .wav file using <computeroutput><ref refid="wave__file__reader_8c_1a428c2db9a5e86cf61e6cf3f9d2ea51ad" kindref="member">read_wave_file()</ref></computeroutput> (see <ref refid="wave__file__reader_8h" kindref="compound">wave_file_reader.h</ref>).</para>
+<para>To use this, include the following flags in your target properties: If you are running on Linux: <preformatted>
+   target C {
+       flags: &quot;-lasound -lm&quot;,
+       files: [&quot;/lib/C/util/audio_loop_linux.c&quot;, &quot;/lib/C/util/audio_loop.h&quot;]
+   };
+   </preformatted> If you are running on Mac: <preformatted>
+   target C {
+       flags: &quot;-framework AudioToolbox -framework CoreFoundation -lm&quot;,
+       files: [&quot;/lib/C/util/audio_loop_mac.c&quot;, &quot;/lib/C/util/audio_loop.h&quot;]
+   };
+   </preformatted></para>
+<para>In addition, you need this in your Lingua Franca file: If you are running on Linux: <preformatted>
+   preamble {=
+       #include &quot;audio_loop_linux.c&quot;
+   =}
+   </preformatted> If you are running on Mac: <preformatted>
+   preamble {=
+       #include &quot;audio_loop_mac.c&quot;
+   =}
+   </preformatted> </para>
+</sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="69"><highlight class="preprocessor">#ifndef<sp/>AUDIO_LOOP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AUDIO_LOOP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="wave__file__reader_8h" kindref="compound">wave_file_reader.h</ref>&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>Defines<sp/>lf_waveform_t.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tag_8h" kindref="compound">core/tag.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Defines<sp/>instant_t.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Constants<sp/>for<sp/>playback.<sp/>These<sp/>are<sp/>all<sp/>coupled.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAMPLE_RATE<sp/>44100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AUDIO_BUFFER_SIZE<sp/><sp/>4410<sp/><sp/>//<sp/>1/10<sp/>second,<sp/>100<sp/>msec</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUFFER_DURATION_NS<sp/>100000000LL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NUM_CHANNELS<sp/>1<sp/>//<sp/>2<sp/>for<sp/>stereo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_AMPLITUDE<sp/>32765</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NUM_NOTES<sp/>8<sp/><sp/>//<sp/>Maximum<sp/>number<sp/>of<sp/>notes<sp/>that<sp/>can<sp/>play<sp/>simultaneously.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="audio__loop_8h_1a7e03b277fd2f2b3ae6aa029e5256da3e" kindref="member">lf_start_audio_loop</ref>(<ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/><ref refid="tag_8c_1a20b56e8fb05c017508f1c4fa2e311a87" kindref="member">start_time</ref>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="audio__loop_8h_1a65266402bd1ede8be91b6a0a5a34f767" kindref="member">lf_stop_audio_loop</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="audio__loop_8h_1a20d5fc7b37764eb8c3a4e917e93ad7d7" kindref="member">lf_play_audio_waveform</ref>(<ref refid="structlf__waveform__t" kindref="compound">lf_waveform_t</ref>*<sp/>waveform,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>emphasis,<sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/><ref refid="tag_8c_1a20b56e8fb05c017508f1c4fa2e311a87" kindref="member">start_time</ref>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>AUDIO_LOOP_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h"/>
+  </compounddef>
+</doxygen>

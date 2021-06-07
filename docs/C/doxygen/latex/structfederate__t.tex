@@ -1,0 +1,80 @@
+\hypertarget{structfederate__t}{}\doxysection{federate\+\_\+t Struct Reference}
+\label{structfederate__t}\index{federate\_t@{federate\_t}}
+
+
+{\ttfamily \#include $<$rti.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structfederate__t_a69fc158bf132b647cabecca6835dda58}\label{structfederate__t_a69fc158bf132b647cabecca6835dda58}} 
+int {\bfseries id}
+\item 
+\mbox{\Hypertarget{structfederate__t_ab248a8454865da80f9dba35e8ab4f1f5}\label{structfederate__t_ab248a8454865da80f9dba35e8ab4f1f5}} 
+pthread\+\_\+t {\bfseries thread\+\_\+id}
+\item 
+\mbox{\Hypertarget{structfederate__t_ab43bed0befa07b0d538c174eeaf5c0f7}\label{structfederate__t_ab43bed0befa07b0d538c174eeaf5c0f7}} 
+int {\bfseries socket}
+\item 
+\mbox{\Hypertarget{structfederate__t_a0d2730044e6b596065728e8b6361ce30}\label{structfederate__t_a0d2730044e6b596065728e8b6361ce30}} 
+struct sockaddr\+\_\+in {\bfseries U\+D\+P\+\_\+addr}
+\item 
+\mbox{\Hypertarget{structfederate__t_a9e4580724a41eec9878ff9eff8763f23}\label{structfederate__t_a9e4580724a41eec9878ff9eff8763f23}} 
+bool {\bfseries clock\+\_\+synchronization\+\_\+enabled}
+\item 
+\mbox{\Hypertarget{structfederate__t_a06611a517931b5fcaff7719b0fa38150}\label{structfederate__t_a06611a517931b5fcaff7719b0fa38150}} 
+\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} {\bfseries completed}
+\item 
+\mbox{\Hypertarget{structfederate__t_a426f1683c5b95daae0ac0b21dab4d648}\label{structfederate__t_a426f1683c5b95daae0ac0b21dab4d648}} 
+\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} {\bfseries last\+\_\+granted}
+\item 
+\mbox{\Hypertarget{structfederate__t_a0d12fb57d188ef7496268b93ea65481a}\label{structfederate__t_a0d12fb57d188ef7496268b93ea65481a}} 
+\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} {\bfseries last\+\_\+provisionally\+\_\+granted}
+\item 
+\mbox{\Hypertarget{structfederate__t_a9ec221b4f8c6b9a36bc30943998e322d}\label{structfederate__t_a9ec221b4f8c6b9a36bc30943998e322d}} 
+\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} {\bfseries next\+\_\+event}
+\item 
+\mbox{\Hypertarget{structfederate__t_a13b4f468579567f6e7a1c2aa542a2b78}\label{structfederate__t_a13b4f468579567f6e7a1c2aa542a2b78}} 
+\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} {\bfseries time\+\_\+advance}
+\item 
+\mbox{\Hypertarget{structfederate__t_a3f4d9c9743013e7a8aa596942237fa50}\label{structfederate__t_a3f4d9c9743013e7a8aa596942237fa50}} 
+\mbox{\hyperlink{rti_8h_a7a2e496e8d9be587cc662640a4251b23}{fed\+\_\+state\+\_\+t}} {\bfseries state}
+\item 
+\mbox{\Hypertarget{structfederate__t_a60eee2c5cbac89d0b7bbebb4cd5ca61d}\label{structfederate__t_a60eee2c5cbac89d0b7bbebb4cd5ca61d}} 
+int $\ast$ {\bfseries upstream}
+\item 
+\mbox{\Hypertarget{structfederate__t_a5098b69a97da31d890feb4ec65d739ca}\label{structfederate__t_a5098b69a97da31d890feb4ec65d739ca}} 
+\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} $\ast$ {\bfseries upstream\+\_\+delay}
+\item 
+\mbox{\Hypertarget{structfederate__t_a1d82ef50c2cd3d4f82252350e04f273a}\label{structfederate__t_a1d82ef50c2cd3d4f82252350e04f273a}} 
+int {\bfseries num\+\_\+upstream}
+\item 
+\mbox{\Hypertarget{structfederate__t_a70e3719658ccc1ed171389b566ec5631}\label{structfederate__t_a70e3719658ccc1ed171389b566ec5631}} 
+int $\ast$ {\bfseries downstream}
+\item 
+\mbox{\Hypertarget{structfederate__t_a5818815895ea37489f73045167f91fe5}\label{structfederate__t_a5818815895ea37489f73045167f91fe5}} 
+int {\bfseries num\+\_\+downstream}
+\item 
+\mbox{\Hypertarget{structfederate__t_aa6322b48ff2d517703942b8ed8616222}\label{structfederate__t_aa6322b48ff2d517703942b8ed8616222}} 
+\mbox{\hyperlink{rti_8h_a83ca4d4187a661b1395c9f860d61c97e}{execution\+\_\+mode\+\_\+t}} {\bfseries mode}
+\item 
+\mbox{\Hypertarget{structfederate__t_a9f1036714019b8b0c5161dc9613605e5}\label{structfederate__t_a9f1036714019b8b0c5161dc9613605e5}} 
+char {\bfseries server\+\_\+hostname} \mbox{[}I\+N\+E\+T\+\_\+\+A\+D\+D\+R\+S\+T\+R\+L\+EN\mbox{]}
+\item 
+\mbox{\Hypertarget{structfederate__t_ab88ca288958c1460bce3507e3ccd7370}\label{structfederate__t_ab88ca288958c1460bce3507e3ccd7370}} 
+int {\bfseries server\+\_\+port}
+\item 
+\mbox{\Hypertarget{structfederate__t_a5442949769973da0defafa15154428f3}\label{structfederate__t_a5442949769973da0defafa15154428f3}} 
+struct in\+\_\+addr {\bfseries server\+\_\+ip\+\_\+addr}
+\item 
+\mbox{\Hypertarget{structfederate__t_a31946be5e766bcb52538645fec9704f9}\label{structfederate__t_a31946be5e766bcb52538645fec9704f9}} 
+bool {\bfseries requested\+\_\+stop}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Information about a federate known to the R\+TI, including its runtime state, mode of execution, and connectivity with other federates. The list of upstream and downstream federates does not include those that are connected via a \char`\"{}physical\char`\"{} connection (one denoted with $\sim$$>$) because those connections do not impose any scheduling constraints. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.\+lflang/src/lib/core/\mbox{\hyperlink{rti_8h}{rti.\+h}}\end{DoxyCompactItemize}

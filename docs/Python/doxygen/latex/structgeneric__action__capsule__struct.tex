@@ -1,0 +1,32 @@
+\hypertarget{structgeneric__action__capsule__struct}{}\doxysection{generic\+\_\+action\+\_\+capsule\+\_\+struct Struct Reference}
+\label{structgeneric__action__capsule__struct}\index{generic\_action\_capsule\_struct@{generic\_action\_capsule\_struct}}
+
+
+{\ttfamily \#include $<$pythontarget.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structgeneric__action__capsule__struct_a4ea107a9738cdbb1650d110693ad81bf}\label{structgeneric__action__capsule__struct_a4ea107a9738cdbb1650d110693ad81bf}} 
+Py\+Object\+\_\+\+H\+E\+AD Py\+Object $\ast$ {\bfseries action}
+\item 
+\mbox{\Hypertarget{structgeneric__action__capsule__struct_ae6533691bd52ae8de4f4cd51152c2414}\label{structgeneric__action__capsule__struct_ae6533691bd52ae8de4f4cd51152c2414}} 
+Py\+Object $\ast$ {\bfseries value}
+\item 
+\mbox{\Hypertarget{structgeneric__action__capsule__struct_a1fca95275785ca6a90dcd9d28abf4fa3}\label{structgeneric__action__capsule__struct_a1fca95275785ca6a90dcd9d28abf4fa3}} 
+bool {\bfseries is\+\_\+present}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The struct used to hold an action that is sent to a Python reaction.
+
+The \char`\"{}action\char`\"{} field holds a Py\+Capsule of the void $\ast$ pointer to an action.
+
+The \char`\"{}value\char`\"{} field holds the action value if anything is given. This value is copied over from action-\/$>$value each time an action is passed to a Python reaction.
+
+The \char`\"{}is\+\_\+present\char`\"{} field is copied over from action-\/$>$value each time an action is passed to a Python reaction. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.\+lflang/src/lib/\+Python/\mbox{\hyperlink{pythontarget_8h}{pythontarget.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structgeneric__action__capsule__struct" kind="struct" language="C++" prot="public">
+    <compoundname>generic_action_capsule_struct</compoundname>
+    <includes refid="pythontarget_8h" local="no">pythontarget.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgeneric__action__capsule__struct_1a4ea107a9738cdbb1650d110693ad81bf" prot="public" static="no" mutable="no">
+        <type>PyObject_HEAD PyObject *</type>
+        <definition>PyObject_HEAD PyObject* generic_action_capsule_struct::action</definition>
+        <argsstring></argsstring>
+        <name>action</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" line="166" column="14" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgeneric__action__capsule__struct_1ae6533691bd52ae8de4f4cd51152c2414" prot="public" static="no" mutable="no">
+        <type>PyObject *</type>
+        <definition>PyObject* generic_action_capsule_struct::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" line="169" column="14" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgeneric__action__capsule__struct_1a1fca95275785ca6a90dcd9d28abf4fa3" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool generic_action_capsule_struct::is_present</definition>
+        <argsstring></argsstring>
+        <name>is_present</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" line="170" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The struct used to hold an action that is sent to a Python reaction.</para>
+<para>The &quot;action&quot; field holds a PyCapsule of the void * pointer to an action.</para>
+<para>The &quot;value&quot; field holds the action value if anything is given. This value is copied over from action-&gt;value each time an action is passed to a Python reaction.</para>
+<para>The &quot;is_present&quot; field is copied over from action-&gt;value each time an action is passed to a Python reaction. </para>
+    </detaileddescription>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" line="164" column="15" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/Python/pythontarget.h" bodystart="164" bodyend="171"/>
+    <listofallmembers>
+      <member refid="structgeneric__action__capsule__struct_1a4ea107a9738cdbb1650d110693ad81bf" prot="public" virt="non-virtual"><scope>generic_action_capsule_struct</scope><name>action</name></member>
+      <member refid="structgeneric__action__capsule__struct_1a1fca95275785ca6a90dcd9d28abf4fa3" prot="public" virt="non-virtual"><scope>generic_action_capsule_struct</scope><name>is_present</name></member>
+      <member refid="structgeneric__action__capsule__struct_1ae6533691bd52ae8de4f4cd51152c2414" prot="public" virt="non-virtual"><scope>generic_action_capsule_struct</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

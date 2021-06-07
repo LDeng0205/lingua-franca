@@ -1,0 +1,1081 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="net__util_8h" kind="file" language="C++">
+    <compoundname>net_util.h</compoundname>
+    <includes refid="platform_8h" local="yes">platform.h</includes>
+    <includes refid="tag_8h" local="yes">tag.h</includes>
+    <includedby refid="net__util_8c" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>platform.h</label>
+        <link refid="platform_8h_source"/>
+      </node>
+      <node id="3">
+        <label>tag.h</label>
+        <link refid="tag_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h</label>
+        <link refid="net__util_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.c</label>
+        <link refid="federate_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c</label>
+        <link refid="net__util_8c"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h</label>
+        <link refid="net__util_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.c</label>
+        <link refid="rti_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="net__util_8h_1ae0b024f7ee4bd875149b1a0a50c20b0a" prot="public" static="no">
+        <name>HOST_LITTLE_ENDIAN</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" line="44" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="net__util_8h_1a18c839c3ef122fe4ecc7b907ea688a97" prot="public" static="no">
+        <name>HOST_BIG_ENDIAN</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" line="45" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="net__util_8h_1a04dd5e3e7b7ee262b58476c4611d7b23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int host_is_big_endian</definition>
+        <argsstring>()</argsstring>
+        <name>host_is_big_endian</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return true (1) if the host is big endian. Otherwise, return false. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" line="50" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c" bodystart="55" bodyend="67" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" declline="50" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="net__util_8h_1a9d26e19c03e782593ba0f1791b7f35b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int read_from_socket_errexit</definition>
+        <argsstring>(int socket, int num_bytes, unsigned char *buffer, char *format,...)</argsstring>
+        <name>read_from_socket_errexit</name>
+        <param>
+          <type>int</type>
+          <declname>socket</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num_bytes</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read the specified number of bytes from the specified socket into the specified buffer. If a disconnect or an EOF occurs during this reading, then if format is non-null, report an error and exit. If format is null, then report the error, but do not exit. This function takes a formatted string and additional optional arguments similar to printf(format, ...) that is appended to the error messages. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to read. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer into which to put the bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A printf-style format string, followed by arguments to fill the string, or NULL to not exit with an error message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes read, or 0 if an EOF is received, or a negative number for an error.</para>
+</simplesect>
+Read the specified number of bytes from the specified socket into the specified buffer. If an error or an EOF occurs during this reading, then if format is non-null, close the socket, report an error and exit. If format is NULL, then just return 0 for EOF and a negative number for any other error.</para>
+<para>This function takes a formatted string and additional optional arguments similar to printf(format, ...) that is appended to the error messages.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to read. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer into which to put the bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A printf-style format string, followed by arguments to fill the string, or NULL to not exit with an error message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes read, or 0 if an EOF is received, or a negative number for an error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" line="68" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c" bodystart="89" bodyend="126" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" declline="68" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="net__util_8h_1a9426930d10448b1f16f6afee07777f88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int read_from_socket</definition>
+        <argsstring>(int socket, int num_bytes, unsigned char *buffer)</argsstring>
+        <name>read_from_socket</name>
+        <param>
+          <type>int</type>
+          <declname>socket</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num_bytes</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read the specified number of bytes from the specified socket into the specified buffer. If a disconnect occurs during this reading, return a negative number. If an EOF occurs during this reading, return 0. Otherwise, return the number of bytes read. This is a version of <ref refid="net__util_8c_1a9d26e19c03e782593ba0f1791b7f35b5" kindref="member">read_from_socket_errexit()</ref> that does not error out. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to read. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer into which to put the bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes read or 0 when EOF is received or negative for an error.</para>
+</simplesect>
+Read the specified number of bytes from the specified socket into the specified buffer. If a disconnect occurs during this reading, return a negative number. If an EOF occurs during this reading, return 0. Otherwise, return the number of bytes read. This is a version of <ref refid="net__util_8c_1a9d26e19c03e782593ba0f1791b7f35b5" kindref="member">read_from_socket_errexit()</ref> that neither closes the socket nor errors out.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to read. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer into which to put the bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes read or 0 when EOF is received or negative for an error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" line="85" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c" bodystart="141" bodyend="143" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" declline="85" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="net__util_8h_1ae819deb7254b390e29a1808625acf70f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int write_to_socket_errexit_with_mutex</definition>
+        <argsstring>(int socket, int num_bytes, unsigned char *buffer, lf_mutex_t *mutex, char *format,...)</argsstring>
+        <name>write_to_socket_errexit_with_mutex</name>
+        <param>
+          <type>int</type>
+          <declname>socket</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num_bytes</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>lf_mutex_t *</type>
+          <declname>mutex</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the specified number of bytes to the specified socket from the specified buffer. If a disconnect or an EOF occurs during this reading, report an error and exit, unless the format string is NULL, in which case, report an error and return. This function takes a formatted string and additional optional arguments similar to printf(format, ...) that is appended to the error messages. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer from which to get the bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mutex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If non-NULL, the mutex to unlock before exiting. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A format string for error messages, followed by any number of fields that will be used to fill the format string as in printf, or NULL to prevent exit on error. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written, or 0 if an EOF was received, or a negative number if an error occurred.</para>
+</simplesect>
+Write the specified number of bytes to the specified socket from the specified buffer. If an error or an EOF occurs during this reading, then if the format string is non-null, close the socket, report an error, and exit. If the format string is null, report an error or EOF and return.</para>
+<para>This function takes a formatted string and additional optional arguments similar to printf(format, ...) that is appended to the error messages.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer from which to get the bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mutex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If non-NULL, the mutex to unlock before exiting. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A format string for error messages, followed by any number of fields that will be used to fill the format string as in printf, or NULL to prevent exit on error. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written, or 0 if an EOF was received, or a negative number if an error occurred. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" line="104" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c" bodystart="166" bodyend="196" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" declline="104" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="net__util_8h_1a0e3b7299eccba74fcd7a27f37642dc7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int write_to_socket_errexit</definition>
+        <argsstring>(int socket, int num_bytes, unsigned char *buffer, char *format,...)</argsstring>
+        <name>write_to_socket_errexit</name>
+        <param>
+          <type>int</type>
+          <declname>socket</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num_bytes</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the specified number of bytes to the specified socket from the specified buffer. If a disconnect or an EOF occurs during this reading, report an error and exit, unless the format string is NULL, in which case, report an error and return. This function takes a formatted string and additional optional arguments similar to printf(format, ...) that is appended to the error messages. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer from which to get the bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mutex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If non-NULL, the mutex to unlock before exiting. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A format string for error messages, followed by any number of fields that will be used to fill the format string as in printf, or NULL to prevent exit on error. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written, or 0 if an EOF was received, or a negative number if an error occurred.</para>
+</simplesect>
+Write the specified number of bytes to the specified socket from the specified buffer. If an error or an EOF occurs during this reading, then if the format string is non-null, close the socket, report an error, and exit. If the format string is null, report an error or EOF and return.</para>
+<para>This function takes a formatted string and additional optional arguments similar to printf(format, ...) that is appended to the error messages.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer from which to get the bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A format string for error messages, followed by any number of fields that will be used to fill the format string as in printf, or NULL to prevent exit on error. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written, or 0 if an EOF was received, or a negative number if an error occurred. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" line="128" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c" bodystart="218" bodyend="224" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" declline="128" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="net__util_8h_1a4c100e73807feaae911d1c5cd67c475f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int write_to_socket2</definition>
+        <argsstring>(int socket, int num_bytes, unsigned char *buffer)</argsstring>
+        <name>write_to_socket2</name>
+        <param>
+          <type>int</type>
+          <declname>socket</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num_bytes</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the specified number of bytes to the specified socket from the specified buffer. If a disconnect or an EOF occurs during this reading, return a negative number or 0 respectively. Otherwise, return the number of bytes written. This is a version of <ref refid="net__util_8c_1ae9bab7965862259f354a419e4140b564" kindref="member">write_to_socket()</ref> that does not error out. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The socket ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer from which to get the bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written, or 0 if an EOF was received, or a negative number if an error occurred. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" line="146" column="5" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" declline="146" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="net__util_8h_1a0b8cbad5d6dc462c87eb48c6a5519c33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void encode_ll</definition>
+        <argsstring>(long long data, unsigned char *buffer)</argsstring>
+        <name>encode_ll</name>
+        <param>
+          <type>long long</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the specified data as a sequence of bytes starting at the specified address. This encodes the data in little-endian order (lowest order byte first). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The location to start writing. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" line="154" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c" bodystart="250" bodyend="258" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" declline="154" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="net__util_8h_1af4312040e137fb9d644f96edaa74075d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void encode_int</definition>
+        <argsstring>(int data, unsigned char *buffer)</argsstring>
+        <name>encode_int</name>
+        <param>
+          <type>int</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the specified data as a sequence of bytes starting at the specified address. This encodes the data in little-endian order (lowest order byte first). This works for either int or unsigned int. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The location to start writing. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" line="163" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c" bodystart="267" bodyend="274" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" declline="163" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="net__util_8h_1ac91e6a5450e934d80281f626ba25deaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void encode_ushort</definition>
+        <argsstring>(unsigned short data, unsigned char *buffer)</argsstring>
+        <name>encode_ushort</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the specified data as a sequence of bytes starting at the specified address. This encodes the data in little-endian order (lowest order byte first). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The location to start writing. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" line="171" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c" bodystart="282" bodyend="287" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" declline="171" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="net__util_8h_1a34227a5f72de6d30571be08cf4ec48f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int swap_bytes_if_big_endian_int</definition>
+        <argsstring>(int src)</argsstring>
+        <name>swap_bytes_if_big_endian_int</name>
+        <param>
+          <type>int</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If this host is little endian, then reverse the order of the bytes of the argument. Otherwise, return the argument unchanged. This can be used to convert the argument to network order (big endian) and then back again. Network transmissions, by convention, are big endian, meaning that the high-order byte is sent first. But many platforms, including my Mac, are little endian, meaning that the low-order byte is first in memory. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The argument to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" line="183" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c" bodystart="299" bodyend="314" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" declline="183" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="net__util_8h_1a8030d5345c501ee7d9bbfffa75b85dd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long long</type>
+        <definition>long long swap_bytes_if_big_endian_ll</definition>
+        <argsstring>(long long src)</argsstring>
+        <name>swap_bytes_if_big_endian_ll</name>
+        <param>
+          <type>long long</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If this host is little endian, then reverse the order of the bytes of the argument. Otherwise, return the argument unchanged. This can be used to convert the argument to network order (big endian) and then back again. Network transmissions, by convention, are big endian, meaning that the high-order byte is sent first. But many platforms, including my Mac, are little endian, meaning that the low-order byte is first in memory. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The argument to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" line="195" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c" bodystart="326" bodyend="343" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" declline="195" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="net__util_8h_1a667ab204d21ca15a1cd9f8fe26696a31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int swap_bytes_if_big_endian_ushort</definition>
+        <argsstring>(unsigned short src)</argsstring>
+        <name>swap_bytes_if_big_endian_ushort</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If this host is little endian, then reverse the order of the bytes of the argument. Otherwise, return the argument unchanged. This can be used to convert the argument to network order (big endian) and then back again. Network transmissions, by convention, are big endian, meaning that the high-order byte is sent first. But many platforms, including my Mac, are little endian, meaning that the low-order byte is first in memory. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The argument to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" line="207" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c" bodystart="355" bodyend="369" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" declline="207" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="net__util_8h_1a2c3e1559ae8f31e111cedc00211edded" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int extract_int</definition>
+        <argsstring>(unsigned char *bytes)</argsstring>
+        <name>extract_int</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Extract an int from the specified byte sequence. This will swap the order of the bytes if this machine is big endian. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of the start of the sequence of bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" line="213" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c" bodystart="375" bodyend="383" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" declline="213" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="net__util_8h_1a3c03766b3fd76c7ad5901581a766caa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long long</type>
+        <definition>long long extract_ll</definition>
+        <argsstring>(unsigned char *bytes)</argsstring>
+        <name>extract_ll</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Extract a long long from the specified byte sequence. This will swap the order of the bytes if this machine is big endian. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of the start of the sequence of bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" line="219" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c" bodystart="389" bodyend="397" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" declline="219" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="net__util_8h_1ab52445dc6792e1d40424c4e0edc18704" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short extract_ushort</definition>
+        <argsstring>(unsigned char *bytes)</argsstring>
+        <name>extract_ushort</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Extract an unsigned short from the specified byte sequence. This will swap the order of the bytes if this machine is big endian. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of the start of the sequence of bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" line="225" column="16" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c" bodystart="403" bodyend="411" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" declline="225" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="net__util_8h_1a11217be2cfd106df54dfab0c53218238" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void extract_header</definition>
+        <argsstring>(unsigned char *buffer, unsigned short *port_id, unsigned short *federate_id, unsigned int *length)</argsstring>
+        <name>extract_header</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>unsigned short *</type>
+          <declname>port_id</declname>
+        </param>
+        <param>
+          <type>unsigned short *</type>
+          <declname>federate_id</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Extract the core header information that all messages between federates share. The core header information is two bytes with the ID of the destination port, two bytes with the ID of the destination federate, and four bytes with the length of the message. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to read from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The place to put the port ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>federate_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The place to put the federate ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The place to put the length. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" line="237" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c" bodystart="423" bodyend="442" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" declline="237" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="net__util_8h_1a3e9fc45154c83606a54f358e4978b489" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void extract_timed_header</definition>
+        <argsstring>(unsigned char *buffer, unsigned short *port_id, unsigned short *federate_id, unsigned int *length, tag_t *tag)</argsstring>
+        <name>extract_timed_header</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>unsigned short *</type>
+          <declname>port_id</declname>
+        </param>
+        <param>
+          <type>unsigned short *</type>
+          <declname>federate_id</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type><ref refid="structtag__t" kindref="compound">tag_t</ref> *</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Extract the timed header information for timed messages between federates. This is two bytes with the ID of the destination port, two bytes with the ID of the destination federate, four bytes with the length of the message, eight bytes with a timestamp, and four bytes with a microstep. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to read from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The place to put the port ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>federate_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The place to put the federate ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The place to put the length. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The place to put the tag. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" line="256" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c" bodystart="456" bodyend="467" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h" declline="256" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Edward A. Lee </para>
+</simplesect>
+<simplesect kind="author"><para>Soroush Bateni</para>
+</simplesect>
+</para>
+<sect1 id="util_8h_1LICENSE">
+<title>LICENSE</title>
+<para>Copyright (c) 2020, The University of California at Berkeley.</para>
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</para>
+<para><orderedlist>
+<listitem><para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem><para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem></orderedlist>
+</para>
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+</sect1>
+<sect1 id="util_8h_1DESCRIPTION">
+<title>DESCRIPTION</title>
+<para>Header file for network utility functions for Lingua Franca programs. Note that these functions do not acquire any mutexes. To use them, you must ensure either that only one thread ever sends on each socket and one thread receives on each socket (these two can be the same thread) or that the caller handles mutual exclusion to prevent more than one thread from accessing the socket at a time. </para>
+</sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="38"><highlight class="preprocessor">#ifndef<sp/>NET_UTIL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NET_UTIL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;platform.h&quot;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>defines<sp/>lf_mutex_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tag_8h" kindref="compound">tag.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Defines<sp/>tag_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HOST_LITTLE_ENDIAN<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HOST_BIG_ENDIAN<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="net__util_8h_1a04dd5e3e7b7ee262b58476c4611d7b23" kindref="member">host_is_big_endian</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="net__util_8h_1a9d26e19c03e782593ba0f1791b7f35b5" kindref="member">read_from_socket_errexit</ref>(</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>socket,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_bytes,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>format,<sp/>...);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="net__util_8h_1a9426930d10448b1f16f6afee07777f88" kindref="member">read_from_socket</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>socket,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_bytes,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="net__util_8h_1ae819deb7254b390e29a1808625acf70f" kindref="member">write_to_socket_errexit_with_mutex</ref>(</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>socket,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_bytes,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lf_mutex_t*<sp/>mutex,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>format,<sp/>...);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="net__util_8h_1a0e3b7299eccba74fcd7a27f37642dc7e" kindref="member">write_to_socket_errexit</ref>(</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>socket,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_bytes,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>format,<sp/>...);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="net__util_8h_1a4c100e73807feaae911d1c5cd67c475f" kindref="member">write_to_socket2</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>socket,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_bytes,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="net__util_8h_1a0b8cbad5d6dc462c87eb48c6a5519c33" kindref="member">encode_ll</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>data,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="net__util_8h_1af4312040e137fb9d644f96edaa74075d" kindref="member">encode_int</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>data,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="net__util_8h_1ac91e6a5450e934d80281f626ba25deaa" kindref="member">encode_ushort</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>data,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="net__util_8h_1a34227a5f72de6d30571be08cf4ec48f6" kindref="member">swap_bytes_if_big_endian_int</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>src);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="net__util_8h_1a8030d5345c501ee7d9bbfffa75b85dd5" kindref="member">swap_bytes_if_big_endian_ll</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>src);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="net__util_8h_1a667ab204d21ca15a1cd9f8fe26696a31" kindref="member">swap_bytes_if_big_endian_ushort</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>src);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="net__util_8h_1a2c3e1559ae8f31e111cedc00211edded" kindref="member">extract_int</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>bytes);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="net__util_8h_1a3c03766b3fd76c7ad5901581a766caa8" kindref="member">extract_ll</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>bytes);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="net__util_8h_1ab52445dc6792e1d40424c4e0edc18704" kindref="member">extract_ushort</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>bytes);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="net__util_8h_1a11217be2cfd106df54dfab0c53218238" kindref="member">extract_header</ref>(</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer,</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">*<sp/>port_id,</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">*<sp/>federate_id,</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>length</highlight></codeline>
+<codeline lineno="242"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="net__util_8h_1a3e9fc45154c83606a54f358e4978b489" kindref="member">extract_timed_header</ref>(</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer,</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">*<sp/>port_id,</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">*<sp/>federate_id,</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>length,</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtag__t" kindref="compound">tag_t</ref>*<sp/>tag</highlight></codeline>
+<codeline lineno="262"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>NET_UTIL_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h"/>
+  </compounddef>
+</doxygen>

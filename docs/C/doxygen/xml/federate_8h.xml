@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="federate_8h" kind="file" language="C++">
+    <compoundname>federate.h</compoundname>
+    <includedby refid="federate_8c" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.c</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.c</label>
+        <link refid="federate_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h</label>
+        <link refid="federate_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structfederate__instance__t" prot="public">federate_instance_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="federate_8h_1a2312893474cb0415e16af40b1de063ca" prot="public" static="no">
+        <name>ADVANCE_MESSAGE_INTERVAL</name>
+        <initializer>MSEC(10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="36" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="federate_8h_1a675c841ec6a29e45cacc71b61ef8d270" prot="public" static="no">
+        <type>struct <ref refid="structfederate__instance__t" kindref="compound">federate_instance_t</ref></type>
+        <definition>typedef struct federate_instance_t federate_instance_t</definition>
+        <argsstring></argsstring>
+        <name>federate_instance_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure that a federate instance uses to keep track of its own state. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="232" column="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="federate_8h_1ad83fe9661682934029a42954b8fe6e2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void synchronize_with_other_federates</definition>
+        <argsstring>()</argsstring>
+        <name>synchronize_with_other_federates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Synchronize the start with other federates via the RTI. This assumes that a connection to the RTI is already made and _lf_rti_socket_TCP is valid. It then sends the current logical time to the RTI and waits for the RTI to respond with a specified time. It starts a thread to listen for messages from the RTI. It then waits for physical time to match the specified time, sets current logical time to the time returned by the RTI, and then returns. If <ndash/>fast was specified, then this does not wait for physical time to match the logical start time returned by the RTI.</para>
+<para>Synchronize the start with other federates via the RTI. This assumes that a connection to the RTI is already made and _fed.socket_TCP_RTI is valid. It then sends the current logical time to the RTI and waits for the RTI to respond with a specified time. It starts a thread to listen for messages from the RTI. It then waits for physical time to match the specified time, sets current logical time to the time returned by the RTI, and then returns. If <ndash/>fast was specified, then this does not wait for physical time to match the logical start time returned by the RTI.</para>
+<para>FIXME: Possibly should be renamed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="246" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.c" bodystart="2339" bodyend="2375" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" declline="246" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="federate_8h_1a5ec362a10173f606cdd994fc6ba4e2e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wait_until_port_status_known</definition>
+        <argsstring>(int portID, interval_t STP)</argsstring>
+        <name>wait_until_port_status_known</name>
+        <param>
+          <type>int</type>
+          <declname>portID</declname>
+          <defname>port_ID</defname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+          <declname>STP</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wait until the status of network port &quot;portID&quot; can be determined.</para>
+<para>In decentralized coordination mode, the wait time is capped by &quot;STP&quot;, after which the status of the port is presumed to be absent.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>portID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the network port </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>STP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The STP offset of the port</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Wait until the status of network port &quot;port_ID&quot; is known.</para>
+<para>In decentralized coordination mode, the wait time is capped by &quot;STP&quot;, after which the status of the port is presumed to be absent.</para>
+<para>This function assumes the holder does not hold a mutex.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port_ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the network port </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>STP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The STP offset of the port </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" line="257" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.c" bodystart="1311" bodyend="1390" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h" declline="257" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Edward A. Lee (<ulink url="mailto:eal@berkeley.edu">eal@berkeley.edu</ulink>)</para>
+</simplesect>
+</para>
+<sect1 id="util_8h_1LICENSE">
+<title>LICENSE</title>
+<para>Copyright (c) 2020, The University of California at Berkeley.</para>
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</para>
+<para><orderedlist>
+<listitem><para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem><para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem></orderedlist>
+</para>
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+</sect1>
+<sect1 id="util_8h_1DESCRIPTION">
+<title>DESCRIPTION</title>
+<para>Data structures and functions used and defined in <ref refid="federate_8c" kindref="compound">federate.c</ref>. </para>
+</sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="32"><highlight class="preprocessor">#ifndef<sp/>FEDERATE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FEDERATE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ADVANCE_MESSAGE_INTERVAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADVANCE_MESSAGE_INTERVAL<sp/>MSEC(10)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="structfederate__instance__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfederate__instance__t" kindref="compound">federate_instance_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="48" refid="structfederate__instance__t_1aacdc19a638ccdc9fae494ce641f4cb04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structfederate__instance__t_1aacdc19a638ccdc9fae494ce641f4cb04" kindref="member">socket_TCP_RTI</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="structfederate__instance__t_1a5b6b4b5912a7bb7df1c8987f38e12004" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>lf_thread_t<sp/><ref refid="structfederate__instance__t_1a5b6b4b5912a7bb7df1c8987f38e12004" kindref="member">RTI_socket_listener</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="structfederate__instance__t_1a189bc35e092cd0c6908267aa9ff663e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structfederate__instance__t_1a189bc35e092cd0c6908267aa9ff663e5" kindref="member">number_of_inbound_p2p_connections</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="structfederate__instance__t_1ac751250db764f954659deb15f1427044" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>lf_thread_t<sp/>*<ref refid="structfederate__instance__t_1ac751250db764f954659deb15f1427044" kindref="member">inbound_socket_listeners</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="structfederate__instance__t_1a26af9633fce5c849b670f9e4ebec020e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structfederate__instance__t_1a26af9633fce5c849b670f9e4ebec020e" kindref="member">number_of_outbound_p2p_connections</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="structfederate__instance__t_1a244a65a4b9ca9e27230c87ce9021b7e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structfederate__instance__t_1a244a65a4b9ca9e27230c87ce9021b7e1" kindref="member">sockets_for_inbound_p2p_connections</ref>[NUMBER_OF_FEDERATES];</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="structfederate__instance__t_1a9e1cde7330bec95f787bb7a85d509c9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structfederate__instance__t_1a9e1cde7330bec95f787bb7a85d509c9a" kindref="member">sockets_for_outbound_p2p_connections</ref>[NUMBER_OF_FEDERATES];</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="structfederate__instance__t_1ab441abf042a2ff79099bdf2860aeb058" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>lf_thread_t<sp/><ref refid="structfederate__instance__t_1ab441abf042a2ff79099bdf2860aeb058" kindref="member">inbound_p2p_handling_thread_id</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="structfederate__instance__t_1a20c5d19d5166ec82a09efe072c2f1b49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structfederate__instance__t_1a20c5d19d5166ec82a09efe072c2f1b49" kindref="member">server_socket</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="structfederate__instance__t_1a309c9672d657f20cd1d3661edc7d5179" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structfederate__instance__t_1a309c9672d657f20cd1d3661edc7d5179" kindref="member">server_port</ref>;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="structfederate__instance__t_1aa66a2f08ea9173743106c7ff18f1846a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtag__t" kindref="compound">tag_t</ref><sp/><ref refid="structfederate__instance__t_1aa66a2f08ea9173743106c7ff18f1846a" kindref="member">last_TAG</ref>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="structfederate__instance__t_1a05a9586ad89b82d0bf5f969a194ef69c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structfederate__instance__t_1a05a9586ad89b82d0bf5f969a194ef69c" kindref="member">is_last_TAG_provisional</ref>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="structfederate__instance__t_1a9812f0499dda0efd9f2718981be2e905" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structfederate__instance__t_1a9812f0499dda0efd9f2718981be2e905" kindref="member">waiting_for_TAG</ref>;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="structfederate__instance__t_1a603662cf0155920b8a76659e7dacb9ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structfederate__instance__t_1a603662cf0155920b8a76659e7dacb9ef" kindref="member">has_upstream</ref>;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="structfederate__instance__t_1ac130c67ec68fe84d6753a54e6e73d59a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structfederate__instance__t_1ac130c67ec68fe84d6753a54e6e73d59a" kindref="member">has_downstream</ref>;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="structfederate__instance__t_1a5bed997749ef910209491c67e3ece6b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structfederate__instance__t_1a5bed997749ef910209491c67e3ece6b4" kindref="member">sent_a_stop_request_to_rti</ref>;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="structfederate__instance__t_1ae95f54a01b0367048faa6460ff86e987" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtag__t" kindref="compound">tag_t</ref><sp/><ref refid="structfederate__instance__t_1ae95f54a01b0367048faa6460ff86e987" kindref="member">last_sent_LTC</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="structfederate__instance__t_1a42618a45ae75b42e1caec4b373471d96" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtag__t" kindref="compound">tag_t</ref><sp/><ref refid="structfederate__instance__t_1a42618a45ae75b42e1caec4b373471d96" kindref="member">last_sent_NET</ref>;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="structfederate__instance__t_1a91a34b0d7f0f604c2f21cf062dbe0314" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/><ref refid="structfederate__instance__t_1a91a34b0d7f0f604c2f21cf062dbe0314" kindref="member">min_delay_from_physical_action_to_federate_output</ref>;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217" refid="structfederate__instance__t_1a8385397cd2996dbf5f79828e077926f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtrigger__t" kindref="compound">trigger_t</ref>**<sp/><ref refid="structfederate__instance__t_1a8385397cd2996dbf5f79828e077926f2" kindref="member">triggers_for_network_input_control_reactions</ref>;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>triggers_for_network_input_control_reactions_size;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230" refid="structfederate__instance__t_1a786701f771e06e14c369be4b0a6519b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtrigger__t" kindref="compound">trigger_t</ref>*<sp/><ref refid="structfederate__instance__t_1a786701f771e06e14c369be4b0a6519b5" kindref="member">trigger_for_network_output_control_reactions</ref>;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal">}<sp/><ref refid="federate_8h_1a675c841ec6a29e45cacc71b61ef8d270" kindref="member">federate_instance_t</ref>;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="federate_8h_1ad83fe9661682934029a42954b8fe6e2f" kindref="member">synchronize_with_other_federates</ref>();</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="federate_8h_1a5ec362a10173f606cdd994fc6ba4e2e9" kindref="member">wait_until_port_status_known</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>portID,<sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>STP);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>FEDERATE_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.h"/>
+  </compounddef>
+</doxygen>

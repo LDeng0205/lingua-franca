@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structevent__t" kind="struct" language="C++" prot="public">
+    <compoundname>event_t</compoundname>
+    <includes refid="reactor_8h" local="no">reactor.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structevent__t_1aeff8ee74b3835a35460f05a3b45f710c" prot="public" static="no" mutable="no">
+        <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+        <definition>instant_t event_t::time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="471" column="15" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="471" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structevent__t_1a0687a08899f1c750aedcc2f44e47f308" prot="public" static="no" mutable="no">
+        <type><ref refid="structtrigger__t" kindref="compound">trigger_t</ref> *</type>
+        <definition>trigger_t* event_t::trigger</definition>
+        <argsstring></argsstring>
+        <name>trigger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="472" column="15" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="472" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structevent__t_1a7e330b2cac061de0e9720e44c3107f30" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t event_t::pos</definition>
+        <argsstring></argsstring>
+        <name>pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="473" column="12" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="473" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structevent__t_1a85bacc8397754414c8942221d79e4edb" prot="public" static="no" mutable="no">
+        <type><ref refid="structlf__token__t" kindref="compound">lf_token_t</ref> *</type>
+        <definition>lf_token_t* event_t::token</definition>
+        <argsstring></argsstring>
+        <name>token</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="474" column="16" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="474" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structevent__t_1a490fa7a60e907ad95003c011a6c1002e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool event_t::is_dummy</definition>
+        <argsstring></argsstring>
+        <name>is_dummy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="475" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="475" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structevent__t_1a51ac1505b09e624cf35376047e992126" prot="public" static="no" mutable="no">
+        <type><ref refid="structevent__t" kindref="compound">event_t</ref> *</type>
+        <definition>event_t* event_t::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="479" column="13" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="479" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Event activation record to push onto the event queue. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>reaction_t</label>
+        <link refid="structreaction__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>triggers</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>last_enabling_reaction</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>event_t</label>
+        <link refid="structevent__t"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>token</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>trigger</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lf_token_t</label>
+        <link refid="structlf__token__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>next_free</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>trigger_t</label>
+        <link refid="structtrigger__t"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>last</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>token</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>reactions</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" line="470" column="14" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h" bodystart="470" bodyend="480"/>
+    <listofallmembers>
+      <member refid="structevent__t_1a490fa7a60e907ad95003c011a6c1002e" prot="public" virt="non-virtual"><scope>event_t</scope><name>is_dummy</name></member>
+      <member refid="structevent__t_1a51ac1505b09e624cf35376047e992126" prot="public" virt="non-virtual"><scope>event_t</scope><name>next</name></member>
+      <member refid="structevent__t_1a7e330b2cac061de0e9720e44c3107f30" prot="public" virt="non-virtual"><scope>event_t</scope><name>pos</name></member>
+      <member refid="structevent__t_1aeff8ee74b3835a35460f05a3b45f710c" prot="public" virt="non-virtual"><scope>event_t</scope><name>time</name></member>
+      <member refid="structevent__t_1a85bacc8397754414c8942221d79e4edb" prot="public" virt="non-virtual"><scope>event_t</scope><name>token</name></member>
+      <member refid="structevent__t_1a0687a08899f1c750aedcc2f44e47f308" prot="public" virt="non-virtual"><scope>event_t</scope><name>trigger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

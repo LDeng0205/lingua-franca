@@ -1,0 +1,100 @@
+\hypertarget{structpqueue__t}{}\doxysection{pqueue\+\_\+t Struct Reference}
+\label{structpqueue__t}\index{pqueue\_t@{pqueue\_t}}
+
+
+{\ttfamily \#include $<$pqueue.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{structpqueue__t_a37a81db394494e542cdaec80ce4f2f42}{size}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structpqueue__t_a2edc2359d1420efc7031677ecd19c1ec}{avail}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structpqueue__t_ab405fbb415065192ce9a1a39b5f45978}{step}}
+\item 
+pqueue\+\_\+cmp\+\_\+pri\+\_\+f \mbox{\hyperlink{structpqueue__t_af44c1953e47510529147cfbea33489ef}{cmppri}}
+\item 
+\mbox{\hyperlink{pqueue_8h_aa84f0100faf971295df5aed226c390a6}{pqueue\+\_\+get\+\_\+pri\+\_\+f}} \mbox{\hyperlink{structpqueue__t_ae1c098eb8c14bdfbce6797ede3f0c387}{getpri}}
+\item 
+\mbox{\hyperlink{pqueue_8h_a31ca7927983005bd7866021819ad7037}{pqueue\+\_\+get\+\_\+pos\+\_\+f}} \mbox{\hyperlink{structpqueue__t_a20a38eccf17fb90e2c483503326c3fba}{getpos}}
+\item 
+pqueue\+\_\+set\+\_\+pos\+\_\+f \mbox{\hyperlink{structpqueue__t_a0960bed72e0c851bccf1591c39360c73}{setpos}}
+\item 
+pqueue\+\_\+eq\+\_\+elem\+\_\+f \mbox{\hyperlink{structpqueue__t_a27ad9197156c9be3cbc2845478223f32}{eqelem}}
+\item 
+\mbox{\hyperlink{pqueue_8h_a884902da135214a6167f1536ad4ed4bc}{pqueue\+\_\+print\+\_\+entry\+\_\+f}} \mbox{\hyperlink{structpqueue__t_aeb48e61916a065bb67c7dc3cc963ffeb}{prt}}
+\item 
+void $\ast$$\ast$ \mbox{\hyperlink{structpqueue__t_a92b9ee0486259382e9087cd1f05f2792}{d}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+the priority queue handle 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpqueue__t_a2edc2359d1420efc7031677ecd19c1ec}\label{structpqueue__t_a2edc2359d1420efc7031677ecd19c1ec}} 
+\index{pqueue\_t@{pqueue\_t}!avail@{avail}}
+\index{avail@{avail}!pqueue\_t@{pqueue\_t}}
+\doxysubsubsection{\texorpdfstring{avail}{avail}}
+{\footnotesize\ttfamily size\+\_\+t pqueue\+\_\+t\+::avail}
+
+slots available in this queue \mbox{\Hypertarget{structpqueue__t_af44c1953e47510529147cfbea33489ef}\label{structpqueue__t_af44c1953e47510529147cfbea33489ef}} 
+\index{pqueue\_t@{pqueue\_t}!cmppri@{cmppri}}
+\index{cmppri@{cmppri}!pqueue\_t@{pqueue\_t}}
+\doxysubsubsection{\texorpdfstring{cmppri}{cmppri}}
+{\footnotesize\ttfamily pqueue\+\_\+cmp\+\_\+pri\+\_\+f pqueue\+\_\+t\+::cmppri}
+
+callback to compare priorities \mbox{\Hypertarget{structpqueue__t_a92b9ee0486259382e9087cd1f05f2792}\label{structpqueue__t_a92b9ee0486259382e9087cd1f05f2792}} 
+\index{pqueue\_t@{pqueue\_t}!d@{d}}
+\index{d@{d}!pqueue\_t@{pqueue\_t}}
+\doxysubsubsection{\texorpdfstring{d}{d}}
+{\footnotesize\ttfamily void$\ast$$\ast$ pqueue\+\_\+t\+::d}
+
+The actual queue in binary heap form \mbox{\Hypertarget{structpqueue__t_a27ad9197156c9be3cbc2845478223f32}\label{structpqueue__t_a27ad9197156c9be3cbc2845478223f32}} 
+\index{pqueue\_t@{pqueue\_t}!eqelem@{eqelem}}
+\index{eqelem@{eqelem}!pqueue\_t@{pqueue\_t}}
+\doxysubsubsection{\texorpdfstring{eqelem}{eqelem}}
+{\footnotesize\ttfamily pqueue\+\_\+eq\+\_\+elem\+\_\+f pqueue\+\_\+t\+::eqelem}
+
+callback to compare elements \mbox{\Hypertarget{structpqueue__t_a20a38eccf17fb90e2c483503326c3fba}\label{structpqueue__t_a20a38eccf17fb90e2c483503326c3fba}} 
+\index{pqueue\_t@{pqueue\_t}!getpos@{getpos}}
+\index{getpos@{getpos}!pqueue\_t@{pqueue\_t}}
+\doxysubsubsection{\texorpdfstring{getpos}{getpos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{pqueue_8h_a31ca7927983005bd7866021819ad7037}{pqueue\+\_\+get\+\_\+pos\+\_\+f}} pqueue\+\_\+t\+::getpos}
+
+callback to get position of a node \mbox{\Hypertarget{structpqueue__t_ae1c098eb8c14bdfbce6797ede3f0c387}\label{structpqueue__t_ae1c098eb8c14bdfbce6797ede3f0c387}} 
+\index{pqueue\_t@{pqueue\_t}!getpri@{getpri}}
+\index{getpri@{getpri}!pqueue\_t@{pqueue\_t}}
+\doxysubsubsection{\texorpdfstring{getpri}{getpri}}
+{\footnotesize\ttfamily \mbox{\hyperlink{pqueue_8h_aa84f0100faf971295df5aed226c390a6}{pqueue\+\_\+get\+\_\+pri\+\_\+f}} pqueue\+\_\+t\+::getpri}
+
+callback to get priority of a node \mbox{\Hypertarget{structpqueue__t_aeb48e61916a065bb67c7dc3cc963ffeb}\label{structpqueue__t_aeb48e61916a065bb67c7dc3cc963ffeb}} 
+\index{pqueue\_t@{pqueue\_t}!prt@{prt}}
+\index{prt@{prt}!pqueue\_t@{pqueue\_t}}
+\doxysubsubsection{\texorpdfstring{prt}{prt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{pqueue_8h_a884902da135214a6167f1536ad4ed4bc}{pqueue\+\_\+print\+\_\+entry\+\_\+f}} pqueue\+\_\+t\+::prt}
+
+callback to print elements \mbox{\Hypertarget{structpqueue__t_a0960bed72e0c851bccf1591c39360c73}\label{structpqueue__t_a0960bed72e0c851bccf1591c39360c73}} 
+\index{pqueue\_t@{pqueue\_t}!setpos@{setpos}}
+\index{setpos@{setpos}!pqueue\_t@{pqueue\_t}}
+\doxysubsubsection{\texorpdfstring{setpos}{setpos}}
+{\footnotesize\ttfamily pqueue\+\_\+set\+\_\+pos\+\_\+f pqueue\+\_\+t\+::setpos}
+
+callback to set position of a node \mbox{\Hypertarget{structpqueue__t_a37a81db394494e542cdaec80ce4f2f42}\label{structpqueue__t_a37a81db394494e542cdaec80ce4f2f42}} 
+\index{pqueue\_t@{pqueue\_t}!size@{size}}
+\index{size@{size}!pqueue\_t@{pqueue\_t}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily size\+\_\+t pqueue\+\_\+t\+::size}
+
+number of elements in this queue plus 1 \mbox{\Hypertarget{structpqueue__t_ab405fbb415065192ce9a1a39b5f45978}\label{structpqueue__t_ab405fbb415065192ce9a1a39b5f45978}} 
+\index{pqueue\_t@{pqueue\_t}!step@{step}}
+\index{step@{step}!pqueue\_t@{pqueue\_t}}
+\doxysubsubsection{\texorpdfstring{step}{step}}
+{\footnotesize\ttfamily size\+\_\+t pqueue\+\_\+t\+::step}
+
+growth stepping setting 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.\+lflang/src/lib/core/\mbox{\hyperlink{pqueue_8h}{pqueue.\+h}}\end{DoxyCompactItemize}

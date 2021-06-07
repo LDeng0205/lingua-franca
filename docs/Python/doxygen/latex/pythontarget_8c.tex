@@ -1,0 +1,150 @@
+\hypertarget{pythontarget_8c}{}\doxysection{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/\+Python/pythontarget.c File Reference}
+\label{pythontarget_8c}\index{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/Python/pythontarget.c@{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/Python/pythontarget.c}}
+{\ttfamily \#include \char`\"{}pythontarget.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/util.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+lf\+\_\+token\+\_\+t $\ast$ \mbox{\hyperlink{pythontarget_8c_affc5826a64f44605c4db375276912944}{\+\_\+\+\_\+initialize\+\_\+token\+\_\+with\+\_\+value}} (lf\+\_\+token\+\_\+t $\ast$token, void $\ast$value, int length)
+\item 
+trigger\+\_\+t $\ast$ \mbox{\hyperlink{pythontarget_8c_a02aaee842c2c225482fb73cc838dc43f}{\+\_\+lf\+\_\+action\+\_\+to\+\_\+trigger}} (void $\ast$action)
+\item 
+instant\+\_\+t \mbox{\hyperlink{pythontarget_8c_a0de9cef51748833c318227ed2e5bbe2a}{get\+\_\+elapsed\+\_\+physical\+\_\+time}} ()
+\item 
+int \mbox{\hyperlink{pythontarget_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{pythontarget_8c_af629769c213699f0e4c9360811ee7251}{request\+\_\+stop}} ()
+\item 
+\mbox{\Hypertarget{pythontarget_8c_aeb7f2f1fd755af7ef03e33eb7e1ff22c}\label{pythontarget_8c_aeb7f2f1fd755af7ef03e33eb7e1ff22c}} 
+Py\+M\+O\+D\+I\+N\+I\+T\+\_\+\+F\+U\+NC {\bfseries G\+E\+N\+\_\+\+N\+A\+ME} (Py\+Init\+\_\+, M\+O\+D\+U\+L\+E\+\_\+\+N\+A\+ME)
+\item 
+void \mbox{\hyperlink{pythontarget_8c_ad52c5f970c1f6a4dde6f3457c92402ae}{destroy\+\_\+action\+\_\+capsule}} (Py\+Object $\ast$capsule)
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{pythontarget_8c_aeddc8cc41a9c71f3e325c2ef536c66cb}{convert\+\_\+\+C\+\_\+port\+\_\+to\+\_\+py}} (void $\ast$port, int width)
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{pythontarget_8c_a9c4b82196fed6530c278b79a1a21b430}{convert\+\_\+\+C\+\_\+action\+\_\+to\+\_\+py}} (void $\ast$action)
+\item 
+Py\+Object $\ast$ \mbox{\hyperlink{pythontarget_8c_a9059deaaaa3994f2603157a5ab5e3d18}{get\+\_\+python\+\_\+function}} (string module, string class, int instance\+\_\+id, string func)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Soroush Bateni (\href{mailto:soroush@utdallas.edu}{\texttt{ soroush@utdallas.\+edu}})
+\end{DoxyAuthor}
+\hypertarget{pythontarget_8h_LICENSE}{}\doxysubsection{L\+I\+C\+E\+N\+SE}\label{pythontarget_8h_LICENSE}
+Copyright (c) 2020, The University of California at Berkeley.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.\hypertarget{pythontarget_8h_DESCRIPTION}{}\doxysubsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}\label{pythontarget_8h_DESCRIPTION}
+Implementation of functions defined in \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{pythontarget_8h}{pythontarget.\+h}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{pythontarget_8c_affc5826a64f44605c4db375276912944}\label{pythontarget_8c_affc5826a64f44605c4db375276912944}} 
+\index{pythontarget.c@{pythontarget.c}!\_\_initialize\_token\_with\_value@{\_\_initialize\_token\_with\_value}}
+\index{\_\_initialize\_token\_with\_value@{\_\_initialize\_token\_with\_value}!pythontarget.c@{pythontarget.c}}
+\doxysubsubsection{\texorpdfstring{\_\_initialize\_token\_with\_value()}{\_\_initialize\_token\_with\_value()}}
+{\footnotesize\ttfamily lf\+\_\+token\+\_\+t$\ast$ \+\_\+\+\_\+initialize\+\_\+token\+\_\+with\+\_\+value (\begin{DoxyParamCaption}\item[{lf\+\_\+token\+\_\+t $\ast$}]{token,  }\item[{void $\ast$}]{value,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+Prototype for the internal A\+PI. \begin{DoxySeeAlso}{See also}
+reactor\+\_\+common.\+c 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{pythontarget_8c_a02aaee842c2c225482fb73cc838dc43f}\label{pythontarget_8c_a02aaee842c2c225482fb73cc838dc43f}} 
+\index{pythontarget.c@{pythontarget.c}!\_lf\_action\_to\_trigger@{\_lf\_action\_to\_trigger}}
+\index{\_lf\_action\_to\_trigger@{\_lf\_action\_to\_trigger}!pythontarget.c@{pythontarget.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_action\_to\_trigger()}{\_lf\_action\_to\_trigger()}}
+{\footnotesize\ttfamily trigger\+\_\+t$\ast$ \+\_\+lf\+\_\+action\+\_\+to\+\_\+trigger (\begin{DoxyParamCaption}\item[{void $\ast$}]{action }\end{DoxyParamCaption})}
+
+Prototype for A\+PI function. \begin{DoxySeeAlso}{See also}
+lib/core/reactor\+\_\+common.\+c 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{pythontarget_8c_a9c4b82196fed6530c278b79a1a21b430}\label{pythontarget_8c_a9c4b82196fed6530c278b79a1a21b430}} 
+\index{pythontarget.c@{pythontarget.c}!convert\_C\_action\_to\_py@{convert\_C\_action\_to\_py}}
+\index{convert\_C\_action\_to\_py@{convert\_C\_action\_to\_py}!pythontarget.c@{pythontarget.c}}
+\doxysubsubsection{\texorpdfstring{convert\_C\_action\_to\_py()}{convert\_C\_action\_to\_py()}}
+{\footnotesize\ttfamily Py\+Object$\ast$ convert\+\_\+\+C\+\_\+action\+\_\+to\+\_\+py (\begin{DoxyParamCaption}\item[{void $\ast$}]{action }\end{DoxyParamCaption})}
+
+A helper function to convert C actions to Python action capsules \begin{DoxySeeAlso}{See also}
+xtext/org.\+icyphy.\+linguafranca/src/org/icyphy/generator/\+C\+Generator.xtend for details about C actions Python actions have the following fields (for more informatino 
+
+\mbox{\hyperlink{structgeneric__action__capsule__struct}{generic\+\_\+action\+\_\+capsule\+\_\+struct}})\+: Py\+Object\+\_\+\+H\+E\+AD Py\+Object$\ast$ action; ~\newline
+ Py\+Object$\ast$ value; bool is\+\_\+present;
+\end{DoxySeeAlso}
+The input to this function is a pointer to a C action, which might or might not contain a value and an is\+\_\+present field. To simplify the assumptions made by this function, the \char`\"{}value\char`\"{} and \char`\"{}is\+\_\+present\char`\"{} are passed to the function instead of expecting them to exist.
+
+The void$\ast$ pointer to the C action instance is encapsulated in a Py\+Capsule instead of passing an exposed pointer through Python. \begin{DoxySeeAlso}{See also}
+\href{https://docs.python.org/3/c-api/capsule.html}{\texttt{ https\+://docs.\+python.\+org/3/c-\/api/capsule.\+html}} This encapsulation is done by calling Py\+Capsule\+\_\+\+New(action, \char`\"{}name\+\_\+of\+\_\+the\+\_\+container\+\_\+in\+\_\+the\+\_\+capsule\char`\"{}, N\+U\+LL), where \char`\"{}name\+\_\+of\+\_\+the\+\_\+container\+\_\+in\+\_\+the\+\_\+capsule\char`\"{} is an agreed-\/upon container name inside the capsule. This capsule can then be treated as a Py\+Object$\ast$ and safely passed through Python code. On the other end (which is in schedule functions), Py\+Capsule\+\_\+\+Get\+Pointer(received\+\_\+action,\char`\"{}action\char`\"{}) can be called to retrieve the void$\ast$ pointer into received\+\_\+action. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{pythontarget_8c_aeddc8cc41a9c71f3e325c2ef536c66cb}\label{pythontarget_8c_aeddc8cc41a9c71f3e325c2ef536c66cb}} 
+\index{pythontarget.c@{pythontarget.c}!convert\_C\_port\_to\_py@{convert\_C\_port\_to\_py}}
+\index{convert\_C\_port\_to\_py@{convert\_C\_port\_to\_py}!pythontarget.c@{pythontarget.c}}
+\doxysubsubsection{\texorpdfstring{convert\_C\_port\_to\_py()}{convert\_C\_port\_to\_py()}}
+{\footnotesize\ttfamily Py\+Object$\ast$ convert\+\_\+\+C\+\_\+port\+\_\+to\+\_\+py (\begin{DoxyParamCaption}\item[{void $\ast$}]{port,  }\item[{int}]{width }\end{DoxyParamCaption})}
+
+A function that is called any time a Python reaction is called with ports as inputs and outputs. This function converts ports that are either a multiport or a non-\/multiport into a port\+\_\+capsule.
+
+First, the void$\ast$ pointer is stored in a Py\+Capsule. If the port is not a multiport, the value and is\+\_\+present fields are copied verbatim. These feilds then can be accessed from the Python code as port.\+value and port.\+is\+\_\+present. If the value is absent, it will be set to None.
+
+For multiports, the value of the port\+\_\+capsule (i.\+e., port.\+value) is always set to None and is\+\_\+present is set to false. Individual ports can then later be accessed in Python code as port\mbox{[}idx\mbox{]}. \mbox{\Hypertarget{pythontarget_8c_ad52c5f970c1f6a4dde6f3457c92402ae}\label{pythontarget_8c_ad52c5f970c1f6a4dde6f3457c92402ae}} 
+\index{pythontarget.c@{pythontarget.c}!destroy\_action\_capsule@{destroy\_action\_capsule}}
+\index{destroy\_action\_capsule@{destroy\_action\_capsule}!pythontarget.c@{pythontarget.c}}
+\doxysubsubsection{\texorpdfstring{destroy\_action\_capsule()}{destroy\_action\_capsule()}}
+{\footnotesize\ttfamily void destroy\+\_\+action\+\_\+capsule (\begin{DoxyParamCaption}\item[{Py\+Object $\ast$}]{capsule }\end{DoxyParamCaption})}
+
+Python Helper Functions These functions are called in generated C code for various reasons. Their main purpose is to facilitate C runtime\textquotesingle{}s communication with Python code. A function that destroys action capsules \mbox{\Hypertarget{pythontarget_8c_a0de9cef51748833c318227ed2e5bbe2a}\label{pythontarget_8c_a0de9cef51748833c318227ed2e5bbe2a}} 
+\index{pythontarget.c@{pythontarget.c}!get\_elapsed\_physical\_time@{get\_elapsed\_physical\_time}}
+\index{get\_elapsed\_physical\_time@{get\_elapsed\_physical\_time}!pythontarget.c@{pythontarget.c}}
+\doxysubsubsection{\texorpdfstring{get\_elapsed\_physical\_time()}{get\_elapsed\_physical\_time()}}
+{\footnotesize\ttfamily instant\+\_\+t get\+\_\+elapsed\+\_\+physical\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the elapsed physical time in nanoseconds. \mbox{\Hypertarget{pythontarget_8c_a9059deaaaa3994f2603157a5ab5e3d18}\label{pythontarget_8c_a9059deaaaa3994f2603157a5ab5e3d18}} 
+\index{pythontarget.c@{pythontarget.c}!get\_python\_function@{get\_python\_function}}
+\index{get\_python\_function@{get\_python\_function}!pythontarget.c@{pythontarget.c}}
+\doxysubsubsection{\texorpdfstring{get\_python\_function()}{get\_python\_function()}}
+{\footnotesize\ttfamily Py\+Object$\ast$ get\+\_\+python\+\_\+function (\begin{DoxyParamCaption}\item[{string}]{module,  }\item[{string}]{class,  }\item[{int}]{instance\+\_\+id,  }\item[{string}]{func }\end{DoxyParamCaption})}
+
+Invoke a Python func in class\mbox{[}instance\+\_\+id\mbox{]} from module. Class instances in generated Python code are always instantiated in a list of template classs\mbox{[}\+\_\+class(params), \+\_\+class(params), ...\mbox{]} (note the extra s) regardless of whether a bank is used or not. If there is no bank, or a bank of width 1, the list will be instantiated as classs\mbox{[}\+\_\+class(params)\mbox{]}.
+
+This function would thus call classs\mbox{[}0\mbox{]} to access the first instance in a bank and so on.
+
+Possible optimizations include\+: -\/ Not loading the module each time (by storing it in global memory),
+\begin{DoxyItemize}
+\item Keeping a persistent argument table 
+\begin{DoxyParams}{Parameters}
+{\em module} & The Python module to load the function from. In embedded mode, it should be set to \char`\"{}\+\_\+\+\_\+main\+\_\+\+\_\+\char`\"{} \\
+\hline
+{\em class} & The name of the list of classes in the generated Python code \\
+\hline
+{\em instance\+\_\+id} & The element number in the list of classes. class\mbox{[}instance\+\_\+id\mbox{]} points to a class instance \\
+\hline
+{\em func} & The reaction functino to be called \\
+\hline
+{\em p\+Args} & the Py\+List of arguments to be sent to function func() \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\mbox{\Hypertarget{pythontarget_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{pythontarget_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{pythontarget.c@{pythontarget.c}!main@{main}}
+\index{main@{main}!pythontarget.c@{pythontarget.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Prototype for the main function. \mbox{\Hypertarget{pythontarget_8c_af629769c213699f0e4c9360811ee7251}\label{pythontarget_8c_af629769c213699f0e4c9360811ee7251}} 
+\index{pythontarget.c@{pythontarget.c}!request\_stop@{request\_stop}}
+\index{request\_stop@{request\_stop}!pythontarget.c@{pythontarget.c}}
+\doxysubsubsection{\texorpdfstring{request\_stop()}{request\_stop()}}
+{\footnotesize\ttfamily void request\+\_\+stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prototype for \mbox{\hyperlink{pythontarget_8c_af629769c213699f0e4c9360811ee7251}{request\+\_\+stop()}}. \begin{DoxySeeAlso}{See also}
+reactor.\+c and reactor\+\_\+threaded.\+c 
+\end{DoxySeeAlso}

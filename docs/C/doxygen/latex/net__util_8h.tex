@@ -1,0 +1,390 @@
+\hypertarget{net__util_8h}{}\doxysection{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/net\+\_\+util.h File Reference}
+\label{net__util_8h}\index{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/net\_util.h@{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/net\_util.h}}
+{\ttfamily \#include \char`\"{}platform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tag.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{net__util_8h_ae0b024f7ee4bd875149b1a0a50c20b0a}\label{net__util_8h_ae0b024f7ee4bd875149b1a0a50c20b0a}} 
+\#define {\bfseries H\+O\+S\+T\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN}~1
+\item 
+\mbox{\Hypertarget{net__util_8h_a18c839c3ef122fe4ecc7b907ea688a97}\label{net__util_8h_a18c839c3ef122fe4ecc7b907ea688a97}} 
+\#define {\bfseries H\+O\+S\+T\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+AN}~2
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{net__util_8h_a04dd5e3e7b7ee262b58476c4611d7b23}{host\+\_\+is\+\_\+big\+\_\+endian}} ()
+\item 
+int \mbox{\hyperlink{net__util_8h_a9d26e19c03e782593ba0f1791b7f35b5}{read\+\_\+from\+\_\+socket\+\_\+errexit}} (int socket, int num\+\_\+bytes, unsigned char $\ast$buffer, char $\ast$format,...)
+\item 
+int \mbox{\hyperlink{net__util_8h_a9426930d10448b1f16f6afee07777f88}{read\+\_\+from\+\_\+socket}} (int socket, int num\+\_\+bytes, unsigned char $\ast$buffer)
+\item 
+int \mbox{\hyperlink{net__util_8h_ae819deb7254b390e29a1808625acf70f}{write\+\_\+to\+\_\+socket\+\_\+errexit\+\_\+with\+\_\+mutex}} (int socket, int num\+\_\+bytes, unsigned char $\ast$buffer, lf\+\_\+mutex\+\_\+t $\ast$mutex, char $\ast$format,...)
+\item 
+int \mbox{\hyperlink{net__util_8h_a0e3b7299eccba74fcd7a27f37642dc7e}{write\+\_\+to\+\_\+socket\+\_\+errexit}} (int socket, int num\+\_\+bytes, unsigned char $\ast$buffer, char $\ast$format,...)
+\item 
+int \mbox{\hyperlink{net__util_8h_a4c100e73807feaae911d1c5cd67c475f}{write\+\_\+to\+\_\+socket2}} (int socket, int num\+\_\+bytes, unsigned char $\ast$buffer)
+\item 
+void \mbox{\hyperlink{net__util_8h_a0b8cbad5d6dc462c87eb48c6a5519c33}{encode\+\_\+ll}} (long long data, unsigned char $\ast$buffer)
+\item 
+void \mbox{\hyperlink{net__util_8h_af4312040e137fb9d644f96edaa74075d}{encode\+\_\+int}} (int data, unsigned char $\ast$buffer)
+\item 
+void \mbox{\hyperlink{net__util_8h_ac91e6a5450e934d80281f626ba25deaa}{encode\+\_\+ushort}} (unsigned short data, unsigned char $\ast$buffer)
+\item 
+int \mbox{\hyperlink{net__util_8h_a34227a5f72de6d30571be08cf4ec48f6}{swap\+\_\+bytes\+\_\+if\+\_\+big\+\_\+endian\+\_\+int}} (int src)
+\item 
+long long \mbox{\hyperlink{net__util_8h_a8030d5345c501ee7d9bbfffa75b85dd5}{swap\+\_\+bytes\+\_\+if\+\_\+big\+\_\+endian\+\_\+ll}} (long long src)
+\item 
+int \mbox{\hyperlink{net__util_8h_a667ab204d21ca15a1cd9f8fe26696a31}{swap\+\_\+bytes\+\_\+if\+\_\+big\+\_\+endian\+\_\+ushort}} (unsigned short src)
+\item 
+int \mbox{\hyperlink{net__util_8h_a2c3e1559ae8f31e111cedc00211edded}{extract\+\_\+int}} (unsigned char $\ast$bytes)
+\item 
+long long \mbox{\hyperlink{net__util_8h_a3c03766b3fd76c7ad5901581a766caa8}{extract\+\_\+ll}} (unsigned char $\ast$bytes)
+\item 
+unsigned short \mbox{\hyperlink{net__util_8h_ab52445dc6792e1d40424c4e0edc18704}{extract\+\_\+ushort}} (unsigned char $\ast$bytes)
+\item 
+void \mbox{\hyperlink{net__util_8h_a11217be2cfd106df54dfab0c53218238}{extract\+\_\+header}} (unsigned char $\ast$buffer, unsigned short $\ast$port\+\_\+id, unsigned short $\ast$federate\+\_\+id, unsigned int $\ast$length)
+\item 
+void \mbox{\hyperlink{net__util_8h_a3e9fc45154c83606a54f358e4978b489}{extract\+\_\+timed\+\_\+header}} (unsigned char $\ast$buffer, unsigned short $\ast$port\+\_\+id, unsigned short $\ast$federate\+\_\+id, unsigned int $\ast$length, \mbox{\hyperlink{structtag__t}{tag\+\_\+t}} $\ast$tag)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Edward A. Lee 
+
+Soroush Bateni
+\end{DoxyAuthor}
+\hypertarget{util_8h_LICENSE}{}\doxysubsection{L\+I\+C\+E\+N\+SE}\label{util_8h_LICENSE}
+Copyright (c) 2020, The University of California at Berkeley.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.\hypertarget{util_8h_DESCRIPTION}{}\doxysubsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}\label{util_8h_DESCRIPTION}
+Header file for network utility functions for Lingua Franca programs. Note that these functions do not acquire any mutexes. To use them, you must ensure either that only one thread ever sends on each socket and one thread receives on each socket (these two can be the same thread) or that the caller handles mutual exclusion to prevent more than one thread from accessing the socket at a time. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{net__util_8h_af4312040e137fb9d644f96edaa74075d}\label{net__util_8h_af4312040e137fb9d644f96edaa74075d}} 
+\index{net\_util.h@{net\_util.h}!encode\_int@{encode\_int}}
+\index{encode\_int@{encode\_int}!net\_util.h@{net\_util.h}}
+\doxysubsubsection{\texorpdfstring{encode\_int()}{encode\_int()}}
+{\footnotesize\ttfamily void encode\+\_\+int (\begin{DoxyParamCaption}\item[{int}]{data,  }\item[{unsigned char $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+Write the specified data as a sequence of bytes starting at the specified address. This encodes the data in little-\/endian order (lowest order byte first). This works for either int or unsigned int. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to write. \\
+\hline
+{\em buffer} & The location to start writing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{net__util_8h_a0b8cbad5d6dc462c87eb48c6a5519c33}\label{net__util_8h_a0b8cbad5d6dc462c87eb48c6a5519c33}} 
+\index{net\_util.h@{net\_util.h}!encode\_ll@{encode\_ll}}
+\index{encode\_ll@{encode\_ll}!net\_util.h@{net\_util.h}}
+\doxysubsubsection{\texorpdfstring{encode\_ll()}{encode\_ll()}}
+{\footnotesize\ttfamily void encode\+\_\+ll (\begin{DoxyParamCaption}\item[{long long}]{data,  }\item[{unsigned char $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+Write the specified data as a sequence of bytes starting at the specified address. This encodes the data in little-\/endian order (lowest order byte first). 
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to write. \\
+\hline
+{\em buffer} & The location to start writing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{net__util_8h_ac91e6a5450e934d80281f626ba25deaa}\label{net__util_8h_ac91e6a5450e934d80281f626ba25deaa}} 
+\index{net\_util.h@{net\_util.h}!encode\_ushort@{encode\_ushort}}
+\index{encode\_ushort@{encode\_ushort}!net\_util.h@{net\_util.h}}
+\doxysubsubsection{\texorpdfstring{encode\_ushort()}{encode\_ushort()}}
+{\footnotesize\ttfamily void encode\+\_\+ushort (\begin{DoxyParamCaption}\item[{unsigned short}]{data,  }\item[{unsigned char $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+Write the specified data as a sequence of bytes starting at the specified address. This encodes the data in little-\/endian order (lowest order byte first). 
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to write. \\
+\hline
+{\em buffer} & The location to start writing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{net__util_8h_a11217be2cfd106df54dfab0c53218238}\label{net__util_8h_a11217be2cfd106df54dfab0c53218238}} 
+\index{net\_util.h@{net\_util.h}!extract\_header@{extract\_header}}
+\index{extract\_header@{extract\_header}!net\_util.h@{net\_util.h}}
+\doxysubsubsection{\texorpdfstring{extract\_header()}{extract\_header()}}
+{\footnotesize\ttfamily void extract\+\_\+header (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{unsigned short $\ast$}]{port\+\_\+id,  }\item[{unsigned short $\ast$}]{federate\+\_\+id,  }\item[{unsigned int $\ast$}]{length }\end{DoxyParamCaption})}
+
+Extract the core header information that all messages between federates share. The core header information is two bytes with the ID of the destination port, two bytes with the ID of the destination federate, and four bytes with the length of the message. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to read from. \\
+\hline
+{\em port\+\_\+id} & The place to put the port ID. \\
+\hline
+{\em federate\+\_\+id} & The place to put the federate ID. \\
+\hline
+{\em length} & The place to put the length. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{net__util_8h_a2c3e1559ae8f31e111cedc00211edded}\label{net__util_8h_a2c3e1559ae8f31e111cedc00211edded}} 
+\index{net\_util.h@{net\_util.h}!extract\_int@{extract\_int}}
+\index{extract\_int@{extract\_int}!net\_util.h@{net\_util.h}}
+\doxysubsubsection{\texorpdfstring{extract\_int()}{extract\_int()}}
+{\footnotesize\ttfamily int extract\+\_\+int (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{bytes }\end{DoxyParamCaption})}
+
+Extract an int from the specified byte sequence. This will swap the order of the bytes if this machine is big endian. 
+\begin{DoxyParams}{Parameters}
+{\em bytes} & The address of the start of the sequence of bytes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{net__util_8h_a3c03766b3fd76c7ad5901581a766caa8}\label{net__util_8h_a3c03766b3fd76c7ad5901581a766caa8}} 
+\index{net\_util.h@{net\_util.h}!extract\_ll@{extract\_ll}}
+\index{extract\_ll@{extract\_ll}!net\_util.h@{net\_util.h}}
+\doxysubsubsection{\texorpdfstring{extract\_ll()}{extract\_ll()}}
+{\footnotesize\ttfamily long long extract\+\_\+ll (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{bytes }\end{DoxyParamCaption})}
+
+Extract a long long from the specified byte sequence. This will swap the order of the bytes if this machine is big endian. 
+\begin{DoxyParams}{Parameters}
+{\em bytes} & The address of the start of the sequence of bytes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{net__util_8h_a3e9fc45154c83606a54f358e4978b489}\label{net__util_8h_a3e9fc45154c83606a54f358e4978b489}} 
+\index{net\_util.h@{net\_util.h}!extract\_timed\_header@{extract\_timed\_header}}
+\index{extract\_timed\_header@{extract\_timed\_header}!net\_util.h@{net\_util.h}}
+\doxysubsubsection{\texorpdfstring{extract\_timed\_header()}{extract\_timed\_header()}}
+{\footnotesize\ttfamily void extract\+\_\+timed\+\_\+header (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{unsigned short $\ast$}]{port\+\_\+id,  }\item[{unsigned short $\ast$}]{federate\+\_\+id,  }\item[{unsigned int $\ast$}]{length,  }\item[{\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} $\ast$}]{tag }\end{DoxyParamCaption})}
+
+Extract the timed header information for timed messages between federates. This is two bytes with the ID of the destination port, two bytes with the ID of the destination federate, four bytes with the length of the message, eight bytes with a timestamp, and four bytes with a microstep. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to read from. \\
+\hline
+{\em port\+\_\+id} & The place to put the port ID. \\
+\hline
+{\em federate\+\_\+id} & The place to put the federate ID. \\
+\hline
+{\em length} & The place to put the length. \\
+\hline
+{\em tag} & The place to put the tag. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{net__util_8h_ab52445dc6792e1d40424c4e0edc18704}\label{net__util_8h_ab52445dc6792e1d40424c4e0edc18704}} 
+\index{net\_util.h@{net\_util.h}!extract\_ushort@{extract\_ushort}}
+\index{extract\_ushort@{extract\_ushort}!net\_util.h@{net\_util.h}}
+\doxysubsubsection{\texorpdfstring{extract\_ushort()}{extract\_ushort()}}
+{\footnotesize\ttfamily unsigned short extract\+\_\+ushort (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{bytes }\end{DoxyParamCaption})}
+
+Extract an unsigned short from the specified byte sequence. This will swap the order of the bytes if this machine is big endian. 
+\begin{DoxyParams}{Parameters}
+{\em bytes} & The address of the start of the sequence of bytes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{net__util_8h_a04dd5e3e7b7ee262b58476c4611d7b23}\label{net__util_8h_a04dd5e3e7b7ee262b58476c4611d7b23}} 
+\index{net\_util.h@{net\_util.h}!host\_is\_big\_endian@{host\_is\_big\_endian}}
+\index{host\_is\_big\_endian@{host\_is\_big\_endian}!net\_util.h@{net\_util.h}}
+\doxysubsubsection{\texorpdfstring{host\_is\_big\_endian()}{host\_is\_big\_endian()}}
+{\footnotesize\ttfamily int host\+\_\+is\+\_\+big\+\_\+endian (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return true (1) if the host is big endian. Otherwise, return false. \mbox{\Hypertarget{net__util_8h_a9426930d10448b1f16f6afee07777f88}\label{net__util_8h_a9426930d10448b1f16f6afee07777f88}} 
+\index{net\_util.h@{net\_util.h}!read\_from\_socket@{read\_from\_socket}}
+\index{read\_from\_socket@{read\_from\_socket}!net\_util.h@{net\_util.h}}
+\doxysubsubsection{\texorpdfstring{read\_from\_socket()}{read\_from\_socket()}}
+{\footnotesize\ttfamily int read\+\_\+from\+\_\+socket (\begin{DoxyParamCaption}\item[{int}]{socket,  }\item[{int}]{num\+\_\+bytes,  }\item[{unsigned char $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+Read the specified number of bytes from the specified socket into the specified buffer. If a disconnect occurs during this reading, return a negative number. If an E\+OF occurs during this reading, return 0. Otherwise, return the number of bytes read. This is a version of \mbox{\hyperlink{net__util_8c_a9d26e19c03e782593ba0f1791b7f35b5}{read\+\_\+from\+\_\+socket\+\_\+errexit()}} that does not error out. 
+\begin{DoxyParams}{Parameters}
+{\em socket} & The socket ID. \\
+\hline
+{\em num\+\_\+bytes} & The number of bytes to read. \\
+\hline
+{\em buffer} & The buffer into which to put the bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes read or 0 when E\+OF is received or negative for an error.
+\end{DoxyReturn}
+Read the specified number of bytes from the specified socket into the specified buffer. If a disconnect occurs during this reading, return a negative number. If an E\+OF occurs during this reading, return 0. Otherwise, return the number of bytes read. This is a version of \mbox{\hyperlink{net__util_8c_a9d26e19c03e782593ba0f1791b7f35b5}{read\+\_\+from\+\_\+socket\+\_\+errexit()}} that neither closes the socket nor errors out.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & The socket ID. \\
+\hline
+{\em num\+\_\+bytes} & The number of bytes to read. \\
+\hline
+{\em buffer} & The buffer into which to put the bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes read or 0 when E\+OF is received or negative for an error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{net__util_8h_a9d26e19c03e782593ba0f1791b7f35b5}\label{net__util_8h_a9d26e19c03e782593ba0f1791b7f35b5}} 
+\index{net\_util.h@{net\_util.h}!read\_from\_socket\_errexit@{read\_from\_socket\_errexit}}
+\index{read\_from\_socket\_errexit@{read\_from\_socket\_errexit}!net\_util.h@{net\_util.h}}
+\doxysubsubsection{\texorpdfstring{read\_from\_socket\_errexit()}{read\_from\_socket\_errexit()}}
+{\footnotesize\ttfamily int read\+\_\+from\+\_\+socket\+\_\+errexit (\begin{DoxyParamCaption}\item[{int}]{socket,  }\item[{int}]{num\+\_\+bytes,  }\item[{unsigned char $\ast$}]{buffer,  }\item[{char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Read the specified number of bytes from the specified socket into the specified buffer. If a disconnect or an E\+OF occurs during this reading, then if format is non-\/null, report an error and exit. If format is null, then report the error, but do not exit. This function takes a formatted string and additional optional arguments similar to printf(format, ...) that is appended to the error messages. 
+\begin{DoxyParams}{Parameters}
+{\em socket} & The socket ID. \\
+\hline
+{\em num\+\_\+bytes} & The number of bytes to read. \\
+\hline
+{\em buffer} & The buffer into which to put the bytes. \\
+\hline
+{\em format} & A printf-\/style format string, followed by arguments to fill the string, or N\+U\+LL to not exit with an error message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes read, or 0 if an E\+OF is received, or a negative number for an error.
+\end{DoxyReturn}
+Read the specified number of bytes from the specified socket into the specified buffer. If an error or an E\+OF occurs during this reading, then if format is non-\/null, close the socket, report an error and exit. If format is N\+U\+LL, then just return 0 for E\+OF and a negative number for any other error.
+
+This function takes a formatted string and additional optional arguments similar to printf(format, ...) that is appended to the error messages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & The socket ID. \\
+\hline
+{\em num\+\_\+bytes} & The number of bytes to read. \\
+\hline
+{\em buffer} & The buffer into which to put the bytes. \\
+\hline
+{\em format} & A printf-\/style format string, followed by arguments to fill the string, or N\+U\+LL to not exit with an error message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes read, or 0 if an E\+OF is received, or a negative number for an error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{net__util_8h_a34227a5f72de6d30571be08cf4ec48f6}\label{net__util_8h_a34227a5f72de6d30571be08cf4ec48f6}} 
+\index{net\_util.h@{net\_util.h}!swap\_bytes\_if\_big\_endian\_int@{swap\_bytes\_if\_big\_endian\_int}}
+\index{swap\_bytes\_if\_big\_endian\_int@{swap\_bytes\_if\_big\_endian\_int}!net\_util.h@{net\_util.h}}
+\doxysubsubsection{\texorpdfstring{swap\_bytes\_if\_big\_endian\_int()}{swap\_bytes\_if\_big\_endian\_int()}}
+{\footnotesize\ttfamily int swap\+\_\+bytes\+\_\+if\+\_\+big\+\_\+endian\+\_\+int (\begin{DoxyParamCaption}\item[{int}]{src }\end{DoxyParamCaption})}
+
+If this host is little endian, then reverse the order of the bytes of the argument. Otherwise, return the argument unchanged. This can be used to convert the argument to network order (big endian) and then back again. Network transmissions, by convention, are big endian, meaning that the high-\/order byte is sent first. But many platforms, including my Mac, are little endian, meaning that the low-\/order byte is first in memory. 
+\begin{DoxyParams}{Parameters}
+{\em src} & The argument to convert. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{net__util_8h_a8030d5345c501ee7d9bbfffa75b85dd5}\label{net__util_8h_a8030d5345c501ee7d9bbfffa75b85dd5}} 
+\index{net\_util.h@{net\_util.h}!swap\_bytes\_if\_big\_endian\_ll@{swap\_bytes\_if\_big\_endian\_ll}}
+\index{swap\_bytes\_if\_big\_endian\_ll@{swap\_bytes\_if\_big\_endian\_ll}!net\_util.h@{net\_util.h}}
+\doxysubsubsection{\texorpdfstring{swap\_bytes\_if\_big\_endian\_ll()}{swap\_bytes\_if\_big\_endian\_ll()}}
+{\footnotesize\ttfamily long long swap\+\_\+bytes\+\_\+if\+\_\+big\+\_\+endian\+\_\+ll (\begin{DoxyParamCaption}\item[{long long}]{src }\end{DoxyParamCaption})}
+
+If this host is little endian, then reverse the order of the bytes of the argument. Otherwise, return the argument unchanged. This can be used to convert the argument to network order (big endian) and then back again. Network transmissions, by convention, are big endian, meaning that the high-\/order byte is sent first. But many platforms, including my Mac, are little endian, meaning that the low-\/order byte is first in memory. 
+\begin{DoxyParams}{Parameters}
+{\em src} & The argument to convert. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{net__util_8h_a667ab204d21ca15a1cd9f8fe26696a31}\label{net__util_8h_a667ab204d21ca15a1cd9f8fe26696a31}} 
+\index{net\_util.h@{net\_util.h}!swap\_bytes\_if\_big\_endian\_ushort@{swap\_bytes\_if\_big\_endian\_ushort}}
+\index{swap\_bytes\_if\_big\_endian\_ushort@{swap\_bytes\_if\_big\_endian\_ushort}!net\_util.h@{net\_util.h}}
+\doxysubsubsection{\texorpdfstring{swap\_bytes\_if\_big\_endian\_ushort()}{swap\_bytes\_if\_big\_endian\_ushort()}}
+{\footnotesize\ttfamily int swap\+\_\+bytes\+\_\+if\+\_\+big\+\_\+endian\+\_\+ushort (\begin{DoxyParamCaption}\item[{unsigned short}]{src }\end{DoxyParamCaption})}
+
+If this host is little endian, then reverse the order of the bytes of the argument. Otherwise, return the argument unchanged. This can be used to convert the argument to network order (big endian) and then back again. Network transmissions, by convention, are big endian, meaning that the high-\/order byte is sent first. But many platforms, including my Mac, are little endian, meaning that the low-\/order byte is first in memory. 
+\begin{DoxyParams}{Parameters}
+{\em src} & The argument to convert. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{net__util_8h_a4c100e73807feaae911d1c5cd67c475f}\label{net__util_8h_a4c100e73807feaae911d1c5cd67c475f}} 
+\index{net\_util.h@{net\_util.h}!write\_to\_socket2@{write\_to\_socket2}}
+\index{write\_to\_socket2@{write\_to\_socket2}!net\_util.h@{net\_util.h}}
+\doxysubsubsection{\texorpdfstring{write\_to\_socket2()}{write\_to\_socket2()}}
+{\footnotesize\ttfamily int write\+\_\+to\+\_\+socket2 (\begin{DoxyParamCaption}\item[{int}]{socket,  }\item[{int}]{num\+\_\+bytes,  }\item[{unsigned char $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+Write the specified number of bytes to the specified socket from the specified buffer. If a disconnect or an E\+OF occurs during this reading, return a negative number or 0 respectively. Otherwise, return the number of bytes written. This is a version of \mbox{\hyperlink{net__util_8c_ae9bab7965862259f354a419e4140b564}{write\+\_\+to\+\_\+socket()}} that does not error out. 
+\begin{DoxyParams}{Parameters}
+{\em socket} & The socket ID. \\
+\hline
+{\em num\+\_\+bytes} & The number of bytes to write. \\
+\hline
+{\em buffer} & The buffer from which to get the bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes written, or 0 if an E\+OF was received, or a negative number if an error occurred. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{net__util_8h_a0e3b7299eccba74fcd7a27f37642dc7e}\label{net__util_8h_a0e3b7299eccba74fcd7a27f37642dc7e}} 
+\index{net\_util.h@{net\_util.h}!write\_to\_socket\_errexit@{write\_to\_socket\_errexit}}
+\index{write\_to\_socket\_errexit@{write\_to\_socket\_errexit}!net\_util.h@{net\_util.h}}
+\doxysubsubsection{\texorpdfstring{write\_to\_socket\_errexit()}{write\_to\_socket\_errexit()}}
+{\footnotesize\ttfamily int write\+\_\+to\+\_\+socket\+\_\+errexit (\begin{DoxyParamCaption}\item[{int}]{socket,  }\item[{int}]{num\+\_\+bytes,  }\item[{unsigned char $\ast$}]{buffer,  }\item[{char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Write the specified number of bytes to the specified socket from the specified buffer. If a disconnect or an E\+OF occurs during this reading, report an error and exit, unless the format string is N\+U\+LL, in which case, report an error and return. This function takes a formatted string and additional optional arguments similar to printf(format, ...) that is appended to the error messages. 
+\begin{DoxyParams}{Parameters}
+{\em socket} & The socket ID. \\
+\hline
+{\em num\+\_\+bytes} & The number of bytes to write. \\
+\hline
+{\em buffer} & The buffer from which to get the bytes. \\
+\hline
+{\em mutex} & If non-\/\+N\+U\+LL, the mutex to unlock before exiting. \\
+\hline
+{\em format} & A format string for error messages, followed by any number of fields that will be used to fill the format string as in printf, or N\+U\+LL to prevent exit on error. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes written, or 0 if an E\+OF was received, or a negative number if an error occurred.
+\end{DoxyReturn}
+Write the specified number of bytes to the specified socket from the specified buffer. If an error or an E\+OF occurs during this reading, then if the format string is non-\/null, close the socket, report an error, and exit. If the format string is null, report an error or E\+OF and return.
+
+This function takes a formatted string and additional optional arguments similar to printf(format, ...) that is appended to the error messages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & The socket ID. \\
+\hline
+{\em num\+\_\+bytes} & The number of bytes to write. \\
+\hline
+{\em buffer} & The buffer from which to get the bytes. \\
+\hline
+{\em format} & A format string for error messages, followed by any number of fields that will be used to fill the format string as in printf, or N\+U\+LL to prevent exit on error. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes written, or 0 if an E\+OF was received, or a negative number if an error occurred. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{net__util_8h_ae819deb7254b390e29a1808625acf70f}\label{net__util_8h_ae819deb7254b390e29a1808625acf70f}} 
+\index{net\_util.h@{net\_util.h}!write\_to\_socket\_errexit\_with\_mutex@{write\_to\_socket\_errexit\_with\_mutex}}
+\index{write\_to\_socket\_errexit\_with\_mutex@{write\_to\_socket\_errexit\_with\_mutex}!net\_util.h@{net\_util.h}}
+\doxysubsubsection{\texorpdfstring{write\_to\_socket\_errexit\_with\_mutex()}{write\_to\_socket\_errexit\_with\_mutex()}}
+{\footnotesize\ttfamily int write\+\_\+to\+\_\+socket\+\_\+errexit\+\_\+with\+\_\+mutex (\begin{DoxyParamCaption}\item[{int}]{socket,  }\item[{int}]{num\+\_\+bytes,  }\item[{unsigned char $\ast$}]{buffer,  }\item[{lf\+\_\+mutex\+\_\+t $\ast$}]{mutex,  }\item[{char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Write the specified number of bytes to the specified socket from the specified buffer. If a disconnect or an E\+OF occurs during this reading, report an error and exit, unless the format string is N\+U\+LL, in which case, report an error and return. This function takes a formatted string and additional optional arguments similar to printf(format, ...) that is appended to the error messages. 
+\begin{DoxyParams}{Parameters}
+{\em socket} & The socket ID. \\
+\hline
+{\em num\+\_\+bytes} & The number of bytes to write. \\
+\hline
+{\em buffer} & The buffer from which to get the bytes. \\
+\hline
+{\em mutex} & If non-\/\+N\+U\+LL, the mutex to unlock before exiting. \\
+\hline
+{\em format} & A format string for error messages, followed by any number of fields that will be used to fill the format string as in printf, or N\+U\+LL to prevent exit on error. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes written, or 0 if an E\+OF was received, or a negative number if an error occurred.
+\end{DoxyReturn}
+Write the specified number of bytes to the specified socket from the specified buffer. If an error or an E\+OF occurs during this reading, then if the format string is non-\/null, close the socket, report an error, and exit. If the format string is null, report an error or E\+OF and return.
+
+This function takes a formatted string and additional optional arguments similar to printf(format, ...) that is appended to the error messages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & The socket ID. \\
+\hline
+{\em num\+\_\+bytes} & The number of bytes to write. \\
+\hline
+{\em buffer} & The buffer from which to get the bytes. \\
+\hline
+{\em mutex} & If non-\/\+N\+U\+LL, the mutex to unlock before exiting. \\
+\hline
+{\em format} & A format string for error messages, followed by any number of fields that will be used to fill the format string as in printf, or N\+U\+LL to prevent exit on error. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes written, or 0 if an E\+OF was received, or a negative number if an error occurred. 
+\end{DoxyReturn}

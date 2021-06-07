@@ -1,0 +1,581 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="util_8h" kind="file" language="C++">
+    <compoundname>util.h</compoundname>
+    <includes local="no">stdarg.h</includes>
+    <includedby refid="sensor__simulator_8c" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/sensor_simulator.c</includedby>
+    <includedby refid="reactor_8h" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h</includedby>
+    <includedby refid="net__util_8c" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c</includedby>
+    <includedby refid="pqueue_8c" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/pqueue.c</includedby>
+    <includedby refid="util_8c" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.c</includedby>
+    <includedby refid="trace_8c" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h</label>
+        <link refid="util_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdarg.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="10">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.c</label>
+        <link refid="util_8c"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h</label>
+        <link refid="util_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/trace.c</label>
+        <link refid="trace_8c"/>
+      </node>
+      <node id="4">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h</label>
+        <link refid="ctarget_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.c</label>
+        <link refid="federate_8c"/>
+      </node>
+      <node id="9">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c</label>
+        <link refid="net__util_8c"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.c</label>
+        <link refid="rti_8c"/>
+      </node>
+      <node id="5">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h</label>
+        <link refid="rti_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c</label>
+        <link refid="clock-sync_8c"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/sensor_simulator.c</label>
+        <link refid="sensor__simulator_8c"/>
+      </node>
+      <node id="3">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h</label>
+        <link refid="reactor_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlf__stat__ll" prot="public">lf_stat_ll</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="util_8h_1a8d8698026252ae104cc2405d8bb13f0e" prot="public" static="no">
+        <name>CONCATENATE_THREE_STRINGS</name>
+        <param><defname>__string1</defname></param>
+        <param><defname>__string2</defname></param>
+        <param><defname>__string3</defname></param>
+        <initializer>__string1 __string2 __string3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A handy macro that can concatenate three strings. Useful in the DEBUG_PRINT macro and error_print functions that want to concatenate a &quot;DEBUG: &quot; or &quot;ERROR: &quot; to the beginning of the message and a new line format <linebreak/>
+ at the end. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="55" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="util_8h_1a742fc70e331d7e568bd893c514756a29" prot="public" static="no">
+        <name>LOG_LEVEL_ERROR</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LOG_LEVEL is set in generated code to 0 through 4 if the target logging property is error, warning, info, log, or debug. The default level is info (2). Currently, 0, 1, and 2 are treated identically and error_print, warning_print, and info_print all result in printed output. If log is set (3), then LOG_DEBUG messages will be printed as well. If debug is set (4), the DEBUG_PRINT messages will be printed as well. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="68" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="util_8h_1af539a66abed2a7a15e3443d70a3cf1e1" prot="public" static="no">
+        <name>LOG_LEVEL_WARNING</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="69" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="util_8h_1a2e25fe130cf710da4ad800747fdd51f3" prot="public" static="no">
+        <name>LOG_LEVEL_INFO</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="70" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="util_8h_1a8b58cabecd61bfd1b706be9cb992e0bd" prot="public" static="no">
+        <name>LOG_LEVEL_LOG</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="71" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="util_8h_1a130224df8c6bf22a688e3cb74a45689a" prot="public" static="no">
+        <name>LOG_LEVEL_DEBUG</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="72" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="util_8h_1a18226173309d6c2ae828080dad0859cf" prot="public" static="no">
+        <name>LOG_LEVEL_ALL</name>
+        <initializer>255</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="73" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="util_8h_1a0b87e0d3bf5853bcbb0b66a7c48fdc05" prot="public" static="no">
+        <name>LOG_LEVEL</name>
+        <initializer>LOG_LEVEL_INFO</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default log level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="77" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="util_8h_1a02ab3aea33a20e71b0f50923d3b222a7" prot="public" static="no">
+        <name>LOG_PRINT</name>
+        <param><defname>format</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>            do { if(<ref refid="util_8h_1a0b87e0d3bf5853bcbb0b66a7c48fdc05" kindref="member">LOG_LEVEL</ref> &gt;= LOG_LEVEL_LOG) { \
+                    <ref refid="util_8h_1aca1b11267854044bfb09f5b172afa99a" kindref="member">log_print</ref>(format, ##__VA_ARGS__); \
+                } } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A macro used to print useful logging information. It can be enabled by setting the target property &apos;logging&apos; to &apos;LOG&apos; or by defining LOG_LEVEL to LOG_LEVEL_LOG or LOG_LEVEL_DEBUG in the top-level preamble. The input to this macro is exactly like printf: (format, ...). &quot;LOG: &quot; is prepended to the beginning of the message and a newline is appended to the end of the message.</para>
+<para><simplesect kind="note"><para>This macro is non-empty even if LOG_LEVEL is not defined in user-code. This is to ensure that the compiler will still parse the predicate inside (...) to prevent LOG_PRINT statements to fall out of sync with the rest of the code. This should have a negligible impact on performance if compiler optimization (e.g., -O2 for gcc) is used as long as the arguments passed to it do not themselves incur significant overhead to evaluate. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="130" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="util_8h_1a0a27a0fa2f8d9461204242121941696c" prot="public" static="no">
+        <name>DEBUG_PRINT</name>
+        <param><defname>format</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>            do { if(<ref refid="util_8h_1a0b87e0d3bf5853bcbb0b66a7c48fdc05" kindref="member">LOG_LEVEL</ref> &gt;= LOG_LEVEL_DEBUG) { \
+                    <ref refid="util_8h_1a8ad76364d50e7fec98ca5cf826a238f3" kindref="member">debug_print</ref>(format, ##__VA_ARGS__); \
+                } } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A macro used to print useful debug information. It can be enabled by setting the target property &apos;logging&apos; to &apos;DEBUG&apos; or by defining LOG_LEVEL to 2 in the top-level preamble. The input to this macro is exactly like printf: (format, ...). &quot;DEBUG: &quot; is prepended to the beginning of the message and a newline is appended to the end of the message.</para>
+<para><simplesect kind="note"><para>This macro is non-empty even if LOG_LEVEL is not defined in user-code. This is to ensure that the compiler will still parse the predicate inside (...) to prevent DEBUG_PRINT statements to fall out of sync with the rest of the code. This should have a negligible impact on performance if compiler optimization (e.g., -O2 for gcc) is used as long as the arguments passed to it do not themselves incur significant overhead to evaluate. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="161" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="util_8h_1a9e708b16d53622a88d5a2638affb6934" prot="public" static="no">
+        <type>struct <ref refid="structlf__stat__ll" kindref="compound">lf_stat_ll</ref></type>
+        <definition>typedef struct lf_stat_ll lf_stat_ll</definition>
+        <argsstring></argsstring>
+        <name>lf_stat_ll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds generic statistical data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="46" column="12"/>
+      </memberdef>
+      <memberdef kind="typedef" id="util_8h_1a47703caddaeadb65621d5e8509a00c72" prot="public" static="no">
+        <type>void()</type>
+        <definition>typedef void() print_message_function_t(char *, va_list)</definition>
+        <argsstring>(char *, va_list)</argsstring>
+        <name>print_message_function_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Message print function type. The arguments passed to one of these print functions are a printf-style format string followed by a printf-style argument list collected into a va_list (variable argument list). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="198" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="util_8h_1a2c4180118c19ff02a0d42f4c6758bdd3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _lf_my_fed_id</definition>
+        <argsstring></argsstring>
+        <name>_lf_my_fed_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The ID of this federate. For a non-federated execution, this will be -1. For a federated execution, it will be assigned when the generated function <ref refid="reactor_8h_1a868e02a04eabb4ffed63f6141f5f64a2" kindref="member">__initialize_trigger_objects()</ref> is called. <simplesect kind="see"><para>xtext/org.icyphy.linguafranca/src/org/icyphy/generator/CGenerator.xtend. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="86" column="12" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.c" bodystart="56" bodyend="-1" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" declline="86" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="util_8h_1adae54a9a8306d4fd24c1f604e1bb189a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int get_fed_id</definition>
+        <argsstring>()</argsstring>
+        <name>get_fed_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the federate ID or -1 if this program is not part of a federation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="91" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.c" bodystart="70" bodyend="72" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" declline="91" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="util_8h_1ab831b6ca5cfb47d7d4b3f15ef8e0f053" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void info_print</definition>
+        <argsstring>(char *format,...)</argsstring>
+        <name>info_print</name>
+        <param>
+          <type>char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Report an informational message on stdout with a newline appended at the end. If this execution is federated, then the message will be prefaced by &quot;Federate n: &quot;, where n is the federate ID. The arguments are just like printf(). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="101" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.c" bodystart="113" bodyend="118" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" declline="101" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="util_8h_1aca1b11267854044bfb09f5b172afa99a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void log_print</definition>
+        <argsstring>(char *format,...)</argsstring>
+        <name>log_print</name>
+        <param>
+          <type>char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Report an log message on stdout with the prefix &quot;LOG: &quot; and a newline appended at the end. If this execution is federated, then the message will be prefaced by &quot;Federate n: &quot;, where n is the federate ID. The arguments are just like printf(). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="111" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.c" bodystart="128" bodyend="133" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" declline="111" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="util_8h_1a8ad76364d50e7fec98ca5cf826a238f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void debug_print</definition>
+        <argsstring>(char *format,...)</argsstring>
+        <name>debug_print</name>
+        <param>
+          <type>char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Report an debug message on stdout with the prefix &quot;DEBUG: &quot; and a newline appended at the end. If this execution is federated, then the message will be prefaced by &quot;Federate n: &quot;, where n is the federate ID. The arguments are just like printf(). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="143" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.c" bodystart="143" bodyend="148" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" declline="143" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="util_8h_1aad9796c174f7ef5d226cd169f2520fd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void error</definition>
+        <argsstring>(char *msg)</argsstring>
+        <name>error</name>
+        <param>
+          <type>char *</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Print the error defined by the errno variable with the specified message as a prefix, then exit with error code 1. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The prefix to the message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="171" column="6" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" declline="171" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="util_8h_1a1c6c13db619d78a55e0517405f226cc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void error_print</definition>
+        <argsstring>(char *format,...)</argsstring>
+        <name>error_print</name>
+        <param>
+          <type>char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Report an error with the prefix &quot;ERROR: &quot; and a newline appended at the end. The arguments are just like printf(). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="177" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.c" bodystart="154" bodyend="159" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" declline="177" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="util_8h_1a31c6c0670e0e0d97586def29f10bf7d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void warning_print</definition>
+        <argsstring>(char *format,...)</argsstring>
+        <name>warning_print</name>
+        <param>
+          <type>char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Report a warning with the prefix &quot;WARNING: &quot; and a newline appended at the end. The arguments are just like printf(). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="183" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.c" bodystart="165" bodyend="170" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" declline="183" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="util_8h_1a7389ef15e70a377a52086e6d6b956d70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void error_print_and_exit</definition>
+        <argsstring>(char *format,...)</argsstring>
+        <name>error_print_and_exit</name>
+        <param>
+          <type>char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Report an error with the prefix &quot;ERROR: &quot; and a newline appended at the end, then exit with the failure code EXIT_FAILURE. The arguments are just like printf(). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="190" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.c" bodystart="177" bodyend="183" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" declline="190" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="util_8h_1ad8d354f663642349063c0ab241cdbb70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void register_print_function</definition>
+        <argsstring>(print_message_function_t *function, int log_level)</argsstring>
+        <name>register_print_function</name>
+        <param>
+          <type><ref refid="util_8h_1a47703caddaeadb65621d5e8509a00c72" kindref="member">print_message_function_t</ref> *</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>log_level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Register a function to display messages. After calling this, all messages passed to the above print functions will be printed using the specified function rather than printf if their log level is greater than the specified level. The level should be one of LOG_LEVEL_ERROR, LOG_LEVEL_WARNING, LOG_LEVEL_INFO, LOG_LEVEL_LOG, or LOG_LEVEL_DEBUG.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The print message function or NULL to revert to using printf. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>log_level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The level of messages to redirect. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" line="212" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.c" bodystart="197" bodyend="200" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h" declline="212" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Edward A. Lee </para>
+</simplesect>
+<simplesect kind="author"><para>Soroush Bateni</para>
+</simplesect>
+</para>
+<sect1 id="util_8h_1LICENSE">
+<title>LICENSE</title>
+<para>Copyright (c) 2020, The University of California at Berkeley.</para>
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</para>
+<para><orderedlist>
+<listitem><para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem><para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem></orderedlist>
+</para>
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+</sect1>
+<sect1 id="util_8h_1DESCRIPTION">
+<title>DESCRIPTION</title>
+<para>Header file for utility types and functions for Lingua Franca programs. </para>
+</sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="33"><highlight class="preprocessor">#ifndef<sp/>UTIL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UTIL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdarg.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Defines<sp/>va_list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="structlf__stat__ll" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlf__stat__ll" kindref="compound">lf_stat_ll</ref><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>average;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>standard_deviation;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>variance;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>max;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}<sp/><ref refid="util_8h_1a9e708b16d53622a88d5a2638affb6934" kindref="member">lf_stat_ll</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="util_8h_1a8d8698026252ae104cc2405d8bb13f0e" refkind="member"><highlight class="preprocessor">#define<sp/>CONCATENATE_THREE_STRINGS(__string1,<sp/>__string2,<sp/>__string3)<sp/>__string1<sp/>__string2<sp/>__string3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="util_8h_1a742fc70e331d7e568bd893c514756a29" refkind="member"><highlight class="preprocessor">#define<sp/>LOG_LEVEL_ERROR<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_LEVEL_WARNING<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_LEVEL_INFO<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_LEVEL_LOG<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_LEVEL_DEBUG<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_LEVEL_ALL<sp/>255</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor">#ifndef<sp/>LOG_LEVEL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="util_8h_1a0b87e0d3bf5853bcbb0b66a7c48fdc05" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_LEVEL<sp/>LOG_LEVEL_INFO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="util_8h_1a2c4180118c19ff02a0d42f4c6758bdd3" kindref="member">_lf_my_fed_id</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="util_8h_1adae54a9a8306d4fd24c1f604e1bb189a" kindref="member">get_fed_id</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="util_8h_1ab831b6ca5cfb47d7d4b3f15ef8e0f053" kindref="member">info_print</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>format,<sp/>...);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="util_8h_1aca1b11267854044bfb09f5b172afa99a" kindref="member">log_print</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>format,<sp/>...);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="util_8h_1a02ab3aea33a20e71b0f50923d3b222a7" refkind="member"><highlight class="preprocessor">#define<sp/>LOG_PRINT(format,<sp/>...)<sp/>\</highlight></codeline>
+<codeline lineno="131"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do<sp/>{<sp/>if(LOG_LEVEL<sp/>&gt;=<sp/>LOG_LEVEL_LOG)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="132"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log_print(format,<sp/>##__VA_ARGS__);<sp/>\</highlight></codeline>
+<codeline lineno="133"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="util_8h_1a8ad76364d50e7fec98ca5cf826a238f3" kindref="member">debug_print</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>format,<sp/>...);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="util_8h_1a0a27a0fa2f8d9461204242121941696c" refkind="member"><highlight class="preprocessor">#define<sp/>DEBUG_PRINT(format,<sp/>...)<sp/>\</highlight></codeline>
+<codeline lineno="162"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do<sp/>{<sp/>if(LOG_LEVEL<sp/>&gt;=<sp/>LOG_LEVEL_DEBUG)<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="163"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>debug_print(format,<sp/>##__VA_ARGS__);<sp/>\</highlight></codeline>
+<codeline lineno="164"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="util_8h_1aad9796c174f7ef5d226cd169f2520fd5" kindref="member">error</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*msg);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="util_8h_1a1c6c13db619d78a55e0517405f226cc3" kindref="member">error_print</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>format,<sp/>...);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="util_8h_1a31c6c0670e0e0d97586def29f10bf7d4" kindref="member">warning_print</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>format,<sp/>...);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="util_8h_1a7389ef15e70a377a52086e6d6b956d70" kindref="member">error_print_and_exit</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>format,<sp/>...);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="util_8h_1a47703caddaeadb65621d5e8509a00c72" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void(<ref refid="util_8h_1a47703caddaeadb65621d5e8509a00c72" kindref="member">print_message_function_t</ref>)(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/>va_list);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="util_8h_1ad8d354f663642349063c0ab241cdbb70" kindref="member">register_print_function</ref>(<ref refid="util_8h_1a47703caddaeadb65621d5e8509a00c72" kindref="member">print_message_function_t</ref>*<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>log_level);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>UTIL_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/util.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,166 @@
+\hypertarget{util_8c}{}\doxysection{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/util.c File Reference}
+\label{util_8c}\index{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/util.c@{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/util.c}}
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{util_8c_af58c457e08491f7cfd5a0a46940e11ad}\label{util_8c_af58c457e08491f7cfd5a0a46940e11ad}} 
+\#define {\bfseries N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+F\+E\+D\+E\+R\+A\+T\+ES}~1
+\item 
+\#define \mbox{\hyperlink{util_8c_a065f1f00e4a82d34116e1cd8734fabde}{S\+O\+C\+K\+E\+T\+\_\+\+R\+E\+A\+D\+\_\+\+R\+E\+T\+R\+Y\+\_\+\+I\+N\+T\+E\+R\+V\+AL}}~1000000
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{util_8c_adae54a9a8306d4fd24c1f604e1bb189a}{get\+\_\+fed\+\_\+id}} ()
+\item 
+void \mbox{\hyperlink{util_8c_a8310a8941e8159259095f412b4af11a5}{\+\_\+lf\+\_\+message\+\_\+print}} (int is\+\_\+error, char $\ast$prefix, char $\ast$format, va\+\_\+list args, int log\+\_\+level)
+\item 
+void \mbox{\hyperlink{util_8c_ab831b6ca5cfb47d7d4b3f15ef8e0f053}{info\+\_\+print}} (char $\ast$format,...)
+\item 
+void \mbox{\hyperlink{util_8c_aca1b11267854044bfb09f5b172afa99a}{log\+\_\+print}} (char $\ast$format,...)
+\item 
+void \mbox{\hyperlink{util_8c_a8ad76364d50e7fec98ca5cf826a238f3}{debug\+\_\+print}} (char $\ast$format,...)
+\item 
+void \mbox{\hyperlink{util_8c_a1c6c13db619d78a55e0517405f226cc3}{error\+\_\+print}} (char $\ast$format,...)
+\item 
+void \mbox{\hyperlink{util_8c_a31c6c0670e0e0d97586def29f10bf7d4}{warning\+\_\+print}} (char $\ast$format,...)
+\item 
+void \mbox{\hyperlink{util_8c_a7389ef15e70a377a52086e6d6b956d70}{error\+\_\+print\+\_\+and\+\_\+exit}} (char $\ast$format,...)
+\item 
+void \mbox{\hyperlink{util_8c_ad8d354f663642349063c0ab241cdbb70}{register\+\_\+print\+\_\+function}} (\mbox{\hyperlink{util_8h_a47703caddaeadb65621d5e8509a00c72}{print\+\_\+message\+\_\+function\+\_\+t}} $\ast$function, int log\+\_\+level)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{util_8c_a2c4180118c19ff02a0d42f4c6758bdd3}{\+\_\+lf\+\_\+my\+\_\+fed\+\_\+id}} = -\/1
+\item 
+\mbox{\hyperlink{util_8h_a47703caddaeadb65621d5e8509a00c72}{print\+\_\+message\+\_\+function\+\_\+t}} $\ast$ \mbox{\hyperlink{util_8c_a57a22a0e1b00db1d40d5fcb8dde330f7}{print\+\_\+message\+\_\+function}} = N\+U\+LL
+\item 
+int \mbox{\hyperlink{util_8c_ac5ad67ecd4813c09ec8e2a2ec8904057}{print\+\_\+message\+\_\+level}} = -\/1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Edward A. Lee (\href{mailto:eal@berkeley.edu}{\texttt{ eal@berkeley.\+edu}})
+\end{DoxyAuthor}
+\hypertarget{util_8h_LICENSE}{}\doxysubsection{L\+I\+C\+E\+N\+SE}\label{util_8h_LICENSE}
+Copyright (c) 2020, The University of California at Berkeley.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.\hypertarget{util_8h_DESCRIPTION}{}\doxysubsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}\label{util_8h_DESCRIPTION}
+Utility functions for managing output the user, error and warning messages, logging, and debug messages. Outputs are filtered based on whether a 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{util_8c_a065f1f00e4a82d34116e1cd8734fabde}\label{util_8c_a065f1f00e4a82d34116e1cd8734fabde}} 
+\index{util.c@{util.c}!SOCKET\_READ\_RETRY\_INTERVAL@{SOCKET\_READ\_RETRY\_INTERVAL}}
+\index{SOCKET\_READ\_RETRY\_INTERVAL@{SOCKET\_READ\_RETRY\_INTERVAL}!util.c@{util.c}}
+\doxysubsubsection{\texorpdfstring{SOCKET\_READ\_RETRY\_INTERVAL}{SOCKET\_READ\_RETRY\_INTERVAL}}
+{\footnotesize\ttfamily \#define S\+O\+C\+K\+E\+T\+\_\+\+R\+E\+A\+D\+\_\+\+R\+E\+T\+R\+Y\+\_\+\+I\+N\+T\+E\+R\+V\+AL~1000000}
+
+Number of nanoseconds to sleep before retrying a socket read. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{util_8c_a8310a8941e8159259095f412b4af11a5}\label{util_8c_a8310a8941e8159259095f412b4af11a5}} 
+\index{util.c@{util.c}!\_lf\_message\_print@{\_lf\_message\_print}}
+\index{\_lf\_message\_print@{\_lf\_message\_print}!util.c@{util.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_message\_print()}{\_lf\_message\_print()}}
+{\footnotesize\ttfamily void \+\_\+lf\+\_\+message\+\_\+print (\begin{DoxyParamCaption}\item[{int}]{is\+\_\+error,  }\item[{char $\ast$}]{prefix,  }\item[{char $\ast$}]{format,  }\item[{va\+\_\+list}]{args,  }\item[{int}]{log\+\_\+level }\end{DoxyParamCaption})}
+
+Internal implementation of the next few reporting functions. \mbox{\Hypertarget{util_8c_a8ad76364d50e7fec98ca5cf826a238f3}\label{util_8c_a8ad76364d50e7fec98ca5cf826a238f3}} 
+\index{util.c@{util.c}!debug\_print@{debug\_print}}
+\index{debug\_print@{debug\_print}!util.c@{util.c}}
+\doxysubsubsection{\texorpdfstring{debug\_print()}{debug\_print()}}
+{\footnotesize\ttfamily void debug\+\_\+print (\begin{DoxyParamCaption}\item[{char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Report an debug message on stdout with the prefix \char`\"{}\+D\+E\+B\+U\+G\+: \char`\"{} and a newline appended at the end. If this execution is federated, then the message will be prefaced by \char`\"{}\+Federate n\+: \char`\"{}, where n is the federate ID. The arguments are just like printf(). \mbox{\Hypertarget{util_8c_a1c6c13db619d78a55e0517405f226cc3}\label{util_8c_a1c6c13db619d78a55e0517405f226cc3}} 
+\index{util.c@{util.c}!error\_print@{error\_print}}
+\index{error\_print@{error\_print}!util.c@{util.c}}
+\doxysubsubsection{\texorpdfstring{error\_print()}{error\_print()}}
+{\footnotesize\ttfamily void error\+\_\+print (\begin{DoxyParamCaption}\item[{char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Report an error with the prefix \char`\"{}\+E\+R\+R\+O\+R\+: \char`\"{} and a newline appended at the end. The arguments are just like printf(). \mbox{\Hypertarget{util_8c_a7389ef15e70a377a52086e6d6b956d70}\label{util_8c_a7389ef15e70a377a52086e6d6b956d70}} 
+\index{util.c@{util.c}!error\_print\_and\_exit@{error\_print\_and\_exit}}
+\index{error\_print\_and\_exit@{error\_print\_and\_exit}!util.c@{util.c}}
+\doxysubsubsection{\texorpdfstring{error\_print\_and\_exit()}{error\_print\_and\_exit()}}
+{\footnotesize\ttfamily void error\+\_\+print\+\_\+and\+\_\+exit (\begin{DoxyParamCaption}\item[{char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Report an error with the prefix \char`\"{}\+E\+R\+R\+O\+R\+: \char`\"{} and a newline appended at the end, then exit with the failure code E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE. The arguments are just like printf(). \mbox{\Hypertarget{util_8c_adae54a9a8306d4fd24c1f604e1bb189a}\label{util_8c_adae54a9a8306d4fd24c1f604e1bb189a}} 
+\index{util.c@{util.c}!get\_fed\_id@{get\_fed\_id}}
+\index{get\_fed\_id@{get\_fed\_id}!util.c@{util.c}}
+\doxysubsubsection{\texorpdfstring{get\_fed\_id()}{get\_fed\_id()}}
+{\footnotesize\ttfamily int get\+\_\+fed\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the federate ID or -\/1 if this program is not part of a federation. \mbox{\Hypertarget{util_8c_ab831b6ca5cfb47d7d4b3f15ef8e0f053}\label{util_8c_ab831b6ca5cfb47d7d4b3f15ef8e0f053}} 
+\index{util.c@{util.c}!info\_print@{info\_print}}
+\index{info\_print@{info\_print}!util.c@{util.c}}
+\doxysubsubsection{\texorpdfstring{info\_print()}{info\_print()}}
+{\footnotesize\ttfamily void info\+\_\+print (\begin{DoxyParamCaption}\item[{char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Report an informational message on stdout with a newline appended at the end. If this execution is federated, then the message will be prefaced by \char`\"{}\+Federate n\+: \char`\"{}, where n is the federate ID. The arguments are just like printf(). \mbox{\Hypertarget{util_8c_aca1b11267854044bfb09f5b172afa99a}\label{util_8c_aca1b11267854044bfb09f5b172afa99a}} 
+\index{util.c@{util.c}!log\_print@{log\_print}}
+\index{log\_print@{log\_print}!util.c@{util.c}}
+\doxysubsubsection{\texorpdfstring{log\_print()}{log\_print()}}
+{\footnotesize\ttfamily void log\+\_\+print (\begin{DoxyParamCaption}\item[{char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Report an log message on stdout with the prefix \char`\"{}\+L\+O\+G\+: \char`\"{} and a newline appended at the end. If this execution is federated, then the message will be prefaced by \char`\"{}\+Federate n\+: \char`\"{}, where n is the federate ID. The arguments are just like printf(). \mbox{\Hypertarget{util_8c_ad8d354f663642349063c0ab241cdbb70}\label{util_8c_ad8d354f663642349063c0ab241cdbb70}} 
+\index{util.c@{util.c}!register\_print\_function@{register\_print\_function}}
+\index{register\_print\_function@{register\_print\_function}!util.c@{util.c}}
+\doxysubsubsection{\texorpdfstring{register\_print\_function()}{register\_print\_function()}}
+{\footnotesize\ttfamily void register\+\_\+print\+\_\+function (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{util_8h_a47703caddaeadb65621d5e8509a00c72}{print\+\_\+message\+\_\+function\+\_\+t}} $\ast$}]{function,  }\item[{int}]{log\+\_\+level }\end{DoxyParamCaption})}
+
+Register a function to display messages. After calling this, all messages passed to the above print functions will be printed using the specified function rather than printf if their log level is greater than the specified level. The level should be one of L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+E\+R\+R\+OR, L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+W\+A\+R\+N\+I\+NG, L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+I\+N\+FO, L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+L\+OG, or L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+D\+E\+B\+UG.
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & The print message function or N\+U\+LL to revert to using printf. \\
+\hline
+{\em log\+\_\+level} & The level of messages to redirect. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{util_8c_a31c6c0670e0e0d97586def29f10bf7d4}\label{util_8c_a31c6c0670e0e0d97586def29f10bf7d4}} 
+\index{util.c@{util.c}!warning\_print@{warning\_print}}
+\index{warning\_print@{warning\_print}!util.c@{util.c}}
+\doxysubsubsection{\texorpdfstring{warning\_print()}{warning\_print()}}
+{\footnotesize\ttfamily void warning\+\_\+print (\begin{DoxyParamCaption}\item[{char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Report a warning with the prefix \char`\"{}\+W\+A\+R\+N\+I\+N\+G\+: \char`\"{} and a newline appended at the end. The arguments are just like printf(). 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{util_8c_a2c4180118c19ff02a0d42f4c6758bdd3}\label{util_8c_a2c4180118c19ff02a0d42f4c6758bdd3}} 
+\index{util.c@{util.c}!\_lf\_my\_fed\_id@{\_lf\_my\_fed\_id}}
+\index{\_lf\_my\_fed\_id@{\_lf\_my\_fed\_id}!util.c@{util.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_my\_fed\_id}{\_lf\_my\_fed\_id}}
+{\footnotesize\ttfamily int \+\_\+lf\+\_\+my\+\_\+fed\+\_\+id = -\/1}
+
+The ID of this federate. For a non-\/federated execution, this will be -\/1. For a federated execution, it will be assigned when the generated function \mbox{\hyperlink{reactor_8h_a868e02a04eabb4ffed63f6141f5f64a2}{\+\_\+\+\_\+initialize\+\_\+trigger\+\_\+objects()}} is called. \begin{DoxySeeAlso}{See also}
+xtext/org.\+icyphy.\+linguafranca/src/org/icyphy/generator/\+C\+Generator.xtend. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{util_8c_a57a22a0e1b00db1d40d5fcb8dde330f7}\label{util_8c_a57a22a0e1b00db1d40d5fcb8dde330f7}} 
+\index{util.c@{util.c}!print\_message\_function@{print\_message\_function}}
+\index{print\_message\_function@{print\_message\_function}!util.c@{util.c}}
+\doxysubsubsection{\texorpdfstring{print\_message\_function}{print\_message\_function}}
+{\footnotesize\ttfamily \mbox{\hyperlink{util_8h_a47703caddaeadb65621d5e8509a00c72}{print\+\_\+message\+\_\+function\+\_\+t}}$\ast$ print\+\_\+message\+\_\+function = N\+U\+LL}
+
+If non-\/null, this function will be used instead of the printf to print messages. \mbox{\Hypertarget{util_8c_ac5ad67ecd4813c09ec8e2a2ec8904057}\label{util_8c_ac5ad67ecd4813c09ec8e2a2ec8904057}} 
+\index{util.c@{util.c}!print\_message\_level@{print\_message\_level}}
+\index{print\_message\_level@{print\_message\_level}!util.c@{util.c}}
+\doxysubsubsection{\texorpdfstring{print\_message\_level}{print\_message\_level}}
+{\footnotesize\ttfamily int print\+\_\+message\+\_\+level = -\/1}
+
+The level of messages to redirect to print\+\_\+message\+\_\+function. 

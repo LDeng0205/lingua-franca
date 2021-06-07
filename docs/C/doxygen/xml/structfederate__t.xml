@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structfederate__t" kind="struct" language="C++" prot="public">
+    <compoundname>federate_t</compoundname>
+    <includes refid="rti_8h" local="no">rti.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfederate__t_1a69fc158bf132b647cabecca6835dda58" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int federate_t::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="638" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="638" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1ab248a8454865da80f9dba35e8ab4f1f5" prot="public" static="no" mutable="no">
+        <type>pthread_t</type>
+        <definition>pthread_t federate_t::thread_id</definition>
+        <argsstring></argsstring>
+        <name>thread_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="639" column="15" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="639" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1ab43bed0befa07b0d538c174eeaf5c0f7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int federate_t::socket</definition>
+        <argsstring></argsstring>
+        <name>socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="640" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="640" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1a0d2730044e6b596065728e8b6361ce30" prot="public" static="no" mutable="no">
+        <type>struct sockaddr_in</type>
+        <definition>struct sockaddr_in federate_t::UDP_addr</definition>
+        <argsstring></argsstring>
+        <name>UDP_addr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="640" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="641" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1a9e4580724a41eec9878ff9eff8763f23" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool federate_t::clock_synchronization_enabled</definition>
+        <argsstring></argsstring>
+        <name>clock_synchronization_enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="642" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="642" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1a06611a517931b5fcaff7719b0fa38150" prot="public" static="no" mutable="no">
+        <type><ref refid="structtag__t" kindref="compound">tag_t</ref></type>
+        <definition>tag_t federate_t::completed</definition>
+        <argsstring></argsstring>
+        <name>completed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="644" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="644" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1a426f1683c5b95daae0ac0b21dab4d648" prot="public" static="no" mutable="no">
+        <type><ref refid="structtag__t" kindref="compound">tag_t</ref></type>
+        <definition>tag_t federate_t::last_granted</definition>
+        <argsstring></argsstring>
+        <name>last_granted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="645" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="645" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1a0d12fb57d188ef7496268b93ea65481a" prot="public" static="no" mutable="no">
+        <type><ref refid="structtag__t" kindref="compound">tag_t</ref></type>
+        <definition>tag_t federate_t::last_provisionally_granted</definition>
+        <argsstring></argsstring>
+        <name>last_provisionally_granted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="646" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="646" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1a9ec221b4f8c6b9a36bc30943998e322d" prot="public" static="no" mutable="no">
+        <type><ref refid="structtag__t" kindref="compound">tag_t</ref></type>
+        <definition>tag_t federate_t::next_event</definition>
+        <argsstring></argsstring>
+        <name>next_event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="647" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="647" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1a13b4f468579567f6e7a1c2aa542a2b78" prot="public" static="no" mutable="no">
+        <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+        <definition>instant_t federate_t::time_advance</definition>
+        <argsstring></argsstring>
+        <name>time_advance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="648" column="15" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="648" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1a3f4d9c9743013e7a8aa596942237fa50" prot="public" static="no" mutable="no">
+        <type><ref refid="rti_8h_1a7a2e496e8d9be587cc662640a4251b23" kindref="member">fed_state_t</ref></type>
+        <definition>fed_state_t federate_t::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="649" column="17" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="649" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1a60eee2c5cbac89d0b7bbebb4cd5ca61d" prot="public" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* federate_t::upstream</definition>
+        <argsstring></argsstring>
+        <name>upstream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="650" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="650" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1a5098b69a97da31d890feb4ec65d739ca" prot="public" static="no" mutable="no">
+        <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref> *</type>
+        <definition>interval_t* federate_t::upstream_delay</definition>
+        <argsstring></argsstring>
+        <name>upstream_delay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="651" column="16" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="651" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1a1d82ef50c2cd3d4f82252350e04f273a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int federate_t::num_upstream</definition>
+        <argsstring></argsstring>
+        <name>num_upstream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="653" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="653" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1a70e3719658ccc1ed171389b566ec5631" prot="public" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* federate_t::downstream</definition>
+        <argsstring></argsstring>
+        <name>downstream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="654" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="654" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1a5818815895ea37489f73045167f91fe5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int federate_t::num_downstream</definition>
+        <argsstring></argsstring>
+        <name>num_downstream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="655" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="655" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1aa6322b48ff2d517703942b8ed8616222" prot="public" static="no" mutable="no">
+        <type><ref refid="rti_8h_1a83ca4d4187a661b1395c9f860d61c97e" kindref="member">execution_mode_t</ref></type>
+        <definition>execution_mode_t federate_t::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="656" column="22" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="656" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1a9f1036714019b8b0c5161dc9613605e5" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char federate_t::server_hostname[INET_ADDRSTRLEN]</definition>
+        <argsstring>[INET_ADDRSTRLEN]</argsstring>
+        <name>server_hostname</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="657" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="657" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1ab88ca288958c1460bce3507e3ccd7370" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int federate_t::server_port</definition>
+        <argsstring></argsstring>
+        <name>server_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="658" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="658" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1a5442949769973da0defafa15154428f3" prot="public" static="no" mutable="no">
+        <type>struct in_addr</type>
+        <definition>struct in_addr federate_t::server_ip_addr</definition>
+        <argsstring></argsstring>
+        <name>server_ip_addr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="658" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="662" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfederate__t_1a31946be5e766bcb52538645fec9704f9" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool federate_t::requested_stop</definition>
+        <argsstring></argsstring>
+        <name>requested_stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="664" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="664" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Information about a federate known to the RTI, including its runtime state, mode of execution, and connectivity with other federates. The list of upstream and downstream federates does not include those that are connected via a &quot;physical&quot; connection (one denoted with ~&gt;) because those connections do not impose any scheduling constraints. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>tag_t</label>
+        <link refid="structtag__t"/>
+      </node>
+      <node id="1">
+        <label>federate_t</label>
+        <link refid="structfederate__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>last_granted</edgelabel>
+          <edgelabel>next_event</edgelabel>
+          <edgelabel>last_provisionally_granted</edgelabel>
+          <edgelabel>completed</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" line="637" column="25" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h" bodystart="637" bodyend="667"/>
+    <listofallmembers>
+      <member refid="structfederate__t_1a9e4580724a41eec9878ff9eff8763f23" prot="public" virt="non-virtual"><scope>federate_t</scope><name>clock_synchronization_enabled</name></member>
+      <member refid="structfederate__t_1a06611a517931b5fcaff7719b0fa38150" prot="public" virt="non-virtual"><scope>federate_t</scope><name>completed</name></member>
+      <member refid="structfederate__t_1a70e3719658ccc1ed171389b566ec5631" prot="public" virt="non-virtual"><scope>federate_t</scope><name>downstream</name></member>
+      <member refid="structfederate__t_1a69fc158bf132b647cabecca6835dda58" prot="public" virt="non-virtual"><scope>federate_t</scope><name>id</name></member>
+      <member refid="structfederate__t_1a426f1683c5b95daae0ac0b21dab4d648" prot="public" virt="non-virtual"><scope>federate_t</scope><name>last_granted</name></member>
+      <member refid="structfederate__t_1a0d12fb57d188ef7496268b93ea65481a" prot="public" virt="non-virtual"><scope>federate_t</scope><name>last_provisionally_granted</name></member>
+      <member refid="structfederate__t_1aa6322b48ff2d517703942b8ed8616222" prot="public" virt="non-virtual"><scope>federate_t</scope><name>mode</name></member>
+      <member refid="structfederate__t_1a9ec221b4f8c6b9a36bc30943998e322d" prot="public" virt="non-virtual"><scope>federate_t</scope><name>next_event</name></member>
+      <member refid="structfederate__t_1a5818815895ea37489f73045167f91fe5" prot="public" virt="non-virtual"><scope>federate_t</scope><name>num_downstream</name></member>
+      <member refid="structfederate__t_1a1d82ef50c2cd3d4f82252350e04f273a" prot="public" virt="non-virtual"><scope>federate_t</scope><name>num_upstream</name></member>
+      <member refid="structfederate__t_1a31946be5e766bcb52538645fec9704f9" prot="public" virt="non-virtual"><scope>federate_t</scope><name>requested_stop</name></member>
+      <member refid="structfederate__t_1a9f1036714019b8b0c5161dc9613605e5" prot="public" virt="non-virtual"><scope>federate_t</scope><name>server_hostname</name></member>
+      <member refid="structfederate__t_1a5442949769973da0defafa15154428f3" prot="public" virt="non-virtual"><scope>federate_t</scope><name>server_ip_addr</name></member>
+      <member refid="structfederate__t_1ab88ca288958c1460bce3507e3ccd7370" prot="public" virt="non-virtual"><scope>federate_t</scope><name>server_port</name></member>
+      <member refid="structfederate__t_1ab43bed0befa07b0d538c174eeaf5c0f7" prot="public" virt="non-virtual"><scope>federate_t</scope><name>socket</name></member>
+      <member refid="structfederate__t_1a3f4d9c9743013e7a8aa596942237fa50" prot="public" virt="non-virtual"><scope>federate_t</scope><name>state</name></member>
+      <member refid="structfederate__t_1ab248a8454865da80f9dba35e8ab4f1f5" prot="public" virt="non-virtual"><scope>federate_t</scope><name>thread_id</name></member>
+      <member refid="structfederate__t_1a13b4f468579567f6e7a1c2aa542a2b78" prot="public" virt="non-virtual"><scope>federate_t</scope><name>time_advance</name></member>
+      <member refid="structfederate__t_1a0d2730044e6b596065728e8b6361ce30" prot="public" virt="non-virtual"><scope>federate_t</scope><name>UDP_addr</name></member>
+      <member refid="structfederate__t_1a60eee2c5cbac89d0b7bbebb4cd5ca61d" prot="public" virt="non-virtual"><scope>federate_t</scope><name>upstream</name></member>
+      <member refid="structfederate__t_1a5098b69a97da31d890feb4ec65d739ca" prot="public" virt="non-virtual"><scope>federate_t</scope><name>upstream_delay</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

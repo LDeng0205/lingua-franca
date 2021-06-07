@@ -1,0 +1,276 @@
+\hypertarget{pqueue_8h}{}\doxysection{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/pqueue.h File Reference}
+\label{pqueue_8h}\index{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/pqueue.h@{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/pqueue.h}}
+
+
+Priority Queue function declarations.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned long long \mbox{\hyperlink{pqueue_8h_ad8239ddc32134716f57e54bb972f6bf0}{pqueue\+\_\+pri\+\_\+t}}
+\item 
+typedef \mbox{\hyperlink{pqueue_8h_ad8239ddc32134716f57e54bb972f6bf0}{pqueue\+\_\+pri\+\_\+t}}($\ast$ \mbox{\hyperlink{pqueue_8h_aa84f0100faf971295df5aed226c390a6}{pqueue\+\_\+get\+\_\+pri\+\_\+f}}) (void $\ast$a)
+\item 
+\mbox{\Hypertarget{pqueue_8h_a792d634f9284f7328c817ec4b8ed4230}\label{pqueue_8h_a792d634f9284f7328c817ec4b8ed4230}} 
+typedef void($\ast$ {\bfseries pqueue\+\_\+set\+\_\+pri\+\_\+f}) (void $\ast$a, \mbox{\hyperlink{pqueue_8h_ad8239ddc32134716f57e54bb972f6bf0}{pqueue\+\_\+pri\+\_\+t}} pri)
+\item 
+\mbox{\Hypertarget{pqueue_8h_a1c3f02694b2a0ec19584c395a88bb6f9}\label{pqueue_8h_a1c3f02694b2a0ec19584c395a88bb6f9}} 
+typedef int($\ast$ {\bfseries pqueue\+\_\+cmp\+\_\+pri\+\_\+f}) (\mbox{\hyperlink{pqueue_8h_ad8239ddc32134716f57e54bb972f6bf0}{pqueue\+\_\+pri\+\_\+t}} next, \mbox{\hyperlink{pqueue_8h_ad8239ddc32134716f57e54bb972f6bf0}{pqueue\+\_\+pri\+\_\+t}} curr)
+\item 
+\mbox{\Hypertarget{pqueue_8h_a664f0abcd86c8089468869aa3dc6e535}\label{pqueue_8h_a664f0abcd86c8089468869aa3dc6e535}} 
+typedef int($\ast$ {\bfseries pqueue\+\_\+eq\+\_\+elem\+\_\+f}) (void $\ast$next, void $\ast$curr)
+\item 
+typedef size\+\_\+t($\ast$ \mbox{\hyperlink{pqueue_8h_a31ca7927983005bd7866021819ad7037}{pqueue\+\_\+get\+\_\+pos\+\_\+f}}) (void $\ast$a)
+\item 
+\mbox{\Hypertarget{pqueue_8h_afdc8f52cbc45181ef375df22917bc4f9}\label{pqueue_8h_afdc8f52cbc45181ef375df22917bc4f9}} 
+typedef void($\ast$ {\bfseries pqueue\+\_\+set\+\_\+pos\+\_\+f}) (void $\ast$a, size\+\_\+t pos)
+\item 
+typedef void($\ast$ \mbox{\hyperlink{pqueue_8h_a884902da135214a6167f1536ad4ed4bc}{pqueue\+\_\+print\+\_\+entry\+\_\+f}}) (void $\ast$a)
+\item 
+typedef struct \mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} \mbox{\hyperlink{pqueue_8h_a05e211b59fd9be5939218e11d1132167}{pqueue\+\_\+t}}
+\item 
+\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$ \mbox{\hyperlink{pqueue_8h_a09b96709c25615c2232596ba6c959c26}{pqueue\+\_\+init}} (size\+\_\+t n, pqueue\+\_\+cmp\+\_\+pri\+\_\+f cmppri, \mbox{\hyperlink{pqueue_8h_aa84f0100faf971295df5aed226c390a6}{pqueue\+\_\+get\+\_\+pri\+\_\+f}} getpri, \mbox{\hyperlink{pqueue_8h_a31ca7927983005bd7866021819ad7037}{pqueue\+\_\+get\+\_\+pos\+\_\+f}} getpos, pqueue\+\_\+set\+\_\+pos\+\_\+f setpos, pqueue\+\_\+eq\+\_\+elem\+\_\+f eqelem, \mbox{\hyperlink{pqueue_8h_a884902da135214a6167f1536ad4ed4bc}{pqueue\+\_\+print\+\_\+entry\+\_\+f}} prt)
+\item 
+void \mbox{\hyperlink{pqueue_8h_acceacc4429dd9cd31d5af09f3f473cb0}{pqueue\+\_\+free}} (\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$q)
+\item 
+size\+\_\+t \mbox{\hyperlink{pqueue_8h_ae0cf88c8360a5f08ada81feaaeb40505}{pqueue\+\_\+size}} (\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$q)
+\item 
+int \mbox{\hyperlink{pqueue_8h_addd8cdfbc8c47b8cdd7eb4c4560de7aa}{pqueue\+\_\+insert}} (\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$q, void $\ast$d)
+\item 
+void \mbox{\hyperlink{pqueue_8h_a7dfaa607ca404b915355d4b123c669ee}{pqueue\+\_\+change\+\_\+priority}} (\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$q, \mbox{\hyperlink{pqueue_8h_ad8239ddc32134716f57e54bb972f6bf0}{pqueue\+\_\+pri\+\_\+t}} new\+\_\+pri, void $\ast$d)
+\item 
+void $\ast$ \mbox{\hyperlink{pqueue_8h_abec9363c7a9cc89190bf0925a4a1652c}{pqueue\+\_\+pop}} (\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$q)
+\item 
+void $\ast$ \mbox{\hyperlink{pqueue_8h_a1107ed07c3b78c119042d0c478d57551}{pqueue\+\_\+find\+\_\+equal\+\_\+same\+\_\+priority}} (\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$q, void $\ast$e)
+\item 
+void $\ast$ \mbox{\hyperlink{pqueue_8h_a8e0ceba56c7d72d4fe5c7776063b5e0c}{pqueue\+\_\+find\+\_\+equal}} (\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$q, void $\ast$e, \mbox{\hyperlink{pqueue_8h_ad8239ddc32134716f57e54bb972f6bf0}{pqueue\+\_\+pri\+\_\+t}} max\+\_\+priority)
+\item 
+int \mbox{\hyperlink{pqueue_8h_a921be3b49e4021888c595188438fdf7a}{pqueue\+\_\+remove}} (\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$q, void $\ast$e)
+\item 
+void $\ast$ \mbox{\hyperlink{pqueue_8h_a2919d3e817688b81da746d4123f51ba3}{pqueue\+\_\+peek}} (\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$q)
+\item 
+void \mbox{\hyperlink{pqueue_8h_a1bc71ac57e101d48d91c75ecbf8fc278}{pqueue\+\_\+print}} (\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$q, \mbox{\hyperlink{pqueue_8h_a884902da135214a6167f1536ad4ed4bc}{pqueue\+\_\+print\+\_\+entry\+\_\+f}} print)
+\item 
+void \mbox{\hyperlink{pqueue_8h_add0fae8523cca210f1574586e82cf7dd}{pqueue\+\_\+dump}} (\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$q, \mbox{\hyperlink{pqueue_8h_a884902da135214a6167f1536ad4ed4bc}{pqueue\+\_\+print\+\_\+entry\+\_\+f}} print)
+\item 
+int \mbox{\hyperlink{pqueue_8h_aecb92aa04f03ad7866508bc27778d7e9}{pqueue\+\_\+is\+\_\+valid}} (\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$q)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Priority Queue function declarations. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{pqueue_8h_a31ca7927983005bd7866021819ad7037}\label{pqueue_8h_a31ca7927983005bd7866021819ad7037}} 
+\index{pqueue.h@{pqueue.h}!pqueue\_get\_pos\_f@{pqueue\_get\_pos\_f}}
+\index{pqueue\_get\_pos\_f@{pqueue\_get\_pos\_f}!pqueue.h@{pqueue.h}}
+\doxysubsubsection{\texorpdfstring{pqueue\_get\_pos\_f}{pqueue\_get\_pos\_f}}
+{\footnotesize\ttfamily typedef size\+\_\+t($\ast$ pqueue\+\_\+get\+\_\+pos\+\_\+f) (void $\ast$a)}
+
+callback functions to get/set the position of an element \mbox{\Hypertarget{pqueue_8h_aa84f0100faf971295df5aed226c390a6}\label{pqueue_8h_aa84f0100faf971295df5aed226c390a6}} 
+\index{pqueue.h@{pqueue.h}!pqueue\_get\_pri\_f@{pqueue\_get\_pri\_f}}
+\index{pqueue\_get\_pri\_f@{pqueue\_get\_pri\_f}!pqueue.h@{pqueue.h}}
+\doxysubsubsection{\texorpdfstring{pqueue\_get\_pri\_f}{pqueue\_get\_pri\_f}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{pqueue_8h_ad8239ddc32134716f57e54bb972f6bf0}{pqueue\+\_\+pri\+\_\+t}}($\ast$ pqueue\+\_\+get\+\_\+pri\+\_\+f) (void $\ast$a)}
+
+callback functions to get/set/compare the priority of an element \mbox{\Hypertarget{pqueue_8h_ad8239ddc32134716f57e54bb972f6bf0}\label{pqueue_8h_ad8239ddc32134716f57e54bb972f6bf0}} 
+\index{pqueue.h@{pqueue.h}!pqueue\_pri\_t@{pqueue\_pri\_t}}
+\index{pqueue\_pri\_t@{pqueue\_pri\_t}!pqueue.h@{pqueue.h}}
+\doxysubsubsection{\texorpdfstring{pqueue\_pri\_t}{pqueue\_pri\_t}}
+{\footnotesize\ttfamily typedef unsigned long long \mbox{\hyperlink{pqueue_8h_ad8239ddc32134716f57e54bb972f6bf0}{pqueue\+\_\+pri\+\_\+t}}}
+
+priority data type \mbox{\Hypertarget{pqueue_8h_a884902da135214a6167f1536ad4ed4bc}\label{pqueue_8h_a884902da135214a6167f1536ad4ed4bc}} 
+\index{pqueue.h@{pqueue.h}!pqueue\_print\_entry\_f@{pqueue\_print\_entry\_f}}
+\index{pqueue\_print\_entry\_f@{pqueue\_print\_entry\_f}!pqueue.h@{pqueue.h}}
+\doxysubsubsection{\texorpdfstring{pqueue\_print\_entry\_f}{pqueue\_print\_entry\_f}}
+{\footnotesize\ttfamily typedef void($\ast$ pqueue\+\_\+print\+\_\+entry\+\_\+f) (void $\ast$a)}
+
+debug callback function to print a entry \mbox{\Hypertarget{pqueue_8h_a05e211b59fd9be5939218e11d1132167}\label{pqueue_8h_a05e211b59fd9be5939218e11d1132167}} 
+\index{pqueue.h@{pqueue.h}!pqueue\_t@{pqueue\_t}}
+\index{pqueue\_t@{pqueue\_t}!pqueue.h@{pqueue.h}}
+\doxysubsubsection{\texorpdfstring{pqueue\_t}{pqueue\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} \mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}}}
+
+the priority queue handle 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{pqueue_8h_a7dfaa607ca404b915355d4b123c669ee}\label{pqueue_8h_a7dfaa607ca404b915355d4b123c669ee}} 
+\index{pqueue.h@{pqueue.h}!pqueue\_change\_priority@{pqueue\_change\_priority}}
+\index{pqueue\_change\_priority@{pqueue\_change\_priority}!pqueue.h@{pqueue.h}}
+\doxysubsubsection{\texorpdfstring{pqueue\_change\_priority()}{pqueue\_change\_priority()}}
+{\footnotesize\ttfamily void pqueue\+\_\+change\+\_\+priority (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$}]{q,  }\item[{\mbox{\hyperlink{pqueue_8h_ad8239ddc32134716f57e54bb972f6bf0}{pqueue\+\_\+pri\+\_\+t}}}]{new\+\_\+pri,  }\item[{void $\ast$}]{d }\end{DoxyParamCaption})}
+
+Move an existing entry to a different priority. 
+\begin{DoxyParams}{Parameters}
+{\em q} & the queue \\
+\hline
+{\em new\+\_\+pri} & the new priority \\
+\hline
+{\em d} & the entry \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{pqueue_8h_add0fae8523cca210f1574586e82cf7dd}\label{pqueue_8h_add0fae8523cca210f1574586e82cf7dd}} 
+\index{pqueue.h@{pqueue.h}!pqueue\_dump@{pqueue\_dump}}
+\index{pqueue\_dump@{pqueue\_dump}!pqueue.h@{pqueue.h}}
+\doxysubsubsection{\texorpdfstring{pqueue\_dump()}{pqueue\_dump()}}
+{\footnotesize\ttfamily void pqueue\+\_\+dump (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$}]{q,  }\item[{\mbox{\hyperlink{pqueue_8h_a884902da135214a6167f1536ad4ed4bc}{pqueue\+\_\+print\+\_\+entry\+\_\+f}}}]{print }\end{DoxyParamCaption})}
+
+Dump the queue and it\textquotesingle{}s internal structure. \mbox{\Hypertarget{pqueue_8h_a8e0ceba56c7d72d4fe5c7776063b5e0c}\label{pqueue_8h_a8e0ceba56c7d72d4fe5c7776063b5e0c}} 
+\index{pqueue.h@{pqueue.h}!pqueue\_find\_equal@{pqueue\_find\_equal}}
+\index{pqueue\_find\_equal@{pqueue\_find\_equal}!pqueue.h@{pqueue.h}}
+\doxysubsubsection{\texorpdfstring{pqueue\_find\_equal()}{pqueue\_find\_equal()}}
+{\footnotesize\ttfamily void$\ast$ pqueue\+\_\+find\+\_\+equal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$}]{q,  }\item[{void $\ast$}]{e,  }\item[{\mbox{\hyperlink{pqueue_8h_ad8239ddc32134716f57e54bb972f6bf0}{pqueue\+\_\+pri\+\_\+t}}}]{max\+\_\+priority }\end{DoxyParamCaption})}
+
+Find the highest-\/ranking item with priority up to and including the given maximum priority that matches the supplied entry. 
+\begin{DoxyParams}{Parameters}
+{\em q} & the queue \\
+\hline
+{\em e} & the entry to compare against \\
+\hline
+{\em max\+\_\+priority} & the maximum priority to consider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL if no matching event has been found, otherwise the entry 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pqueue_8h_a1107ed07c3b78c119042d0c478d57551}\label{pqueue_8h_a1107ed07c3b78c119042d0c478d57551}} 
+\index{pqueue.h@{pqueue.h}!pqueue\_find\_equal\_same\_priority@{pqueue\_find\_equal\_same\_priority}}
+\index{pqueue\_find\_equal\_same\_priority@{pqueue\_find\_equal\_same\_priority}!pqueue.h@{pqueue.h}}
+\doxysubsubsection{\texorpdfstring{pqueue\_find\_equal\_same\_priority()}{pqueue\_find\_equal\_same\_priority()}}
+{\footnotesize\ttfamily void$\ast$ pqueue\+\_\+find\+\_\+equal\+\_\+same\+\_\+priority (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$}]{q,  }\item[{void $\ast$}]{e }\end{DoxyParamCaption})}
+
+Find the highest-\/ranking item with the same priority that matches the supplied entry. 
+\begin{DoxyParams}{Parameters}
+{\em q} & the queue \\
+\hline
+{\em e} & the entry to compare against \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL if no matching event has been found, otherwise the entry 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pqueue_8h_acceacc4429dd9cd31d5af09f3f473cb0}\label{pqueue_8h_acceacc4429dd9cd31d5af09f3f473cb0}} 
+\index{pqueue.h@{pqueue.h}!pqueue\_free@{pqueue\_free}}
+\index{pqueue\_free@{pqueue\_free}!pqueue.h@{pqueue.h}}
+\doxysubsubsection{\texorpdfstring{pqueue\_free()}{pqueue\_free()}}
+{\footnotesize\ttfamily void pqueue\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+free all memory used by the queue 
+\begin{DoxyParams}{Parameters}
+{\em q} & the queue \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{pqueue_8h_a09b96709c25615c2232596ba6c959c26}\label{pqueue_8h_a09b96709c25615c2232596ba6c959c26}} 
+\index{pqueue.h@{pqueue.h}!pqueue\_init@{pqueue\_init}}
+\index{pqueue\_init@{pqueue\_init}!pqueue.h@{pqueue.h}}
+\doxysubsubsection{\texorpdfstring{pqueue\_init()}{pqueue\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}}$\ast$ pqueue\+\_\+init (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{n,  }\item[{pqueue\+\_\+cmp\+\_\+pri\+\_\+f}]{cmppri,  }\item[{\mbox{\hyperlink{pqueue_8h_aa84f0100faf971295df5aed226c390a6}{pqueue\+\_\+get\+\_\+pri\+\_\+f}}}]{getpri,  }\item[{\mbox{\hyperlink{pqueue_8h_a31ca7927983005bd7866021819ad7037}{pqueue\+\_\+get\+\_\+pos\+\_\+f}}}]{getpos,  }\item[{pqueue\+\_\+set\+\_\+pos\+\_\+f}]{setpos,  }\item[{pqueue\+\_\+eq\+\_\+elem\+\_\+f}]{eqelem,  }\item[{\mbox{\hyperlink{pqueue_8h_a884902da135214a6167f1536ad4ed4bc}{pqueue\+\_\+print\+\_\+entry\+\_\+f}}}]{prt }\end{DoxyParamCaption})}
+
+initialize the queue
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the initial estimate of the number of queue items for which memory should be preallocated \\
+\hline
+{\em cmppri} & The callback function to run to compare two elements This callback should return 0 for \textquotesingle{}lower\textquotesingle{} and non-\/zero for \textquotesingle{}higher\textquotesingle{}, or vice versa if reverse priority is desired \\
+\hline
+{\em getpri} & the callback function to run to set a score to an element \\
+\hline
+{\em getpos} & the callback function to get the current element\textquotesingle{}s position \\
+\hline
+{\em setpos} & the callback function to set the current element\textquotesingle{}s position\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the handle or N\+U\+LL for insufficent memory 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pqueue_8h_addd8cdfbc8c47b8cdd7eb4c4560de7aa}\label{pqueue_8h_addd8cdfbc8c47b8cdd7eb4c4560de7aa}} 
+\index{pqueue.h@{pqueue.h}!pqueue\_insert@{pqueue\_insert}}
+\index{pqueue\_insert@{pqueue\_insert}!pqueue.h@{pqueue.h}}
+\doxysubsubsection{\texorpdfstring{pqueue\_insert()}{pqueue\_insert()}}
+{\footnotesize\ttfamily int pqueue\+\_\+insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$}]{q,  }\item[{void $\ast$}]{d }\end{DoxyParamCaption})}
+
+Insert an element into the queue. 
+\begin{DoxyParams}{Parameters}
+{\em q} & the queue \\
+\hline
+{\em e} & the element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pqueue_8h_aecb92aa04f03ad7866508bc27778d7e9}\label{pqueue_8h_aecb92aa04f03ad7866508bc27778d7e9}} 
+\index{pqueue.h@{pqueue.h}!pqueue\_is\_valid@{pqueue\_is\_valid}}
+\index{pqueue\_is\_valid@{pqueue\_is\_valid}!pqueue.h@{pqueue.h}}
+\doxysubsubsection{\texorpdfstring{pqueue\_is\_valid()}{pqueue\_is\_valid()}}
+{\footnotesize\ttfamily int pqueue\+\_\+is\+\_\+valid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+Check that the all entries are in the right order, etc. \mbox{\Hypertarget{pqueue_8h_a2919d3e817688b81da746d4123f51ba3}\label{pqueue_8h_a2919d3e817688b81da746d4123f51ba3}} 
+\index{pqueue.h@{pqueue.h}!pqueue\_peek@{pqueue\_peek}}
+\index{pqueue\_peek@{pqueue\_peek}!pqueue.h@{pqueue.h}}
+\doxysubsubsection{\texorpdfstring{pqueue\_peek()}{pqueue\_peek()}}
+{\footnotesize\ttfamily void$\ast$ pqueue\+\_\+peek (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+Access highest-\/ranking item without removing it. 
+\begin{DoxyParams}{Parameters}
+{\em q} & the queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL on error, otherwise the entry 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pqueue_8h_abec9363c7a9cc89190bf0925a4a1652c}\label{pqueue_8h_abec9363c7a9cc89190bf0925a4a1652c}} 
+\index{pqueue.h@{pqueue.h}!pqueue\_pop@{pqueue\_pop}}
+\index{pqueue\_pop@{pqueue\_pop}!pqueue.h@{pqueue.h}}
+\doxysubsubsection{\texorpdfstring{pqueue\_pop()}{pqueue\_pop()}}
+{\footnotesize\ttfamily void$\ast$ pqueue\+\_\+pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+Pop the highest-\/ranking item from the queue. 
+\begin{DoxyParams}{Parameters}
+{\em q} & the queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL on error, otherwise the entry 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pqueue_8h_a1bc71ac57e101d48d91c75ecbf8fc278}\label{pqueue_8h_a1bc71ac57e101d48d91c75ecbf8fc278}} 
+\index{pqueue.h@{pqueue.h}!pqueue\_print@{pqueue\_print}}
+\index{pqueue\_print@{pqueue\_print}!pqueue.h@{pqueue.h}}
+\doxysubsubsection{\texorpdfstring{pqueue\_print()}{pqueue\_print()}}
+{\footnotesize\ttfamily void pqueue\+\_\+print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$}]{q,  }\item[{\mbox{\hyperlink{pqueue_8h_a884902da135214a6167f1536ad4ed4bc}{pqueue\+\_\+print\+\_\+entry\+\_\+f}}}]{print }\end{DoxyParamCaption})}
+
+Print the queue. \mbox{\Hypertarget{pqueue_8h_a921be3b49e4021888c595188438fdf7a}\label{pqueue_8h_a921be3b49e4021888c595188438fdf7a}} 
+\index{pqueue.h@{pqueue.h}!pqueue\_remove@{pqueue\_remove}}
+\index{pqueue\_remove@{pqueue\_remove}!pqueue.h@{pqueue.h}}
+\doxysubsubsection{\texorpdfstring{pqueue\_remove()}{pqueue\_remove()}}
+{\footnotesize\ttfamily int pqueue\+\_\+remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$}]{q,  }\item[{void $\ast$}]{e }\end{DoxyParamCaption})}
+
+Remove an item from the queue. 
+\begin{DoxyParams}{Parameters}
+{\em q} & the queue \\
+\hline
+{\em e} & the entry \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pqueue_8h_ae0cf88c8360a5f08ada81feaaeb40505}\label{pqueue_8h_ae0cf88c8360a5f08ada81feaaeb40505}} 
+\index{pqueue.h@{pqueue.h}!pqueue\_size@{pqueue\_size}}
+\index{pqueue\_size@{pqueue\_size}!pqueue.h@{pqueue.h}}
+\doxysubsubsection{\texorpdfstring{pqueue\_size()}{pqueue\_size()}}
+{\footnotesize\ttfamily size\+\_\+t pqueue\+\_\+size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpqueue__t}{pqueue\+\_\+t}} $\ast$}]{q }\end{DoxyParamCaption})}
+
+return the size of the queue. 
+\begin{DoxyParams}{Parameters}
+{\em q} & the queue \\
+\hline
+\end{DoxyParams}

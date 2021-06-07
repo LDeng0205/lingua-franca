@@ -1,0 +1,525 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="ctarget_8h" kind="file" language="C++">
+    <compoundname>ctarget.h</compoundname>
+    <includes refid="reactor_8h" local="yes">core/reactor.h</includes>
+    <includedby refid="sensor__simulator_8c" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/sensor_simulator.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+      <node id="11">
+        <label>util.h</label>
+        <link refid="util_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>pqueue.h</label>
+        <link refid="pqueue_8h"/>
+      </node>
+      <node id="12">
+        <label>stdarg.h</label>
+      </node>
+      <node id="14">
+        <label>trace.h</label>
+        <link refid="trace_8h"/>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="9">
+        <label>errno.h</label>
+      </node>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h</label>
+        <link refid="ctarget_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>tag.h</label>
+        <link refid="tag_8h"/>
+      </node>
+      <node id="8">
+        <label>limits.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="2">
+        <label>core/reactor.h</label>
+        <link refid="reactor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>time.h</label>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h</label>
+        <link refid="ctarget_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/sensor_simulator.c</label>
+        <link refid="sensor__simulator_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ctarget_8h_1ae766d7bbeaee4ea6917191b7012bc960" prot="public" static="no">
+        <name>SET</name>
+        <param><defname>out</defname></param>
+        <param><defname>val</defname></param>
+        <initializer><ref refid="reactor_8h_1af5f7e281be573bc680ed652ad54f5386" kindref="member">_LF_SET</ref>(out, val)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the specified output (or input of a contained reactor) to the specified value.</para>
+<para>This version is used for primitive types such as int, double, etc. as well as the built-in types bool and string. The value is copied and therefore the variable carrying the value can be subsequently modified without changing the output. This can also be used for structs with a type defined by a typedef so that the type designating string does not end in &apos;*&apos;. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output port (by name) or input of a contained reactor in form input_name.port_name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to insert into the self struct. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" line="69" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ctarget_8h_1a713a5eb85ee00e225d5abebe3a98fc70" prot="public" static="no">
+        <name>SET_ARRAY</name>
+        <param><defname>out</defname></param>
+        <param><defname>val</defname></param>
+        <param><defname>element_size</defname></param>
+        <param><defname>length</defname></param>
+        <initializer><ref refid="reactor_8h_1a8a4001d12854ff4675f7d119dfb0b952" kindref="member">_LF_SET_ARRAY</ref>(out, val, element_size, length)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Version of set for output types given as &apos;type[]&apos; where you want to send a previously dynamically allocated array.</para>
+<para>The deallocation is delegated to downstream reactors, which automatically deallocate when the reference count drops to zero. It also sets the corresponding _is_present variable in the self struct to true (which causes the object message to be sent). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output port (by name). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array to send (a pointer to the first element). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the array to send. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="structlf__token__t" kindref="compound">lf_token_t</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" line="84" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ctarget_8h_1ac4add0e6067a7dec70daf3f69f86ea7b" prot="public" static="no">
+        <name>SET_NEW</name>
+        <param><defname>out</defname></param>
+        <initializer><ref refid="reactor_8h_1ae6d69be73768b3d144a524fa87f0d069" kindref="member">_LF_SET_NEW</ref>(out)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Version of set() for output types given as &apos;type*&apos; that allocates a new object of the type of the specified output port.</para>
+<para>This macro dynamically allocates enough memory to contain one instance of the output datatype and sets the variable named by the argument to point to the newly allocated memory. The user code can then populate it with whatever value it wishes to send.</para>
+<para>This macro also sets the corresponding _is_present variable in the self struct to true (which causes the object message to be sent), <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output port (by name). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" line="100" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ctarget_8h_1a09848dd9d5f27043a324d1deea54ce73" prot="public" static="no">
+        <name>SET_NEW_ARRAY</name>
+        <param><defname>out</defname></param>
+        <param><defname>len</defname></param>
+        <initializer><ref refid="reactor_8h_1a64c4d124085ac4279bac7158ad144218" kindref="member">_LF_SET_NEW_ARRAY</ref>(out, len)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Version of set() for output types given as &apos;type[]&apos;.</para>
+<para>This allocates a new array of the specified length, sets the corresponding _is_present variable in the self struct to true (which causes the array message to be sent), and sets the variable given by the first argument to point to the new array so that the user code can populate the array. The freeing of the dynamically allocated array will be handled automatically when the last downstream reader of the message has finished. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output port (by name). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the array to be sent. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" line="115" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ctarget_8h_1aae3aee7c6d3295bc671851f5bb7cf5be" prot="public" static="no">
+        <name>SET_PRESENT</name>
+        <param><defname>out</defname></param>
+        <initializer><ref refid="reactor_8h_1a26960b6a12ebe9eff3f276c2b07096ab" kindref="member">_LF_SET_PRESENT</ref>(out)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Version of set() for output types given as &apos;type[number]&apos;.</para>
+<para>This sets the _is_present variable corresponding to the specified output to true (which causes the array message to be sent). The values in the output are normally written directly to the array or struct before or after this is called. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output port (by name). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" line="126" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ctarget_8h_1aabca482a436b71f743253b204953cbe4" prot="public" static="no">
+        <name>SET_TOKEN</name>
+        <param><defname>out</defname></param>
+        <param><defname>newtoken</defname></param>
+        <initializer><ref refid="reactor_8h_1a5f45a70cbab4e36efdc9efdcf37a7bb9" kindref="member">_LF_SET_TOKEN</ref>(out, newtoken)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Version of set() for output types given as &apos;type*&apos; or &apos;type[]&apos; where you want to forward an input or action without copying it.</para>
+<para>The deallocation of memory is delegated to downstream reactors, which automatically deallocate when the reference count drops to zero. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output port (by name). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>token</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to token obtained from an input or action. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" line="137" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ctarget_8h_1a961a0ed618d8dbb43f9f3b2bf3541af4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref></type>
+        <definition>handle_t schedule</definition>
+        <argsstring>(void *action, interval_t offset)</argsstring>
+        <name>schedule</name>
+        <param>
+          <type>void *</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Schedule an action to occur with the specified value and time offset with no payload (no value conveyed). See <ref refid="ctarget_8h_1ab666cf351f7ca211945793b37cb29f58" kindref="member">schedule_token()</ref>, which this uses, for details. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an action on the self struct. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time offset over and above that in the action. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A handle to the event, or 0 if no event was scheduled, or -1 for error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" line="151" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" bodystart="151" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="ctarget_8h_1ae823c9b132062048c11066e1e7296dea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref></type>
+        <definition>handle_t schedule_int</definition>
+        <argsstring>(void *action, interval_t extra_delay, int value)</argsstring>
+        <name>schedule_int</name>
+        <param>
+          <type>void *</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+          <declname>extra_delay</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variant of schedule_value when the value is an integer. See <ref refid="reactor_8h" kindref="compound">reactor.h</ref> for documentation. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an action on the self struct. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" line="160" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" bodystart="160" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="ctarget_8h_1ab666cf351f7ca211945793b37cb29f58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref></type>
+        <definition>handle_t schedule_token</definition>
+        <argsstring>(void *action, interval_t extra_delay, lf_token_t *token)</argsstring>
+        <name>schedule_token</name>
+        <param>
+          <type>void *</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+          <declname>extra_delay</declname>
+        </param>
+        <param>
+          <type><ref refid="structlf__token__t" kindref="compound">lf_token_t</ref> *</type>
+          <declname>token</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Schedule the specified trigger at current_time plus the offset of the specified trigger plus the delay. See <ref refid="reactor_8h" kindref="compound">reactor.h</ref> for documentation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" line="170" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" bodystart="170" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="ctarget_8h_1ae185eda185f191553410d431eb643e09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref></type>
+        <definition>handle_t schedule_copy</definition>
+        <argsstring>(void *action, interval_t offset, void *value, int length)</argsstring>
+        <name>schedule_copy</name>
+        <param>
+          <type>void *</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Schedule an action to occur with the specified value and time offset with a copy of the specified value. See <ref refid="reactor_8h" kindref="compound">reactor.h</ref> for documentation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" line="179" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" bodystart="179" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="ctarget_8h_1a7e122ceb9688a43baa97a5a0dc7818e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref></type>
+        <definition>handle_t schedule_value</definition>
+        <argsstring>(void *action, interval_t extra_delay, void *value, int length)</argsstring>
+        <name>schedule_value</name>
+        <param>
+          <type>void *</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+          <declname>extra_delay</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variant of schedule_token that creates a token to carry the specified value. See <ref refid="reactor_8h" kindref="compound">reactor.h</ref> for documentation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" line="188" column="10" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h" bodystart="188" bodyend="190"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Edward A. Lee (<ulink url="mailto:eal@berkeley.edu">eal@berkeley.edu</ulink>)</para>
+</simplesect>
+</para>
+<sect1 id="util_8h_1LICENSE">
+<title>LICENSE</title>
+<para>Copyright (c) 2020, The University of California at Berkeley.</para>
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</para>
+<para><orderedlist>
+<listitem><para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem><para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem></orderedlist>
+</para>
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+</sect1>
+<sect1 id="util_8h_1DESCRIPTION">
+<title>DESCRIPTION</title>
+<para>Target-specific runtime functions for the C target language. This API layer can be used in conjunction with: target C;</para>
+<para>Note for target language developers. This is one way of developing a target language where the C core runtime is adopted. This file is a translation layer that implements Lingua Franca APIs which interact with the internal _lf_SET and _lf_schedule APIs. This file can act as a template for future runtime developement for target languages. For source generation, see xtext/org.icyphy.linguafranca/src/org/icyphy/generator/CCppGenerator.xtend. </para>
+</sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="41"><highlight class="preprocessor">#ifndef<sp/>CTARGET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CTARGET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="reactor_8h" kindref="compound">core/reactor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NOTE:<sp/>According<sp/>to<sp/>the<sp/>&quot;Swallowing<sp/>the<sp/>Semicolon&quot;<sp/>section<sp/>on<sp/>this<sp/>page:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>https://gcc.gnu.org/onlinedocs/gcc-3.0.1/cpp_3.html</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>following<sp/>macros<sp/>should<sp/>use<sp/>an<sp/>odd<sp/>do-while<sp/>construct<sp/>to<sp/>avoid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/>problems<sp/>with<sp/>if<sp/>...<sp/>else<sp/>statements<sp/>that<sp/>do<sp/>not<sp/>use<sp/>braces<sp/>around<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/>two<sp/>branches.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="ctarget_8h_1ae766d7bbeaee4ea6917191b7012bc960" refkind="member"><highlight class="preprocessor">#define<sp/>SET(out,<sp/>val)<sp/>_LF_SET(out,<sp/>val)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="ctarget_8h_1a713a5eb85ee00e225d5abebe3a98fc70" refkind="member"><highlight class="preprocessor">#define<sp/>SET_ARRAY(out,<sp/>val,<sp/>element_size,<sp/>length)<sp/>_LF_SET_ARRAY(out,<sp/>val,<sp/>element_size,<sp/>length)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="ctarget_8h_1ac4add0e6067a7dec70daf3f69f86ea7b" refkind="member"><highlight class="preprocessor">#define<sp/>SET_NEW(out)<sp/>_LF_SET_NEW(out)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="ctarget_8h_1a09848dd9d5f27043a324d1deea54ce73" refkind="member"><highlight class="preprocessor">#define<sp/>SET_NEW_ARRAY(out,<sp/>len)<sp/>_LF_SET_NEW_ARRAY(out,<sp/>len)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="ctarget_8h_1aae3aee7c6d3295bc671851f5bb7cf5be" refkind="member"><highlight class="preprocessor">#define<sp/>SET_PRESENT(out)<sp/>_LF_SET_PRESENT(out)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="ctarget_8h_1aabca482a436b71f743253b204953cbe4" refkind="member"><highlight class="preprocessor">#define<sp/>SET_TOKEN(out,<sp/>newtoken)<sp/>_LF_SET_TOKEN(out,<sp/>newtoken)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="ctarget_8h_1a961a0ed618d8dbb43f9f3b2bf3541af4" refkind="member"><highlight class="normal"><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref><sp/><ref refid="ctarget_8h_1a961a0ed618d8dbb43f9f3b2bf3541af4" kindref="member">schedule</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>action,<sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>offset)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1a369700b5e0906335f3d304a67eec5f29" kindref="member">_lf_schedule_token</ref>(action,<sp/>offset,<sp/>NULL);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="ctarget_8h_1ae823c9b132062048c11066e1e7296dea" refkind="member"><highlight class="normal"><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref><sp/><ref refid="ctarget_8h_1ae823c9b132062048c11066e1e7296dea" kindref="member">schedule_int</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>action,<sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>extra_delay,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1aa715873b79dee5b9f50daa2fef88cf34" kindref="member">_lf_schedule_int</ref>(action,<sp/>extra_delay,<sp/>value);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="ctarget_8h_1ab666cf351f7ca211945793b37cb29f58" refkind="member"><highlight class="normal"><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref><sp/><ref refid="ctarget_8h_1ab666cf351f7ca211945793b37cb29f58" kindref="member">schedule_token</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>action,<sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>extra_delay,<sp/><ref refid="structlf__token__t" kindref="compound">lf_token_t</ref>*<sp/>token)<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1a369700b5e0906335f3d304a67eec5f29" kindref="member">_lf_schedule_token</ref>(action,<sp/>extra_delay,<sp/>token);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179" refid="ctarget_8h_1ae185eda185f191553410d431eb643e09" refkind="member"><highlight class="normal"><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref><sp/><ref refid="ctarget_8h_1ae185eda185f191553410d431eb643e09" kindref="member">schedule_copy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>action,<sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>offset,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>value,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length)<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1a2c07a7b9e616070f32fa88b4959fba53" kindref="member">_lf_schedule_copy</ref>(action,<sp/>offset,<sp/>value,<sp/>length);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="ctarget_8h_1a7e122ceb9688a43baa97a5a0dc7818e1" refkind="member"><highlight class="normal"><ref refid="reactor_8h_1a5ad7d32f3a1ddabdc2933223ca6ce2ea" kindref="member">handle_t</ref><sp/><ref refid="ctarget_8h_1a7e122ceb9688a43baa97a5a0dc7818e1" kindref="member">schedule_value</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>action,<sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>extra_delay,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>value,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length)<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="reactor_8h_1aa0a09f1dc9ee5870a6d225a3569388df" kindref="member">_lf_schedule_value</ref>(action,<sp/>extra_delay,<sp/>value,<sp/>length);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>CTARGET_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h"/>
+  </compounddef>
+</doxygen>

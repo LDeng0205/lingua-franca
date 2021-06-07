@@ -1,0 +1,224 @@
+\hypertarget{tag_8c}{}\doxysection{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/tag.c File Reference}
+\label{tag_8c}\index{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/tag.c@{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/tag.c}}
+{\ttfamily \#include \char`\"{}tag.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}platform.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{tag_8c_a6f9d6db9250698b048f5f118b0308e47}{compare\+\_\+tags}} (\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} tag1, \mbox{\hyperlink{structtag__t}{tag\+\_\+t}} tag2)
+\item 
+\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} \mbox{\hyperlink{tag_8c_a285bf3926110e2e1ee38febe34f69222}{delay\+\_\+tag}} (\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} tag, \mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} interval)
+\item 
+\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} \mbox{\hyperlink{tag_8c_a23e91eb69aca986b03aba4ce86923102}{get\+\_\+elapsed\+\_\+logical\+\_\+time}} ()
+\item 
+\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} \mbox{\hyperlink{tag_8c_a284eab9a62e22fa3a64d36d301d0195d}{get\+\_\+current\+\_\+tag}} ()
+\item 
+\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} \mbox{\hyperlink{tag_8c_a9da5960071964c9c2bdb602526da0565}{get\+\_\+logical\+\_\+time}} ()
+\item 
+\mbox{\hyperlink{tag_8h_a818d416d39f7c82f1fbeb5c5d3149f0d}{microstep\+\_\+t}} \mbox{\hyperlink{tag_8c_af413f18a3d52672f4ba984cc92e4efe5}{get\+\_\+microstep}} ()
+\item 
+\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} \mbox{\hyperlink{tag_8c_a84d52b3843db3b4fcb932326d6b288c4}{get\+\_\+physical\+\_\+time}} ()
+\item 
+\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} \mbox{\hyperlink{tag_8c_a8b4f2e4e87e43670217c0c53099ae2f5}{get\+\_\+start\+\_\+time}} ()
+\item 
+\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} \mbox{\hyperlink{tag_8c_a0de9cef51748833c318227ed2e5bbe2a}{get\+\_\+elapsed\+\_\+physical\+\_\+time}} ()
+\item 
+void \mbox{\hyperlink{tag_8c_ac45b5d21dac66de7986c99f7db1b577b}{set\+\_\+physical\+\_\+clock\+\_\+offset}} (\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} offset)
+\item 
+\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} \mbox{\hyperlink{tag_8c_a3dc06a20d8902397916c0784e3a956c7}{convert\+\_\+volatile\+\_\+tag\+\_\+to\+\_\+nonvolatile}} (\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} volatile vtag)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} \mbox{\hyperlink{tag_8c_ad4570173ff1498d16032fb37814b3f40}{\+\_\+lf\+\_\+epoch\+\_\+offset}} = 0\+LL
+\item 
+\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} \mbox{\hyperlink{tag_8c_a1545de0581eee4dfe26fb54ee1039ffe}{current\+\_\+tag}} = \{.time = 0\+LL, .microstep = 0\}
+\item 
+\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} \mbox{\hyperlink{tag_8c_afc91fb8110046fe2a5b10993c6618688}{physical\+\_\+start\+\_\+time}} = N\+E\+V\+ER
+\item 
+\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} \mbox{\hyperlink{tag_8c_a20b56e8fb05c017508f1c4fa2e311a87}{start\+\_\+time}} = N\+E\+V\+ER
+\item 
+\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} \mbox{\hyperlink{tag_8c_a25a4105de2c979a2af935f5381058f15}{\+\_\+lf\+\_\+global\+\_\+physical\+\_\+clock\+\_\+offset}} = 0\+LL
+\item 
+\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} \mbox{\hyperlink{tag_8c_add35442c29c7b864362ef6672f35e7a5}{\+\_\+lf\+\_\+global\+\_\+physical\+\_\+clock\+\_\+drift}} = 0\+LL
+\item 
+\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} \mbox{\hyperlink{tag_8c_a0fb7f81b3b001d51f72b052a8a23c6d2}{\+\_\+lf\+\_\+global\+\_\+test\+\_\+physical\+\_\+clock\+\_\+offset}} = 0\+LL
+\item 
+\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} \mbox{\hyperlink{tag_8c_ae33f5d37733acaf7044864b1124240e0}{\+\_\+lf\+\_\+last\+\_\+reported\+\_\+physical\+\_\+time\+\_\+ns}} = 0\+LL
+\item 
+\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} \mbox{\hyperlink{tag_8c_aa69d28e60eef684c98f95a802681c4b9}{\+\_\+lf\+\_\+last\+\_\+reported\+\_\+unadjusted\+\_\+physical\+\_\+time\+\_\+ns}} = N\+E\+V\+ER
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Edward A. Lee 
+
+Soroush Bateni
+\end{DoxyAuthor}
+\hypertarget{util_8h_LICENSE}{}\doxysubsection{L\+I\+C\+E\+N\+SE}\label{util_8h_LICENSE}
+Copyright (c) 2020, The University of California at Berkeley.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.\hypertarget{util_8h_DESCRIPTION}{}\doxysubsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}\label{util_8h_DESCRIPTION}
+Implementation file for tag functions for Lingua Franca programs. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tag_8c_a6f9d6db9250698b048f5f118b0308e47}\label{tag_8c_a6f9d6db9250698b048f5f118b0308e47}} 
+\index{tag.c@{tag.c}!compare\_tags@{compare\_tags}}
+\index{compare\_tags@{compare\_tags}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{compare\_tags()}{compare\_tags()}}
+{\footnotesize\ttfamily int compare\+\_\+tags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtag__t}{tag\+\_\+t}}}]{tag1,  }\item[{\mbox{\hyperlink{structtag__t}{tag\+\_\+t}}}]{tag2 }\end{DoxyParamCaption})}
+
+Compare two tags. Return -\/1 if the first is less than the second, 0 if they are equal, and +1 if the first is greater than the second. A tag is greater than another if its time is greater or if its time is equal and its microstep is greater. 
+\begin{DoxyParams}{Parameters}
+{\em tag1} & \\
+\hline
+{\em tag2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1, 0, or 1 depending on the relation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{tag_8c_a3dc06a20d8902397916c0784e3a956c7}\label{tag_8c_a3dc06a20d8902397916c0784e3a956c7}} 
+\index{tag.c@{tag.c}!convert\_volatile\_tag\_to\_nonvolatile@{convert\_volatile\_tag\_to\_nonvolatile}}
+\index{convert\_volatile\_tag\_to\_nonvolatile@{convert\_volatile\_tag\_to\_nonvolatile}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{convert\_volatile\_tag\_to\_nonvolatile()}{convert\_volatile\_tag\_to\_nonvolatile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtag__t}{tag\+\_\+t}} convert\+\_\+volatile\+\_\+tag\+\_\+to\+\_\+nonvolatile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtag__t}{tag\+\_\+t}} volatile}]{vtag }\end{DoxyParamCaption})}
+
+For C++ compatibility, take a volatile \mbox{\hyperlink{structtag__t}{tag\+\_\+t}} and return a non-\/volatile variant. \begin{DoxyNote}{Note}
+This is an undefined behavior in C and should be used with utmost caution. See Section 6.\+7.\+2 of the C99 standard. 
+\end{DoxyNote}
+\mbox{\Hypertarget{tag_8c_a285bf3926110e2e1ee38febe34f69222}\label{tag_8c_a285bf3926110e2e1ee38febe34f69222}} 
+\index{tag.c@{tag.c}!delay\_tag@{delay\_tag}}
+\index{delay\_tag@{delay\_tag}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{delay\_tag()}{delay\_tag()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtag__t}{tag\+\_\+t}} delay\+\_\+tag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtag__t}{tag\+\_\+t}}}]{tag,  }\item[{\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}}}]{interval }\end{DoxyParamCaption})}
+
+Delay a tag by the specified time interval to realize the \char`\"{}after\char`\"{} keyword. If either the time interval or the time field of the tag is N\+E\+V\+ER, return the unmodified tag. If the time interval is 0LL, add one to the microstep, leave the time field alone, and return the result. Otherwise, add the interval to the time field of the tag and reset the microstep to 0. If the sum overflows, saturate the time value at F\+O\+R\+E\+V\+ER.
+
+Note that normally it makes no sense to call this with a negative interval (except N\+E\+V\+ER), but this is not checked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & The tag to increment. \\
+\hline
+{\em interval} & The time interval. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{tag_8c_a284eab9a62e22fa3a64d36d301d0195d}\label{tag_8c_a284eab9a62e22fa3a64d36d301d0195d}} 
+\index{tag.c@{tag.c}!get\_current\_tag@{get\_current\_tag}}
+\index{get\_current\_tag@{get\_current\_tag}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{get\_current\_tag()}{get\_current\_tag()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtag__t}{tag\+\_\+t}} get\+\_\+current\+\_\+tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the current tag, a logical time, microstep pair. \mbox{\Hypertarget{tag_8c_a23e91eb69aca986b03aba4ce86923102}\label{tag_8c_a23e91eb69aca986b03aba4ce86923102}} 
+\index{tag.c@{tag.c}!get\_elapsed\_logical\_time@{get\_elapsed\_logical\_time}}
+\index{get\_elapsed\_logical\_time@{get\_elapsed\_logical\_time}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{get\_elapsed\_logical\_time()}{get\_elapsed\_logical\_time()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} get\+\_\+elapsed\+\_\+logical\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the elapsed logical time in nanoseconds since the start of execution. \mbox{\Hypertarget{tag_8c_a0de9cef51748833c318227ed2e5bbe2a}\label{tag_8c_a0de9cef51748833c318227ed2e5bbe2a}} 
+\index{tag.c@{tag.c}!get\_elapsed\_physical\_time@{get\_elapsed\_physical\_time}}
+\index{get\_elapsed\_physical\_time@{get\_elapsed\_physical\_time}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{get\_elapsed\_physical\_time()}{get\_elapsed\_physical\_time()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} get\+\_\+elapsed\+\_\+physical\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the elapsed physical time in nanoseconds. This is the time returned by \mbox{\hyperlink{tag_8c_a84d52b3843db3b4fcb932326d6b288c4}{get\+\_\+physical\+\_\+time()}} minus the physical start time as measured by \mbox{\hyperlink{tag_8c_a84d52b3843db3b4fcb932326d6b288c4}{get\+\_\+physical\+\_\+time()}} when the program was started. \mbox{\Hypertarget{tag_8c_a9da5960071964c9c2bdb602526da0565}\label{tag_8c_a9da5960071964c9c2bdb602526da0565}} 
+\index{tag.c@{tag.c}!get\_logical\_time@{get\_logical\_time}}
+\index{get\_logical\_time@{get\_logical\_time}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{get\_logical\_time()}{get\_logical\_time()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} get\+\_\+logical\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the current logical time in nanoseconds since January 1, 1970. \mbox{\Hypertarget{tag_8c_af413f18a3d52672f4ba984cc92e4efe5}\label{tag_8c_af413f18a3d52672f4ba984cc92e4efe5}} 
+\index{tag.c@{tag.c}!get\_microstep@{get\_microstep}}
+\index{get\_microstep@{get\_microstep}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{get\_microstep()}{get\_microstep()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tag_8h_a818d416d39f7c82f1fbeb5c5d3149f0d}{microstep\+\_\+t}} get\+\_\+microstep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the current microstep. \mbox{\Hypertarget{tag_8c_a84d52b3843db3b4fcb932326d6b288c4}\label{tag_8c_a84d52b3843db3b4fcb932326d6b288c4}} 
+\index{tag.c@{tag.c}!get\_physical\_time@{get\_physical\_time}}
+\index{get\_physical\_time@{get\_physical\_time}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{get\_physical\_time()}{get\_physical\_time()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} get\+\_\+physical\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the current physical time in nanoseconds since January 1, 1970, adjusted by the global physical time offset. \mbox{\Hypertarget{tag_8c_a8b4f2e4e87e43670217c0c53099ae2f5}\label{tag_8c_a8b4f2e4e87e43670217c0c53099ae2f5}} 
+\index{tag.c@{tag.c}!get\_start\_time@{get\_start\_time}}
+\index{get\_start\_time@{get\_start\_time}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{get\_start\_time()}{get\_start\_time()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} get\+\_\+start\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the physical time of the start of execution in nanoseconds. $\ast$ On many platforms, this is the number of nanoseconds since January 1, 1970, but it is actually platform dependent. $\ast$ \begin{DoxyReturn}{Returns}
+A time instant. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{tag_8c_ac45b5d21dac66de7986c99f7db1b577b}\label{tag_8c_ac45b5d21dac66de7986c99f7db1b577b}} 
+\index{tag.c@{tag.c}!set\_physical\_clock\_offset@{set\_physical\_clock\_offset}}
+\index{set\_physical\_clock\_offset@{set\_physical\_clock\_offset}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{set\_physical\_clock\_offset()}{set\_physical\_clock\_offset()}}
+{\footnotesize\ttfamily void set\+\_\+physical\+\_\+clock\+\_\+offset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}}}]{offset }\end{DoxyParamCaption})}
+
+Set a fixed offset to the physical clock. After calling this, the value returned by \mbox{\hyperlink{tag_8c_a84d52b3843db3b4fcb932326d6b288c4}{get\+\_\+physical\+\_\+time()}} and get\+\_\+elpased\+\_\+physical\+\_\+time() will have this specified offset added to what it would have returned before the call. 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{tag_8c_ad4570173ff1498d16032fb37814b3f40}\label{tag_8c_ad4570173ff1498d16032fb37814b3f40}} 
+\index{tag.c@{tag.c}!\_lf\_epoch\_offset@{\_lf\_epoch\_offset}}
+\index{\_lf\_epoch\_offset@{\_lf\_epoch\_offset}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_epoch\_offset}{\_lf\_epoch\_offset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} \+\_\+lf\+\_\+epoch\+\_\+offset = 0\+LL}
+
+Offset to \+\_\+\+L\+F\+\_\+\+C\+L\+O\+CK that would convert it to epoch time. For C\+L\+O\+C\+K\+\_\+\+R\+E\+A\+L\+T\+I\+ME, this offset is always zero. For C\+L\+O\+C\+K\+\_\+\+M\+O\+N\+O\+T\+O\+N\+IC, it is the difference between those clocks at the start of the execution. \mbox{\Hypertarget{tag_8c_add35442c29c7b864362ef6672f35e7a5}\label{tag_8c_add35442c29c7b864362ef6672f35e7a5}} 
+\index{tag.c@{tag.c}!\_lf\_global\_physical\_clock\_drift@{\_lf\_global\_physical\_clock\_drift}}
+\index{\_lf\_global\_physical\_clock\_drift@{\_lf\_global\_physical\_clock\_drift}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_global\_physical\_clock\_drift}{\_lf\_global\_physical\_clock\_drift}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} \+\_\+lf\+\_\+global\+\_\+physical\+\_\+clock\+\_\+drift = 0\+LL}
+
+A measure of calculating the drift between the federate\textquotesingle{}s clock and the R\+TI\textquotesingle{}s clock \mbox{\Hypertarget{tag_8c_a25a4105de2c979a2af935f5381058f15}\label{tag_8c_a25a4105de2c979a2af935f5381058f15}} 
+\index{tag.c@{tag.c}!\_lf\_global\_physical\_clock\_offset@{\_lf\_global\_physical\_clock\_offset}}
+\index{\_lf\_global\_physical\_clock\_offset@{\_lf\_global\_physical\_clock\_offset}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_global\_physical\_clock\_offset}{\_lf\_global\_physical\_clock\_offset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} \+\_\+lf\+\_\+global\+\_\+physical\+\_\+clock\+\_\+offset = 0\+LL}
+
+Global physical clock offset. Initially set according to the R\+TI\textquotesingle{}s clock in federated programs. \mbox{\Hypertarget{tag_8c_a0fb7f81b3b001d51f72b052a8a23c6d2}\label{tag_8c_a0fb7f81b3b001d51f72b052a8a23c6d2}} 
+\index{tag.c@{tag.c}!\_lf\_global\_test\_physical\_clock\_offset@{\_lf\_global\_test\_physical\_clock\_offset}}
+\index{\_lf\_global\_test\_physical\_clock\_offset@{\_lf\_global\_test\_physical\_clock\_offset}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_global\_test\_physical\_clock\_offset}{\_lf\_global\_test\_physical\_clock\_offset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} \+\_\+lf\+\_\+global\+\_\+test\+\_\+physical\+\_\+clock\+\_\+offset = 0\+LL}
+
+A test offset that is applied to the clock. The clock synchronization algorithm must correct for this offset. This offset is especially useful to test clock synchronization on the same machine. \mbox{\Hypertarget{tag_8c_ae33f5d37733acaf7044864b1124240e0}\label{tag_8c_ae33f5d37733acaf7044864b1124240e0}} 
+\index{tag.c@{tag.c}!\_lf\_last\_reported\_physical\_time\_ns@{\_lf\_last\_reported\_physical\_time\_ns}}
+\index{\_lf\_last\_reported\_physical\_time\_ns@{\_lf\_last\_reported\_physical\_time\_ns}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_last\_reported\_physical\_time\_ns}{\_lf\_last\_reported\_physical\_time\_ns}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} \+\_\+lf\+\_\+last\+\_\+reported\+\_\+physical\+\_\+time\+\_\+ns = 0\+LL}
+
+Stores the last reported absolute snapshot of the physical clock. \mbox{\Hypertarget{tag_8c_aa69d28e60eef684c98f95a802681c4b9}\label{tag_8c_aa69d28e60eef684c98f95a802681c4b9}} 
+\index{tag.c@{tag.c}!\_lf\_last\_reported\_unadjusted\_physical\_time\_ns@{\_lf\_last\_reported\_unadjusted\_physical\_time\_ns}}
+\index{\_lf\_last\_reported\_unadjusted\_physical\_time\_ns@{\_lf\_last\_reported\_unadjusted\_physical\_time\_ns}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_last\_reported\_unadjusted\_physical\_time\_ns}{\_lf\_last\_reported\_unadjusted\_physical\_time\_ns}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} \+\_\+lf\+\_\+last\+\_\+reported\+\_\+unadjusted\+\_\+physical\+\_\+time\+\_\+ns = N\+E\+V\+ER}
+
+Records the most recent time reported by the physical clock when accessed by \mbox{\hyperlink{tag_8c_a84d52b3843db3b4fcb932326d6b288c4}{get\+\_\+physical\+\_\+time()}}. This will be an epoch time (number of nanoseconds since Jan. 1, 1970), as reported when you call lf\+\_\+clock\+\_\+gettime(\+C\+L\+O\+C\+K\+\_\+\+R\+E\+A\+L\+T\+I\+M\+E, ...). This differs from \+\_\+lf\+\_\+last\+\_\+reported\+\_\+physical\+\_\+time\+\_\+ns by \+\_\+lf\+\_\+global\+\_\+physical\+\_\+clock\+\_\+offset plus any calculated drift adjustement, which are adjustments made by clock synchronization. \mbox{\Hypertarget{tag_8c_a1545de0581eee4dfe26fb54ee1039ffe}\label{tag_8c_a1545de0581eee4dfe26fb54ee1039ffe}} 
+\index{tag.c@{tag.c}!current\_tag@{current\_tag}}
+\index{current\_tag@{current\_tag}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{current\_tag}{current\_tag}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtag__t}{tag\+\_\+t}} current\+\_\+tag = \{.time = 0\+LL, .microstep = 0\}}
+
+Current time in nanoseconds since January 1, 1970 This is not in scope for reactors. This should only ever be accessed while holding the mutex lock. \mbox{\Hypertarget{tag_8c_afc91fb8110046fe2a5b10993c6618688}\label{tag_8c_afc91fb8110046fe2a5b10993c6618688}} 
+\index{tag.c@{tag.c}!physical\_start\_time@{physical\_start\_time}}
+\index{physical\_start\_time@{physical\_start\_time}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{physical\_start\_time}{physical\_start\_time}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} physical\+\_\+start\+\_\+time = N\+E\+V\+ER}
+
+Physical time at the start of the execution. This should only ever be accessed while holding the mutex lock. \mbox{\Hypertarget{tag_8c_a20b56e8fb05c017508f1c4fa2e311a87}\label{tag_8c_a20b56e8fb05c017508f1c4fa2e311a87}} 
+\index{tag.c@{tag.c}!start\_time@{start\_time}}
+\index{start\_time@{start\_time}!tag.c@{tag.c}}
+\doxysubsubsection{\texorpdfstring{start\_time}{start\_time}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} start\+\_\+time = N\+E\+V\+ER}
+
+Logical time at the start of execution. This should only ever be accessed while holding the mutex lock. 

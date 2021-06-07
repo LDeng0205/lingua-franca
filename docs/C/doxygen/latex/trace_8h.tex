@@ -1,0 +1,103 @@
+\hypertarget{trace_8h}{}\doxysection{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/trace.h File Reference}
+\label{trace_8h}\index{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/trace.h@{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/core/trace.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{trace_8h_a93b33b5ac0d1091ac118ab464bf3a7d0}\label{trace_8h_a93b33b5ac0d1091ac118ab464bf3a7d0}} 
+\#define {\bfseries register\+\_\+user\+\_\+trace\+\_\+event}(...)
+\item 
+\mbox{\Hypertarget{trace_8h_aeae0efb071b08e657d36788eee20c1a7}\label{trace_8h_aeae0efb071b08e657d36788eee20c1a7}} 
+\#define {\bfseries tracepoint}(...)
+\item 
+\mbox{\Hypertarget{trace_8h_a618fd3947984f4585e5071ec945f4908}\label{trace_8h_a618fd3947984f4585e5071ec945f4908}} 
+\#define {\bfseries tracepoint\+\_\+reaction\+\_\+starts}(...)
+\item 
+\mbox{\Hypertarget{trace_8h_a6886c0b07fa8962e9e251bc5442fbae3}\label{trace_8h_a6886c0b07fa8962e9e251bc5442fbae3}} 
+\#define {\bfseries tracepoint\+\_\+reaction\+\_\+ends}(...)
+\item 
+\mbox{\Hypertarget{trace_8h_afce5f2514b7b2001611c45b2f0122cee}\label{trace_8h_afce5f2514b7b2001611c45b2f0122cee}} 
+\#define {\bfseries tracepoint\+\_\+schedule}(...)
+\item 
+\mbox{\Hypertarget{trace_8h_a4eaa42638286bf2cfdfed4b45d4a1036}\label{trace_8h_a4eaa42638286bf2cfdfed4b45d4a1036}} 
+\#define {\bfseries tracepoint\+\_\+user\+\_\+event}(...)
+\item 
+\mbox{\Hypertarget{trace_8h_adc24126d062442704b43b2ea2f95042c}\label{trace_8h_adc24126d062442704b43b2ea2f95042c}} 
+\#define {\bfseries tracepoint\+\_\+user\+\_\+value}(...)
+\item 
+\mbox{\Hypertarget{trace_8h_a00635edd06259391fe45fa81f2dd9cab}\label{trace_8h_a00635edd06259391fe45fa81f2dd9cab}} 
+\#define {\bfseries tracepoint\+\_\+worker\+\_\+wait\+\_\+starts}(...)
+\item 
+\mbox{\Hypertarget{trace_8h_a9dc20d411fb600c803f04572bde501ff}\label{trace_8h_a9dc20d411fb600c803f04572bde501ff}} 
+\#define {\bfseries tracepoint\+\_\+worker\+\_\+wait\+\_\+ends}(...)
+\item 
+\mbox{\Hypertarget{trace_8h_aa22497584488a2a7e993a79aaf722b3f}\label{trace_8h_aa22497584488a2a7e993a79aaf722b3f}} 
+\#define {\bfseries tracepoint\+\_\+worker\+\_\+advancing\+\_\+time\+\_\+starts}(...)~;
+\item 
+\mbox{\Hypertarget{trace_8h_a24b9a43858a553b3dcdd6adfaa3b0ace}\label{trace_8h_a24b9a43858a553b3dcdd6adfaa3b0ace}} 
+\#define {\bfseries tracepoint\+\_\+worker\+\_\+advancing\+\_\+time\+\_\+ends}(...)~;
+\item 
+\mbox{\Hypertarget{trace_8h_a27e365336dc38cd3fec8741832c0e195}\label{trace_8h_a27e365336dc38cd3fec8741832c0e195}} 
+\#define {\bfseries start\+\_\+trace}(...)
+\item 
+\mbox{\Hypertarget{trace_8h_a9c54cf0034978f2dd5b3521fc522d237}\label{trace_8h_a9c54cf0034978f2dd5b3521fc522d237}} 
+\#define {\bfseries stop\+\_\+trace}(...)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{trace_8h_ab02e9e69539d60297cedb38c2193a453}{trace\+\_\+event\+\_\+t}} \{ \newline
+{\bfseries reaction\+\_\+starts}, 
+{\bfseries reaction\+\_\+ends}, 
+{\bfseries schedule\+\_\+called}, 
+{\bfseries user\+\_\+event}, 
+\newline
+{\bfseries user\+\_\+value}, 
+{\bfseries worker\+\_\+wait\+\_\+starts}, 
+{\bfseries worker\+\_\+wait\+\_\+ends}, 
+{\bfseries worker\+\_\+advancing\+\_\+time\+\_\+starts}, 
+\newline
+{\bfseries worker\+\_\+advancing\+\_\+time\+\_\+ends}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Edward A. Lee
+\end{DoxyAuthor}
+\hypertarget{util_8h_LICENSE}{}\doxysubsection{L\+I\+C\+E\+N\+SE}\label{util_8h_LICENSE}
+Copyright (c) 2020, The University of California at Berkeley and TU Dresden
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.\hypertarget{util_8h_DESCRIPTION}{}\doxysubsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}\label{util_8h_DESCRIPTION}
+Definitions of tracepoint events for use with the C code generator and any other code generator that uses the C infrastructure (such as the Python code generator).
+
+See\+: \href{https://github.com/icyphy/lingua-franca/wiki/Tracing\#TracingInC}{\texttt{ https\+://github.\+com/icyphy/lingua-\/franca/wiki/\+Tracing\#\+Tracing\+InC}}
+
+The trace file is named trace.\+lft and is a binary file with the following format\+:
+
+Header\+:
+\begin{DoxyItemize}
+\item instant\+\_\+t\+: The start time. This is both the starting physical time and the starting logical time.
+\item int\+: Size N of the table mapping pointers to descriptions. This is followed by N records each of which has\+:
+\item A pointer value (the key).
+\item A null-\/terminated string (the description).
+\end{DoxyItemize}
+
+Traces\+: A sequence of traces, each of which begins with an int giving the length of the trace followed by binary representations of the trace\+\_\+record struct written using fwrite(). 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{trace_8h_ab02e9e69539d60297cedb38c2193a453}\label{trace_8h_ab02e9e69539d60297cedb38c2193a453}} 
+\index{trace.h@{trace.h}!trace\_event\_t@{trace\_event\_t}}
+\index{trace\_event\_t@{trace\_event\_t}!trace.h@{trace.h}}
+\doxysubsubsection{\texorpdfstring{trace\_event\_t}{trace\_event\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{trace_8h_ab02e9e69539d60297cedb38c2193a453}{trace\+\_\+event\+\_\+t}}}
+
+Trace event types. If you update this, be sure to update the string representation below. Also, create a tracepoint function for each event type. 

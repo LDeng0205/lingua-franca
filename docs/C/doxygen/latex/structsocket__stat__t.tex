@@ -1,0 +1,52 @@
+\hypertarget{structsocket__stat__t}{}\doxysection{socket\+\_\+stat\+\_\+t Struct Reference}
+\label{structsocket__stat__t}\index{socket\_stat\_t@{socket\_stat\_t}}
+
+
+{\ttfamily \#include $<$clock-\/sync.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsocket__stat__t_a337626dbaef95e87f6e611219cc445ef}\label{structsocket__stat__t_a337626dbaef95e87f6e611219cc445ef}} 
+\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} {\bfseries remote\+\_\+physical\+\_\+clock\+\_\+snapshot\+\_\+\+T1}
+\item 
+\mbox{\Hypertarget{structsocket__stat__t_af084180438ba84b4ec8e8fd873222605}\label{structsocket__stat__t_af084180438ba84b4ec8e8fd873222605}} 
+\mbox{\hyperlink{tag_8h_ad740f3189d2a477285138e682eafa8c5}{instant\+\_\+t}} {\bfseries local\+\_\+physical\+\_\+clock\+\_\+snapshot\+\_\+\+T2}
+\item 
+\mbox{\Hypertarget{structsocket__stat__t_a645afb48648fcee15ce3625456eb5c21}\label{structsocket__stat__t_a645afb48648fcee15ce3625456eb5c21}} 
+\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} {\bfseries local\+\_\+delay}
+\item 
+\mbox{\Hypertarget{structsocket__stat__t_ac7e50f6cbdc0f9709868bca0ec83b177}\label{structsocket__stat__t_ac7e50f6cbdc0f9709868bca0ec83b177}} 
+int {\bfseries received\+\_\+\+T4\+\_\+messages\+\_\+in\+\_\+current\+\_\+sync\+\_\+window}
+\item 
+\mbox{\Hypertarget{structsocket__stat__t_ab34f093b789df801fe4717cca5a3e745}\label{structsocket__stat__t_ab34f093b789df801fe4717cca5a3e745}} 
+\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} {\bfseries history}
+\item 
+\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} \mbox{\hyperlink{structsocket__stat__t_a2d53d66644d18d6e948aafd2913b638d}{network\+\_\+stat\+\_\+round\+\_\+trip\+\_\+delay\+\_\+max}}
+\item 
+\mbox{\Hypertarget{structsocket__stat__t_a5782a45124508e912999a1e5a723e07d}\label{structsocket__stat__t_a5782a45124508e912999a1e5a723e07d}} 
+int {\bfseries network\+\_\+stat\+\_\+sample\+\_\+index}
+\item 
+\mbox{\Hypertarget{structsocket__stat__t_aa86b4d56287ba851680428e98fd6cdf2}\label{structsocket__stat__t_aa86b4d56287ba851680428e98fd6cdf2}} 
+\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} {\bfseries clock\+\_\+synchronization\+\_\+error\+\_\+bound}
+\item 
+\mbox{\Hypertarget{structsocket__stat__t_a334228438ef47a0f2befc117ee0d9d47}\label{structsocket__stat__t_a334228438ef47a0f2befc117ee0d9d47}} 
+\mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} {\bfseries network\+\_\+stat\+\_\+samples} \mbox{[}\mbox{\hyperlink{clock-sync_8h_ab0eeaea19d6e5c9217a4eed928c32141}{\+\_\+\+L\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+Y\+N\+C\+\_\+\+E\+X\+C\+H\+A\+N\+G\+E\+S\+\_\+\+P\+E\+R\+\_\+\+I\+N\+T\+E\+R\+V\+AL}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Statistics for a given socket. The R\+TI initiates a clock synchronization action by sending its current physical time T1 to a federate. The federate records the local time T2 that it receives T1. It sends a reply at local time T3, which the R\+TI receives at its time T4. The R\+TI sends back T4. The round trip delay on the socket is therefore estimated as\+: (T4 -\/ T1) -\/ (T3 -\/ T2). 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structsocket__stat__t_a2d53d66644d18d6e948aafd2913b638d}\label{structsocket__stat__t_a2d53d66644d18d6e948aafd2913b638d}} 
+\index{socket\_stat\_t@{socket\_stat\_t}!network\_stat\_round\_trip\_delay\_max@{network\_stat\_round\_trip\_delay\_max}}
+\index{network\_stat\_round\_trip\_delay\_max@{network\_stat\_round\_trip\_delay\_max}!socket\_stat\_t@{socket\_stat\_t}}
+\doxysubsubsection{\texorpdfstring{network\_stat\_round\_trip\_delay\_max}{network\_stat\_round\_trip\_delay\_max}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tag_8h_a181bf532390385b9092615f354cccf87}{interval\+\_\+t}} socket\+\_\+stat\+\_\+t\+::network\+\_\+stat\+\_\+round\+\_\+trip\+\_\+delay\+\_\+max}
+
+F\+I\+X\+ME\+: T\+O\+DO\+: A federate should create a \mbox{\hyperlink{structsocket__stat__t}{socket\+\_\+stat\+\_\+t}} for every federate it is connected to and keep record of the following stats 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.\+lflang/src/lib/core/\mbox{\hyperlink{clock-sync_8h}{clock-\/sync.\+h}}\end{DoxyCompactItemize}

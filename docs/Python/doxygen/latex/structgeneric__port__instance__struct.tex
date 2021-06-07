@@ -1,0 +1,26 @@
+\hypertarget{structgeneric__port__instance__struct}{}\doxysection{generic\+\_\+port\+\_\+instance\+\_\+struct Struct Reference}
+\label{structgeneric__port__instance__struct}\index{generic\_port\_instance\_struct@{generic\_port\_instance\_struct}}
+
+
+{\ttfamily \#include $<$pythontarget.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structgeneric__port__instance__struct_a3e8ba95e2738d6d3631c159e35082873}\label{structgeneric__port__instance__struct_a3e8ba95e2738d6d3631c159e35082873}} 
+Py\+Object $\ast$ {\bfseries value}
+\item 
+\mbox{\Hypertarget{structgeneric__port__instance__struct_a9c01e0f1634b218351eb76cc8ac878b8}\label{structgeneric__port__instance__struct_a9c01e0f1634b218351eb76cc8ac878b8}} 
+bool {\bfseries is\+\_\+present}
+\item 
+\mbox{\Hypertarget{structgeneric__port__instance__struct_a19b8f6fecf7a9793305289e3c662308d}\label{structgeneric__port__instance__struct_a19b8f6fecf7a9793305289e3c662308d}} 
+int {\bfseries num\+\_\+destinations}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The struct used to instantiate a port in Lingua Franca. This template is used in the Python\+Generator instead of redefining a struct for each port. This template can be used for any Python object, including lists and tuples. Py\+Object$\ast$ value\+: the value of the port with the generic Python type is\+\_\+present\+: indicates if the value of the port is present at the current logical time num\+\_\+destinations\+: used for reference counting the number of connections to destinations. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.\+lflang/src/lib/\+Python/\mbox{\hyperlink{pythontarget_8h}{pythontarget.\+h}}\end{DoxyCompactItemize}

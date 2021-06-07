@@ -1,0 +1,809 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="tag_8h" kind="file" language="C++">
+    <compoundname>tag.h</compoundname>
+    <includedby refid="audio__loop_8h" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h</includedby>
+    <includedby refid="reactor_8h" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h</includedby>
+    <includedby refid="net__util_8h" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h</includedby>
+    <includedby refid="tag_8c" local="yes">/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.c</includedby>
+    <invincdepgraph>
+      <node id="4">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_mac.c</label>
+        <link refid="audio__loop__mac_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop.h</label>
+        <link refid="audio__loop_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/ctarget.h</label>
+        <link refid="ctarget_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.c</label>
+        <link refid="tag_8c"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h</label>
+        <link refid="tag_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/federate.c</label>
+        <link refid="federate_8c"/>
+      </node>
+      <node id="13">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.c</label>
+        <link refid="net__util_8c"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/net_util.h</label>
+        <link refid="net__util_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.c</label>
+        <link refid="rti_8c"/>
+      </node>
+      <node id="8">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/rti.h</label>
+        <link refid="rti_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/clock-sync.c</label>
+        <link refid="clock-sync_8c"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/sensor_simulator.c</label>
+        <link refid="sensor__simulator_8c"/>
+      </node>
+      <node id="5">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/reactor.h</label>
+        <link refid="reactor_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/audio_loop_linux.c</label>
+        <link refid="audio__loop__linux_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structtag__t" prot="public">tag_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="tag_8h_1a8c561c4985495c722ac86b55b3d9bbb3" prot="public" static="no">
+        <name>NSEC</name>
+        <param><defname>t</defname></param>
+        <initializer>(t * 1LL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="37" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1aea80ae7708f69d05cd44126f08a08cf3" prot="public" static="no">
+        <name>NSECS</name>
+        <param><defname>t</defname></param>
+        <initializer>(t * 1LL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="38" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1aa2aeaab0c2033d1db412c8021bff93fc" prot="public" static="no">
+        <name>USEC</name>
+        <param><defname>t</defname></param>
+        <initializer>(t * 1000LL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="39" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1aa0c5b5c56bdb5016516284c87eac86a9" prot="public" static="no">
+        <name>USECS</name>
+        <param><defname>t</defname></param>
+        <initializer>(t * 1000LL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="40" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1a673a8ebab8ec621a1cf731871dd170c8" prot="public" static="no">
+        <name>MSEC</name>
+        <param><defname>t</defname></param>
+        <initializer>(t * 1000000LL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="41" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1ad3edea62ad14babaf45f6d3020cb7674" prot="public" static="no">
+        <name>MSECS</name>
+        <param><defname>t</defname></param>
+        <initializer>(t * 1000000LL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="42" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1a30e47c4dd44d168c2982d3ec1d4e0825" prot="public" static="no">
+        <name>SEC</name>
+        <param><defname>t</defname></param>
+        <initializer>(t * 1000000000LL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="43" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1a8d1ccba996ebc6fc86c6c3c52051329d" prot="public" static="no">
+        <name>SECS</name>
+        <param><defname>t</defname></param>
+        <initializer>(t * 1000000000LL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="44" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1a72e3dbcf6a85e8c0a04691cfb14d3876" prot="public" static="no">
+        <name>MINUTE</name>
+        <param><defname>t</defname></param>
+        <initializer>(t * 60000000000LL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="45" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1a694878332b974b464c7d58c7114ee6e9" prot="public" static="no">
+        <name>MINUTES</name>
+        <param><defname>t</defname></param>
+        <initializer>(t * 60000000000LL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="46" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1a3cf238d5a1a842131a5adf916d571d12" prot="public" static="no">
+        <name>HOUR</name>
+        <param><defname>t</defname></param>
+        <initializer>(t * 3600000000000LL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="47" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1a2249e1bedc7aeaad64ed3fefdd6e7951" prot="public" static="no">
+        <name>HOURS</name>
+        <param><defname>t</defname></param>
+        <initializer>(t * 3600000000000LL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="48" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1a8393c538440a761b4439623e536a7c91" prot="public" static="no">
+        <name>DAY</name>
+        <param><defname>t</defname></param>
+        <initializer>(t * 86400000000000LL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="49" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1a987a486d1ad1ff15346b2395847280ab" prot="public" static="no">
+        <name>DAYS</name>
+        <param><defname>t</defname></param>
+        <initializer>(t * 86400000000000LL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="50" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1ac38fd1109df8cd9f53ab99761b3efa04" prot="public" static="no">
+        <name>WEEK</name>
+        <param><defname>t</defname></param>
+        <initializer>(t * 604800000000000LL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="51" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1a6377f87d75908e0d79a4005db7af3b35" prot="public" static="no">
+        <name>WEEKS</name>
+        <param><defname>t</defname></param>
+        <initializer>(t * 604800000000000LL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="52" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1a9e5c19968af97bd64f46650ec8732318" prot="public" static="no">
+        <name>NEVER</name>
+        <initializer>LLONG_MIN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="55" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1a75c828ed6c02fcd44084e67a032e422c" prot="public" static="no">
+        <name>FOREVER</name>
+        <initializer>LLONG_MAX</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="56" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1afc2f39e1818a6a8b68ca46e7c9dc2704" prot="public" static="no">
+        <name>NEVER_TAG</name>
+        <initializer>(<ref refid="structtag__t" kindref="compound">tag_t</ref>){ .time = LLONG_MIN, .microstep = 0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="58" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1a183109e082a793ae85cec00d72e70d4b" prot="public" static="no">
+        <name>FOREVER_TAG</name>
+        <initializer>(<ref refid="structtag__t" kindref="compound">tag_t</ref>){ .time = LLONG_MAX, .microstep = UINT_MAX }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="59" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1a31f99d9c502b52b5f36dc7e2028c2e80" prot="public" static="no">
+        <name>BILLION</name>
+        <initializer>1000000000LL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="62" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tag_8h_1a98d0737d9461f08293ba054a2f754fc4" prot="public" static="no">
+        <name>_LF_CLOCK</name>
+        <initializer>CLOCK_MONOTONIC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="65" column="9" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="tag_8h_1ad740f3189d2a477285138e682eafa8c5" prot="public" static="no">
+        <type>long long</type>
+        <definition>typedef long long instant_t</definition>
+        <argsstring></argsstring>
+        <name>instant_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Time instant. Both physical and logical times are represented using this typedef. WARNING: If this code is used after about the year 2262, then representing time as a 64-bit long long will be insufficient. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="73" column="19" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="tag_8h_1a181bf532390385b9092615f354cccf87" prot="public" static="no">
+        <type>long long</type>
+        <definition>typedef long long interval_t</definition>
+        <argsstring></argsstring>
+        <name>interval_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Interval of time. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="78" column="19" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="tag_8h_1a818d416d39f7c82f1fbeb5c5d3149f0d" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>typedef unsigned int microstep_t</definition>
+        <argsstring></argsstring>
+        <name>microstep_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Microstep instant. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="83" column="22" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="tag_8h_1a9921069499ea65eecb0aeed778a5b92c" prot="public" static="no">
+        <type><ref refid="structtag__t" kindref="compound">tag_t</ref></type>
+        <definition>typedef tag_t tag_interval_t</definition>
+        <argsstring></argsstring>
+        <name>tag_interval_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A tag interval indicates the pairwise difference of two tags. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="97" column="15" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="tag_8h_1a25a4105de2c979a2af935f5381058f15" prot="public" static="no" mutable="no">
+        <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+        <definition>interval_t _lf_global_physical_clock_offset</definition>
+        <argsstring></argsstring>
+        <name>_lf_global_physical_clock_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Global physical clock offset. Initially set according to the RTI&apos;s clock in federated programs. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="160" column="19" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.c" bodystart="69" bodyend="-1" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" declline="160" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="variable" id="tag_8h_1a0fb7f81b3b001d51f72b052a8a23c6d2" prot="public" static="no" mutable="no">
+        <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+        <definition>interval_t _lf_global_test_physical_clock_offset</definition>
+        <argsstring></argsstring>
+        <name>_lf_global_test_physical_clock_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A test offset that is applied to the clock. The clock synchronization algorithm must correct for this offset. This offset is especially useful to test clock synchronization on the same machine. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="168" column="19" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.c" bodystart="83" bodyend="-1" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" declline="168" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="variable" id="tag_8h_1ad4570173ff1498d16032fb37814b3f40" prot="public" static="no" mutable="no">
+        <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+        <definition>interval_t _lf_epoch_offset</definition>
+        <argsstring></argsstring>
+        <name>_lf_epoch_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Offset to _LF_CLOCK that would convert it to epoch time. This is applied to the physical clock to get a more meaningful and universal time.</para>
+<para>For CLOCK_REALTIME, this offset is always zero. For CLOCK_MONOTONIC, it is the difference between those clocks at the start of the execution.</para>
+<para>Offset to _LF_CLOCK that would convert it to epoch time. For CLOCK_REALTIME, this offset is always zero. For CLOCK_MONOTONIC, it is the difference between those clocks at the start of the execution. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="179" column="19" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.c" bodystart="43" bodyend="-1" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" declline="179" declcolumn="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="tag_8h_1a6f9d6db9250698b048f5f118b0308e47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int compare_tags</definition>
+        <argsstring>(tag_t tag1, tag_t tag2)</argsstring>
+        <name>compare_tags</name>
+        <param>
+          <type><ref refid="structtag__t" kindref="compound">tag_t</ref></type>
+          <declname>tag1</declname>
+        </param>
+        <param>
+          <type><ref refid="structtag__t" kindref="compound">tag_t</ref></type>
+          <declname>tag2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare two tags. Return -1 if the first is less than the second, 0 if they are equal, and +1 if the first is greater than the second. A tag is greater than another if its time is greater or if its time is equal and its microstep is greater. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tag1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>-1, 0, or 1 depending on the relation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="109" column="5" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.c" bodystart="95" bodyend="107" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" declline="109" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="tag_8h_1a285bf3926110e2e1ee38febe34f69222" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structtag__t" kindref="compound">tag_t</ref></type>
+        <definition>tag_t delay_tag</definition>
+        <argsstring>(tag_t tag, interval_t interval)</argsstring>
+        <name>delay_tag</name>
+        <param>
+          <type><ref refid="structtag__t" kindref="compound">tag_t</ref></type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+          <declname>interval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Delay a tag by the specified time interval to realize the &quot;after&quot; keyword. If either the time interval or the time field of the tag is NEVER, return the unmodified tag. If the time interval is 0LL, add one to the microstep, leave the time field alone, and return the result. Otherwise, add the interval to the time field of the tag and reset the microstep to 0. If the sum overflows, saturate the time value at FOREVER.</para>
+<para>Note that normally it makes no sense to call this with a negative interval (except NEVER), but this is not checked.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tag to increment. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time interval. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="127" column="7" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.c" bodystart="125" bodyend="143" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" declline="127" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="tag_8h_1a23e91eb69aca986b03aba4ce86923102" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+        <definition>interval_t get_elapsed_logical_time</definition>
+        <argsstring>()</argsstring>
+        <name>get_elapsed_logical_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the elapsed logical time in nanoseconds since the start of execution. <simplesect kind="return"><para>A time interval.</para>
+</simplesect>
+Return the elapsed logical time in nanoseconds since the start of execution. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="134" column="12" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.c" bodystart="148" bodyend="150" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" declline="134" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="tag_8h_1a9da5960071964c9c2bdb602526da0565" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+        <definition>instant_t get_logical_time</definition>
+        <argsstring>()</argsstring>
+        <name>get_logical_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the current logical time in nanoseconds. On many platforms, this is the number of nanoseconds since January 1, 1970, but it is actually platform dependent.</para>
+<para><simplesect kind="return"><para>A time instant.</para>
+</simplesect>
+Return the current logical time in nanoseconds since January 1, 1970. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="143" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.c" bodystart="162" bodyend="164" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" declline="143" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="tag_8h_1a284eab9a62e22fa3a64d36d301d0195d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structtag__t" kindref="compound">tag_t</ref></type>
+        <definition>tag_t get_current_tag</definition>
+        <argsstring>()</argsstring>
+        <name>get_current_tag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the current tag, a logical time, microstep pair. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="148" column="7" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.c" bodystart="155" bodyend="157" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" declline="148" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="tag_8h_1af413f18a3d52672f4ba984cc92e4efe5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="tag_8h_1a818d416d39f7c82f1fbeb5c5d3149f0d" kindref="member">microstep_t</ref></type>
+        <definition>microstep_t get_microstep</definition>
+        <argsstring>()</argsstring>
+        <name>get_microstep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the current microstep. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="153" column="13" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.c" bodystart="169" bodyend="171" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" declline="153" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="tag_8h_1a84d52b3843db3b4fcb932326d6b288c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+        <definition>instant_t get_physical_time</definition>
+        <argsstring>()</argsstring>
+        <name>get_physical_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the current physical time in nanoseconds. On many platforms, this is the number of nanoseconds since January 1, 1970, but it is actually platform dependent. <simplesect kind="return"><para>A time instant.</para>
+</simplesect>
+Return the current physical time in nanoseconds since January 1, 1970, adjusted by the global physical time offset. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="187" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.c" bodystart="194" bodyend="229" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" declline="187" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="tag_8h_1a0de9cef51748833c318227ed2e5bbe2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+        <definition>instant_t get_elapsed_physical_time</definition>
+        <argsstring>()</argsstring>
+        <name>get_elapsed_physical_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the elapsed physical time in nanoseconds. This is the time returned by <ref refid="tag_8h_1a84d52b3843db3b4fcb932326d6b288c4" kindref="member">get_physical_time()</ref> minus the physical start time as measured by <ref refid="tag_8h_1a84d52b3843db3b4fcb932326d6b288c4" kindref="member">get_physical_time()</ref> when the program was started. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="195" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.c" bodystart="248" bodyend="250" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" declline="195" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="tag_8h_1ac45b5d21dac66de7986c99f7db1b577b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void set_physical_clock_offset</definition>
+        <argsstring>(interval_t offset)</argsstring>
+        <name>set_physical_clock_offset</name>
+        <param>
+          <type><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref></type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set a fixed offset to the physical clock. After calling this, the value returned by <ref refid="tag_8h_1a84d52b3843db3b4fcb932326d6b288c4" kindref="member">get_physical_time()</ref> and get_elpased_physical_time() will have this specified offset added to what it would have returned before the call. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="203" column="6" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.c" bodystart="258" bodyend="260" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" declline="203" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="tag_8h_1a8b4f2e4e87e43670217c0c53099ae2f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref></type>
+        <definition>instant_t get_start_time</definition>
+        <argsstring>()</argsstring>
+        <name>get_start_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the physical and logical time of the start of execution in nanoseconds. On many platforms, this is the number of nanoseconds since January 1, 1970, but it is actually platform dependent. <simplesect kind="return"><para>A time instant.</para>
+</simplesect>
+Return the physical time of the start of execution in nanoseconds. * On many platforms, this is the number of nanoseconds since January 1, 1970, but it is actually platform dependent. * <simplesect kind="return"><para>A time instant. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="211" column="11" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.c" bodystart="237" bodyend="239" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" declline="211" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="tag_8h_1a3dc06a20d8902397916c0784e3a956c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structtag__t" kindref="compound">tag_t</ref></type>
+        <definition>tag_t convert_volatile_tag_to_nonvolatile</definition>
+        <argsstring>(tag_t volatile vtag)</argsstring>
+        <name>convert_volatile_tag_to_nonvolatile</name>
+        <param>
+          <type><ref refid="structtag__t" kindref="compound">tag_t</ref> volatile</type>
+          <declname>vtag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For C++ compatibility, take a volatile <ref refid="structtag__t" kindref="compound">tag_t</ref> and return a non-volatile variant. <simplesect kind="note"><para>This is an undefined behavior in C and should be used with utmost caution. See Section 6.7.2 of the C99 standard. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" line="224" column="7" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.c" bodystart="278" bodyend="280" declfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h" declline="224" declcolumn="7"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Edward A. Lee </para>
+</simplesect>
+<simplesect kind="author"><para>Soroush Bateni</para>
+</simplesect>
+</para>
+<sect1 id="util_8h_1LICENSE">
+<title>LICENSE</title>
+<para>Copyright (c) 2020, The University of California at Berkeley.</para>
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</para>
+<para><orderedlist>
+<listitem><para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem><para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem></orderedlist>
+</para>
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</para>
+</sect1>
+<sect1 id="util_8h_1DESCRIPTION">
+<title>DESCRIPTION</title>
+<para>Header file for tag functions for Lingua Franca programs. </para>
+</sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="33"><highlight class="preprocessor">#ifndef<sp/>TAG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TAG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Conversion<sp/>of<sp/>time<sp/>to<sp/>nanoseconds.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NSEC(t)<sp/>(t<sp/>*<sp/>1LL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NSECS(t)<sp/>(t<sp/>*<sp/>1LL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USEC(t)<sp/>(t<sp/>*<sp/>1000LL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USECS(t)<sp/>(t<sp/>*<sp/>1000LL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MSEC(t)<sp/>(t<sp/>*<sp/>1000000LL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MSECS(t)<sp/>(t<sp/>*<sp/>1000000LL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SEC(t)<sp/><sp/>(t<sp/>*<sp/>1000000000LL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SECS(t)<sp/>(t<sp/>*<sp/>1000000000LL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MINUTE(t)<sp/><sp/><sp/>(t<sp/>*<sp/>60000000000LL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MINUTES(t)<sp/><sp/>(t<sp/>*<sp/>60000000000LL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HOUR(t)<sp/><sp/>(t<sp/>*<sp/>3600000000000LL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HOURS(t)<sp/>(t<sp/>*<sp/>3600000000000LL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAY(t)<sp/><sp/><sp/>(t<sp/>*<sp/>86400000000000LL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAYS(t)<sp/><sp/>(t<sp/>*<sp/>86400000000000LL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WEEK(t)<sp/><sp/>(t<sp/>*<sp/>604800000000000LL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WEEKS(t)<sp/>(t<sp/>*<sp/>604800000000000LL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Commonly<sp/>used<sp/>time<sp/>values.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NEVER<sp/>LLONG_MIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FOREVER<sp/>LLONG_MAX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NEVER_TAG<sp/>(tag_t){<sp/>.time<sp/>=<sp/>LLONG_MIN,<sp/>.microstep<sp/>=<sp/>0<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FOREVER_TAG<sp/>(tag_t){<sp/>.time<sp/>=<sp/>LLONG_MAX,<sp/>.microstep<sp/>=<sp/>UINT_MAX<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Convenience<sp/>for<sp/>converting<sp/>times</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BILLION<sp/>1000000000LL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>underlying<sp/>physical<sp/>clock</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_LF_CLOCK<sp/>CLOCK_MONOTONIC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="tag_8h_1a181bf532390385b9092615f354cccf87" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="tag_8h_1a818d416d39f7c82f1fbeb5c5d3149f0d" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tag_8h_1a818d416d39f7c82f1fbeb5c5d3149f0d" kindref="member">microstep_t</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="structtag__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/>time;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tag_8h_1a818d416d39f7c82f1fbeb5c5d3149f0d" kindref="member">microstep_t</ref><sp/>microstep;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}<sp/><ref refid="structtag__t" kindref="compound">tag_t</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="tag_8h_1a9921069499ea65eecb0aeed778a5b92c" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structtag__t" kindref="compound">tag_t</ref><sp/><ref refid="tag_8h_1a9921069499ea65eecb0aeed778a5b92c" kindref="member">tag_interval_t</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tag_8h_1a6f9d6db9250698b048f5f118b0308e47" kindref="member">compare_tags</ref>(<ref refid="structtag__t" kindref="compound">tag_t</ref><sp/>tag1,<sp/><ref refid="structtag__t" kindref="compound">tag_t</ref><sp/>tag2);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><ref refid="structtag__t" kindref="compound">tag_t</ref><sp/><ref refid="tag_8h_1a285bf3926110e2e1ee38febe34f69222" kindref="member">delay_tag</ref>(<ref refid="structtag__t" kindref="compound">tag_t</ref><sp/>tag,<sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>interval);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/><ref refid="tag_8h_1a23e91eb69aca986b03aba4ce86923102" kindref="member">get_elapsed_logical_time</ref>();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/><ref refid="tag_8h_1a9da5960071964c9c2bdb602526da0565" kindref="member">get_logical_time</ref>();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><ref refid="structtag__t" kindref="compound">tag_t</ref><sp/><ref refid="tag_8h_1a284eab9a62e22fa3a64d36d301d0195d" kindref="member">get_current_tag</ref>();</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><ref refid="tag_8h_1a818d416d39f7c82f1fbeb5c5d3149f0d" kindref="member">microstep_t</ref><sp/><ref refid="tag_8h_1af413f18a3d52672f4ba984cc92e4efe5" kindref="member">get_microstep</ref>();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/><ref refid="tag_8h_1a25a4105de2c979a2af935f5381058f15" kindref="member">_lf_global_physical_clock_offset</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/><ref refid="tag_8h_1a0fb7f81b3b001d51f72b052a8a23c6d2" kindref="member">_lf_global_test_physical_clock_offset</ref>;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/><ref refid="tag_8h_1ad4570173ff1498d16032fb37814b3f40" kindref="member">_lf_epoch_offset</ref>;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/><ref refid="tag_8h_1a84d52b3843db3b4fcb932326d6b288c4" kindref="member">get_physical_time</ref>();</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/><ref refid="tag_8h_1a0de9cef51748833c318227ed2e5bbe2a" kindref="member">get_elapsed_physical_time</ref>();</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="tag_8h_1ac45b5d21dac66de7986c99f7db1b577b" kindref="member">set_physical_clock_offset</ref>(<ref refid="tag_8h_1a181bf532390385b9092615f354cccf87" kindref="member">interval_t</ref><sp/>offset);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><ref refid="tag_8h_1ad740f3189d2a477285138e682eafa8c5" kindref="member">instant_t</ref><sp/><ref refid="tag_8h_1a8b4f2e4e87e43670217c0c53099ae2f5" kindref="member">get_start_time</ref>();</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><ref refid="structtag__t" kindref="compound">tag_t</ref><sp/><ref refid="tag_8h_1a3dc06a20d8902397916c0784e3a956c7" kindref="member">convert_volatile_tag_to_nonvolatile</ref>(<ref refid="structtag__t" kindref="compound">tag_t</ref><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>vtag);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><ref refid="structtag__t" kindref="compound">tag_t</ref><sp/><ref refid="tag_8h_1a3dc06a20d8902397916c0784e3a956c7" kindref="member">convert_volatile_tag_to_nonvolatile</ref>(<ref refid="structtag__t" kindref="compound">tag_t</ref><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>vtag);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>TAG_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/core/tag.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,323 @@
+\hypertarget{sensor__simulator_8c}{}\doxysection{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/\+C/util/sensor\+\_\+simulator.c File Reference}
+\label{sensor__simulator_8c}\index{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/C/util/sensor\_simulator.c@{/home/shaokai/lingua-\/franca-\/master/git/lingua-\/franca/org.lflang/src/lib/C/util/sensor\_simulator.c}}
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$ncurses.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}sensor\+\_\+simulator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ctarget.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/platform.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__lf__sensor__message__t}{\+\_\+lf\+\_\+sensor\+\_\+message\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sensor__simulator_8c_a67eec5f95f4bdd36888379013c2cf10b}\label{sensor__simulator_8c_a67eec5f95f4bdd36888379013c2cf10b}} 
+\#define {\bfseries W\+G\+E\+T\+C\+H\+R\+\_\+\+T\+I\+M\+E\+O\+UT}~1000
+\item 
+\mbox{\Hypertarget{sensor__simulator_8c_a253dc085a62ce4d344b4b97c2fea4ac0}\label{sensor__simulator_8c_a253dc085a62ce4d344b4b97c2fea4ac0}} 
+\#define {\bfseries L\+F\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+I\+ZE}~96
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sensor__simulator_8c_a67e4883b16f55f5e45ba5c498e4e5603}\label{sensor__simulator_8c_a67e4883b16f55f5e45ba5c498e4e5603}} 
+typedef struct \mbox{\hyperlink{struct__lf__sensor__message__t}{\+\_\+lf\+\_\+sensor\+\_\+message\+\_\+t}} {\bfseries \+\_\+lf\+\_\+sensor\+\_\+message\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sensor__simulator_8c_a8f5bc282c0405791a6bf0c02abe54df9}\label{sensor__simulator_8c_a8f5bc282c0405791a6bf0c02abe54df9}} 
+enum {\bfseries \+\_\+lf\+\_\+sensor\+\_\+message\+\_\+type} \{ {\bfseries \+\_\+lf\+\_\+sensor\+\_\+message}, 
+{\bfseries \+\_\+lf\+\_\+sensor\+\_\+tick}, 
+{\bfseries \+\_\+lf\+\_\+sensor\+\_\+close\+\_\+windows}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sensor__simulator_8c_a0e21915a1152dda872b68aa7254249c4}{\+\_\+lf\+\_\+show\+\_\+message}} (char $\ast$message\+\_\+lines\mbox{[}$\,$\mbox{]}, int number\+\_\+of\+\_\+lines)
+\item 
+void \mbox{\hyperlink{sensor__simulator_8c_ae5a65cee79299573890b78d9b7a10996}{\+\_\+lf\+\_\+start\+\_\+tick\+\_\+window}} (int width)
+\item 
+void \mbox{\hyperlink{sensor__simulator_8c_afa21343db2cbddc2217a5056e48eda62}{\+\_\+lf\+\_\+start\+\_\+print\+\_\+window}} (int above, int right)
+\item 
+void \mbox{\hyperlink{sensor__simulator_8c_a24678a3378f026da6438a1abdc800936}{\+\_\+lf\+\_\+sensor\+\_\+post\+\_\+message}} (enum \+\_\+lf\+\_\+sensor\+\_\+message\+\_\+type type, char $\ast$body)
+\item 
+void \mbox{\hyperlink{sensor__simulator_8c_a9468858bfcd43511b468a8612e4b5fdc}{\+\_\+lf\+\_\+print\+\_\+message\+\_\+function}} (char $\ast$format, va\+\_\+list args)
+\item 
+void $\ast$ \mbox{\hyperlink{sensor__simulator_8c_a7a8b3518d3bf1f17cf67393019bc626d}{\+\_\+lf\+\_\+sensor\+\_\+read\+\_\+input}} (void $\ast$ignored)
+\item 
+void $\ast$ \mbox{\hyperlink{sensor__simulator_8c_a709258e171d00094677190625fcb4acc}{\+\_\+lf\+\_\+sensor\+\_\+simulator\+\_\+thread}} (void $\ast$ignored)
+\item 
+void \mbox{\hyperlink{sensor__simulator_8c_a562a694d5b2ed8c935aa08d78c488114}{end\+\_\+sensor\+\_\+simulator}} ()
+\item 
+int \mbox{\hyperlink{sensor__simulator_8c_adfb8c4dc96d976367deb805452b8a3b2}{start\+\_\+sensor\+\_\+simulator}} (char $\ast$message\+\_\+lines\mbox{[}$\,$\mbox{]}, int number\+\_\+of\+\_\+lines, int \mbox{\hyperlink{sensor__simulator_8c_a89502730b2655e279c83afb299e8ded5}{tick\+\_\+window\+\_\+width}}, char $\ast$\mbox{\hyperlink{sensor__simulator_8c_ab936051f5aaca44c6c3c41dee0d19c36}{log\+\_\+file}}, int log\+\_\+level)
+\item 
+void \mbox{\hyperlink{sensor__simulator_8c_ad9a70cc616c82bab0563369a662e5cc0}{show\+\_\+tick}} (char $\ast$character)
+\item 
+int \mbox{\hyperlink{sensor__simulator_8c_a196614841046dea5b94b2a60108fff40}{register\+\_\+sensor\+\_\+key}} (char key, void $\ast$action)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}} $\ast$ \mbox{\hyperlink{sensor__simulator_8c_acb4ab4301308daeacb3d7f71c116d3d2}{\+\_\+lf\+\_\+sensor\+\_\+trigger\+\_\+table}} \mbox{[}L\+F\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+I\+ZE\mbox{]}
+\item 
+\mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}} $\ast$ \mbox{\hyperlink{sensor__simulator_8c_aa58341acdf7b2f59f4000909394061b1}{\+\_\+lf\+\_\+sensor\+\_\+sensor\+\_\+newline\+\_\+trigger}} = N\+U\+LL
+\item 
+\mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}} $\ast$ \mbox{\hyperlink{sensor__simulator_8c_a7e66e751c1778a1ad1628a6309131755}{\+\_\+lf\+\_\+sensor\+\_\+any\+\_\+key\+\_\+trigger}} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{sensor__simulator_8c_afb458531acce5cf61822ddd3018fb1cc}\label{sensor__simulator_8c_afb458531acce5cf61822ddd3018fb1cc}} 
+lf\+\_\+mutex\+\_\+t {\bfseries \+\_\+lf\+\_\+sensor\+\_\+mutex}
+\item 
+\mbox{\Hypertarget{sensor__simulator_8c_a2690217f1332b74188d73aeae8e23879}\label{sensor__simulator_8c_a2690217f1332b74188d73aeae8e23879}} 
+lf\+\_\+cond\+\_\+t {\bfseries \+\_\+lf\+\_\+sensor\+\_\+simulator\+\_\+cond\+\_\+var}
+\item 
+\mbox{\Hypertarget{sensor__simulator_8c_aa31421e2302e39963b9c3ac64e031507}\label{sensor__simulator_8c_aa31421e2302e39963b9c3ac64e031507}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\_lf\_thread\_t {\bfseries input\_thread\_id}\\
+\>\_lf\_thread\_t {\bfseries output\_thread\_id}\\
+\>int {\bfseries thread\_created}\\
+\>WINDOW $\ast$ \mbox{\hyperlink{sensor__simulator_8c_a9029bf378e52a9f85a25eb0ba9095fe3}{default\_window}}\\
+\>WINDOW $\ast$ \mbox{\hyperlink{sensor__simulator_8c_a682ef20deffe76d72ab94e4e1ac037cc}{tick\_window}}\\
+\>int \mbox{\hyperlink{sensor__simulator_8c_a694b3b10a1c18c5d3fdf32c62e2326db}{tick\_cursor\_x}}\\
+\>int {\bfseries tick\_cursor\_y}\\
+\>int {\bfseries print\_cursor\_x}\\
+\>int {\bfseries print\_cursor\_y}\\
+\>WINDOW $\ast$ \mbox{\hyperlink{sensor__simulator_8c_a9553b3dfcfccb994a2df43aa3ff1f53e}{print\_window}}\\
+\>int \mbox{\hyperlink{sensor__simulator_8c_a8d610b74b6930e1f1620d21638a71f6d}{print\_window\_height}}\\
+\>FILE $\ast$ \mbox{\hyperlink{sensor__simulator_8c_ab936051f5aaca44c6c3c41dee0d19c36}{log\_file}}\\
+\>char $\ast$$\ast$ \mbox{\hyperlink{sensor__simulator_8c_a03b142cb38481e1ae252f84274ec14e1}{welcome\_message}}\\
+\>int \mbox{\hyperlink{sensor__simulator_8c_aed914099b551105b7294552e79e13b16}{welcome\_message\_length}}\\
+\>struct \mbox{\hyperlink{struct__lf__sensor__message__t}{\_lf\_sensor\_message\_t}} $\ast$ {\bfseries message\_q}\\
+\>struct \mbox{\hyperlink{struct__lf__sensor__message__t}{\_lf\_sensor\_message\_t}} $\ast$ {\bfseries message\_recycle\_q}\\
+\>int \mbox{\hyperlink{sensor__simulator_8c_a89502730b2655e279c83afb299e8ded5}{tick\_window\_width}}\\
+\} {\bfseries \_lf\_sensor}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Edward A. Lee (\href{mailto:eal@berkeley.edu}{\texttt{ eal@berkeley.\+edu}})
+\end{DoxyAuthor}
+\hypertarget{util_8h_LICENSE}{}\doxysubsection{L\+I\+C\+E\+N\+SE}\label{util_8h_LICENSE}
+Copyright (c) 2020, The University of California at Berkeley.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.\hypertarget{util_8h_DESCRIPTION}{}\doxysubsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}\label{util_8h_DESCRIPTION}
+See \mbox{\hyperlink{sensor__simulator_8h}{sensor\+\_\+simulator.\+h}}. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sensor__simulator_8c_a9468858bfcd43511b468a8612e4b5fdc}\label{sensor__simulator_8c_a9468858bfcd43511b468a8612e4b5fdc}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!\_lf\_print\_message\_function@{\_lf\_print\_message\_function}}
+\index{\_lf\_print\_message\_function@{\_lf\_print\_message\_function}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_print\_message\_function()}{\_lf\_print\_message\_function()}}
+{\footnotesize\ttfamily void \+\_\+lf\+\_\+print\+\_\+message\+\_\+function (\begin{DoxyParamCaption}\item[{char $\ast$}]{format,  }\item[{va\+\_\+list}]{args }\end{DoxyParamCaption})}
+
+Function to register to handle printing of messages in \mbox{\hyperlink{util_8h}{util.\+h}}/c. This acquires the mutex lock. \mbox{\Hypertarget{sensor__simulator_8c_a24678a3378f026da6438a1abdc800936}\label{sensor__simulator_8c_a24678a3378f026da6438a1abdc800936}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!\_lf\_sensor\_post\_message@{\_lf\_sensor\_post\_message}}
+\index{\_lf\_sensor\_post\_message@{\_lf\_sensor\_post\_message}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_sensor\_post\_message()}{\_lf\_sensor\_post\_message()}}
+{\footnotesize\ttfamily void \+\_\+lf\+\_\+sensor\+\_\+post\+\_\+message (\begin{DoxyParamCaption}\item[{enum \+\_\+lf\+\_\+sensor\+\_\+message\+\_\+type}]{type,  }\item[{char $\ast$}]{body }\end{DoxyParamCaption})}
+
+Post a message to be displayed. 
+\begin{DoxyParams}{Parameters}
+{\em type} & The message type, one of \+\_\+lf\+\_\+sensor\+\_\+message, \+\_\+lf\+\_\+sensor\+\_\+tick, or \+\_\+lf\+\_\+sesor\+\_\+close\+\_\+window. \\
+\hline
+{\em message} & The message, or N\+U\+LL for exit type. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sensor__simulator_8c_a7a8b3518d3bf1f17cf67393019bc626d}\label{sensor__simulator_8c_a7a8b3518d3bf1f17cf67393019bc626d}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!\_lf\_sensor\_read\_input@{\_lf\_sensor\_read\_input}}
+\index{\_lf\_sensor\_read\_input@{\_lf\_sensor\_read\_input}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_sensor\_read\_input()}{\_lf\_sensor\_read\_input()}}
+{\footnotesize\ttfamily void$\ast$ \+\_\+lf\+\_\+sensor\+\_\+read\+\_\+input (\begin{DoxyParamCaption}\item[{void $\ast$}]{ignored }\end{DoxyParamCaption})}
+
+Thread to read input characters until an E\+OF is received. For each character received, if there is a registered trigger for that character, schedule that trigger with a payload equal to the character that was typed. Otherwise, the character is ignored. \mbox{\Hypertarget{sensor__simulator_8c_a709258e171d00094677190625fcb4acc}\label{sensor__simulator_8c_a709258e171d00094677190625fcb4acc}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!\_lf\_sensor\_simulator\_thread@{\_lf\_sensor\_simulator\_thread}}
+\index{\_lf\_sensor\_simulator\_thread@{\_lf\_sensor\_simulator\_thread}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_sensor\_simulator\_thread()}{\_lf\_sensor\_simulator\_thread()}}
+{\footnotesize\ttfamily void$\ast$ \+\_\+lf\+\_\+sensor\+\_\+simulator\+\_\+thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{ignored }\end{DoxyParamCaption})}
+
+Thread to display strings in either the tick window or the message window. \mbox{\Hypertarget{sensor__simulator_8c_a0e21915a1152dda872b68aa7254249c4}\label{sensor__simulator_8c_a0e21915a1152dda872b68aa7254249c4}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!\_lf\_show\_message@{\_lf\_show\_message}}
+\index{\_lf\_show\_message@{\_lf\_show\_message}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_show\_message()}{\_lf\_show\_message()}}
+{\footnotesize\ttfamily void \+\_\+lf\+\_\+show\+\_\+message (\begin{DoxyParamCaption}\item[{char $\ast$}]{message\+\_\+lines\mbox{[}$\,$\mbox{]},  }\item[{int}]{number\+\_\+of\+\_\+lines }\end{DoxyParamCaption})}
+
+Put a persistent message in the upper left of the terminal window. The message will be left justified, with each string in the specified array on a new line. This should not be called directly by the user. It assumes the mutex lock is held. 
+\begin{DoxyParams}{Parameters}
+{\em message\+\_\+lines} & The message lines. \\
+\hline
+{\em number\+\_\+of\+\_\+lines} & The number of lines. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sensor__simulator_8c_afa21343db2cbddc2217a5056e48eda62}\label{sensor__simulator_8c_afa21343db2cbddc2217a5056e48eda62}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!\_lf\_start\_print\_window@{\_lf\_start\_print\_window}}
+\index{\_lf\_start\_print\_window@{\_lf\_start\_print\_window}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_start\_print\_window()}{\_lf\_start\_print\_window()}}
+{\footnotesize\ttfamily void \+\_\+lf\+\_\+start\+\_\+print\+\_\+window (\begin{DoxyParamCaption}\item[{int}]{above,  }\item[{int}]{right }\end{DoxyParamCaption})}
+
+Start a window on the bottom left of the terminal window for printed messages from the application. This should not be called directly by the user. It assumes the mutex lock is held. 
+\begin{DoxyParams}{Parameters}
+{\em above} & Space to leave above the window. \\
+\hline
+{\em right} & Space to leave to the right of the window. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sensor__simulator_8c_ae5a65cee79299573890b78d9b7a10996}\label{sensor__simulator_8c_ae5a65cee79299573890b78d9b7a10996}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!\_lf\_start\_tick\_window@{\_lf\_start\_tick\_window}}
+\index{\_lf\_start\_tick\_window@{\_lf\_start\_tick\_window}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_start\_tick\_window()}{\_lf\_start\_tick\_window()}}
+{\footnotesize\ttfamily void \+\_\+lf\+\_\+start\+\_\+tick\+\_\+window (\begin{DoxyParamCaption}\item[{int}]{width }\end{DoxyParamCaption})}
+
+Start a tick window on the right of the terminal window. This should not be called directly by the user. It assumes the mutex lock is held. 
+\begin{DoxyParams}{Parameters}
+{\em width} & The width of the window. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sensor__simulator_8c_a562a694d5b2ed8c935aa08d78c488114}\label{sensor__simulator_8c_a562a694d5b2ed8c935aa08d78c488114}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!end\_sensor\_simulator@{end\_sensor\_simulator}}
+\index{end\_sensor\_simulator@{end\_sensor\_simulator}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{end\_sensor\_simulator()}{end\_sensor\_simulator()}}
+{\footnotesize\ttfamily void end\+\_\+sensor\+\_\+simulator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+End ncurses control of the terminal. \mbox{\Hypertarget{sensor__simulator_8c_a196614841046dea5b94b2a60108fff40}\label{sensor__simulator_8c_a196614841046dea5b94b2a60108fff40}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!register\_sensor\_key@{register\_sensor\_key}}
+\index{register\_sensor\_key@{register\_sensor\_key}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{register\_sensor\_key()}{register\_sensor\_key()}}
+{\footnotesize\ttfamily int register\+\_\+sensor\+\_\+key (\begin{DoxyParamCaption}\item[{char}]{key,  }\item[{void $\ast$}]{action }\end{DoxyParamCaption})}
+
+Register a keyboard key to trigger the specified action. Printable A\+S\+C\+II characters (codes 32 to 127) are supported plus \textquotesingle{}~\newline
+\textquotesingle{} and \textquotesingle{}\textbackslash{}0\textquotesingle{}, where the latter registers a trigger to invoked when any key is pressed. If a specific key is registered and any key (\textquotesingle{}\textbackslash{}0\textquotesingle{}) is also registered, the any key trigger will be scheduled after the specific key is scheduled. If these triggers belong to different reactors, they could be invoked in parallel. This will fail if the specified key has already been registered (error code 1), or the key is not a supported key (error code 2) or if the trigger is N\+U\+LL (error code 3). 
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to register. \\
+\hline
+{\em action} & The action to trigger when the key is pressed (a pointer to a \mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}} struct). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, error code for failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sensor__simulator_8c_ad9a70cc616c82bab0563369a662e5cc0}\label{sensor__simulator_8c_ad9a70cc616c82bab0563369a662e5cc0}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!show\_tick@{show\_tick}}
+\index{show\_tick@{show\_tick}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{show\_tick()}{show\_tick()}}
+{\footnotesize\ttfamily void show\+\_\+tick (\begin{DoxyParamCaption}\item[{char $\ast$}]{character }\end{DoxyParamCaption})}
+
+Place a tick (usually a single character) in the tick window. 
+\begin{DoxyParams}{Parameters}
+{\em character} & The tick character. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sensor__simulator_8c_adfb8c4dc96d976367deb805452b8a3b2}\label{sensor__simulator_8c_adfb8c4dc96d976367deb805452b8a3b2}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!start\_sensor\_simulator@{start\_sensor\_simulator}}
+\index{start\_sensor\_simulator@{start\_sensor\_simulator}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{start\_sensor\_simulator()}{start\_sensor\_simulator()}}
+{\footnotesize\ttfamily int start\+\_\+sensor\+\_\+simulator (\begin{DoxyParamCaption}\item[{char $\ast$}]{message\+\_\+lines\mbox{[}$\,$\mbox{]},  }\item[{int}]{number\+\_\+of\+\_\+lines,  }\item[{int}]{tick\+\_\+window\+\_\+width,  }\item[{char $\ast$}]{log\+\_\+file,  }\item[{int}]{log\+\_\+level }\end{DoxyParamCaption})}
+
+Start the sensor simulator if it has not been already started. This must be called at least once before any call to register\+\_\+sensor\+\_\+key. The specified message is an initial message to display at the upper left, typically a set of instructions, that remains displayed throughout the lifetime of the window. 
+\begin{DoxyParams}{Parameters}
+{\em message\+\_\+lines} & The message lines. \\
+\hline
+{\em number\+\_\+of\+\_\+lines} & The number of lines. \\
+\hline
+{\em tick\+\_\+window\+\_\+width} & The width of the tick window or 0 for none. \\
+\hline
+{\em log\+\_\+file} & If non-\/\+N\+U\+LL, the name of a file to which to write logging messages. \\
+\hline
+{\em log\+\_\+level} & The level of log messages to redirect to the file. The level should be one of L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+E\+R\+R\+OR, L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+W\+A\+R\+N\+I\+NG, L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+I\+N\+FO, L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+L\+OG, L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+D\+E\+B\+UG, or L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+A\+LL. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, error code for failure. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{sensor__simulator_8c_a7e66e751c1778a1ad1628a6309131755}\label{sensor__simulator_8c_a7e66e751c1778a1ad1628a6309131755}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!\_lf\_sensor\_any\_key\_trigger@{\_lf\_sensor\_any\_key\_trigger}}
+\index{\_lf\_sensor\_any\_key\_trigger@{\_lf\_sensor\_any\_key\_trigger}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_sensor\_any\_key\_trigger}{\_lf\_sensor\_any\_key\_trigger}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}}$\ast$ \+\_\+lf\+\_\+sensor\+\_\+any\+\_\+key\+\_\+trigger = N\+U\+LL}
+
+Trigger for any key. \mbox{\Hypertarget{sensor__simulator_8c_aa58341acdf7b2f59f4000909394061b1}\label{sensor__simulator_8c_aa58341acdf7b2f59f4000909394061b1}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!\_lf\_sensor\_sensor\_newline\_trigger@{\_lf\_sensor\_sensor\_newline\_trigger}}
+\index{\_lf\_sensor\_sensor\_newline\_trigger@{\_lf\_sensor\_sensor\_newline\_trigger}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_sensor\_sensor\_newline\_trigger}{\_lf\_sensor\_sensor\_newline\_trigger}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}}$\ast$ \+\_\+lf\+\_\+sensor\+\_\+sensor\+\_\+newline\+\_\+trigger = N\+U\+LL}
+
+Trigger for the newline character \textquotesingle{}~\newline
+\textquotesingle{}, which is platform dependent. \mbox{\Hypertarget{sensor__simulator_8c_acb4ab4301308daeacb3d7f71c116d3d2}\label{sensor__simulator_8c_acb4ab4301308daeacb3d7f71c116d3d2}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!\_lf\_sensor\_trigger\_table@{\_lf\_sensor\_trigger\_table}}
+\index{\_lf\_sensor\_trigger\_table@{\_lf\_sensor\_trigger\_table}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{\_lf\_sensor\_trigger\_table}{\_lf\_sensor\_trigger\_table}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtrigger__t}{trigger\+\_\+t}}$\ast$ \+\_\+lf\+\_\+sensor\+\_\+trigger\+\_\+table\mbox{[}L\+F\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+T\+A\+B\+L\+E\+\_\+\+S\+I\+ZE\mbox{]}}
+
+Table of Lingua Franca trigger objects to schedule in response to keypresses. \mbox{\Hypertarget{sensor__simulator_8c_a9029bf378e52a9f85a25eb0ba9095fe3}\label{sensor__simulator_8c_a9029bf378e52a9f85a25eb0ba9095fe3}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!default\_window@{default\_window}}
+\index{default\_window@{default\_window}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{default\_window}{default\_window}}
+{\footnotesize\ttfamily W\+I\+N\+D\+OW$\ast$ default\+\_\+window}
+
+Default window from which to get input characters. If show\+\_\+welcome\+\_\+message() is called, this will be the welcome message window. Otherwise, it will be stdscr, the default curses window. \mbox{\Hypertarget{sensor__simulator_8c_ab936051f5aaca44c6c3c41dee0d19c36}\label{sensor__simulator_8c_ab936051f5aaca44c6c3c41dee0d19c36}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!log\_file@{log\_file}}
+\index{log\_file@{log\_file}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{log\_file}{log\_file}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ log\+\_\+file}
+
+File to which to write log data, or N\+U\+LL to send to window. \mbox{\Hypertarget{sensor__simulator_8c_a9553b3dfcfccb994a2df43aa3ff1f53e}\label{sensor__simulator_8c_a9553b3dfcfccb994a2df43aa3ff1f53e}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!print\_window@{print\_window}}
+\index{print\_window@{print\_window}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{print\_window}{print\_window}}
+{\footnotesize\ttfamily W\+I\+N\+D\+OW$\ast$ print\+\_\+window}
+
+Print window. \mbox{\Hypertarget{sensor__simulator_8c_a8d610b74b6930e1f1620d21638a71f6d}\label{sensor__simulator_8c_a8d610b74b6930e1f1620d21638a71f6d}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!print\_window\_height@{print\_window\_height}}
+\index{print\_window\_height@{print\_window\_height}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{print\_window\_height}{print\_window\_height}}
+{\footnotesize\ttfamily int print\+\_\+window\+\_\+height}
+
+The print window height. \mbox{\Hypertarget{sensor__simulator_8c_a694b3b10a1c18c5d3fdf32c62e2326db}\label{sensor__simulator_8c_a694b3b10a1c18c5d3fdf32c62e2326db}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!tick\_cursor\_x@{tick\_cursor\_x}}
+\index{tick\_cursor\_x@{tick\_cursor\_x}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{tick\_cursor\_x}{tick\_cursor\_x}}
+{\footnotesize\ttfamily int tick\+\_\+cursor\+\_\+x}
+
+Keep track of the tick cursor position directly so it doesn\textquotesingle{}t get as messed up by printf() calls. \mbox{\Hypertarget{sensor__simulator_8c_a682ef20deffe76d72ab94e4e1ac037cc}\label{sensor__simulator_8c_a682ef20deffe76d72ab94e4e1ac037cc}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!tick\_window@{tick\_window}}
+\index{tick\_window@{tick\_window}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{tick\_window}{tick\_window}}
+{\footnotesize\ttfamily W\+I\+N\+D\+OW$\ast$ tick\+\_\+window}
+
+Tick window. \mbox{\Hypertarget{sensor__simulator_8c_a89502730b2655e279c83afb299e8ded5}\label{sensor__simulator_8c_a89502730b2655e279c83afb299e8ded5}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!tick\_window\_width@{tick\_window\_width}}
+\index{tick\_window\_width@{tick\_window\_width}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{tick\_window\_width}{tick\_window\_width}}
+{\footnotesize\ttfamily int tick\+\_\+window\+\_\+width}
+
+The width of the tick window. \mbox{\Hypertarget{sensor__simulator_8c_a03b142cb38481e1ae252f84274ec14e1}\label{sensor__simulator_8c_a03b142cb38481e1ae252f84274ec14e1}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!welcome\_message@{welcome\_message}}
+\index{welcome\_message@{welcome\_message}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{welcome\_message}{welcome\_message}}
+{\footnotesize\ttfamily char$\ast$$\ast$ welcome\+\_\+message}
+
+The welcome message. \mbox{\Hypertarget{sensor__simulator_8c_aed914099b551105b7294552e79e13b16}\label{sensor__simulator_8c_aed914099b551105b7294552e79e13b16}} 
+\index{sensor\_simulator.c@{sensor\_simulator.c}!welcome\_message\_length@{welcome\_message\_length}}
+\index{welcome\_message\_length@{welcome\_message\_length}!sensor\_simulator.c@{sensor\_simulator.c}}
+\doxysubsubsection{\texorpdfstring{welcome\_message\_length}{welcome\_message\_length}}
+{\footnotesize\ttfamily int welcome\+\_\+message\+\_\+length}
+
+The length of the welcome message. 

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structlf__waveform__t" kind="struct" language="C++" prot="public">
+    <compoundname>lf_waveform_t</compoundname>
+    <includes refid="wave__file__reader_8h" local="no">wave_file_reader.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlf__waveform__t_1a04db217ea68b2e445ff25f2f53f855cd" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t lf_waveform_t::length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.h" line="65" column="14" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlf__waveform__t_1ac1821431ece937edd64e32209a793018" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t lf_waveform_t::num_channels</definition>
+        <argsstring></argsstring>
+        <name>num_channels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.h" line="66" column="14" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlf__waveform__t_1add06d5d0fc6b2337a8aa902736c28558" prot="public" static="no" mutable="no">
+        <type>int16_t *</type>
+        <definition>int16_t* lf_waveform_t::waveform</definition>
+        <argsstring></argsstring>
+        <name>waveform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.h" line="67" column="13" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Waveform in 16-bit linear-PCM format. The waveform element is an array containing audio samples. If there are two channels, then they are interleaved left and right channel. The length is the total number of samples, a multiple of the number of channels. </para>
+    </detaileddescription>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.h" line="64" column="28" bodyfile="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/wave_file_reader.h" bodystart="64" bodyend="68"/>
+    <listofallmembers>
+      <member refid="structlf__waveform__t_1a04db217ea68b2e445ff25f2f53f855cd" prot="public" virt="non-virtual"><scope>lf_waveform_t</scope><name>length</name></member>
+      <member refid="structlf__waveform__t_1ac1821431ece937edd64e32209a793018" prot="public" virt="non-virtual"><scope>lf_waveform_t</scope><name>num_channels</name></member>
+      <member refid="structlf__waveform__t_1add06d5d0fc6b2337a8aa902736c28558" prot="public" virt="non-virtual"><scope>lf_waveform_t</scope><name>waveform</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_af74254cfa9cb54da5eb17346cbdb537" kind="dir">
+    <compoundname>/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util</compoundname>
+    <innerfile refid="audio__loop_8h">audio_loop.h</innerfile>
+    <innerfile refid="audio__loop__linux_8c">audio_loop_linux.c</innerfile>
+    <innerfile refid="audio__loop__mac_8c">audio_loop_mac.c</innerfile>
+    <innerfile refid="sensor__simulator_8c">sensor_simulator.c</innerfile>
+    <innerfile refid="sensor__simulator_8h">sensor_simulator.h</innerfile>
+    <innerfile refid="wave__file__reader_8c">wave_file_reader.c</innerfile>
+    <innerfile refid="wave__file__reader_8h">wave_file_reader.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/shaokai/lingua-franca-master/git/lingua-franca/org.lflang/src/lib/C/util/"/>
+  </compounddef>
+</doxygen>
