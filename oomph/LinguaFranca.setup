@@ -182,8 +182,8 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="git.clone.lingua.franca.branch"
-      value="master"
-      defaultValue="master"
+      value="kotlin-testing"
+      defaultValue="kotlin-testing"
       storageURI="scope://Workspace"
       label="">
     <description></description>
