@@ -1,4 +1,28 @@
-/* Generator for UCLID5 target. */
+/* Generator for UCLID5 models. */
+
+/*************
+Copyright (c) 2021, The University of California at Berkeley.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
+THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
+THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+***************/
 
 package org.lflang.generator
 
@@ -13,37 +37,29 @@ import org.lflang.lf.VarRef
 import org.lflang.FileConfig
 import org.lflang.ErrorReporter
 
-// import static extension org.lflang.ASTUtils.*
+import static extension org.lflang.ASTUtils.*
 
+/**
+ * Generator for UCLID5 models.
+ * 
+ * Connectivity graph needs to preserve the following info:
+ * 1. Components,
+ * 2. Connectivity edges (connection, action, timer),
+ *   - Types of connectivity edges (logical, physical)
+ *   - Delays on the edges 
+ * 
+ * @author{Shaokai Lin <shaokai@berkeley.edu>}
+ */
+ 
 class UCLIDGenerator extends GeneratorBase {
     
     ////////////////////////////////////////////
     //// Public variables
     
-    
-    // The list of action IDs
-    var ArrayList<String> actionIds
-    
     // The output directory where the model is stored
-    Path outputDir;
+    Path outputDir
     
-    // The list of port IDs
-    var ArrayList<String> portIds
-    
-    // The list of reaction IDs 
-    var ArrayList<String> reactionIds
-    
-    /**
-     * A representation of the dependencies between reactions as they are
-     * inferred from the main reactor instance.
-     */
-    var ReactionInstanceGraph reactionGraph
-    
-    // The list of state variable IDs
-    var ArrayList<String> stateVarIds
-    
-    // The list of timer IDs
-    var ArrayList<String> timerIds
+    var ConnectivityGraph connectivityGraph
     
     new(FileConfig fileConfig, ErrorReporter errorReporter) {
         super(fileConfig, errorReporter)
@@ -59,7 +75,7 @@ class UCLIDGenerator extends GeneratorBase {
         super.doGenerate(resource, fsa, context)
         
         // Traverse the instantiation tree for the connectivity information
-        traverseInstantiation()
+        buildConnectivityGraph()
         
         // Create the "src-gen" directory if it doesn't yet exist.
         var dir = fileConfig.getSrcGenPath.toFile
@@ -73,24 +89,8 @@ class UCLIDGenerator extends GeneratorBase {
         generateModel()
     }
     
-    def traverseInstantiation() {
-        /*
-        // Build the instantiation tree if a main reactor is present.
-        if (this.mainDef !== null) {
-            if (this.main === null) {
-                // Recursively build instances. This is done once because
-                // it is the same for all federates.
-                this.main = new ReactorInstance(mainDef, null, this) 
-            }   
-        }
-        else {
-            for (r : reactors) {
-                // construct instances for each one.
-            }
-        }
-        */
-        
-        /*
+    def buildConnectivityGraph() {   
+        // FIXME: Does this handle the federated reactor in case of federated execution?    
         for (federate : federates) {
             // Build the instantiation tree if a main reactor is present.
             if (this.mainDef !== null) {
@@ -98,27 +98,21 @@ class UCLIDGenerator extends GeneratorBase {
                 if (this.main === null) {
                     // Recursively build instances. This is done once because
                     // it is the same for all federates.
-                    this.main = new ReactorInstance(mainDef.reactorClass.toDefinition, this, 
-                        this.unorderedReactions)
-                    this.reactionGraph = new ReactionInstanceGraph(main)
+                    this.main = new ReactorInstance(
+                        mainDef.reactorClass.toDefinition,
+                        this.errorReporter
+                    )
                 }   
             }
-        }
-        */
+        }  
         
-        
+        this.connectivityGraph = new ConnectivityGraph(this.main)
     }
     
-    protected def generateModel() {
-        // Generate common.ucl and print to file
-        code = new StringBuilder()
-        var filename = outputDir.resolve("common.ucl").toString
-        generateCommon()
-        writeSourceCodeToFile(getCode.getBytes, filename)
-        
+    protected def generateModel() {     
         // Generate main.ucl and print to file
         code = new StringBuilder()
-        filename = outputDir.resolve("main.ucl").toString
+        var filename = outputDir.resolve("main.ucl").toString
         generateMain()
         writeSourceCodeToFile(getCode.getBytes, filename)
         
@@ -129,7 +123,7 @@ class UCLIDGenerator extends GeneratorBase {
         writeSourceCodeToFile(getCode.getBytes, filename)
     }
     
-    protected def generateCommon() {
+    protected def generateMain() {
         pr('''
         /*******************************
          * Auto-generated UCLID5 model *
@@ -137,9 +131,9 @@ class UCLIDGenerator extends GeneratorBase {
          
         ''')
         
-        // Start a new module
+        // Start the main module
         pr('''
-        module common {
+        module main {
          
         ''')
         indent()
@@ -307,33 +301,6 @@ class UCLIDGenerator extends GeneratorBase {
 
         define in_trace(_tr : trace_t, _e : element_t) : boolean
         = (exists (j : step_t) :: in_range(j) && get(_tr, j) == _e);
-         
-        ''')
-        
-        unindent()
-        pr('}')
-    }
-    
-    protected def generateMain() {
-        pr('''
-        /*******************************
-         * Auto-generated UCLID5 model *
-         ******************************/
-         
-        ''')
-        
-        // Start the main module
-        pr('''
-        module main {
-         
-        ''')
-        indent()
-        
-        // Import dependencies
-        pr('''
-        type    * = common.*;
-        define  * = common.*;
-        const   * = common.*;
          
         ''')
         
