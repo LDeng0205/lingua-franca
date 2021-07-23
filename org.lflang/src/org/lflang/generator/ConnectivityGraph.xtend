@@ -57,25 +57,35 @@ import org.lflang.graph.DirectedGraph
      */
     def rebuild() {
         this.clear()
-        addNodesAndEdges()
+        
+        println("========== Building Connectivity Graph ==========")
+        println(this.reactionGraph)
+        println("Testing traversal:")
+        for (node : this.reactionGraph.nodes) {
+            addNodesAndEdges(node)
+        }
     }
     
     /**
      * Build the graph by adding nodes and edges based on the reaction graph.
      * 
-     * FIXME: 1. Add nodes; 2. Add edges based on connection map in
-     * the reactor instance.
+     * FIXME:
+     * 1. Add nodes.
+     * 2. Add edges based on connection map in the reactor instance.
      */
-    protected def void addNodesAndEdges() {
-        println("========== Building Connectivity Graph ==========")
-        println(this.reactionGraph)
-        println("Testing traversal:")
-        for (node : this.reactionGraph.nodes) {
-            var ds = this.reactionGraph.getDownstreamAdjacentNodes(node)
-            println("Reaction " + node + " has the following downstream nodes.")
-            for (n : ds) {
-                println(n)
-            }
+    protected def void addNodesAndEdges(ReactionInstance reaction) {
+        // Add the current reaction to the connectivity graph.
+        this.addNode(reaction)
+            
+        // Recursively add downstream nodes.
+        println("Reaction " + reaction + " has the following downstream nodes.")
+        var downstreamAdjNodes = this.reactionGraph.getDownstreamAdjacentNodes(reaction)
+        for (node : downstreamAdjNodes) {
+            // Recursively add downstream nodes to the graph.
+            addNodesAndEdges(node)
+            
+            // Add an edge
+            this.addEdge(node, reaction)
         }
     }
  }
