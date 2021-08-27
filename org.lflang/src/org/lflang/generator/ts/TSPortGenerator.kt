@@ -35,9 +35,9 @@ class TSPortGenerator(private val reactor: Reactor) {
     private fun generateDeclaration(port: Port): String = with(port) {
         return if (isMultiport) {
             //val initializerLists = (0 until getValidWidth()).joinToString(", ") { """{"${name}_$it", this}""" }
-            """$cppType $name;"""
+            """$tsType $name;"""
         } else {
-            """$cppType $name{"$name", this};"""
+            """$tsType $name{"$name", this};"""
         }
     }
 

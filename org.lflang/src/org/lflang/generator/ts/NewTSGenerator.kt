@@ -40,7 +40,7 @@ import java.nio.file.Path
 import java.nio.file.Paths
 
 class NewTSGenerator(
-    private val cppFileConfig: CppFileConfig,
+    private val cppFileConfig: TSFileConfig,
     errorReporter: ErrorReporter,
     private val scopeProvider: LFGlobalScopeProvider
 ) :
@@ -98,7 +98,7 @@ class NewTSGenerator(
 
         // generate header and source files for all reactors
         for (r in reactors) {
-            val generator = CppReactorGenerator(r, cppFileConfig, errorReporter)
+            val generator = TSReactorGenerator(r, cppFileConfig, errorReporter)
             val headerFile = cppFileConfig.getReactorHeaderPath(r)
             val sourceFile = if (r.isGeneric) cppFileConfig.getReactorHeaderImplPath(r) else cppFileConfig.getReactorSourcePath(r)
             if (!r.isGeneric)
@@ -110,7 +110,7 @@ class NewTSGenerator(
 
         // generate file level preambles for all resources
         for (r in resources) {
-            val generator = CppPreambleGenerator(r, cppFileConfig, scopeProvider)
+            val generator = TSPreambleGenerator(r, cppFileConfig, scopeProvider)
             val sourceFile = cppFileConfig.getPreambleSourcePath(r)
             val headerFile = cppFileConfig.getPreambleHeaderPath(r)
             cppSources.add(sourceFile)

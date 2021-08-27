@@ -34,8 +34,8 @@ import org.lflang.toText
 /** A C++ code generator for reactions and their function bodies */
 class TSReactionGenerator(
     private val reactor: Reactor,
-    private val portGenerator: CppPortGenerator,
-    private val instanceGenerator: CppInstanceGenerator
+    private val portGenerator: TSPortGenerator,
+    private val instanceGenerator: TSInstanceGenerator
 ) {
 
     private val reactionsWithDeadlines = reactor.reactions.filter { it.deadline != null }
@@ -64,8 +64,8 @@ class TSReactionGenerator(
         get() =
             when (val variable = this.variable) {
                 is Timer  -> "Timer"
-                is Action -> with(CppActionGenerator) { variable.cppType }
-                is Port   -> with(portGenerator) { variable.cppType }
+                is Action -> with(CppActionGenerator) { variable.tsType }
+                is Port   -> with(portGenerator) { variable.tsType }
                 else      -> AssertionError("Unexpected variable type")
             }
 
