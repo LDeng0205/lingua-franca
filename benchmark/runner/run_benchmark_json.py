@@ -1,6 +1,9 @@
+### This script should only be run by the continuous benchmarking workflow. 
+### To run benchmarks, please use run_benchmark.py instead.
+
 #!/usr/bin/env python3
 
-# import csv
+import csv
 import hydra
 import logging
 import multiprocessing
@@ -166,40 +169,35 @@ def execute_command(command):
 
 
 def write_results(times, cfg):
-    # row = {
-    #     "benchmark": cfg["benchmark"]["name"],
-    #     "target": cfg["target"]["name"],
-    #     "total_iterations": cfg["iterations"],
-    #     "threads": cfg["threads"],
-    #     "iteration": None,
-    #     "time_ms": None,
-    # }
-    # also add all parameters and their values
-    # row.update(cfg["benchmark"]["params"])
-    # if "params" in cfg["target"]:
-    #     row.update(cfg["target"]["params"])
-
-    # with open("results.csv", "w", newline="") as csvfile:
-    #     writer = csv.DictWriter(csvfile, fieldnames=row.keys())
-    #     writer.writeheader()
-    #     i = 0
-    #     for t in times:
-    #         row["iteration"] = i
-    #         row["time_ms"] = t
-    #         writer.writerow(row)
-    #         i += 1
-    with open("benchmark_result.json", "w") as outfile:
-        sum = 0
+    row = {
+        "benchmark": cfg["benchmark"]["name"],
+        "target": cfg["target"]["name"],
+        "total_iterations": cfg["iterations"],
+        "threads": cfg["threads"],
+        "iteration": None,
+        "time_ms": None,
+    }
+    with open("../../../benchmark_result.json", "r+") as outfile:
+        # benchmark_result.json file should be in the multirun directory
+        total_time = 0
         for t in times:
-            sum += t
-        data = [
-            {
-                "name": "LFC Pingpong Benchmark",
+            total_time += t
+        data = {
+                "name": cfg["benchmark"]["name"],
                 "unit": "ms",
-                "value": t
+                "value": total_time,
+                "extra": f"Target: {cfg['target']['name']}\nTotal Iterations: {cfg['iterations']}\nThreads: {cfg['threads']}"
             }
-        ]
-        json.dump(data, outfile, indent=4)
+        
+        try:
+            # update existing file    
+            contents = json.load(outfile)
+            contents.append(data)
+            outfile.seek(0)
+            json.dump(contents, outfile, indent=4)
+        except json.JSONDecodeError:
+            # create new file
+            json.dump([data], outfile, indent=4)
         
     
 
