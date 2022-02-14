@@ -177,25 +177,28 @@ def write_results(times, cfg):
         "iteration": None,
         "time_ms": None,
     }
-    with open("../../../benchmark_result.json", "r+") as outfile:
-        # benchmark_result.json file should be in the multirun directory
-        total_time = 0
-        for t in times:
-            total_time += t
-        data = {
-                "name": cfg["benchmark"]["name"],
-                "unit": "ms",
-                "value": total_time,
-                "extra": f"Target: {cfg['target']['name']}\nTotal Iterations: {cfg['iterations']}\nThreads: {cfg['threads']}"
-            }
-        
-        try:
+
+    total_time = 0
+    for t in times:
+        total_time += t
+    data = {
+            "name": cfg["benchmark"]["name"],
+            "unit": "ms",
+            "value": total_time,
+            "extra": f"Target: {cfg['target']['name']}\nTotal Iterations: {cfg['iterations']}\nThreads: {cfg['threads']}"
+        }
+
+    try: 
+        with open("../../../benchmark_result.json", "r+") as outfile:
+            # benchmark_result.json file should be in the multirun directory
             # update existing file    
             contents = json.load(outfile)
             contents.append(data)
             outfile.seek(0)
             json.dump(contents, outfile, indent=4)
-        except json.JSONDecodeError:
+
+    except FileNotFoundError:
+        with open("../../../benchmark_result.json", "w+") as outfile:
             # create new file
             json.dump([data], outfile, indent=4)
         
