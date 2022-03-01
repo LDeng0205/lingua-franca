@@ -181,6 +181,7 @@ def write_results(times, cfg):
     total_time = 0
     for t in times:
         total_time += t
+    total_time /= len(times)
     data = {
             "name": cfg["benchmark"]["name"],
             "unit": "ms",
