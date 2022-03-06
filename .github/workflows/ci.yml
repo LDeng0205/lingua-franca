@@ -1,12 +1,12 @@
 # Main workflow for testing the Lingua Franca compiler.
 name: CI
 
-on:
-  # Trigger this workflow on push events, but only on master.
-  push:
-    branches:
-      - master
-  # Trigger this workflow also on pull_request events, but ignore the 'nightly' branch.
+# on:
+#   # Trigger this workflow on push events, but only on master.
+#   push:
+#     branches:
+#       - master
+#   # Trigger this workflow also on pull_request events, but ignore the 'nightly' branch.
   pull_request:
     branches-ignore:
       - 'nightly'
