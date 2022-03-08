@@ -1,16 +1,16 @@
 name: Benchmark tests
 
 on:
-  # Trigger this workflow on push events, but only on master.
-  push:
-    branches:
-      - master
-  workflow_call:
-    inputs:
-      target:
-        required: false
-        type: string
-        default: Cpp
+  # # Trigger this workflow on push events, but only on master.
+  # push:
+  #   branches:
+  #     - master
+  # workflow_call:
+  #   inputs:
+  #     target:
+  #       required: false
+  #       type: string
+  #       default: Cpp
 
 jobs:
   run:
