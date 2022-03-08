@@ -35,6 +35,7 @@ jobs:
       - name: Checkout current branch of reactor-c
         uses: actions/checkout@v2
         with:
+          repository: lf-lang/reactor-c
           path: org.lflang/src/lib/c/reactor-c
 
       - name: Install Python dependencies
