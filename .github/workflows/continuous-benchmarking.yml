@@ -30,9 +30,13 @@ jobs:
       - name: Checkout Lingua Franca repository
         uses: actions/checkout@v2
         with:
-          repository: LDeng0205/lingua-franca
-          submodules: true
-        
+          repository: lf-lang/lingua-franca
+          ref: continuous-benchmark
+      - name: Checkout current branch of reactor-c
+        uses: actions/checkout@v2
+        with:
+          path: org.lflang/src/lib/c/reactor-c
+
       - name: Install Python dependencies
         run: pip3 install -r benchmark/runner/requirements.txt  
 
