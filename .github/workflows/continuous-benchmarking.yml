@@ -32,11 +32,13 @@ jobs:
         with:
           repository: lf-lang/lingua-franca
           ref: continuous-benchmark
+          submodules: true
       - name: Checkout current branch of reactor-c
         uses: actions/checkout@v2
         with:
           repository: lf-lang/reactor-c
           path: org.lflang/src/lib/c/reactor-c
+          ref: continuous-benchmarking
 
       - name: Install Python dependencies
         run: pip3 install -r benchmark/runner/requirements.txt  
