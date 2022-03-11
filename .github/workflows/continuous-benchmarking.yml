@@ -48,12 +48,12 @@ jobs:
           path: $GITHUB_WORKSPACE/lf/lib/c/reactor-c
           ref: continuous-benchmarking
 
-      - name: Checkout current branch of reactor-c at org
-        uses: actions/checkout@v2
-        with:
-          repository: lf-lang/reactor-c
-          path: $GITHUB_WORKSPACE/lf/org.lflang/src/lib/c/reactor-c
-          ref: continuous-benchmarking
+      # - name: Checkout current branch of reactor-c at org
+      #   uses: actions/checkout@v2
+      #   with:
+      #     repository: lf-lang/reactor-c
+      #     path: $GITHUB_WORKSPACE/lf/org.lflang/src/lib/c/reactor-c
+      #     ref: continuous-benchmarking
 
       - name: debug message
         run: |
