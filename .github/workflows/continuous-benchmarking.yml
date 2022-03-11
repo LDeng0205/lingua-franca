@@ -39,7 +39,7 @@ jobs:
         with:
           repository: lf-lang/lingua-franca
           path: lf
-          
+
       - name: Checkout current branch of reactor-c
         uses: actions/checkout@v2
         with:
@@ -52,6 +52,7 @@ jobs:
 
       - name: Build lfc
         run: |
+          cd lf
           ./gradlew buildLfc
 
       - name: Set LF_PATH and LF_BENCHMARKS_PATH environmental variable
