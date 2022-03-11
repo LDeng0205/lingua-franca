@@ -41,12 +41,12 @@ jobs:
           path: lf
           # submodules: true
 
-      - name: Checkout current branch of reactor-c
-        uses: actions/checkout@v2
-        with:
-          repository: lf-lang/reactor-c
-          path: lf/lib/c/reactor-c
-          ref: continuous-benchmarking
+      # - name: Checkout current branch of reactor-c
+      #   uses: actions/checkout@v2
+      #   with:
+      #     repository: lf-lang/reactor-c
+      #     path: lf/lib/c/reactor-c
+      #     ref: continuous-benchmarking
 
       - name: Checkout current branch of reactor-c at org
         uses: actions/checkout@v2
@@ -54,12 +54,6 @@ jobs:
           repository: lf-lang/reactor-c
           path: lf/org.lflang/src/lib/c/reactor-c
           ref: continuous-benchmarking
-
-      - name: debug message
-        run: |
-          ls lf/lib/c/reactor-c
-          ls lf/org.lflang/src/lib/c
-          ls lf/org.lflang/src/lib/c/reactor-c
 
       - name: Install Python dependencies
         run: pip3 install -r runner/requirements.txt  
