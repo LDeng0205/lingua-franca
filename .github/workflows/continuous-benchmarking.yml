@@ -39,7 +39,7 @@ jobs:
         with:
           repository: lf-lang/lingua-franca
           path: lf
-          submodules: true
+          # submodules: true
 
       - name: Checkout current branch of reactor-c
         uses: actions/checkout@v2
