@@ -39,14 +39,6 @@ jobs:
         with:
           repository: lf-lang/lingua-franca
           path: lf
-          # submodules: true
-
-      # - name: Checkout current branch of reactor-c
-      #   uses: actions/checkout@v2
-      #   with:
-      #     repository: lf-lang/reactor-c
-      #     path: lf/lib/c/reactor-c
-      #     ref: continuous-benchmarking
 
       - name: Checkout current branch of reactor-c at org
         uses: actions/checkout@v2
@@ -70,7 +62,7 @@ jobs:
   
       - name: Run C Benchmarks
         run: |
-          python3 runner/run_benchmark.py -m test_mode=False iterations=5 benchmark="glob(*)" target=lf-c json=True
+          python3 runner/run_benchmark.py -m continue_on_error=True iterations=12 benchmark="glob(*)" target=lf-c json=True
       
       # Use continuous benchmark action to store result
       - name: Store Benchmark Result
