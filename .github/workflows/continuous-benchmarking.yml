@@ -46,7 +46,7 @@ jobs:
         with:
           repository: lf-lang/reactor-c
           path: $GITHUB_WORKSPACE/lf/org.lflang/src/lib/c/reactor-c
-          ref: continuous-benchmarking
+          # ref: continuous-benchmarking
 
       - name: Install Python dependencies
         run: pip3 install -r runner/requirements.txt  
