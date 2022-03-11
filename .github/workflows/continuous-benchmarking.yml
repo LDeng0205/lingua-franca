@@ -27,10 +27,6 @@ jobs:
         with:
           python-version: 3.8
 
-      - name: Checkout Lingua Franca repository
-        uses: actions/checkout@v2
-        with:
-          repository: lf-lang/lingua-franca
 
       - name: Checkout benchmark repository
         uses: actions/checkout@v2
@@ -38,11 +34,17 @@ jobs:
           repository: lf-lang/benchmarks-lingua-franca
           ref: continuous-benchmark
 
+      - name: Checkout Lingua Franca repository
+        uses: actions/checkout@v2
+        with:
+          repository: lf-lang/lingua-franca
+          path: lf
+          
       - name: Checkout current branch of reactor-c
         uses: actions/checkout@v2
         with:
           repository: lf-lang/reactor-c
-          path: org.lflang/src/lib/c/reactor-c
+          path: lf/org.lflang/src/lib/c/reactor-c
           ref: continuous-benchmarking
 
       - name: Install Python dependencies
@@ -54,7 +56,7 @@ jobs:
 
       - name: Set LF_PATH and LF_BENCHMARKS_PATH environmental variable
         run: |
-          echo "LF_PATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
+          echo "LF_PATH=$GITHUB_WORKSPACE/lf" >> $GITHUB_ENV
           echo "LF_BENCHMARKS_PATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
   
       - name: Run C Benchmarks
