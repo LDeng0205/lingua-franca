@@ -48,6 +48,19 @@ jobs:
           path: $GITHUB_WORKSPACE/lf/lib/c/reactor-c
           ref: continuous-benchmarking
 
+      - name: Checkout current branch of reactor-c at org
+        uses: actions/checkout@v2
+        with:
+          repository: lf-lang/reactor-c
+          path: $GITHUB_WORKSPACE/lf/lib/c/reactor-c
+          ref: continuous-benchmarking
+
+      - name: debug message
+        run: |
+          ls $GITHUB_WORKSPACE/lf/lib/c/reactor-c
+          ls $GITHUB_WORKSPACE/lf/org.lflang/src/lib/c
+          ls $GITHUB_WORKSPACE/lf/org.lflang/src/lib/c/reactor-c
+          
       - name: Install Python dependencies
         run: pip3 install -r runner/requirements.txt  
 
@@ -63,7 +76,7 @@ jobs:
   
       - name: Run C Benchmarks
         run: |
-          python3 runner/run_benchmark.py -m test_mode=False iterations=5 benchmark="glob(*)" target=lf-c continue_on_error=True json=True
+          python3 runner/run_benchmark.py -m test_mode=False iterations=5 benchmark="glob(*)" target=lf-c json=True
       
       # Use continuous benchmark action to store result
       - name: Store Benchmark Result
