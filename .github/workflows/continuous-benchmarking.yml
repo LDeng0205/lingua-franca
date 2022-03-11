@@ -45,8 +45,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: lf-lang/reactor-c
-          path: lf/org.lflang/src/lib/c/reactor-c
-          # ref: continuous-benchmarking
+          path: $GITHUB_WORKSPACE/lf/org.lflang/src/lib/c/reactor-c
+          ref: continuous-benchmarking
 
       - name: Install Python dependencies
         run: pip3 install -r runner/requirements.txt  
